@@ -48,3 +48,6 @@ results
 build
 
 _notes
+
+# Exception
+!wordpress_*.sql.zip
