@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+// HTML5
+$html5 : true;
+
+// IE9 SVG
+$experimental-support-for-svg:false;
+
+// Sprite
+//$sprite: sprite-map("sprite/*.png", $spacing: 20px);
+//$sprite-img:sprite-url($sprite);
+
+// font-family
+$fontFamily : "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana,Arial,Helvetica,sans-serif;
+//$fontFamily :  HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+$fontFamilyLight :  'HelveticaNeue-Light', Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+
+$fontCode   : monospace, "ＭＳ Ｐ ゴシック","MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+
+// Colum Base Width
+$outerWidth  : 1280px;
+$baseWidth  : 960px;
+
+// Base Margin
+$margin : 20px;
+
+//Color
+$colorBorder       : #b2b2b2;
+$colorGreen        : #2f7b4e;
+$colorLink         : #4173a5;
+$colorLink_active  : #4173a5;
+$colorLink_hover   : #4173a5;
+$colorLink_visited : #4173a5;
+$colorMain         : #4173b3;
+$colorSub          : #537F6D;
+$colorSubText      : #666;
+$colorText         : #333;

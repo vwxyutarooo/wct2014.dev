@@ -1,0 +1,30 @@
+{
+  "name": "wct2014dev",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-changed": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-csso": "*",
+    "gulp-filter": "*",
+    "gulp-imagemin": "*",
+    "gulp-jade": "*",
+    "gulp-livereload": "*",
+    "gulp-open": "*",
+    "gulp-plumber": "*",
+    "gulp-prettify": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-util": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yutaro Miyazaki",
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+/*
+Theme Name:     wct2014
+Description:    wct2014 development as a child theme of twentyfouteen
+Author:         wct2014 Web team
+Template:       twentyfourteen
+*/
+
+@import url("../twentyfourteen/style.css");
+@import url("2014.wct.css");

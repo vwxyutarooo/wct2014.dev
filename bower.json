@@ -1,0 +1,27 @@
+{
+  "name": "jade2htmlgulp",
+  "version": "0.0.1",
+  "authors": [
+    "Yutaro <yutaro@studio-rubbish.com>"
+  ],
+  "description": "gulp + jade + bower + foundation",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "foundation": "*",
+    "foundation-icon-fonts": "*"
+  },
+  "devDependencies": {
+    "jquery": "*",
+    "foundation": "*",
+    "foundation-icon-fonts": "*"
+  }
+}

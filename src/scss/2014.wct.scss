@@ -1,0 +1,59 @@
+/*
+Theme Name:
+Theme URI:
+Description:
+Version: 1.0
+*/
+@import "setting";
+//@import "default";
+//@import "foundation";
+@import "foundation-icons";
+@import "mixins";
+@import "functions";
+@import "module_classes";
+/* ========================================
+ * layout
+======================================== */
+@font-face {
+  font-family: "foundation-icons";
+  src: url("fonts/foundation-icons.eot");
+  src: url("fonts/foundation-icons.eot?#iefix") format("embedded-opentype"),
+       url("fonts/foundation-icons.woff") format("woff"),
+       url("fonts/foundation-icons.ttf") format("truetype"),
+       url("fonts/foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{}
+
+/* header
+---------------------------------------- */
+@import "module_header";
+
+/* main
+---------------------------------------- */
+@import "module_top";
+@import "module_archive";
+@import "module_page";
+
+/* sidebar
+---------------------------------------- */
+@import "module_sidebar";
+
+/* footer
+---------------------------------------- */
+@import "module_footer";
+
+/* for Responsive
+---------------------------------------- */
+@media screen and(min-width: 640px){
+  .variableLeft{ float: left; }
+  .variableRight{ float: right; }
+}
+@media screen and(max-width: 639px){
+  .variable{
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
