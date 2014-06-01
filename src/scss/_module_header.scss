@@ -23,8 +23,6 @@ button:hover, .contributor-posts-link:hover, input[type="button"]:hover, input[t
 
 a {
     transition: color .15s ease-in-out;
-    -moz-transition: color .15s ease-in-out;
-    -webkit-transition: color .15s ease-in-out;
 }
 
 a:hover {
@@ -62,7 +60,7 @@ a:hover {
 #page {
     display: block;
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: $maxWidth;
     background-color: transparent;
 }
 
@@ -99,6 +97,7 @@ body.single-post .post-thumbnail {
 
 .site-header {
     background-color: rgba(92, 92, 92, 0.6);
+    max-width: $maxWidth;
 }
 
 .primary-navigation ul ul a:hover, .primary-navigation ul ul li.focus > a {
@@ -127,153 +126,10 @@ body.single-post .post-thumbnail {
     max-width: 90%;
 }
 
-.content-sidebar {
-    margin-left: -29.04761904%;
-    width: 29.04761904%;
-}
-
 .entry-header, .entry-content, .entry-meta {
     margin-left: 0 !important;
     width: 100%;
     max-width: 900px !important;
-}
-
-article.post {
-    margin-left: 0 !important;
-}
-
-.hentry {
-    max-width: 900px !important;
-}
-
-.entry-title a, .entry-title {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-}
-
-.entry-header {
-    padding-right: 0 !important;
-    width: 95% !important;
-}
-
-.primary-navigation li:hover > a, .primary-navigation li.focus > a {
-    background-color: #e44830;
-}
-
-#content ul {
-    list-style: none !important;
-    margin-left: 10px !important;
-}
-
-#content ul h3 {
-    margin-bottom: 5px !important;
-    margin-top: 1em !important;
-}
-
-#content ul li {
-    margin-bottom: 5px !important;
-}
-
-.post-thumbnail {
-    background: transparent !important;
-    text-align: center !important;
-}
-
-.page-id-31 .wcorg-sponsor-description .attachment-post-thumbnail {
-    display: block !important;
-    margin-bottom: 10px !important;
-}
-
-.site-content .has-post-thumbnail .entry-header {
-    margin-top: 0 !important;
-}
-
-.buy-tickets-now {
-    transition: background .15s ease-in-out;
-    -moz-transition: background .15s ease-in-out;
-    -webkit-transition: background .15s ease-in-out;
-    background: #e44830;
-    text-align: center;
-    font-size: 16px;
-    padding: 50px 20px;
-    width: 90%;
-    margin: 0 auto;
-    font-size: 18px;
-}
-
-.buy-tickets-now:hover {
-    background: #E9523B !important;
-}
-
-.featured-content-inner {
-    padding-top: 20px;
-}
-
-.featured-content .post-thumbnail {
-    height: 20px;
-    padding-top: 80px;
-}
-
-.featured-content .entry-header {
-    min-height: 64px;
-}
-
-.featured-content .post-thumbnail img {
-    left: 38%;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    padding: 1em;
-}
-
-.grid .featured-content .entry-header {
-    background-color: #e44830;
-    border: 0;
-    text-align: center;
-    height: 40px;
-}
-
-.grid .featured-content .entry-header h1.entry-title {
-    font-size: 2em;
-}
-
-.featured-content-inner {
-    background-color: #e44830;
-}
-
-.featured-content-inner .cat-links {
-    display: none;
-}
-
-.wcorg-speaker, .wcorg-session {
-    margin-bottom: 2em;
-    display: inline-block;
-}
-
-.wcorg-speaker:after, .wcorg-session:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-.wcorg-speaker img.avatar, .wcorg-session img.avatar {
-    float: left;
-    margin-right: 2em;
-}
-
-.wcorg-session h2 {
-    margin-bottom: 4px !important;
-}
-
-.wcorg-session p.wcpt-session-meta {
-    margin-bottom: 14px;
-}
-
-.tix-column-remaining {
-    display: none;
 }
 
 @media only screen and (max-width: 782px) {

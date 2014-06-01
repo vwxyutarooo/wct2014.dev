@@ -14,18 +14,7 @@ Version: 1.0
 /* ========================================
  * layout
 ======================================== */
-@font-face {
-  font-family: "foundation-icons";
-  src: url("fonts/foundation-icons.eot");
-  src: url("fonts/foundation-icons.eot?#iefix") format("embedded-opentype"),
-       url("fonts/foundation-icons.woff") format("woff"),
-       url("fonts/foundation-icons.ttf") format("truetype"),
-       url("fonts/foundation-icons.svg#fontcustom") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-body{}
+@import "module_common";
 
 /* header
 ---------------------------------------- */
@@ -34,7 +23,7 @@ body{}
 /* main
 ---------------------------------------- */
 @import "module_top";
-@import "module_archive";
+@import "module_post";
 @import "module_page";
 
 /* sidebar
@@ -44,16 +33,3 @@ body{}
 /* footer
 ---------------------------------------- */
 @import "module_footer";
-
-/* for Responsive
----------------------------------------- */
-@media screen and(min-width: 640px){
-  .variableLeft{ float: left; }
-  .variableRight{ float: right; }
-}
-@media screen and(max-width: 639px){
-  .variable{
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-}

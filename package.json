@@ -6,21 +6,23 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "*",
+    "browser-sync": "*",
     "gulp-autoprefixer": "*",
+    "gulp-bower-files": "*",
     "gulp-changed": "*",
+    "gulp-combine-media-queries": "*",
     "gulp-concat": "*",
-    "gulp-connect": "*",
-    "gulp-csso": "*",
     "gulp-filter": "*",
+    "gulp-flatten": "*",
     "gulp-imagemin": "*",
     "gulp-jade": "*",
-    "gulp-livereload": "*",
-    "gulp-open": "*",
     "gulp-plumber": "*",
     "gulp-prettify": "*",
     "gulp-rename": "*",
-    "gulp-ruby-sass": "*",
-    "gulp-util": "*"
+    "gulp-sass": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "gulp.spritesmith": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

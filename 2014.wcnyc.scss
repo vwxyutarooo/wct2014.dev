@@ -1,0 +1,313 @@
+.featured-content {
+  padding-left: 0;
+}
+
+.hentry, .entry-meta, .post-navigation, .image-navigation, #comments {
+  max-width: 100% !important;
+}
+
+#page {
+  display: block;
+  margin: 0 auto;
+  max-width: 1260px;
+  background-color: transparent;
+}
+
+.site-header {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+}
+
+.admin-bar .site-header {
+  top: 32px;
+}
+
+.primary-navigation li:hover > a, .primary-navigation li.focus > a {
+  background-color: #08BBD1;
+}
+
+.site-navigation .current_page_item > a, .site-navigation .current_page_ancestor > a, .site-navigation .current-menu-item > a, .site-navigation .current-menu-ancestor > a {
+  color: #fff;
+  font-weight: 700;
+  background: #08BBD1;
+}
+
+.site-navigation .current_page_item > a:hover, .site-navigation .current_page_ancestor > a:hover, .site-navigation .current-menu-item > a:hover, .site-navigation .current-menu-ancestor > a:hover {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+.search-toggle {
+  display: none;
+}
+
+.header-main {
+  position: relative;
+}
+
+#menu-item-42716 {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#menu-item-42716 a {
+  color: #6adfef;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+#menu-item-42716 a:hover {
+  color: #fff;
+}
+
+.site-navigation .current-menu-item > a {
+  color: #fff !important;
+}
+
+.site-navigation .sub-menu a:hover, .site-navigation .sub-menu li.focus > a {
+  background-color: #6adfef;
+}
+
+.primary-navigation ul ul {
+  background: #08bbd1;
+}
+
+#main {
+  background: #fff;
+  border-top: 4px solid #08bbd1;
+}
+
+.masthead-fixed .site-main {
+  margin-top: 0;
+}
+
+#primary {
+  margin: 40px 0 0;
+  padding: 0;
+  width: 66.667%;
+}
+
+.site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .page-content {
+  max-width: 80%;
+}
+
+.site-content {
+  margin: 0 !important;
+}
+
+#content-sidebar {
+  margin: 0;
+  width: 33.333%;
+}
+
+.post-thumbnail {
+  background: transparent !important;
+  width: 80%;
+  margin: 0 10%;
+}
+
+.content-sidebar {
+  padding-top: 52px;
+}
+
+.content-sidebar .widget {
+  background: #f9f9f9;
+  border-top: 1px solid #08BBD1;
+  padding: 0 7% 7%;
+  width: 86%;
+}
+
+.content-sidebar .widget .widget-title {
+  border: none;
+  color: #08BBD1;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -19px;
+}
+
+.featured-content {
+  background: #f5f5f5;
+}
+
+.featured-content-inner {
+  position: relative;
+  top: -4px;
+}
+
+.featured-content-inner article {
+  background: #08bbd1;
+}
+
+.featured-content-inner article:hover, .featured-content-inner article.post-31091:hover {
+  background: #1ca574;
+}
+
+.featured-content-inner article.post-31091 {
+  background: #6adfef;
+}
+
+.featured-content .post-thumbnail {
+  height: 45px;
+  padding-top: 40px;
+}
+
+.featured-content .entry-header {
+  min-height: 80px;
+  padding: 0 10px 80px;
+  width: 100% !important;
+}
+
+.featured-content .post-thumbnail img {
+  left: 44%;
+  padding: .5em;
+  margin-top: 1.5em;
+  transition: all .5s ease;
+}
+
+.featured-content .post-thumbnail:hover img {
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+.grid .featured-content .entry-header {
+  background: none !important;
+  border: 0;
+  text-align: center;
+  height: 80px;
+}
+
+.grid .featured-content .entry-header h1.entry-title {
+  font-size: 1.75em;
+}
+
+.grid .featured-content .entry-header:after {
+  font-size: .75em;
+  position: relative;
+  top: -5px;
+}
+
+.grid .featured-content .post-31082 .entry-header:after {
+  content: "Help power WCNYC";
+}
+
+.grid .featured-content .post-31091 .entry-header:after {
+  content: "Share your Knowledge";
+}
+
+.grid .featured-content .post-61942 .entry-header:after {
+  content: "Get your Tickets today";
+}
+
+.featured-content a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.featured-content .entry-meta, .home .cat-links, .single-post .home .cat-links, .single-post .tag-featured .cat-links, .single-post .tag-featured .entry-meta, .single-post .tag-featured + .post-navigation {
+  display: none;
+}
+
+.grid .featured-content .hentry:nth-child(2n+1) {
+  clear: inherit;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"], .widget input[type="button"], .widget input[type="reset"], .widget input[type="submit"] {
+  background-color: #1ca574 !important;
+}
+
+input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .widget input[type="button"]:hover, .widget input[type="reset"]:hover, .widget input[type="submit"]:hover {
+  background-color: #3ecf9e !important;
+}
+
+.action-button {
+  font-size: 1.5em;
+  background-color: #08bbd1;
+  text-decoration: none !important;
+  color: #fff !important;
+  border-radius: 2px;
+  padding: .5em 1em;
+  margin: 1em 0 !important;
+  text-transform: uppercase;
+}
+
+.action-button:hover {
+  background-color: #6adfef;
+  color: #fff !important;
+}
+
+.wcorg-organizer {
+  border-bottom: 1px solid #f5f5f5;
+  padding-top: 20px;
+  min-height: 170px;
+}
+
+.wcorg-organizer img {
+  float: left;
+  padding: 7px 20px 0 0;
+}
+
+article.wcb_sponsor .entry-header, .site-content .has-post-thumbnail .entry-header {
+  margin-top: 0 !important;
+}
+
+#content-sidebar .sponsor-level img {
+  background: #fff;
+  margin-bottom: 10px;
+  max-width: 94%;
+  padding: 3%;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid .featured-content .hentry {
+    width: 33.3333%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #primary, #content-sidebar, .grid .featured-content .hentry {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 782px) {
+  body.custom-background {
+    background-position: center center !important;
+  }
+
+  #site-header {
+    padding: 5% 0;
+  }
+
+  .site-header {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .nav-menu {
+    text-align: center !important;
+  }
+
+  .site-navigation .sub-menu a:hover, .site-navigation .sub-menu li.focus > a {
+    background-color: #08BBD1;
+  }
+
+  #menu-item-42716 {
+    background: #5d5d5d;
+    color: #fff;
+    position: relative;
+  }
+}
+@media screen and (min-width: 673px) {
+  .full-width .site-content .has-post-thumbnail .entry-header, .full-width.singular .site-content .hentry.has-post-thumbnail {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #page {
+    width: 98.5% !important;
+    margin: 0 auto !important;
+  }
+}

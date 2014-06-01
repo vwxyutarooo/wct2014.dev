@@ -6,7 +6,7 @@ On your WordPress "theme" directory,
 
 	git clone git@github.org:vwxyutarooo/wct2014.dev.git wct2014  
 
-Move files to your WordPress plugin directory which is in "plugin" folder and enable them.  
+copy files to your WordPress plugin directory which is in "wct2014/plugins" folder and enable them.  
 Set up gulp if you haven't
 
 	npm install -g gulp

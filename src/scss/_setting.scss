@@ -1,10 +1,13 @@
 @charset "utf-8";
+$filePath          : "http://2014.tokyo.wordcamp.org/files";
+$filePath          : "files";
+
 
 // HTML5
 $html5 : true;
 
 // IE9 SVG
-$experimental-support-for-svg:false;
+$experimental-support-for-svg    :false;
 
 // Sprite
 //$sprite: sprite-map("sprite/*.png", $spacing: 20px);
@@ -14,15 +17,10 @@ $experimental-support-for-svg:false;
 $fontFamily : "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana,Arial,Helvetica,sans-serif;
 //$fontFamily :  HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 $fontFamilyLight :  'HelveticaNeue-Light', Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
-
 $fontCode   : monospace, "ＭＳ Ｐ ゴシック","MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
 
 // Colum Base Width
-$outerWidth  : 1280px;
-$baseWidth  : 960px;
-
-// Base Margin
-$margin : 20px;
+$maxWidth          : 1280px;
 
 //Color
 $colorBorder       : #b2b2b2;
