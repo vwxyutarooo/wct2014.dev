@@ -1,21 +1,62 @@
 @font-face {
-  font-family: "foundation-icons";
-  src: url($filePath + "/foundation-icons.eot");
-  src: url($filePath + "/foundation-icons.eot?#iefix") format("embedded-opentype"),
-       url($filePath + "/foundation-icons.woff") format("woff"),
-       url($filePath + "/foundation-icons.ttf") format("truetype"),
-       url($filePath + "/foundation-icons.svg#fontcustom") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "foundation-icons";
+    src: url($filePath + "/foundation-icons.eot");
+    src: url($filePath + "/foundation-icons.eot?#iefix") format("embedded-opentype"),
+             url($filePath + "/foundation-icons.woff") format("woff"),
+             url($filePath + "/foundation-icons.ttf") format("truetype"),
+             url($filePath + "/foundation-icons.svg#fontcustom") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 body{
     font: 10px $fontFamily;
 }
+.site{
+    max-width: 100%;
+    &:before{
+        display: none;
+    }
+}
+.search-toggle{
+    display: none;
+}
 
-#site-header{
-    img{
-        max-width: $maxWidth;
-        width: 100%;
+#secondary{
+    display: none;
+}
+#main{
+    @extend %baseWidth;
+}
+#main-content{
+    float: none;
+}
+#primary{
+    width: 100%;
+}
+.site-content{
+    margin: 0 340px 0 auto;
+}
+@media screen and (min-width: 673px){
+    .site-content{
+        .entry-header,
+        .entry-content,
+        .entry-summary,
+        .entry-meta,
+        .page-content,
+        .comments-area{
+            max-width: 780px;
+            .full-width &{
+                max-width: 100%;
+            }
+        }
+        .full-width & .comments-area{
+            max-width: 780px;
+        }
+    }
+}
+@media screen and (max-width: 672px){
+    .site-content{
+        margin-right: 0;
     }
 }

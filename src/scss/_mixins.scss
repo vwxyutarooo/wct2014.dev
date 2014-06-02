@@ -26,162 +26,66 @@
     font-size:0;
   }
 }
-//***********************
-// Sprite(PC Only)
-// @param $name
-// @param $hover
-// @param $center
-//***********************
-// %ir-pc{
-//   display: block;
-//   background-image: $sprite-img;
-//   overflow: hidden;
-//   height: 0;
-//   background-repeat: no-repeat;
-// }
-// @mixin sprite-ir($name, $hover:false, $center:false ) {
-//   @extend %ir-pc;
-//   @if $center{
-//     margin-left:auto;
-//     margin-right:auto;
-//   }
-//   width: round(image-width(sprite-file($sprite, $name)));
-//   padding-top:round(image-height(sprite-file($sprite, $name)));
-//   $xpos :round(nth(sprite-position($sprite, $name), 1));
-//   $ypos :round(nth(sprite-position($sprite, $name), 2));
-//   background-position:$xpos $ypos;
-//   @if $hover{
-//     &:hover, &.active{
-//       $hoverXpos :round(nth(sprite-position($sprite, interpolation0___on), 1));
-//       $hoverYpos :round(nth(sprite-position($sprite, interpolation0___on), 2));
-//       background-position: $hoverXpos $hoverYpos;
-//     }
-//   }
-// }
-//***********************
-// Sprite list(PC Only)
-// @param $name
-// @param $hover
-// @param $center
-//***********************
-// %list-pc{
-//   background-image: $sprite-img;
-//   background-repeat:no-repeat;
-// }
-// @mixin sprite-list($name,$position:false){
-//   @extend %list-pc;
-//   $pos:false;
-//   $xpos :round(nth(sprite-position($sprite, $name), 1));
-//   $ypos :round(nth(sprite-position($sprite, $name), 2));
-//   @if $position{
-//     $pos : $ypos + $position;
-//   }@else{
-//     $pos : $ypos;
-//   }
-//   background-position:$xpos $pos;
-// }
+
+%baseWidth{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1080px;
+  width: 100%;
+}
+%largeVariableWidth{
+  width: 100%;
+  max-width: 1400px;
+  min-width: 840px;
+  margin-right: auto;
+  margin-left: auto;
+}
+%mediumWidth{
+  width: 840px;
+  margin-right: auto;
+  margin-left: auto;
+}
+%narrowWidth{
+  width: 716px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%pseudoClass{
+  display: block;
+  content: "";
+  position: absolute;
+}
 
 //***********************
-// Inline list
-// @param $left
-// @param $right
+// Sprite css image replacement (Medium size)
+// @param $name
 //***********************
-%inlineList{
-  ul,li{
-    display: inline;
-  }
-}
-@mixin inline-list($left:false,$right:false){
-  @extend %inlineList;
-  li{
-    @if $left{
-      margin-left: $left;
-      &:first-child{
-        margin-left: 0px;
-      }
-    }
-    @if $right{
-      margin-right: $right;
-      &:last-child{
-        margin-left: 0px;
-      }
-    }
-  }
+@mixin sprite-ir-M($sprite) {
+  @include sprite($sprite);
+  display: block;
+  overflow: hidden;
+  padding-top: nth($sprite, 6);
+  height: 0;
+  background-repeat: no-repeat; 
 }
 
 
 //パーツ
-@mixin orderBtn {
-  margin-bottom: 30px;
-  a {
-    @include border-radius(6px);
-    @include transition-property(background-color);
-    @include transition-duration(.3s);
-    display: inline-block;
-    padding: 11px 45px 12px 25px;
-    background: url(shared/img/site/ico_arrow_01.png) no-repeat 115px center $mainColor;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    &:hover {
-       background-color: darken($mainColor, 10%);
-    }
-  }
-}
-
-@mixin roundBtn {
-  display: inline-block;
-  a {
-    @include border-radius(16px);
-    @include transition-property(background-image);
-    @include transition-duration(.3s);
-    padding: 4px 20px 6px;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: normal;
-    font-family: $fontFamilyLight;
-  }
-}
-@mixin roundOrderBtn {
-  @include roundBtn();
-  a {
-    @include background-image(linear-gradient(#399dcd, #0073a6, #00669f));
-    border: 1px solid #4A7091;
-    background: #649bca; /* Old browsers */
-    color: #fff;
-    &:hover {
-      @include background-image(linear-gradient(#3a90ba, #006896, #005c8f));
-    }
-  }
-}
-@mixin roundDriveBtn {
-  @include roundBtn();
-  a {
-    @include background-image(linear-gradient(#aeaeaf, #8e8e8e, #656363));
-    border: 1px solid #565555;
-    background: #8e8e8e; /* Old browsers */
-    color: #fff;
-    &:hover {
-      @include background-image(linear-gradient(#9c9c9d, #7a7a7a, #585656));
-    }
-  }
-}
-
-/* 上から下にグラデーション */
-@mixin bg-gradient($bef, $af) {
-    background: $bef; /* Old browsers */
-    background: -moz-linear-gradient(top,  $bef 0%, $af 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$bef), color-stop(100%,$af)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  $bef 0%,$af 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  $bef 0%,$af 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  $bef 0%,$af 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  $bef 0%,$af 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bef', endColorstr='$af',GradientType=0 ); /* IE6-9 */
-}
 %halfWidth-bg {
   position: absolute;
   display: block;
   width: 50%;
   height: 100%;
   content: "";
+}
+
+@keyframes fadeIn {
+  0%{ opacity: 0; }
+  100%{ opacity: 1; }
+}
+%fadeIn {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+  animation-fill-mode: both;
 }

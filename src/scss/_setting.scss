@@ -9,10 +9,6 @@ $html5 : true;
 // IE9 SVG
 $experimental-support-for-svg    :false;
 
-// Sprite
-//$sprite: sprite-map("sprite/*.png", $spacing: 20px);
-//$sprite-img:sprite-url($sprite);
-
 // font-family
 $fontFamily : "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana,Arial,Helvetica,sans-serif;
 //$fontFamily :  HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
@@ -20,7 +16,7 @@ $fontFamilyLight :  'HelveticaNeue-Light', Helvetica, Arial, Verdana, "ヒラギ
 $fontCode   : monospace, "ＭＳ Ｐ ゴシック","MS PGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
 
 // Colum Base Width
-$maxWidth          : 1280px;
+$maxWidth          : 1080px;
 
 //Color
 $colorBorder       : #b2b2b2;

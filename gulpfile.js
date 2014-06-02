@@ -101,7 +101,7 @@ gulp.task('scss', function() {
 	return gulp.src(paths.scssDir)
 		.pipe(plumber({ errorHandler: handleError }))
 		.pipe(sass({errLogToConsole: true}))
-		//.pipe(cmq())
+		.pipe(cmq())
 		.pipe(prefix('last 1 version'))
 		.pipe(gulp.dest(paths.dest))
 		.pipe(rename({suffix: '.min'}))
@@ -144,8 +144,7 @@ gulp.task('watch', function() {
 	gulp.watch([paths.imgDest + '/sprite/*.png'], ['sprite']);
 	//gulp.watch([paths.jsDir], ['concat']);
 	gulp.watch([paths.scssDir], ['scss']);
-	gulp.watch(['./*.php'], ['bs-reload']);
-	gulp.watch('./*.css', ['bs-reload']);
+	gulp.watch(['./*.php', './*.css'], ['bs-reload']);
 });
 
 gulp.task('default', [
