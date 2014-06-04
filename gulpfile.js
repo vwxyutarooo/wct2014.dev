@@ -47,7 +47,7 @@ var bowerJS = [
 ];
 
 var bowerCSS = [
-	{ name: '', dir: 'font-awesome/scss/font-awesome.scss', prefix: true }
+	{ name: '', dir: 'font-awesome/css/font-awesome.css', prefix: true }
 ];
 
 gulp.task('init', function() {
@@ -65,7 +65,7 @@ gulp.task('init', function() {
 			.pipe(gulp.dest(paths.scssDest))
 	});
 	gulp.src('bower_components/font-awesome/fonts/**')
-		.pipe(gulp.dest('fonts'));
+		.pipe(gulp.dest('files/2014/06'));
 });
 
 gulp.task('browser-sync', function() {
@@ -109,9 +109,9 @@ gulp.task('concat', function() {
 gulp.task('scss', function() {
 	return gulp.src(paths.scssDir)
 		.pipe(plumber({ errorHandler: handleError }))
-		.pipe(sass({errLogToConsole: true}))
+		.pipe(sass())
 		.pipe(cmq())
-		.pipe(prefix('last 1 version'))
+		.pipe(prefix('last 2 version'))
 		.pipe(gulp.dest(paths.dest))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(minifycss())

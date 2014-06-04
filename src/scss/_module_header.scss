@@ -5,8 +5,17 @@
 
 #site-header{
     max-width: 100%;
+    position: relative;
     img{
         width: 100%;
+    }
+    &:after{
+        @extend %pseudoClass;
+        @extend %hovering;
+        right: 10%;
+        top: 50%;
+        margin-top: -150px;
+        content: url($filePath + '2014/06/iconWapu.png');
     }
 }
 #masthead{
