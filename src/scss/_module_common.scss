@@ -1,18 +1,31 @@
 @font-face {
     font-family: "foundation-icons";
-    src: url($filePath + "/foundation-icons.eot");
-    src: url($filePath + "/foundation-icons.eot?#iefix") format("embedded-opentype"),
-             url($filePath + "/foundation-icons.woff") format("woff"),
-             url($filePath + "/foundation-icons.ttf") format("truetype"),
-             url($filePath + "/foundation-icons.svg#fontcustom") format("svg");
+    src: url($fontPath + "/foundation-icons.eot");
+    src: url($fontPath + "/foundation-icons.eot?#iefix") format("embedded-opentype"),
+             url($fontPath + "/foundation-icons.woff") format("woff"),
+             url($fontPath + "/foundation-icons.ttf") format("truetype"),
+             url($fontPath + "/foundation-icons.svg#fontcustom") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 body{
     font: 10px $fontFamily;
+    a{
+        color: $colorLink;
+        &:hover{
+            color: $colorLinkHover;
+        }
+        &:visited{
+            color: $colorLinkVisited;
+        }
+        &::selection{
+            background-color: $colorLinkSelect;
+        }
+    }
 }
 .site{
+    background-color: $colorBkg;
     max-width: 100%;
     &:before{
         display: none;
@@ -36,6 +49,23 @@ body{
 }
 .site-content{
     margin: 0 340px 0 auto;
+    .entry-header{
+        background-color: transparent;
+        .entry-title,
+        .entry-title a{
+            color: #fff;
+        }
+        .entry-meta{
+            background-color: transparent;
+        }
+    }
+    .entry-content{
+        background-color: transparent;
+        color: #fff;
+    }
+    .comments-area{
+        display: none;
+    }
 }
 @media screen and (min-width: 673px){
     .site-content{
@@ -45,12 +75,6 @@ body{
         .entry-meta,
         .page-content,
         .comments-area{
-            max-width: 780px;
-            .full-width &{
-                max-width: 100%;
-            }
-        }
-        .full-width & .comments-area{
             max-width: 780px;
         }
     }

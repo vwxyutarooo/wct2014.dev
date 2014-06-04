@@ -3711,8 +3711,8 @@ h6 {
 
 @font-face {
 	font-family: "foundation-icons";
-	src: url("files/foundation-icons.eot");
-	src: url("files/foundation-icons.eot?#iefix") format("embedded-opentype"), url("files/foundation-icons.woff") format("woff"), url("files/foundation-icons.ttf") format("truetype"), url("files/foundation-icons.svg#fontcustom") format("svg");
+	src: url("fonts/foundation-icons.eot");
+	src: url("fonts/foundation-icons.eot?#iefix") format("embedded-opentype"), url("fonts/foundation-icons.woff") format("woff"), url("fonts/foundation-icons.ttf") format("truetype"), url("fonts/foundation-icons.svg#fontcustom") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -3721,7 +3721,28 @@ body {
 	font: 10px "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif;
 }
 
+body a {
+	color: #000;
+}
+
+body a:hover {
+	color: #000;
+}
+
+body a:visited {
+	color: #000;
+}
+
+body a::-moz-selection {
+	background-color: #000;
+}
+
+body a::selection {
+	background-color: #000;
+}
+
 .site {
+	background-color: #5CA4D5;
 	max-width: 100%;
 }
 
@@ -3749,6 +3770,28 @@ body {
 	margin: 0 340px 0 auto;
 }
 
+.site-content .entry-header {
+	background-color: transparent;
+}
+
+.site-content .entry-header .entry-title,
+.site-content .entry-header .entry-title a {
+	color: #fff;
+}
+
+.site-content .entry-header .entry-meta {
+	background-color: transparent;
+}
+
+.site-content .entry-content {
+	background-color: transparent;
+	color: #fff;
+}
+
+.site-content .comments-area {
+	display: none;
+}
+
 /* header
 ---------------------------------------- */
 
@@ -3766,6 +3809,7 @@ body {
 
 #masthead {
 	max-width: 100%;
+	display: none;
 }
 
 /* main
@@ -3802,6 +3846,10 @@ article.post {
 /* footer
 ---------------------------------------- */
 
+.site-footer {
+	background-color: #5CA4D5;
+}
+
 @media screen and (min-width: 673px) {
 
 .variableLeft {
@@ -3818,19 +3866,6 @@ article.post {
 .site-content .entry-meta,
 .site-content .page-content,
 .site-content .comments-area {
-	max-width: 780px;
-}
-
-.full-width .site-content .entry-header,
-.full-width .site-content .entry-content,
-.full-width .site-content .entry-summary,
-.full-width .site-content .entry-meta,
-.full-width .site-content .page-content,
-.full-width .site-content .comments-area {
-	max-width: 100%;
-}
-
-.full-width .site-content .comments-area {
 	max-width: 780px;
 }
 

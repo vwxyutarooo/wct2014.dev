@@ -14,6 +14,8 @@
     "gulp-concat": "*",
     "gulp-filter": "*",
     "gulp-flatten": "*",
+    "gulp-foreach": "*",
+    "gulp-if": "*",
     "gulp-imagemin": "*",
     "gulp-jade": "*",
     "gulp-plumber": "*",

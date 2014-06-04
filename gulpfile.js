@@ -7,6 +7,8 @@ var gulp		=	require('gulp')
 ,	cmq			=	require('gulp-combine-media-queries')
 ,	concat		=	require('gulp-concat')
 ,	filter		=	require('gulp-filter')
+,	forEach		=	require('gulp-foreach')
+,	gulpif		=	require('gulp-if')
 ,	imagemin	=	require('gulp-imagemin')
 ,	jade		=	require('gulp-jade')
 ,	minifycss	=	require('gulp-csso')
@@ -14,7 +16,7 @@ var gulp		=	require('gulp')
 ,	prefix		=	require('gulp-autoprefixer')
 ,	prettify	=	require('gulp-prettify')
 ,	rename		=	require('gulp-rename')
-,	sass		=	require('gulp-sass')
+,	sass		=	require('gulp-ruby-sass')
 ,	spritesmith	=	require('gulp.spritesmith')
 ;
 
@@ -34,29 +36,36 @@ var paths = {
 ,	'scssDest':		'src/scss'
 ,	'scssDir':		['src/scss/*.scss', 'src/scss/*.sass']
 ,	'vhost':		'2014.wct.dev'
-,	'portNo':			8080
+,	'portNo':		8080
 }
 
 /*******************************************************************************
  * 3. initialize browser-sync && bower_components
 *******************************************************************************/
 var bowerJS = [
-	// { name: 'jQuery', dir: 'jquery/src/jquery.js', prefix: false }
+	{ name: '', dir: 'jquery/dist/jquery.js', prefix: false }
 ];
 
 var bowerCSS = [
-	// { name: 'foundation', dir: 'foundaiont/css/foundation.css', prefix: true }
+	{ name: '', dir: 'font-awesome/scss/font-awesome.scss', prefix: true }
 ];
 
 gulp.task('init', function() {
-	gulp.src('bower_components/jquery/src/jquery.js')
-		.pipe(gulp.dest(paths.jsDest))
-		.pipe(gulp.src('bower_components/' + bowerJS[0]['dir']))
-		.pipe(rename({ prefix: '_' }))
-		.pipe(gulp.dest(paths.jsDest))
-		.pipe(gulp.src('bower_components/' + bowerCSS[0]['dir']))
-		.pipe(rename({ prefix: '_', extname: '.scss' }))
-		.pipe(gulp.dest(paths.scssDest));
+	bowerJS.forEach(function(bowerjs){
+		gulp.src('bower_components/' + bowerjs['dir'])
+			.pipe(gulpif(bowerjs['prefix'], rename({ prefix: '_' })))
+			.pipe(gulp.dest(paths.jsDest))
+	});
+	bowerCSS.forEach(function(bowercss){
+		gulp.src('bower_components/' + bowercss['dir'])
+			.pipe(gulpif(bowercss['prefix'],
+				rename({ prefix: '_', extname: '.scss' }),
+				rename({ extname: '.scss' })
+			))
+			.pipe(gulp.dest(paths.scssDest))
+	});
+	gulp.src('bower_components/font-awesome/fonts/**')
+		.pipe(gulp.dest('fonts'));
 });
 
 gulp.task('browser-sync', function() {

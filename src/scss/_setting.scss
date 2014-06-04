@@ -1,6 +1,9 @@
 @charset "utf-8";
 $filePath          : "http://2014.tokyo.wordcamp.org/files";
 $filePath          : "files";
+$fontPath          : "http://2014.tokyo.wordcamp.org/files";
+$fontPath          : "fonts";
+
 
 
 // HTML5
@@ -20,11 +23,13 @@ $maxWidth          : 1080px;
 
 //Color
 $colorBorder       : #b2b2b2;
+$colorBkg          : #5CA4D5;
 $colorGreen        : #2f7b4e;
-$colorLink         : #4173a5;
-$colorLink_active  : #4173a5;
-$colorLink_hover   : #4173a5;
-$colorLink_visited : #4173a5;
+$colorLink         : #000;
+$colorLinkActive   : #000;
+$colorLinkHover    : #000;
+$colorLinkVisited  : #000;
+$colorLinkSelect   : #000; 
 $colorMain         : #4173b3;
 $colorSub          : #537F6D;
 $colorSubText      : #666;
