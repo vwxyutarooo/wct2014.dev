@@ -17,7 +17,7 @@
 }
 // Clearfix
 %group{
-  &:after {
+  &:after{
     display: block;
     visibility: hidden;
     clear: both;
@@ -58,10 +58,26 @@
 }
 
 //***********************
+// imageReplace
+// @param $name
+//***********************
+@mixin imageReplace($path, $imgWidth, $imgHeight, $scale: 1){
+  display: block;
+  overflow: hidden;
+  padding-top: $imgHeight * $scale;
+  width: $imgWidth * $scale;
+  height: 0;
+  background-image: url($filePath + $path);
+  background-position: 0, 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+//***********************
 // Sprite css image replacement (Medium size)
 // @param $name
 //***********************
-@mixin sprite-ir-M($sprite) {
+@mixin sprite-ir-M($sprite){
   @include sprite($sprite);
   display: block;
   overflow: hidden;
@@ -72,7 +88,7 @@
 
 
 //パーツ
-%halfWidth-bg {
+%halfWidth-bg{
   position: absolute;
   display: block;
   width: 50%;
@@ -80,36 +96,54 @@
   content: "";
 }
 
-@keyframes fadeIn {
+%buttonAct{
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+  &:hover{
+    transform: translateY(3px);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  }
+  &:active{
+    transform: translateY(3px);
+    transition: all 0.1s;
+  }
+}
+
+@keyframes fadeIn{
   0%{ opacity: 0; }
   100%{ opacity: 1; }
 }
-%fadeIn {
+%fadeIn{
   animation-name: fadeIn;
   animation-duration: .5s;
   animation-fill-mode: both;
 }
-@keyframes hoverDown {
-  0% { transform: translate(0, -500px); }
-  100% { transform: translate(0 500px); }
+@keyframes hoverDown{
+  0%{ transform: translate(0, -500px); }
+  100%{ transform: translate(0, 0); }
 }
-@keyframes hovering {
-  0% { transform: translate(0, 0px); }
-  50% { transform: translate(0, 16px); }
-  100% { transform: translate(0, -0px); }
+@keyframes hovering{
+  0%{ transform: translate(0, 0px); }
+  50%{ transform: translate(0, 8%); }
+  100%{ transform: translate(0, -0px); }
 }
-%hoverDown {
+@keyframes weight{
+  0%{ transform: translate(0, -500px); }
+  100%{ transform: translate(0, 0); }
+}
+%hoverDown{
   animation-name: hoverDown;
   animation-duration: 3s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
 }
-%hovering {
+%hovering{
   animation-name: hoverDown, hovering;
-  animation-delay: 1s, 0.1s;
   animation-duration: 2s, 3s;
-  animation-fill-mode: backwards, forwards;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-delay: 1s, 0.1s;
   animation-iteration-count: 1, infinite;
-  animation-timing-function: ease-in, ease-in-out;
+  animation-direction: normal, normal;
+  animation-fill-mode: backwards, none;
   // animation: hoverDown ease-in 2000ms 1000ms 1 backwards normal, ease-in-out hovering 3000ms 100ms infinite forwards normal;
 }

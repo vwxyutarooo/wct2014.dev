@@ -1,35 +1,39 @@
 /* =========================================================
      サイト全体共通スタイル
 ========================================================= */
-@font-face {
-    font-family: "foundation-icons";
-    src: url($fontPath + "/foundation-icons.eot");
-    src: url($fontPath + "/foundation-icons.eot?#iefix") format("embedded-opentype"),
-             url($fontPath + "/foundation-icons.woff") format("woff"),
-             url($fontPath + "/foundation-icons.ttf") format("truetype"),
-             url($fontPath + "/foundation-icons.svg#fontcustom") format("svg");
-    font-weight: normal;
-    font-style: normal;
+html{
+    font-size: 10px;
 }
-
 body{
-    font: 10px $fontFamily;
+    font-family: $fontFamily;
+    background-image: url($filePath + '2014/06/bkgHeaderS.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
     a{
         color: $colorLink;
         &:hover{
             color: $colorLinkHover;
+            text-decoration: underline;
         }
         &:visited{
             color: $colorLinkVisited;
         }
-        &::selection{
-            background-color: $colorLinkSelect;
-        }
+    }
+    ::selection{
+        background-color: $colorLinkSelect;
+    }
+    .fa{
+        display: inline-block;
+        text-decoration: none;
+    }
+    .fontEn{
+        font-family: $fontFamilyEn;
     }
 }
 .site{
-    background-color: $colorBkg;
     max-width: 100%;
+    background-color: transparent;
     &:before{
         display: none;
     }
@@ -42,21 +46,24 @@ body{
     display: none;
 }
 #main{
-    @extend %baseWidth;
+    background-color: $colorBkg;
 }
 #main-content{
+    @extend %baseWidth;
     float: none;
 }
 #primary{
     width: 100%;
+    padding: 0;
 }
 .site-content{
     margin: 0 340px 0 auto;
     .entry-header{
         background-color: transparent;
+        display: none;
         .entry-title,
         .entry-title a{
-            color: #fff;
+            color: $colorLink;
         }
         .entry-meta{
             background-color: transparent;
@@ -64,10 +71,32 @@ body{
     }
     .entry-content{
         background-color: transparent;
-        color: #fff;
+        color: $colorText;
+        text-align: center;
     }
     .comments-area{
         display: none;
+    }
+}
+@media screen and (max-width: 400px){
+    html{
+        font-size: 6px;
+    }
+}
+@media screen and (min-width: 401px){}
+@media screen and (max-width: 672px){
+    html{
+        font-size: 8px;
+    }
+    .site-content{
+        margin-right: 0;
+    }
+}
+@media screen and (min-width: 594px){
+    body{
+        background-image: url($filePath + '2014/06/bkgHeaderM.jpg');
+        background-repeat: no-repeat;
+        background-position: center -44px;
     }
 }
 @media screen and (min-width: 673px){
@@ -82,8 +111,23 @@ body{
         }
     }
 }
-@media screen and (max-width: 672px){
-    .site-content{
-        margin-right: 0;
+@media screen and (min-width: 783px){}
+@media screen and (min-width: 810px){}
+@media screen and (min-width: 846px){}
+@media screen and (min-width: 1008px){}
+@media screen and (min-width: 1040px){}
+@media screen and (min-width: 1080px){}
+@media screen and (min-width: 1110px){}
+@media screen and (min-width: 1260px){}
+@media screen and (min-width: 1281px){
+    body{
+        background-size: 100%;
+    }
+}
+@media screen and (min-width: 1440px){
+    body{
+        background-image: url($filePath + '2014/06/bkgHeaderL.jpg');
+        background-position: center top;
+        background-size: 1920px 1080px;
     }
 }

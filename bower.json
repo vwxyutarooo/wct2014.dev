@@ -16,13 +16,10 @@
   ],
   "dependencies": {
     "jquery": "*",
-    "foundation": "*",
-    "foundation-icon-fonts": "*"
+    "foundation": "*"
   },
   "devDependencies": {
     "jquery": "*",
-    "foundation": "*",
-    "foundation-icon-fonts": "*",
-    "font-awesome": "~4.1.0"
+    "foundation": "*"
   }
 }

@@ -47,7 +47,7 @@ var bowerJS = [
 ];
 
 var bowerCSS = [
-	{ name: '', dir: 'font-awesome/css/font-awesome.css', prefix: true }
+	// { name: '', dir: 'font-awesome/css/font-awesome.css', prefix: true }
 ];
 
 gulp.task('init', function() {
@@ -112,9 +112,6 @@ gulp.task('scss', function() {
 		.pipe(sass())
 		.pipe(cmq())
 		.pipe(prefix('last 2 version'))
-		.pipe(gulp.dest(paths.dest))
-		.pipe(rename({suffix: '.min'}))
-		.pipe(minifycss())
 		.pipe(gulp.dest(paths.dest));
 });
 

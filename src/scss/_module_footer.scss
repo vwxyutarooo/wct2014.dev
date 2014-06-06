@@ -1,3 +1,10 @@
 .site-footer{
 	background-color: $colorBkg;
+	.site-info{
+		color: $colorText;
+		text-align: center;
+		a{
+			color: $colorLink;
+		}
+	}
 }
