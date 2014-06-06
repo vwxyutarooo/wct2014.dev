@@ -6,9 +6,10 @@ html{
 }
 body{
     font-family: $fontFamily;
-    background-image: url($filePath + '2014/06/bkgHeaderS.jpg');
+    background-image: url($filePath + '2014/06/bkgHeaderM.jpg');
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: 640px auto;
     text-align: center;
     a{
         color: $colorLink;
@@ -78,6 +79,9 @@ body{
         display: none;
     }
 }
+div.sharedaddy h3.sd-title{
+    display: block;
+}
 @media screen and (max-width: 400px){
     html{
         font-size: 6px;
@@ -96,7 +100,8 @@ body{
     body{
         background-image: url($filePath + '2014/06/bkgHeaderM.jpg');
         background-repeat: no-repeat;
-        background-position: center -44px;
+        background-position: center -24px;
+        background-size: 1280px auto;
     }
 }
 @media screen and (min-width: 673px){
