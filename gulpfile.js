@@ -110,7 +110,7 @@ gulp.task('scss', function() {
 	return gulp.src(paths.scssDir)
 		.pipe(plumber({ errorHandler: handleError }))
 		.pipe(sass())
-		.pipe(cmq())
+		// .pipe(cmq())
 		.pipe(prefix('last 2 version'))
 		.pipe(gulp.dest(paths.dest));
 });
