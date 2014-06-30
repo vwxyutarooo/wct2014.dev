@@ -3,22 +3,19 @@
  * 2014.tokyo.wordcamp.org
  * Custom CSS
 */
+/* ========================================
+ * core files
+======================================== */
 /* =============================================== */
 /** extend */
 /* ----------------------------------------------- */
-.clearfix:after, .socialList:after {
+.socialList:after, .clearfix:after {
   display: block;
   visibility: hidden;
   clear: both;
   height: 0;
   content: ".";
   font-size: 0; }
-
-#main-content, .header-main {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1080px;
-  width: 100%; }
 
 #masthead:after {
   display: block;
@@ -52,7 +49,6 @@
 
   100% {
     opacity: 1; } }
-
 @-webkit-keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
@@ -61,7 +57,6 @@
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
-
 @keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
@@ -70,7 +65,6 @@
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
-
 @-webkit-keyframes hovering {
   0% {
     -webkit-transform: translate(0, 0px);
@@ -83,7 +77,6 @@
   100% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); } }
-
 @keyframes hovering {
   0% {
     -webkit-transform: translate(0, 0px);
@@ -96,7 +89,6 @@
   100% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); } }
-
 @-webkit-keyframes weight {
   0% {
     -webkit-transform: translate(0, -500px);
@@ -105,7 +97,6 @@
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
-
 @keyframes weight {
   0% {
     -webkit-transform: translate(0, -500px);
@@ -114,7 +105,6 @@
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
-
 #masthead:after {
   -webkit-animation-name: hoverDown, hovering;
   animation-name: hoverDown, hovering;
@@ -131,6 +121,393 @@
   -webkit-animation-fill-mode: backwards, none;
   animation-fill-mode: backwards, none; }
 
+/* ========================================
+ * layout
+======================================== */
+/* =========================================================
+	 サイト全体共通スタイル
+========================================================= */
+html {
+  font-size: 10px; }
+
+body {
+  font-family: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif;
+  background-image: url("files/") "2014/06/bkgHeaderM.jpg";
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 640px auto; }
+  body a {
+    color: white; }
+    body a:hover {
+      text-decoration: underline;
+      color: white; }
+    body a:visited {
+      color: white; }
+  body ::-moz-selection {
+    background-color: #1e5d8a; }
+  body ::selection {
+    background-color: #1e5d8a; }
+  body .fa {
+    display: inline-block;
+    text-decoration: none; }
+  body .fontEn {
+    font-family: HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif; }
+
+.site {
+  max-width: 100%;
+  background-color: transparent; }
+  .site:before {
+    display: none; }
+
+/* main content
+---------------------------------------- */
+#secondary {
+  display: none; }
+
+#main-content {
+  float: none; }
+
+#primary {
+  width: 100%; }
+
+.site-content {
+  margin: 0 340px 0 auto; }
+
+@media screen and (min-width: 673px) {
+  .site-content .entry-header,
+  .site-content .entry-content,
+  .site-content .entry-summary,
+  .site-content .entry-meta,
+  .site-content .page-content,
+  .site-content .comments-area {
+    max-width: 780px; }
+    .full-width .site-content .entry-header, .full-width
+    .site-content .entry-content, .full-width
+    .site-content .entry-summary, .full-width
+    .site-content .entry-meta, .full-width
+    .site-content .page-content, .full-width
+    .site-content .comments-area {
+      max-width: 100%; }
+  .full-width .site-content .comments-area {
+    max-width: 780px; } }
+@media screen and (max-width: 672px) {
+  .site-content {
+    margin-right: 0; } }
+/* content inner
+---------------------------------------- */
+.entry-content .entry-content__inner {
+  max-width: 474px;
+  margin: 0 auto; }
+
+/* jetpack
+---------------------------------------- */
+div.sharedaddy h3.sd-title {
+  display: block; }
+
+/* header
+---------------------------------------- */
+.header-main {
+  padding: 656px 0 0 0;
+  width: 100%; }
+
+#site-header {
+  position: relative;
+  max-width: 100%; }
+  #site-header img {
+    width: 100%; }
+
+/* masthead
+---------------------------------------- */
+#masthead {
+  position: relative;
+  max-width: 100%;
+  height: 380px;
+  background-color: transparent;
+  background-image: url("files/") "2014/06/txtHeaderS.png";
+  background-position: center 36%;
+  background-size: 120%;
+  background-repeat: no-repeat; }
+  #masthead:after {
+    display: block;
+    overflow: hidden;
+    padding-top: 90px;
+    width: 90px;
+    height: 0;
+    background-image: url("files/2014/06/iconWapu.png");
+    background-position: 0, 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 28%;
+    right: 8%;
+    margin-top: -45px; }
+  #masthead .site-title,
+  #masthead .search-toggle {
+    display: none; }
+
+.masthead-fixed .site-main {
+  margin-top: 0; }
+
+/* navigation
+---------------------------------------- */
+.primary-navigation {
+  margin: 0 auto;
+  width: 100%;
+  background-color: #1d70ab;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125); }
+  .primary-navigation a {
+    letter-spacing: .125em;
+    font-weight: normal;
+    font-size: 1.4rem; }
+
+.site-navigation li:hover > a {
+  background-color: transparent;
+  color: #fff; }
+.site-navigation .current-menu-item > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #fff;
+  font-weight: normal; }
+  .site-navigation .current-menu-item > a > span {
+    position: relative; }
+    .site-navigation .current-menu-item > a > span:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: inline-block;
+      margin: -5px auto auto -15px;
+      color: #d35991;
+      content: '\25CF';
+      font-size: 10px;
+      line-height: 1; }
+
+.becomeStaff .fa {
+  width: 2em;
+  height: 2em;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  font-size: 4rem;
+  line-height: 2em; }
+.becomeStaff .buttonWrap .button {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  background-color: #1E5D8A;
+  color: #fff;
+  font-weight: normal;
+  font-size: 2rem; }
+.becomeStaff p {
+  margin: 3% auto; }
+
+.socialList {
+  display: inline-block;
+  margin: 0;
+  list-style: none; }
+  .socialList li {
+    float: left;
+    margin-left: 2em; }
+    .socialList li:first-child {
+      margin-left: auto; }
+    .socialList li .fa {
+      width: 8.8rem;
+      height: 8.8rem;
+      border-radius: 100%;
+      background-color: #66BADF;
+      color: #fff;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 6rem;
+      line-height: 8.8rem; }
+    .socialList li .icon-twitter {
+      background-color: #55acee;
+      letter-spacing: -0.0125em; }
+    .socialList li .icon-facebook {
+      background-color: #3b5998;
+      letter-spacing: -0.025em; }
+    .socialList li .icon-google-plus {
+      background-color: #dd4b39;
+      letter-spacing: -0.125em; }
+
+/* main -> top
+---------------------------------------- */
+.row {
+  margin: 0 auto;
+  padding: 13% 0;
+  border-top: 1px solid #e4e4e4; }
+  .row:first-child {
+    border-top: none; }
+  .row .subTitle {
+    font-size: 3rem; }
+
+/* 
+---------------------------------------- */
+article.post {
+  margin-left: 0; }
+
+.hentry {
+  margin: 0 auto;
+  max-width: 900px; }
+
+.entry-title a, .entry-title {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/* page tmeplate full width
+---------------------------------------- */
+.page-template-page-templatesfull-width-php #main,
+.full-width #main {
+  background-color: #f7f7f7; }
+.page-template-page-templatesfull-width-php #main-content,
+.full-width #main-content {
+  float: none; }
+  .page .page-template-page-templatesfull-width-php #main-content, .page
+  .full-width #main-content {
+    max-width: 100%; }
+.page-template-page-templatesfull-width-php #primary,
+.full-width #primary {
+  width: 100%; }
+.page-template-page-templatesfull-width-php .site-content,
+.full-width .site-content {
+  margin: 0 auto; }
+  .page-template-page-templatesfull-width-php .site-content .entry-header,
+  .full-width .site-content .entry-header {
+    background-color: transparent; }
+    .page-template-page-templatesfull-width-php .site-content .entry-header .entry-title,
+    .page-template-page-templatesfull-width-php .site-content .entry-header .entry-title a,
+    .full-width .site-content .entry-header .entry-title,
+    .full-width .site-content .entry-header .entry-title a {
+      color: #2b2b2b; }
+    .page-template-page-templatesfull-width-php .site-content .entry-header .entry-meta,
+    .full-width .site-content .entry-header .entry-meta {
+      background-color: transparent; }
+  .page-template-page-templatesfull-width-php .site-content .entry-content,
+  .full-width .site-content .entry-content {
+    color: #2b2b2b;
+    background-color: transparent; }
+  .page-template-page-templatesfull-width-php .site-content .comments-area,
+  .full-width .site-content .comments-area {
+    display: none; }
+
+/* set secondart && Primary Sidebar
+---------------------------------------- */
+#secondary {
+  display: none;
+  margin: 0;
+  width: 100%;
+  min-height: 0; }
+
+.site-description {
+  display: none; }
+
+.widget-title, .widget-title a {
+  color: #2b2b2b; }
+
+/* Content Sidebar
+---------------------------------------- */
+.content-sidebar {
+  margin-left: -300px;
+  width: 300px; }
+
+@media screen and (max-width: 672px) {
+  .content-sidebar {
+    margin-left: auto;
+    width: 100%; } }
+.site-footer {
+  background-color: #5198ce; }
+  .site-footer .site-info {
+    text-align: center;
+    color: #2b2b2b; }
+    .site-footer .site-info a {
+      color: white; }
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 6px; } }
+@media screen and (max-width: 672px) {
+  html {
+    font-size: 8px; }
+
+  .site-content {
+    margin-right: 0; } }
+@media only screen and (min-width: 594px) {
+  body {
+    background-image: url("files/2014/06/bkgHeaderM.jpg");
+    background-repeat: no-repeat;
+    background-position: center -24px;
+    background-size: 1280px auto; }
+
+  #masthead {
+    position: relative;
+    max-width: 100%;
+    height: 704px;
+    background-color: transparent;
+    background-image: url("files/2014/06/txtHeaderM.png");
+    background-position: center 46%;
+    background-size: 120%;
+    background-repeat: no-repeat; }
+    #masthead:after {
+      display: block;
+      overflow: hidden;
+      padding-top: 180px;
+      width: 180px;
+      height: 0;
+      background-image: url("files/2014/06/iconWapu.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      top: 32%;
+      right: 10%;
+      margin-top: -90px; } }
+@media screen and (min-width: 673px) {
+  .site-content .entry-header,
+  .site-content .entry-content,
+  .site-content .entry-summary,
+  .site-content .entry-meta,
+  .site-content .page-content,
+  .site-content .comments-area {
+    max-width: 780px;
+    max-width: 100%; }
+  .site-content .entry-content .entry-content__inner {
+    max-width: 780px; } }
+@media screen and (min-width: 846px) {
+  #masthead {
+    background-position: center center; } }
+@media screen and (min-width: 1008px) {
+  #masthead {
+    background-position: center center;
+    background-size: 1280px 800px; } }
+@media screen and (min-width: 1281px) {
+  body {
+    background-size: 100%; }
+
+  #masthead {
+    background-size: 100%; } }
+@media only screen and (min-width: 1440px) {
+  body {
+    background-image: url("files/2014/06/bkgHeaderL.jpg");
+    background-position: center top;
+    background-size: 1920px 1080px; }
+
+  #masthead {
+    height: 1080px;
+    background-image: url("files/2014/06/txtHeaderL.png");
+    background-size: 100%; }
+    #masthead:after {
+      display: block;
+      overflow: hidden;
+      padding-top: 300px;
+      width: 300px;
+      height: 0;
+      background-image: url("files/2014/06/iconWapu.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      margin-top: -150px; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+  body {
+    background-image: url("files/2014/06/bkgHeaderL.jpg");
+    background-size: 1280px auto;
+    background-position: center top; } }
 .vt {
   vertical-align: top; }
 
@@ -208,79 +585,79 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 170%; }
 
 .xsmall {
-  font-size: 77%; }
+  font-size: fz(10); }
 
 .small {
-  font-size: 85%; }
+  font-size: fz(11); }
 
 .medium {
-  font-size: 100%; }
+  font-size: fz(13); }
 
 .large {
-  font-size: 124%; }
+  font-size: fz(16); }
 
 .xlarge {
-  font-size: 139%; }
+  font-size: fz(18); }
 
 .f07 {
-  font-size: 62%; }
+  font-size: fz(7); }
 
 .f08 {
-  font-size: 62%; }
+  font-size: fz(8); }
 
 .f09 {
-  font-size: 70%; }
+  font-size: fz(9); }
 
 .f10 {
-  font-size: 77%; }
+  font-size: fz(10); }
 
 .f11 {
-  font-size: 85%; }
+  font-size: fz(11); }
 
 .f12 {
-  font-size: 93%; }
+  font-size: fz(12); }
 
 .f13 {
-  font-size: 100%; }
+  font-size: fz(13); }
 
 .f14 {
-  font-size: 108%; }
+  font-size: fz(14); }
 
 .f15 {
-  font-size: 116%; }
+  font-size: fz(15); }
 
 .f16 {
-  font-size: 124%; }
+  font-size: fz(16); }
 
 .f17 {
-  font-size: 131%; }
+  font-size: fz(17); }
 
 .f18 {
-  font-size: 139%; }
+  font-size: fz(18); }
 
 .f19 {
-  font-size: 147%; }
+  font-size: fz(19); }
 
 .f20 {
-  font-size: 154%; }
+  font-size: fz(20); }
 
 .f21 {
-  font-size: 162%; }
+  font-size: fz(21); }
 
 .f22 {
-  font-size: 170%; }
+  font-size: fz(22); }
 
 .f23 {
-  font-size: 177%; }
+  font-size: fz(23); }
 
 .f24 {
-  font-size: 185%; }
+  font-size: fz(24); }
 
 .f25 {
-  font-size: 193%; }
+  font-size: fz(25); }
 
 .f26 {
-  font-size: 200%; }
+  font-size: fz(26); }
 
 .fsize80 {
   font-size: 80%; }
@@ -1812,303 +2189,14 @@ h1, h2, h3, h4, h5, h6 {
   .variable {
     margin-left: auto !important;
     margin-right: auto !important; } }
-/* ========================================
- * layout
-======================================== */
-/* =========================================================
-     サイト全体共通スタイル
-========================================================= */
-html {
-  font-size: 10px; }
+#main, .primary-navigation .nav-menu, .page-template-page-templatesfull-width-php #main-content,
+.full-width #main-content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1080px;
+  width: 100%; }
 
-body {
-  font-family: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif;
-  background-image: url("files/2014/06/bkgHeaderM.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 640px auto;
-  text-align: center; }
-  body a {
-    color: white; }
-    body a:hover {
-      color: white;
-      text-decoration: underline; }
-    body a:visited {
-      color: white; }
-  body ::-moz-selection {
-    background-color: #1e5d8a; }
-  body ::selection {
-    background-color: #1e5d8a; }
-  body .fa {
-    display: inline-block;
-    text-decoration: none; }
-  body .fontEn {
-    font-family: HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif; }
-
-.site {
+.page-template-page-templatesfull-width-php #main,
+.full-width #main {
   max-width: 100%;
-  background-color: transparent; }
-  .site:before {
-    display: none; }
-
-.search-toggle {
-  display: none; }
-
-#secondary {
-  display: none; }
-
-#main {
-  background-color: #5198ce; }
-
-#main-content {
-  float: none; }
-
-#primary {
-  width: 100%;
-  padding: 0; }
-
-.site-content {
-  margin: 0 340px 0 auto; }
-  .site-content .entry-header {
-    background-color: transparent;
-    display: none; }
-    .site-content .entry-header .entry-title,
-    .site-content .entry-header .entry-title a {
-      color: white; }
-    .site-content .entry-header .entry-meta {
-      background-color: transparent; }
-  .site-content .entry-content {
-    background-color: transparent;
-    color: #f4f4f4;
-    text-align: center; }
-  .site-content .comments-area {
-    display: none; }
-
-div.sharedaddy h3.sd-title {
-  display: block; }
-
-/* header
----------------------------------------- */
-.header-main {
-  padding: 0; }
-
-#site-header {
-  position: relative;
-  max-width: 100%; }
-  #site-header img {
-    width: 100%; }
-
-#masthead {
-  position: relative;
-  max-width: 100%;
-  height: 380px;
-  background-color: transparent;
-  background-image: url("files/2014/06/txtHeaderS.png");
-  background-position: center 36%;
-  background-size: 120%;
-  background-repeat: no-repeat; }
-  #masthead:after {
-    display: block;
-    overflow: hidden;
-    padding-top: 90px;
-    width: 90px;
-    height: 0;
-    background-image: url("files/2014/06/iconWapu.png");
-    background-position: 0, 0;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    top: 28%;
-    right: 8%;
-    margin-top: -45px; }
-  #masthead .header-main,
-  #masthead .site-title,
-  #masthead .search-toggle,
-  #masthead #primary-navigation {
-    display: none; }
-
-.masthead-fixed .site-main {
-  margin-top: 0; }
-
-/* main
----------------------------------------- */
-/* main -> top
----------------------------------------- */
-.row {
-  margin: 0 auto;
-  padding: 13% 0;
-  border-top: 1px solid #e4e4e4; }
-  .row:first-child {
-    border-top: none; }
-  .row .subTitle {
-    font-size: 3rem; }
-
-.becomeStaff .fa {
-  width: 2em;
-  height: 2em;
-  border: 1px solid #fff;
-  border-radius: 100%;
-  font-size: 4rem;
-  line-height: 2em; }
-.becomeStaff .buttonWrap .button {
-  display: inline-block;
-  border: none;
-  border-radius: 4px;
-  background-color: #1E5D8A;
-  color: #fff;
-  font-weight: normal;
-  font-size: 2rem; }
-.becomeStaff p {
-  margin: 3% auto; }
-
-.socialList {
-  display: inline-block;
-  margin: 0;
-  list-style: none; }
-  .socialList li {
-    float: left;
-    margin-left: 2em; }
-    .socialList li:first-child {
-      margin-left: auto; }
-    .socialList li .fa {
-      width: 8.8rem;
-      height: 8.8rem;
-      border-radius: 100%;
-      background-color: #66BADF;
-      color: #fff;
-      vertical-align: middle;
-      text-align: center;
-      font-size: 6rem;
-      line-height: 8.8rem; }
-    .socialList li .icon-twitter {
-      background-color: #55acee;
-      letter-spacing: -0.0125em; }
-    .socialList li .icon-facebook {
-      background-color: #3b5998;
-      letter-spacing: -0.025em; }
-    .socialList li .icon-google-plus {
-      background-color: #dd4b39;
-      letter-spacing: -0.125em; }
-
-article.post {
-  margin-left: 0; }
-
-.hentry {
-  margin: 0 auto;
-  max-width: 900px; }
-
-.entry-title a, .entry-title {
-  display: block;
-  width: 100%;
-  height: 100%; }
-
-.primary-navigation li:hover > a,
-.primary-navigation li.focus > a {
-  background-color: #e44830; }
-
-/* sidebar
----------------------------------------- */
-.content-sidebar {
-  margin-left: -300px;
-  width: 300px; }
-
-@media screen and (max-width: 672px) {
-  .content-sidebar {
-    margin-left: auto;
-    width: 100%; } }
-/* footer
----------------------------------------- */
-.site-footer {
-  background-color: #5198ce; }
-  .site-footer .site-info {
-    color: #f4f4f4;
-    text-align: center; }
-    .site-footer .site-info a {
-      color: white; }
-
-/* media queries
----------------------------------------- */
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 6px; } }
-@media screen and (max-width: 672px) {
-  html {
-    font-size: 8px; }
-
-  .site-content {
-    margin-right: 0; } }
-@media only screen and (min-width: 594px) {
-  body {
-    background-image: url("files/2014/06/bkgHeaderM.jpg");
-    background-repeat: no-repeat;
-    background-position: center -24px;
-    background-size: 1280px auto; }
-
-  #masthead {
-    position: relative;
-    max-width: 100%;
-    height: 714px;
-    background-color: transparent;
-    background-image: url("files/2014/06/txtHeaderM.png");
-    background-position: center 46%;
-    background-size: 120%;
-    background-repeat: no-repeat; }
-    #masthead:after {
-      display: block;
-      overflow: hidden;
-      padding-top: 180px;
-      width: 180px;
-      height: 0;
-      background-image: url("files/2014/06/iconWapu.png");
-      background-position: 0, 0;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      top: 32%;
-      right: 10%;
-      margin-top: -90px; } }
-@media screen and (min-width: 673px) {
-  .site-content .entry-header,
-  .site-content .entry-content,
-  .site-content .entry-summary,
-  .site-content .entry-meta,
-  .site-content .page-content,
-  .site-content .comments-area {
-    max-width: 780px; } }
-@media screen and (min-width: 846px) {
-  #masthead {
-    background-position: center center; } }
-@media screen and (min-width: 1008px) {
-  #masthead {
-    background-position: center center;
-    background-size: 1280px 800px; } }
-@media screen and (min-width: 1281px) {
-  body {
-    background-size: 100%; }
-
-  #masthead {
-    background-size: 100%; } }
-@media only screen and (min-width: 1440px) {
-  body {
-    background-image: url("files/2014/06/bkgHeaderL.jpg");
-    background-position: center top;
-    background-size: 1920px 1080px; }
-
-  #masthead {
-    height: 1080px;
-    background-image: url("files/2014/06/txtHeaderL.png");
-    background-size: 100%; }
-    #masthead:after {
-      display: block;
-      overflow: hidden;
-      padding-top: 300px;
-      width: 300px;
-      height: 0;
-      background-image: url("files/2014/06/iconWapu.png");
-      background-position: 0, 0;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      margin-top: -150px; } }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 1280px) {
-  body {
-    background-image: url("files/2014/06/bkgHeaderL.jpg");
-    background-size: 1280px auto;
-    background-position: center top; } }
+  width: 100%; }

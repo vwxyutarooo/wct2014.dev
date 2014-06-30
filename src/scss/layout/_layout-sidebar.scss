@@ -1,0 +1,32 @@
+/* set secondart && Primary Sidebar
+---------------------------------------- */
+#secondary{
+	display: none;
+	margin: 0;
+	width: 100%;
+	min-height: 0;
+}
+
+.site-description{
+	display: none;
+}
+
+.widget-title{
+	&,
+	& a{
+		color: $colorText;
+	}
+}
+
+/* Content Sidebar
+---------------------------------------- */
+.content-sidebar {
+    margin-left: -300px;
+    width: 300px;
+}
+@media screen and (max-width: 672px) {
+    .content-sidebar {
+    margin-left: auto;
+    width: 100%;
+    }
+}

@@ -1,10 +1,9 @@
 {
-  "name": "jade2htmlgulp",
+  "name": "myproject",
   "version": "0.0.1",
   "authors": [
     "Yutaro <yutaro@studio-rubbish.com>"
   ],
-  "description": "gulp + jade + bower + foundation",
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -16,10 +15,18 @@
   ],
   "dependencies": {
     "jquery": "*",
-    "foundation": "*"
+    "foundation": "*",
   },
-  "devDependencies": {
-    "jquery": "*",
-    "foundation": "*"
+  "overrides": {
+    "jquery": {
+      "ignore": true
+    },
+    "foundation": {
+      "main": [
+        "**/foundation.min.js",
+        "**/*.scss"
+      ],
+      "dependencies": null
+    }
   }
 }

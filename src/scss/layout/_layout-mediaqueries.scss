@@ -1,0 +1,111 @@
+@media screen and (max-width: 400px){
+    html{
+        font-size: 6px;
+    }
+}
+@media screen and (min-width: 401px){}
+@media screen and (max-width: 672px){
+    html{
+        font-size: 8px;
+    }
+    .site-content{
+        margin-right: 0;
+    }
+}
+@media only screen and (min-width: 594px){
+    body{
+        background-image: url($filePath + '2014/06/bkgHeaderM.jpg');
+        background-repeat: no-repeat;
+        background-position: center -24px;
+        background-size: 1280px auto;
+    }
+    #masthead{
+        position: relative;
+        max-width: 100%;
+        height: 704px;
+        background-color: transparent;
+        background-image: url($filePath + '2014/06/txtHeaderM.png');
+        background-position: center 46%;
+        background-size: 120%;
+        background-repeat: no-repeat;
+        &:after{
+            @include imageReplace('2014/06/iconWapu.png', 300px, 300px, 0.6);
+            top: 32%;
+            right: 10%;
+            margin-top: -(150px * 0.6);
+        }
+    }
+}
+@media screen and (min-width: 673px){
+    .site-content{
+        .entry-header,
+        .entry-content,
+        .entry-summary,
+        .entry-meta,
+        .page-content,
+        .comments-area{
+            max-width: 780px;
+            max-width: 100%;
+        }
+        .entry-content{
+            .entry-content__inner{
+                max-width: 780px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 783px){}
+@media screen and (min-width: 810px){}
+@media screen and (min-width: 846px){
+    #masthead{
+        background-position: center center;
+    }
+}
+@media screen and (min-width: 1008px){
+    #masthead{
+        background-position: center center;
+        background-size: 1280px 800px;
+    }
+}
+@media screen and (min-width: 1040px){}
+@media screen and (min-width: 1080px){}
+@media screen and (min-width: 1110px){}
+@media screen and (min-width: 1260px){}
+@media screen and (min-width: 1281px){
+    body{
+        background-size: 100%;
+    }
+    #masthead{
+        background-size: 100%;
+    }
+}
+@media only screen and (min-width: 1440px){
+    body{
+        background-image: url($filePath + '2014/06/bkgHeaderL.jpg');
+        background-position: center top;
+        background-size: 1920px 1080px;
+    }
+    #masthead{
+        height: 1080px;
+        background-image: url($filePath + '2014/06/txtHeaderL.png');
+        background-size: 100%;
+        &:after{
+            @include imageReplace('2014/06/iconWapu.png', 300px, 300px, 1.0);
+            margin-top: -(150px * 1.0);
+        }
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1280px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1280px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1280px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1280px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1280px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1280px) {
+    body{
+        background-image: url($filePath + '2014/06/bkgHeaderL.jpg');
+        background-size: 1280px auto;
+        background-position: center top;
+    }
+}

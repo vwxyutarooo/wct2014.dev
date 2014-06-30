@@ -1,0 +1,27 @@
+%baseWidth{
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1080px;
+	width: 100%;
+}
+%largeVariableWidth{
+	width: 100%;
+	max-width: 1400px;
+	min-width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+}
+%mediumWidth{
+	width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+}
+%narrowWidth{
+	width: 716px;
+	margin-right: auto;
+	margin-left: auto;
+}
+%fullWidth{
+	max-width: 100%;
+	width: 100%;
+}

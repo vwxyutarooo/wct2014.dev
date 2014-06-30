@@ -2,35 +2,29 @@
  * 2014.tokyo.wordcamp.org
  * Custom CSS
 */
-@import "setting";
-// @import "default";
-// @import "foundation";
-@import "mixins";
-@import "functions";
-@import "module_classes";
+/* ========================================
+ * core files
+======================================== */
+@import 'core/config';
+@import 'core/mixins';
+
 /* ========================================
  * layout
 ======================================== */
-@import "module_common";
+@import 'layout/layout-common';
+@import 'layout/layout-header';
+@import 'layout/layout-teaser';
+@import 'layout/layout-top';
+@import 'layout/layout-post';
+@import 'layout/layout-page';
+@import 'layout/layout-archives';
+@import 'layout/layout-sidebar';
+@import 'layout/layout-footer';
+@import 'layout/layout-mediaqueries';
 
-/* header
----------------------------------------- */
-@import "module_header";
-
-/* main
----------------------------------------- */
-@import "module_top";
-@import "module_post";
-@import "module_page";
-
-/* sidebar
----------------------------------------- */
-@import "module_sidebar";
-
-/* footer
----------------------------------------- */
-@import "module_footer";
-
-/* media queries
----------------------------------------- */
-@import "module_mediaqueries";
+//========================================
+// module
+//======================================== */
+@import 'module/module-classes';
+@import 'module/module-grid';
+// @import 'module/module-sprite';

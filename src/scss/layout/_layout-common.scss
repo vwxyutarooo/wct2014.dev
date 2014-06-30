@@ -1,0 +1,96 @@
+/* =========================================================
+	 サイト全体共通スタイル
+========================================================= */
+html{
+	font-size: 10px;
+}
+body{
+	font-family: $fontFamily;
+	background-image: url($filePath ) '2014/06/bkgHeaderM.jpg';
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 640px auto;;
+	a{
+		color: $colorLink;
+		&:hover{
+			text-decoration: underline;
+			color: $colorLinkHover;
+		}
+		&:visited{
+			color: $colorLinkVisited;
+		}
+	}
+	::selection{
+		background-color: $colorLinkSelect;
+	}
+	.fa{
+		display: inline-block;
+		text-decoration: none;
+	}
+	.fontEn{
+		font-family: $fontFamilyEn;
+	}
+}
+.site{
+	max-width: 100%;
+	background-color: transparent;
+	&:before{
+		display: none;
+	}
+}
+
+/* main content
+---------------------------------------- */
+#secondary{
+    display: none;
+}
+#main{
+    @extend %baseWidth;
+}
+#main-content{
+    float: none;
+}
+#primary{
+    width: 100%;
+}
+.site-content{
+    margin: 0 340px 0 auto;
+}
+@media screen and (min-width: 673px){
+    .site-content{
+        .entry-header,
+        .entry-content,
+        .entry-summary,
+        .entry-meta,
+        .page-content,
+        .comments-area{
+            max-width: 780px;
+            .full-width &{
+                max-width: 100%;
+            }
+        }
+        .full-width & .comments-area{
+            max-width: 780px;
+        }
+    }
+}
+@media screen and (max-width: 672px){
+    .site-content{
+        margin-right: 0;
+    }
+}
+
+/* content inner
+---------------------------------------- */
+.entry-content{
+	.entry-content__inner{
+		max-width: 474px;
+		margin: 0 auto;
+	}
+}
+
+/* jetpack
+---------------------------------------- */
+div.sharedaddy h3.sd-title{
+	display: block;
+}

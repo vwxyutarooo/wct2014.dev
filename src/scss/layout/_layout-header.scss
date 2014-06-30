@@ -1,0 +1,94 @@
+/* header
+---------------------------------------- */
+.header-main{
+	padding: (704px - 48) 0 0 0;
+	width: 100%;
+}
+
+#site-header{
+	position: relative;
+	max-width: 100%;
+	img{
+		width: 100%;
+	}
+}
+
+/* masthead
+---------------------------------------- */
+#masthead{
+	@include hasPseudoClass(after);
+	max-width: 100%;
+	height: 380px;
+	background-color: transparent;
+	background-image: url($filePath ) '2014/06/txtHeaderS.png';
+	background-position: center 36%;
+	background-size: 120%;
+	background-repeat: no-repeat;
+	&:after{
+		@extend %hovering;
+		@include imageReplace('2014/06/iconWapu.png', 300px, 300px, .3);
+		top: 28%;
+		right: 8%;
+		margin-top: -(150px * .3);
+	}
+	.site-title,
+	.search-toggle{
+		display: none;
+	}
+}
+.masthead-fixed{
+	.site-main{
+		margin-top: 0;
+	}
+}
+
+/* navigation
+---------------------------------------- */
+$colorNav: #1d70ab;
+.primary-navigation{
+	margin: 0 auto;
+	width: 100%;
+	background-color: $colorNav;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .125);
+	.nav-menu{
+		@extend %baseWidth;
+		// text-align: left;
+	}
+	a{
+	letter-spacing: .125em;
+	font-weight: normal;
+	font-size: 1.4rem;
+	}
+}
+.site-navigation{
+	li{
+		&:hover{
+			> a{
+				background-color: transparent;
+				color: #fff;
+			}
+		}
+	}
+	.current-menu-item{
+		> a{
+			padding-right: 20px;
+			padding-left: 20px;
+			color: #fff;
+			font-weight: normal;
+			> span{
+				position: relative;
+				&:before{
+					position: absolute;
+					top: 50%;
+					left: 0;
+					display: inline-block;
+					margin: -5px auto auto -15px;
+					color: $colorPink;
+					content: '\25CF';
+					font-size: 10px;
+					line-height: 1;
+				}
+			}
+		}
+	}
+}
