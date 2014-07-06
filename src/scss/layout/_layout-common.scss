@@ -5,16 +5,14 @@ html{
 	font-size: 10px;
 }
 body{
-	font-family: $fontFamily;
-	background-image: url($filePath ) '2014/06/bkgHeaderM.jpg';
 	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: 640px auto;;
+	color: $colorText;
+	font-family: $fontFamily;
 	a{
 		color: $colorLink;
 		&:hover{
-			text-decoration: underline;
 			color: $colorLinkHover;
+			text-decoration: underline;
 		}
 		&:visited{
 			color: $colorLinkVisited;
@@ -41,9 +39,6 @@ body{
 
 /* main content
 ---------------------------------------- */
-#secondary{
-    display: none;
-}
 #main{
     @extend %baseWidth;
 }
@@ -51,6 +46,7 @@ body{
     float: none;
 }
 #primary{
+    box-sizing: border-box;
     width: 100%;
 }
 .site-content{
@@ -65,9 +61,6 @@ body{
         .page-content,
         .comments-area{
             max-width: 780px;
-            .full-width &{
-                max-width: 100%;
-            }
         }
         .full-width & .comments-area{
             max-width: 780px;
@@ -78,15 +71,6 @@ body{
     .site-content{
         margin-right: 0;
     }
-}
-
-/* content inner
----------------------------------------- */
-.entry-content{
-	.entry-content__inner{
-		max-width: 474px;
-		margin: 0 auto;
-	}
 }
 
 /* jetpack

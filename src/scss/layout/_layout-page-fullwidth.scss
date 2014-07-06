@@ -1,0 +1,63 @@
+/* page tmeplate full width
+---------------------------------------- */
+.full-width{
+	#main{
+		@extend %fullWidth;
+		background-color: #f7f7f7;
+	}
+
+	#main-content{
+		float: none;
+		.page &{
+			max-width: 100%;
+		}
+	}
+
+	#primary{
+		width: 100%;
+	}
+
+	.site-content{
+		margin: 0 auto;
+		.entry-header{
+			@extend %fullWidthInner;
+			background-color: transparent;
+			.entry-title,
+			.entry-title a{
+				color: $colorText;
+			}
+			.entry-meta{
+				background-color: transparent;
+			}
+		}
+		.entry-content{
+			padding: 0;
+			background-color: transparent;
+			color: $colorText;
+			max-width: 100%;
+		}
+		.comments-area{
+			display: none;
+		}
+	}
+
+	#secondary{
+		#primary-sidebar{
+			@extend %fullWidthInner;
+		}
+	}
+}
+
+/* content inner
+---------------------------------------- */
+.entry-content{
+	.entry-content__row{
+		padding: 4em 0;
+		&:nth-child(odd){
+			background-color: #eee;
+		}
+		.entry-content__row__inner{
+			@extend %fullWidthInner;
+		}
+	}
+}

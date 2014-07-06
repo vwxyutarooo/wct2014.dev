@@ -6,12 +6,11 @@ var gulp		=	require('gulp')
 ,	browserSync	=	require('browser-sync')
 ,	changed		=	require('gulp-changed')
 ,	concat		=	require('gulp-concat')
-// ,	csscomb		=	require('csscomb')
+,	csscomb		=	require('gulp-csscomb')
 ,	flatten		=	require('gulp-flatten')
 ,	gulpFilter	=	require('gulp-filter')
 ,	imagemin	=	require('gulp-imagemin')
 ,	jade		=	require('gulp-jade')
-,	kss			=	require('gulp-kss')
 ,	minifycss	=	require('gulp-csso')
 ,	plumber		=	require('gulp-plumber')
 ,	prefix		=	require('gulp-autoprefixer')
@@ -39,7 +38,7 @@ var paths = {
 ,	'scssDest':		'src/scss'
 ,	'scssDir':		['src/scss/**/*.scss', 'src/scss/**/*.sass']
 ,	'vhost':		'2014.wct.dev'
-,	'portNo':		80
+,	'portNum':		8080
 }
 
 /*******************************************************************************
@@ -72,8 +71,8 @@ gulp.task('foundation-init', function() {
 });
 
 gulp.task('browser-sync', function() {
-	browserSync.init(null, {
-		proxy: paths.vhost
+	browserSync.init('./*.css', {
+		proxy: '2014.wct.dev'
 	});
 });
 
@@ -109,23 +108,15 @@ gulp.task('js', function() {
 
 /*******************************************************************************
  * 6. sass Tasks
-*******************************************************************************/
+********************************************************************************/
 gulp.task('scss', function() {
 	return gulp.src(paths.scssDir)
 		.pipe(plumber({ errorHandler: handleError }))
 		.pipe(sass())
 		.pipe(prefix('last 2 version'))
 		// .pipe(csscomb())
-		.pipe(gulp.dest(paths.dest))
-		.pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('kss', function() {
-	return gulp.src('style.css')
-	.pipe(gulpkss({
-		overview: 'doc/styleguide.md'
-	}))
-	.pipe(gulp.dest('doc/'));
+		.pipe(gulp.dest(paths.dest));
+		// .pipe(browserSync.reload({stream: true}));
 });
 
 function handleError(err) {
@@ -145,13 +136,13 @@ gulp.task('image', function() {
 });
 
 gulp.task('sprite', function () {
-	var spriteData = gulp.src('images/sprite/*.png')
+	var spriteData = gulp.src(paths.imgDest + '/sprite/*.png')
 	.pipe(spritesmith({
-		imgName: 'images/sprite.png',
+		imgName: paths.imgDest + '/sprite.png',
 		cssName: '_module-sprite.scss'
 	}));
 	spriteData.img.pipe(gulp.dest("./"));
-	spriteData.css.pipe(gulp.dest(paths.scssDest));
+	spriteData.css.pipe(gulp.dest(paths.scssDest + '/module'));
 });
 
 /*******************************************************************************
@@ -163,7 +154,7 @@ gulp.task('watch', function() {
 	// gulp.watch([paths.imgDest + '/sprite/*.png'], ['sprite']);
 	// gulp.watch([paths.jsDir], ['concat']);
 	gulp.watch([paths.scssDir], ['scss']);
-	gulp.watch(['./*.php', './*.css'], ['bs-reload']);
+	gulp.watch(['./*.php'], ['bs-reload']);
 });
 
 gulp.task('default', [
@@ -171,9 +162,10 @@ gulp.task('default', [
 	'scss',
 	'jade',
 	'image',
-	'sprite',
+	// 'sprite',
 	'watch'
 ]);
+
 gulp.task('init', [
 	'bower-init',
 	'foundation-init'

@@ -7,6 +7,14 @@
 ======================================== */
 @import 'core/config';
 @import 'core/mixins';
+@import 'core/default';
+
+/* ========================================
+ * module
+======================================== */
+@import 'module/module-classes';
+@import 'module/module-grid';
+// @import 'module/module-sprite';
 
 /* ========================================
  * layout
@@ -17,14 +25,8 @@
 @import 'layout/layout-top';
 @import 'layout/layout-post';
 @import 'layout/layout-page';
+@import 'layout/layout-page-fullwidth';
 @import 'layout/layout-archives';
 @import 'layout/layout-sidebar';
 @import 'layout/layout-footer';
 @import 'layout/layout-mediaqueries';
-
-//========================================
-// module
-//======================================== */
-@import 'module/module-classes';
-@import 'module/module-grid';
-// @import 'module/module-sprite';

@@ -16,14 +16,18 @@ $fontCode   : monospace, "ＭＳ Ｐ ゴシック","MS PGothic", "ヒラギノ�
 
 // Colum Base Width
 $maxWidth          : 1080px;
+$menuItemWidth     : 12%;
+$menuItemHeight    : 30px;	// total 48px = 30 + (padding 9 * 2)
+$menuHeight        : 48px;
+$menuPadding       : ($menuHeight - $menuItemHeight) / 2;
 
 //Color
 $colorBorder       : #000;
 $colorBkg          : #5198ce;
-$colorLink         : #fff;
-$colorLinkActive   : #fff;
-$colorLinkHover    : #fff;
-$colorLinkVisited  : #fff;
+$colorLink         : #1E5D8A;
+$colorLinkActive   : #1E5D8A;
+$colorLinkHover    : #1E5D8A;
+$colorLinkVisited  : #1E5D8A;
 $colorLinkSelect   : #1E5D8A; 
 $colorBlue         : #3595BE;
 $colorPink         : #D35991;

@@ -1,10 +1,15 @@
 /* set secondart && Primary Sidebar
 ---------------------------------------- */
 #secondary{
-	display: none;
+	display: block;
+	box-sizing: border-box;
 	margin: 0;
-	width: 100%;
+	padding: 4em 0;
 	min-height: 0;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	color: $colorText;
 }
 
 .site-description{
