@@ -72,7 +72,7 @@ gulp.task('foundation-init', function() {
 
 gulp.task('browser-sync', function() {
 	browserSync.init('./*.css', {
-		proxy: '2014.wct.dev'
+		proxy: paths.vhost
 	});
 });
 
