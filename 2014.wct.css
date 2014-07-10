@@ -17,7 +17,7 @@
   content: ".";
   font-size: 0; }
 
-#masthead:after {
+#masthead:after, .menu-toggle:after {
   display: block;
   content: "";
   position: absolute; }
@@ -2000,15 +2000,15 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   width: 100%; }
 
-.full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
+.menu-toggle, .full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
   margin-left: auto;
   margin-right: auto;
   max-width: 674px;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 20px;
+  padding-left: 20px; }
 
 @media only screen and (min-width: 594px) {
-  .full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
+  .menu-toggle, .full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
     padding-right: 30px;
     padding-left: 30px; } }
 /* ========================================
@@ -2080,7 +2080,7 @@ div.sharedaddy h3.sd-title {
 /* header
 ---------------------------------------- */
 .header-main {
-  padding: 320px 0 0 0;
+  padding: 560px 0 0 0;
   min-height: 0;
   width: 100%;
   height: 0; }
@@ -2095,6 +2095,7 @@ div.sharedaddy h3.sd-title {
 ---------------------------------------- */
 #masthead {
   position: relative;
+  margin-bottom: 48px;
   max-width: 100%;
   background-color: transparent;
   background-repeat: no-repeat; }
@@ -2137,45 +2138,58 @@ div.sharedaddy h3.sd-title {
   margin-top: 0; }
 
 .menu-toggle {
-  background-color: transparent; }
+  position: relative;
+  background-color: transparent;
+  width: auto;
+  height: 48px; }
   .menu-toggle:active, .menu-toggle:focus, .menu-toggle:hover {
     background-color: transparent; }
+  .menu-toggle:before {
+    content: '\f104';
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -1px;
+    font-size: 1.6rem;
+    line-height: 16px; }
+  .toggled-on .menu-toggle:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .menu-toggle:after {
+    position: static;
+    display: inline;
+    margin-left: 0.5em;
+    color: #fff;
+    content: 'Menu';
+    vertical-align: middle;
+    font-size: 1.4rem;
+    line-height: 16px; }
 
 /* navigation
 ---------------------------------------- */
 .primary-navigation {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 560px;
   left: 0;
   z-index: 100;
   float: none;
   margin: 0 auto;
-  padding: 9px 0;
+  padding: 0;
   min-height: 48px;
   width: 100%;
-  background-color: rgba(37, 110, 176, 0.94);
+  background-color: #177098;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125); }
-  .admin-bar .primary-navigation {
-    top: 32px; }
   .primary-navigation .nav-menu {
     width: auto;
     text-align: center; }
-  .primary-navigation li.menu-item-64 a {
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.25); }
-    .primary-navigation li.menu-item-64 a:active, .primary-navigation li.menu-item-64 a:focus, .primary-navigation li.menu-item-64 a:hover {
-      background-color: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.125) inset; }
   .primary-navigation a {
     box-sizing: border-box;
-    padding-top: 12px;
-    padding-right: 3em;
-    padding-bottom: 12px;
-    padding-left: 3em;
+    padding: 20px 3em;
     text-align: left;
     letter-spacing: .125em;
     font-weight: normal;
     font-size: 1.4rem; }
+  .primary-navigation.toggled-on {
+    padding: 0; }
 
 .site-navigation li:hover > a {
   background-color: transparent;
@@ -2188,13 +2202,16 @@ div.sharedaddy h3.sd-title {
     .site-navigation .current-menu-item > a > span:before {
       position: absolute;
       top: 50%;
-      left: 0;
+      left: -2px;
       display: inline-block;
       margin: -5px auto auto -15px;
-      color: #d35991;
+      color: #8dd0ee;
       content: '\25CF';
       font-size: 10px;
       line-height: 1; }
+
+.screen-reader-text {
+  display: none; }
 
 .becomeStaff .fa {
   width: 2em;
@@ -2341,7 +2358,7 @@ article.post {
 
 @media screen and (max-width: 640px) {
   html {
-    font-size: 8px; }
+    font-size: 10px; }
 
   .site-content {
     margin-right: 0; }
@@ -2362,7 +2379,10 @@ article.post {
 
   #masthead {
     background-size: 400px;
-    height: 400px; } }
+    height: 400px; }
+
+  .primary-navigation {
+    top: 400px; } }
 /* for Android @2
 ---------------------------------------- */
 @media screen and (max-width: 360px) {
@@ -2385,7 +2405,7 @@ article.post {
 ---------------------------------------- */
 @media screen and (min-width: 401px) {
   body {
-    background-position: center;
+    background-position: center top;
     background-size: 640px auto; }
 
   #masthead {
@@ -2393,7 +2413,10 @@ article.post {
     background-position: center;
     background-size: 100%; }
     #masthead:after {
-      margin-top: 20px; } }
+      margin-top: 20px; }
+
+  .primary-navigation {
+    top: 560px; } }
 @media only screen and (min-width: 641px) {
   body {
     background-image: url("files/2014/07/bkgHeaderM.jpg");
@@ -2415,7 +2438,13 @@ article.post {
       background-repeat: no-repeat;
       top: 32%;
       right: 4%;
-      margin-top: -90px; } }
+      margin-top: -90px; }
+
+  .header-main {
+    padding-top: 640px; }
+
+  .primary-navigation {
+    top: 640px; } }
 @media screen and (min-width: 673px) {
   .site-content .entry-header,
   .site-content .entry-content,
@@ -2426,36 +2455,39 @@ article.post {
     max-width: 780px;
     max-width: 100%; } }
 @media screen and (min-width: 783px) {
-  .site-navigation li {
-    width: 12%;
-    height: 30px;
-    line-height: 30px; }
-  .site-navigation a {
-    padding-top: 0;
-    padding-bottom: 0;
-    text-align: center;
-    height: 30px;
-    line-height: 30px; }
-
-  .primary-navigation a {
-    padding-right: 20px;
-    padding-left: 20px;
-    width: 100%; } }
-@media screen and (min-width: 846px) {
   body {
     background-position: center top;
     background-size: 1280px auto; }
 
   #masthead {
     height: 704px;
-    background-size: 1280px auto;
+    background-size: 1000px auto;
     background-size: center top; }
     #masthead:after {
-      right: 10%; } }
+      right: 10%; }
+
+  .site-navigation li {
+    width: 12%;
+    height: 36px;
+    line-height: 36px; }
+  .site-navigation a {
+    text-align: center;
+    height: 36px;
+    line-height: 36px; }
+
+  .primary-navigation {
+    top: 704px;
+    padding: 6px 0; }
+    .primary-navigation a {
+      padding: 0 20px;
+      width: 100%; } }
+@media screen and (min-width: 846px) {
+  #masthead {
+    background-size: 1280px auto; } }
 @media screen and (min-width: 1008px) {
   #masthead {
     background-position: center center;
-    background-size: 1280px 800px; } }
+    background-size: 1280px auto; } }
 @media screen and (min-width: 1281px) {
   body {
     background-size: 100%; }
@@ -2482,7 +2514,10 @@ article.post {
       background-position: 0, 0;
       background-size: 100%;
       background-repeat: no-repeat;
-      margin-top: -150px; } }
+      margin-top: -150px; }
+
+  .primary-navigation {
+    top: 1080px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 1280px) {
   body {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
