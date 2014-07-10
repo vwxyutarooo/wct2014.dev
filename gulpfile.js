@@ -37,7 +37,7 @@ var paths = {
 ,	'jsDir':		'src/js/*.js'
 ,	'scssDest':		'src/scss'
 ,	'scssDir':		['src/scss/**/*.scss', 'src/scss/**/*.sass']
-,	'vhost':		'2014.wct.dev'
+,	'vhost':		'wct2014.dev'
 ,	'portNum':		8080
 }
 
@@ -72,7 +72,7 @@ gulp.task('foundation-init', function() {
 
 gulp.task('browser-sync', function() {
 	browserSync.init('./*.css', {
-		proxy: '2014.wct.dev'
+		proxy: paths.vhost
 	});
 });
 
