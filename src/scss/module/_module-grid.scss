@@ -1,10 +1,10 @@
+// Basic collumn size
 %baseWidth{
 	margin-right: auto;
 	margin-left: auto;
 	max-width: 1080px;
 	width: 100%;
 }
-
 %largeVariableWidth{
 	width: 100%;
 	max-width: 1400px;
@@ -12,24 +12,22 @@
 	margin-right: auto;
 	margin-left: auto;
 }
-
 %mediumWidth{
 	width: 840px;
 	margin-right: auto;
 	margin-left: auto;
 }
-
 %narrowWidth{
 	width: 716px;
 	margin-right: auto;
 	margin-left: auto;
 }
-
 %fullWidth{
+	padding-right: 0;
+	padding-left: 0;
 	max-width: 100%;
 	width: 100%;
 }
-
 %fullWidthInner{
 	margin-left: auto;
 	margin-right: auto;
@@ -37,9 +35,22 @@
 	padding-right: 20px;
 	padding-left: 20px;
 }
+
+// Content size
+%contentWidth{
+	box-sizing: border-box;
+	padding: 0 30px;
+	max-width: 900px;
+}
+
 @media only screen and (min-width: 594px){
 	%fullWidthInner{
 		padding-right: 30px;
 		padding-left: 30px;
+	}
+	%baseWidth{
+		box-sizing: border-box;
+		padding-right: 20px;
+		padding-left: 20px;
 	}
 }

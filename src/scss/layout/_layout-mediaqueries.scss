@@ -1,213 +1,271 @@
 @media screen and (max-width: 640px){
-    html{
-        font-size: 10px;
-    }
-    .site-content{
-        margin-right: 0;
-    }
-    body{
-        background-image: url($filePath + '2014/07/bkgHeaderS.jpg');
-        background-position: center top;
-        background-size: 640px;
-    }
-    #masthead{
-        background-image: url($filePath + '2014/07/txtHeaderS.png');
-        background-position: center top;
-        background-size: 640px;
-        height: 640px;
-    }
+	html{
+		font-size: 10px;
+	}
+	.site-content{
+		margin-right: 0;
+	}
+	body{
+		background-image: url($filePath + '2014/07/bkgHeaderS.jpg');
+		background-position: center top;
+		background-size: 640px;
+	}
+	#masthead{
+		background-image: url($filePath + '2014/07/txtHeaderS.png');
+		background-position: center top;
+		background-size: 640px;
+		height: 640px;
+	}
 }
 @media screen and (max-width: 400px){
-    $hHeight: 400px;
-    body{
-        background-size: $hHeight;
-    }
-    #masthead{
-        background-size: $hHeight;
-        height: $hHeight;
-    }
-    .primary-navigation{
-        top: $hHeight;
-    }
+	$hHeight: 400px;
+	body{
+		background-size: $hHeight;
+	}
+	#masthead{
+		background-size: $hHeight;
+		height: $hHeight;
+	}
+	.primary-navigation{
+		top: $hHeight;
+	}
+	.list-view{
+		.content-area{
+			padding: 30px;
+		}
+		.site-content{
+			.hentry{
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+	}
+	.content-sidebar{
+		margin-top: 0;
+	}
 }
 /* for Android @2
 ---------------------------------------- */
 @media screen and (max-width: 360px){
-    $hHeight: 360px;
-    body{
-        background-size: $hHeight;
-    }
-    #masthead{
-        background-size: $hHeight;
-        height: $hHeight;
-    }
+	$hHeight: 360px;
+	body{
+		background-size: $hHeight;
+	}
+	#masthead{
+		background-size: $hHeight;
+		height: $hHeight;
+	}
 }
 /* for iPhone @2
 ---------------------------------------- */
 @media screen and (max-width: 320px){
-    $hHeight: 320px;
-    body{
-        background-size: $hHeight;
-    }
-    #masthead{
-        background-size: $hHeight;
-        height: $hHeight;
-    }
+	$hHeight: 320px;
+	body{
+		background-size: $hHeight;
+	}
+	#masthead{
+		background-size: $hHeight;
+		height: $hHeight;
+	}
+	.primary-navigation{
+		top: $hHeight;
+	}
 }
 
 
 /* any other devices width twentyfourteen
 ---------------------------------------- */
 @media screen and (min-width: 401px){
-    $hHeight: 560px;
-    body{
-        background-position: center top;
-        background-size: 640px auto;
-    }
-    #masthead{
-        height: $hHeight;
-        background-position: center;
-        background-size: 100%;
-        &:after{
-            margin-top: 20px;
-        }
-    }
-    .primary-navigation{
-        top: $hHeight;
-    }
+	$hHeight: 640px - 48;
+	body{
+		background-position: center top;
+		background-size: 640px auto;
+	}
+	#masthead{
+		height: $hHeight;
+		background-position: center;
+		background-size: 100%;
+		&:after{
+			margin-top: 20px;
+		}
+	}
+	.primary-navigation{
+		top: $hHeight;
+	}
 }
 @media only screen and (min-width: 594px){}
 @media only screen and (min-width: 641px){
-    $hHeight: 640px;
-    body{
-        background-image: url($filePath + '2014/07/bkgHeaderM.jpg');
-        background-size: auto $hHeight;
-    }
-    #masthead{
-        height: $hHeight;
-        background-image: url($filePath + '2014/06/txtHeaderM.png');
-        background-size: 860px auto;
-        &:after{
-            @include imageReplace('2014/06/iconWapu.png', 300px, 300px, 0.6);
-            top: 32%;
-            right: 4%;
-            margin-top: -(150px * 0.6);
-        }
-    }
-    .header-main{
-        padding-top: $hHeight;
-    }
-    .primary-navigation{
-        top: $hHeight;
-    }
+	$hHeight: 640px;
+	body{
+		background-image: url($filePath + '2014/07/bkgHeaderM.jpg');
+		background-size: auto $hHeight;
+	}
+	#masthead{
+		height: $hHeight;
+		background-image: url($filePath + '2014/06/txtHeaderM.png');
+		background-size: 860px auto;
+		&:after{
+			@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 0.6);
+			top: 32%;
+			right: 4%;
+			margin-top: -(150px * 0.6);
+		}
+	}
+	.header-main{
+		padding-top: $hHeight;
+	}
+	.primary-navigation{
+		top: $hHeight;
+	}
+	.content-sidebar{
+		padding: 0;
+	}
 }
 @media screen and (min-width: 673px){
-    .site-content{
-        .entry-header,
-        .entry-content,
-        .entry-summary,
-        .entry-meta,
-        .page-content,
-        .comments-area{
-            max-width: 780px;
-            max-width: 100%;
-        }
-    }
+	.site-content{
+		.entry-header,
+		.entry-content,
+		.entry-summary,
+		.entry-meta,
+		.page-content,
+		.comments-area{
+			max-width: 780px;
+			max-width: 100%;
+		}
+	}
 }
 @media screen and (min-width: 783px){
-    $hHeight: 704px;
-    body{
-        background-position: center top;
-        background-size: 1280px auto;
-    }
-    #masthead{
-        height: $hHeight;
-        background-size: 1000px auto;
-        background-size: center top;
-        &:after{
-            right: 10%;
-        }
-    }
-    .site-navigation{
-        li{
-            width: $menuItemWidth;
-            height: $menuItemHeight;
-            line-height: $menuItemHeight;
-        }
-        a{
-            text-align: center;
-            height: $menuItemHeight;
-            line-height: $menuItemHeight;
-        }
-    }
-    .primary-navigation{
-        top: $hHeight;
-        padding: $menuPadding 0;
-        a{
-            padding: 0 20px;
-            width: 100%;
-        }
-    }
+	$hHeight: 704px;
+	body{
+		background-position: center top;
+		background-size: 1280px auto;
+	}
+	#masthead{
+		height: $hHeight;
+		background-size: 1000px auto;
+		background-size: center top;
+		&:after{
+			right: 10%;
+		}
+	}
+	.site-navigation{
+		li{
+			width: $menuItemWidth;
+			height: $menuItemHeight;
+			line-height: $menuItemHeight;
+		}
+		a{
+			text-align: center;
+			height: $menuItemHeight;
+			line-height: $menuItemHeight;
+		}
+	}
+	.primary-navigation{
+		top: $hHeight;
+		padding: $menuPadding 0;
+		a{
+			padding: 0 20px;
+			width: 100%;
+		}
+	}
+	.primary-sidebar{
+		.widget{
+			max-width: 100%;
+		}
+	}
 }
 @media screen and (min-width: 810px){}
 @media screen and (min-width: 846px){
-    #masthead{
-        background-size: 1280px auto;
-    }
+	body{
+		background-color: #f5f5f5;
+	}
+	#masthead{
+		background-size: 1280px auto;
+	}
+	.content-sidebar{
+		margin-top: 72px;
+		margin-left: -300px;
+	}
+	.site-content{
+		margin: 0 340px 0 auto;
+	}
+	.content-sidebar{
+		width: 300px;
+	}
 }
 @media screen and (min-width: 1008px){
-    #masthead{
-        background-position: center center;
-        background-size: 1280px auto;
-    }
+	#masthead{
+		background-position: center center;
+		background-size: 1280px auto;
+	}
 }
 @media screen and (min-width: 1040px){}
 @media screen and (min-width: 1080px){}
 @media screen and (min-width: 1110px){}
+@media screen and (min-width: 1218px){
+	.archive-header,
+	.comments-area,
+	.image-navigation,
+	.page-header,
+	.page-content,
+	.post-navigation,
+	.site-content .entry-header,
+	.site-content .entry-content,
+	.site-content .entry-summary,
+	.site-content footer.entry-meta{
+		margin-right: 0;
+	}
+}
 @media screen and (min-width: 1260px){}
 @media screen and (min-width: 1281px){
-    body{
-        background-size: 100%;
-    }
-    #masthead{
-        background-size: 100%;
-    }
+	body{
+		background-size: 100%;
+	}
+	#masthead{
+		background-size: 100%;
+	}
 }
 @media only screen and (min-width: 1440px){
-    $hHeight: 1080px;
-    body{
-        background-image: url($filePath + '2014/06/bkgHeaderL.jpg');
-        background-position: center top;
-        background-size: 1920px $hHeight;
-    }
-    #masthead{
-        height: $hHeight;
-        background-image: url($filePath + '2014/06/txtHeaderL.png');
-        background-size: 100%;
-        &:after{
-            @include imageReplace('2014/06/iconWapu.png', 300px, 300px, 1.0);
-            margin-top: -(150px * 1.0);
-        }
-    }
-    .primary-navigation{
-        top: $hHeight;
-    }
+	$hHeight: 1080px;
+	body{
+		background-image: url($filePath + '2014/06/bkgHeaderL.jpg');
+		background-position: center top;
+		background-size: 1920px $hHeight;
+	}
+	#masthead{
+		height: $hHeight;
+		background-image: url($filePath + '2014/06/txtHeaderL.png');
+		background-size: 100%;
+		&:after{
+			@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 1.0);
+			margin-top: -(150px * 1.0);
+		}
+	}
+	.primary-navigation{
+		top: $hHeight;
+	}
 }
 
 @media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1280px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1280px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1280px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1280px),
-only screen and (                min-resolution: 192dpi) and (min-width: 1280px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 1280px) {
-    body{
-        background-image: url($filePath + '2014/06/bkgHeaderL.jpg');
-        background-size: 1280px auto;
-        background-position: center top;
-    }
-    #masthead{
-        background-image: url($filePath + '2014/06/txtHeaderL.png');
-        background-size: 1280px auto;
-    }
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 960px) and (max-width: 1920px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
+only screen and (                min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1920px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 960px) and (max-width: 1920px){
+	$hHeight: 704px;
+	body{
+		background-image: url($filePath + '2014/06/bkgHeaderL.jpg');
+		background-size: 1280px auto;
+		background-position: center top;
+	}
+	#masthead{
+		height: $hHeight;
+		background-image: url($filePath + '2014/06/txtHeaderL.png');
+		background-size: 1280px auto;
+	}
+	.primary-navigation{
+		top: $hHeight;
+	}
 }

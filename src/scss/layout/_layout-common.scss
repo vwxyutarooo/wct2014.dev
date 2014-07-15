@@ -5,6 +5,7 @@ html{
 	font-size: 10px;
 }
 body{
+	background-color: #fff;
 	background-repeat: no-repeat;
 	color: $colorText;
 	font-family: $fontFamily;
@@ -50,27 +51,24 @@ body{
     width: 100%;
 }
 .site-content{
-    margin: 0 340px 0 auto;
+	margin: 0 0 0 auto;
+	.entry-header,
+	.entry-content,
+	.entry-summary,
+	.page-content{
+		@extend %contentWidth;
+		background-color: transparent;
+	}
+	.entry-meta{
+		background-color: transparent;
+		max-width: 100%;
+	}
 }
-@media screen and (min-width: 673px){
-    .site-content{
-        .entry-header,
-        .entry-content,
-        .entry-summary,
-        .entry-meta,
-        .page-content,
-        .comments-area{
-            max-width: 780px;
-        }
-        .full-width & .comments-area{
-            max-width: 780px;
-        }
-    }
-}
-@media screen and (max-width: 672px){
-    .site-content{
-        margin-right: 0;
-    }
+
+.hentry{
+	&:last-child{
+		border-bottom: none;
+	}
 }
 
 /* jetpack
