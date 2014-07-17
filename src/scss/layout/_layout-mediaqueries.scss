@@ -93,8 +93,41 @@
 	.primary-navigation{
 		top: $hHeight;
 	}
+	.list-view{
+		.site-content{
+			.hentry{
+				position: relative;
+				padding: 48px 0;
+				@mixin void{
+					content: '\25CF';
+					position: absolute;
+					bottom: 1em;
+					color: #e7e7e7;
+					font-size: 8px;
+				}
+				&:before{
+					@include void;
+					left: 1em;
+				}
+				&:after{
+					@include void;
+					right: 1em;
+				}
+			}
+		}
+	}
 }
-@media only screen and (min-width: 594px){}
+@media only screen and (min-width: 594px){
+	%fullWidthInner{
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	%baseWidth{
+		box-sizing: border-box;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
 @media only screen and (min-width: 641px){
 	$hHeight: 640px;
 	body{
@@ -177,9 +210,6 @@
 }
 @media screen and (min-width: 810px){}
 @media screen and (min-width: 846px){
-	body{
-		background-color: #f5f5f5;
-	}
 	#masthead{
 		background-size: 1280px auto;
 	}
@@ -202,7 +232,12 @@
 }
 @media screen and (min-width: 1040px){}
 @media screen and (min-width: 1080px){}
-@media screen and (min-width: 1110px){}
+@media screen and (min-width: 1110px){
+	%baseWidth{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 @media screen and (min-width: 1218px){
 	.archive-header,
 	.comments-area,

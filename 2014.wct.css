@@ -1896,16 +1896,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 30px;
   max-width: 900px; }
 
-@media only screen and (min-width: 594px) {
-  .menu-toggle, .full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
-    padding-right: 30px;
-    padding-left: 30px; }
-
-  #main, .primary-navigation .nav-menu {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding-right: 20px;
-    padding-left: 20px; } }
 /* ========================================
  * layout
 ======================================== */
@@ -2338,7 +2328,35 @@ article.post {
       margin-top: 20px; }
 
   .primary-navigation {
-    top: 592px; } }
+    top: 592px; }
+
+  .list-view .site-content .hentry {
+    position: relative;
+    padding: 48px 0; }
+    .list-view .site-content .hentry:before {
+      content: '\25CF';
+      position: absolute;
+      bottom: 1em;
+      color: #e7e7e7;
+      font-size: 8px;
+      left: 1em; }
+    .list-view .site-content .hentry:after {
+      content: '\25CF';
+      position: absolute;
+      bottom: 1em;
+      color: #e7e7e7;
+      font-size: 8px;
+      right: 1em; } }
+@media only screen and (min-width: 594px) {
+  .menu-toggle, .full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
+    padding-right: 30px;
+    padding-left: 30px; }
+
+  #main, .primary-navigation .nav-menu {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-left: 20px; } }
 @media only screen and (min-width: 641px) {
   body {
     background-image: url("files/2014/07/bkgHeaderM.jpg");
@@ -2410,9 +2428,6 @@ article.post {
   .primary-sidebar .widget {
     max-width: 100%; } }
 @media screen and (min-width: 846px) {
-  body {
-    background-color: #f5f5f5; }
-
   #masthead {
     background-size: 1280px auto; }
 
@@ -2429,6 +2444,10 @@ article.post {
   #masthead {
     background-position: center center;
     background-size: 1280px auto; } }
+@media screen and (min-width: 1110px) {
+  #main, .primary-navigation .nav-menu {
+    padding-left: 0;
+    padding-right: 0; } }
 @media screen and (min-width: 1218px) {
   .archive-header,
   .comments-area,
