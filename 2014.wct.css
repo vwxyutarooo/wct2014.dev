@@ -2153,7 +2153,7 @@ div.sharedaddy h3.sd-title {
     line-height: 16px; }
   .toggled-on .menu-toggle:before {
     -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
+            transform: rotate(90deg); }
   .menu-toggle:after {
     position: static;
     display: inline;
