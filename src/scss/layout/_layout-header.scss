@@ -33,10 +33,13 @@
 		margin-top: -(0 * .3);
 		top: 28%;
 	}
-	a,
-	a:hover{
-		color: #fff;
-	}
+	// a{
+	// 	color: #fff;
+	// 	transition: all 0.2s;
+	// 	&:hover{
+	// 		color: #e7e7e7;
+	// 	}
+	// }
 	.site-title{	// for header link
 		position: absolute;
 		top: 0;
@@ -77,12 +80,13 @@
 		background-color: transparent;
 	}
 	&:before{
-		content: '\f104';
-		vertical-align: middle;
 		display: inline-block;
 		margin-top: -1px;
+		content: '\f104';
+		vertical-align: middle;
 		font-size: 1.6rem;
 		line-height: 16px;
+		transition: all 0.2s;
 	}
 	.toggled-on &:before{
 		transform: rotate(90deg);
@@ -135,10 +139,15 @@ $colorNav: #177098;
 }
 .site-navigation{
 	li{
+		> a{
+			color: #fff;
+			transition: all 0.2s;
+		}
 		&:hover{
 			> a{
 				background-color: transparent;
-				color: #fff;
+				color: #8dd0ee;
+				text-decoration: none;
 			}
 		}
 	}

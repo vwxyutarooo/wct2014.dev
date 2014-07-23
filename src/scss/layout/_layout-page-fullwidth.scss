@@ -46,6 +46,9 @@
 			@extend %fullWidthInner;
 		}
 	}
+	.widget{
+		background-color: transparent;
+	}
 }
 
 /* content inner
