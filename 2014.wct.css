@@ -17,11 +17,6 @@
   content: ".";
   font-size: 0; }
 
-#masthead:after, .menu-toggle:after {
-  display: block;
-  content: "";
-  position: absolute; }
-
 .becomeStaff .buttonWrap .button, .socialList li .fa {
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.2s;
@@ -1869,8 +1864,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: auto !important;
     margin-right: auto !important; } }
 #main, .primary-navigation .nav-menu {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
   max-width: 1080px;
   width: 100%; }
 
@@ -1890,10 +1889,12 @@ h1, h2, h3, h4, h5, h6 {
 .site-content .entry-header,
 .site-content .entry-content,
 .site-content .entry-summary,
-.site-content .page-content, .widget {
+.site-content .page-content,
+.site-content .entry-meta,
+.site-content footer.entry-meta, .widget {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 0;
   max-width: 900px; }
 
 /* ========================================
@@ -1948,9 +1949,9 @@ body {
   .site-content .entry-header,
   .site-content .entry-content,
   .site-content .entry-summary,
-  .site-content .page-content {
-    background-color: transparent; }
-  .site-content .entry-meta {
+  .site-content .page-content,
+  .site-content .entry-meta,
+  .site-content footer.entry-meta {
     background-color: transparent;
     max-width: 100%; }
 
@@ -1984,6 +1985,10 @@ div.sharedaddy h3.sd-title {
   max-width: 100%;
   background-color: transparent;
   background-repeat: no-repeat; }
+  #masthead:after {
+    display: block;
+    content: "";
+    position: absolute; }
   #masthead:after {
     display: block;
     overflow: hidden;
@@ -2024,15 +2029,21 @@ div.sharedaddy h3.sd-title {
   background-color: transparent;
   width: auto;
   height: 48px; }
+  .menu-toggle:after {
+    display: block;
+    content: "";
+    position: absolute; }
   .menu-toggle:active, .menu-toggle:focus, .menu-toggle:hover {
     background-color: transparent; }
   .menu-toggle:before {
+    position: static;
     display: inline-block;
-    margin-top: -1px;
-    content: '\f104';
+    content: "\f104";
     vertical-align: middle;
     font-size: 1.6rem;
-    line-height: 16px;
+    font-family: Genericons;
+    line-height: 1em;
+    margin-top: -1px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
   .toggled-on .menu-toggle:before {
@@ -2060,7 +2071,7 @@ div.sharedaddy h3.sd-title {
   padding: 0;
   min-height: 48px;
   width: 100%;
-  background-color: #177098;
+  background-color: #ef86b4;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125); }
   .primary-navigation .nav-menu {
     width: auto;
@@ -2084,18 +2095,21 @@ div.sharedaddy h3.sd-title {
   background-color: transparent;
   color: #8dd0ee;
   text-decoration: none; }
-.site-navigation .current-menu-item > a {
+.site-navigation .current-menu-item > a,
+.site-navigation .current_page_parent > a {
   color: #fff;
   font-weight: normal; }
-  .site-navigation .current-menu-item > a > span {
+  .site-navigation .current-menu-item > a > span,
+  .site-navigation .current_page_parent > a > span {
     position: relative; }
-    .site-navigation .current-menu-item > a > span:before {
+    .site-navigation .current-menu-item > a > span:before,
+    .site-navigation .current_page_parent > a > span:before {
       position: absolute;
       top: 50%;
       left: -2px;
       display: inline-block;
       margin: -5px auto auto -15px;
-      color: #8dd0ee;
+      color: #f1d755;
       content: '\25CF';
       font-size: 10px;
       line-height: 1; }
@@ -2170,10 +2184,86 @@ article.post {
   margin: 0 auto;
   max-width: 900px; }
 
-.entry-title a, .entry-title {
+.entry-title a,
+.entry-title {
   display: block;
   width: 100%;
   height: 100%; }
+
+/* Post content styles
+---------------------------------------- */
+.entry-content h1 {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 20px 0 0;
+  padding: 12px 10px 10px 60px;
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  box-shadow: rgba(240, 240, 240, 0.65098) -2px 0px 6px 2px;
+  color: #484848;
+  letter-spacing: 1px;
+  line-height: 1.8em; }
+  .entry-content h1:before {
+    display: block;
+    content: "";
+    position: absolute; }
+  .entry-content h1:before {
+    display: block;
+    overflow: hidden;
+    padding-top: 80.5px;
+    width: 113px;
+    height: 0;
+    background-image: url("files/2014/07/ttl_entry-title01.png");
+    background-position: 0, 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: -14px;
+    left: -54px; }
+
+article .entry-header {
+  padding-top: 44px; }
+
+.entry-content h2 {
+  position: relative; }
+  .entry-content h2:after {
+    display: block;
+    content: "";
+    position: absolute; }
+  .entry-content h2:after {
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(135deg, #e7b955 25%, rgba(231, 185, 85, 0) 25%, rgba(231, 185, 85, 0) 50%, #e7b955 50%, #e7b955 75%, rgba(231, 185, 85, 0) 75%, rgba(231, 185, 85, 0));
+    background-image: linear-gradient(315deg, #e7b955 25%, rgba(231, 185, 85, 0) 25%, rgba(231, 185, 85, 0) 50%, #e7b955 50%, #e7b955 75%, rgba(231, 185, 85, 0) 75%, rgba(231, 185, 85, 0));
+    background-position: 0 20px;
+    background-size: 14px 14px; }
+
+.entry-content h3 {
+  padding: 20px 20px 20px 50px;
+  background: url("files/2014/07/ttl_entry-title03_left.png"), url("files/2014/07/ttl_entry-title03.png");
+  background-size: 42px 52px;
+  background-size: 42px 52px,8px 52px;
+  background-repeat: no-repeat, repeat-x; }
+
+.entry-content h4 {
+  padding: 0 10px 20px;
+  background: url("files/2014/07/ttl_entry-title04.png") left bottom no-repeat;
+  background-size: 100% auto; }
+
+.entry-content h5 {
+  padding: 10px 20px;
+  background: url("files/2014/07/ttl_entry-title05.png") left bottom no-repeat;
+  background-size: 12px 38px; }
+
+.entry-content h6 {
+  margin: 10px 0;
+  padding: 0 5px;
+  border-left: solid #e3e3e3 10px;
+  background-size: 12px 38px; }
 
 /* page tmeplate full width
 ---------------------------------------- */
@@ -2286,7 +2376,7 @@ article.post {
     top: 400px; }
 
   .list-view .content-area {
-    padding: 30px; }
+    padding: 30px 0; }
   .list-view .site-content .hentry:last-child {
     border-bottom: none; }
 
@@ -2313,7 +2403,7 @@ article.post {
 
   .primary-navigation {
     top: 320px; } }
-/* any other devices width twentyfourteen
+/* any other devices following twentyfourteen
 ---------------------------------------- */
 @media screen and (min-width: 401px) {
   body {
@@ -2332,31 +2422,18 @@ article.post {
 
   .list-view .site-content .hentry {
     position: relative;
-    padding: 48px 0; }
-    .list-view .site-content .hentry:before {
-      content: '\25CF';
-      position: absolute;
-      bottom: 1em;
-      color: #e7e7e7;
-      font-size: 8px;
-      left: 1em; }
-    .list-view .site-content .hentry:after {
-      content: '\25CF';
-      position: absolute;
-      bottom: 1em;
-      color: #e7e7e7;
-      font-size: 8px;
-      right: 1em; } }
+    padding: 200px 0 48px; } }
 @media only screen and (min-width: 594px) {
   .menu-toggle, .full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
     padding-right: 30px;
     padding-left: 30px; }
 
   #main, .primary-navigation .nav-menu {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding-right: 20px;
-    padding-left: 20px; } }
+    padding-left: 30px;
+    padding-right: 30px; } }
+/* =========================================================
+	 Tablet Size
+========================================================= */
 @media only screen and (min-width: 641px) {
   body {
     background-image: url("files/2014/07/bkgHeaderM.jpg");
@@ -2387,7 +2464,126 @@ article.post {
     top: 640px; }
 
   .content-sidebar {
-    padding: 0; } }
+    padding: 0; }
+
+  .blog .site-content .entry-header,
+  .arhive .site-content .entry-header,
+  .single .site-content .entry-header,
+  .page-template-default .site-content .entry-header {
+    position: relative;
+    position: relative;
+    padding-right: 100px;
+    padding-bottom: 20px; }
+    .blog .site-content .entry-header:before,
+    .arhive .site-content .entry-header:before,
+    .single .site-content .entry-header:before,
+    .page-template-default .site-content .entry-header:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .blog .site-content .entry-header:after,
+    .arhive .site-content .entry-header:after,
+    .single .site-content .entry-header:after,
+    .page-template-default .site-content .entry-header:after {
+      display: block;
+      content: "";
+      position: relative; }
+    .blog .site-content .entry-header:before,
+    .arhive .site-content .entry-header:before,
+    .single .site-content .entry-header:before,
+    .page-template-default .site-content .entry-header:before {
+      display: block;
+      overflow: hidden;
+      padding-top: 116.8px;
+      width: 156.8px;
+      height: 0;
+      background-image: url("files/2014/07/ttl_postWapu.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      right: -6px;
+      bottom: 6px;
+      z-index: 10; }
+    .blog .site-content .entry-header:after,
+    .arhive .site-content .entry-header:after,
+    .single .site-content .entry-header:after,
+    .page-template-default .site-content .entry-header:after {
+      display: block;
+      overflow: hidden;
+      padding-top: 15px;
+      width: 100%;
+      height: 0;
+      background-image: url("files/2014/07/ttl_postBtmLine.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      bottom: 0;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background-position: bottom right;
+      background-size: auto 15px;
+      background-repeat: repeat-x; }
+    .blog .site-content .entry-header > .entry-meta:first-child,
+    .arhive .site-content .entry-header > .entry-meta:first-child,
+    .single .site-content .entry-header > .entry-meta:first-child,
+    .page-template-default .site-content .entry-header > .entry-meta:first-child {
+      position: relative; }
+      .blog .site-content .entry-header > .entry-meta:first-child:before,
+      .arhive .site-content .entry-header > .entry-meta:first-child:before,
+      .single .site-content .entry-header > .entry-meta:first-child:before,
+      .page-template-default .site-content .entry-header > .entry-meta:first-child:before {
+        display: block;
+        content: "";
+        position: absolute; }
+      .blog .site-content .entry-header > .entry-meta:first-child .cat-links a,
+      .arhive .site-content .entry-header > .entry-meta:first-child .cat-links a,
+      .single .site-content .entry-header > .entry-meta:first-child .cat-links a,
+      .page-template-default .site-content .entry-header > .entry-meta:first-child .cat-links a {
+        color: #d35991; }
+        .blog .site-content .entry-header > .entry-meta:first-child .cat-links a:before,
+        .arhive .site-content .entry-header > .entry-meta:first-child .cat-links a:before,
+        .single .site-content .entry-header > .entry-meta:first-child .cat-links a:before,
+        .page-template-default .site-content .entry-header > .entry-meta:first-child .cat-links a:before {
+          position: static;
+          display: inline-block;
+          content: "\f301";
+          vertical-align: text-bottom;
+          font-size: 16px;
+          font-family: Genericons;
+          line-height: 1em; }
+    .blog .site-content .entry-header > .entry-meta:last-child,
+    .arhive .site-content .entry-header > .entry-meta:last-child,
+    .single .site-content .entry-header > .entry-meta:last-child,
+    .page-template-default .site-content .entry-header > .entry-meta:last-child {
+      position: relative;
+      display: inline-block;
+      background-color: #d35991;
+      color: #fff;
+      padding: 0.25em 0.5em; }
+      .blog .site-content .entry-header > .entry-meta:last-child:after,
+      .arhive .site-content .entry-header > .entry-meta:last-child:after,
+      .single .site-content .entry-header > .entry-meta:last-child:after,
+      .page-template-default .site-content .entry-header > .entry-meta:last-child:after {
+        display: block;
+        content: "";
+        position: absolute; }
+      .blog .site-content .entry-header > .entry-meta:last-child a,
+      .arhive .site-content .entry-header > .entry-meta:last-child a,
+      .single .site-content .entry-header > .entry-meta:last-child a,
+      .page-template-default .site-content .entry-header > .entry-meta:last-child a {
+        color: #fff; }
+  .blog .site-content .entry-title,
+  .arhive .site-content .entry-title,
+  .single .site-content .entry-title,
+  .page-template-default .site-content .entry-title {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-right: 60px; }
+    .blog .site-content .entry-title a,
+    .arhive .site-content .entry-title a,
+    .single .site-content .entry-title a,
+    .page-template-default .site-content .entry-title a {
+      color: #000; } }
 @media screen and (min-width: 673px) {
   .site-content .entry-header,
   .site-content .entry-content,
@@ -2397,6 +2593,9 @@ article.post {
   .site-content .comments-area {
     max-width: 780px;
     max-width: 100%; } }
+/* =========================================================
+	 Navigation Expanded
+========================================================= */
 @media screen and (min-width: 783px) {
   body {
     background-position: center top;
@@ -2427,6 +2626,9 @@ article.post {
 
   .primary-sidebar .widget {
     max-width: 100%; } }
+/* =========================================================
+	 PC Size
+========================================================= */
 @media screen and (min-width: 846px) {
   #masthead {
     background-size: 1280px auto; }
@@ -2436,10 +2638,25 @@ article.post {
     margin-left: -300px; }
 
   .site-content {
-    margin: 0 340px 0 auto; }
+    margin: 0 360px 0 auto; }
 
   .content-sidebar {
-    width: 300px; } }
+    width: 300px; }
+
+  .blog .site-content .entry-header,
+  .arhive .site-content .entry-header,
+  .single .site-content .entry-header,
+  .page-template-default .site-content .entry-header {
+    padding-right: 60px; }
+    .blog .site-content .entry-header:before,
+    .arhive .site-content .entry-header:before,
+    .single .site-content .entry-header:before,
+    .page-template-default .site-content .entry-header:before {
+      right: -56px; }
+
+  #main, .primary-navigation .nav-menu {
+    padding-left: 20px;
+    padding-right: 20px; } }
 @media screen and (min-width: 1008px) {
   #masthead {
     background-position: center center;
@@ -2447,7 +2664,27 @@ article.post {
 @media screen and (min-width: 1110px) {
   #main, .primary-navigation .nav-menu {
     padding-left: 0;
-    padding-right: 0; } }
+    padding-right: 0; }
+
+  .blog .site-content .entry-header,
+  .arhive .site-content .entry-header,
+  .single .site-content .entry-header,
+  .page-template-default .site-content .entry-header {
+    padding-right: 100px; }
+    .blog .site-content .entry-header:before,
+    .arhive .site-content .entry-header:before,
+    .single .site-content .entry-header:before,
+    .page-template-default .site-content .entry-header:before {
+      display: block;
+      overflow: hidden;
+      padding-top: 146px;
+      width: 196px;
+      height: 0;
+      background-image: url("files/2014/07/ttl_postWapu.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      bottom: 3px; } }
 @media screen and (min-width: 1218px) {
   .archive-header,
   .comments-area,
@@ -2490,6 +2727,9 @@ article.post {
 
   .primary-navigation {
     top: 1080px; } }
+/* =========================================================
+	 Retina dispaly devices
+========================================================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 960px) and (max-width: 1920px), only screen and (min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1920px), only screen and (min-resolution: 2dppx) and (min-width: 960px) and (max-width: 1920px) {
   body {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
@@ -2502,4 +2742,33 @@ article.post {
     background-size: 1280px auto; }
 
   .primary-navigation {
-    top: 704px; } }
+    top: 704px; }
+
+  .blog .site-content .entry-header:before,
+  .arhive .site-content .entry-header:before,
+  .single .site-content .entry-header:before,
+  .page-template-default .site-content .entry-header:before {
+    display: block;
+    overflow: hidden;
+    padding-top: 146px;
+    width: 196px;
+    height: 0;
+    background-image: url("files/2014/07/ttl_postWapu@2x.png");
+    background-position: 0, 0;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+  .blog .site-content .entry-header:after,
+  .arhive .site-content .entry-header:after,
+  .single .site-content .entry-header:after,
+  .page-template-default .site-content .entry-header:after {
+    display: block;
+    overflow: hidden;
+    padding-top: 15px;
+    width: 100%;
+    height: 0;
+    background-image: url("files/2014/07/ttl_postBtmLine@2x.png");
+    background-position: 0, 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 15px;
+    background-repeat: repeat-x; } }

@@ -27,25 +27,26 @@
 	}
 }
 
-%pseudoSet{
-	display: block;
-	content: "";
-	position: absolute;
-}
-@mixin hasPseudoClass($loc:false){
+@mixin hasPseudoClass($loc:false, $position: absolute){
 	position: relative;
 	@if $loc == before{
 		&:before{
-			@extend %pseudoSet;
+			display: block;
+			content: "";
+			position: $position;
 		}
 	}@else if $loc == after{
 		&:after{
-			@extend %pseudoSet;
+			display: block;
+			content: "";
+			position: $position;
 		}
 	}@else{
 		&:before,
 		&:after{
-			@extend %pseudoSet;
+			display: block;
+			content: "";
+			position: $position;
 		}
 	}
 }
@@ -80,15 +81,10 @@
 }
 
 
-//パーツ
-%halfWidth-bg{
-	position: absolute;
-	display: block;
-	width: 50%;
-	height: 100%;
-	content: "";
-}
-
+//***********************
+// Original functions
+//***********************
+// Button actions
 %buttonAct{
 	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
 	transition: all 0.2s;
@@ -102,6 +98,18 @@
 	}
 }
 
+// Insert genericon
+@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom){
+	position: static;
+	display: inline-block;
+	content: $content;
+	vertical-align: $valaign;
+	font-size: $fontsize;
+	font-family: Genericons;
+	line-height: 1em;
+}
+
+// Animates
 @keyframes fadeIn{
 	0%{ opacity: 0; }
 	100%{ opacity: 1; }
@@ -139,4 +147,45 @@
 	animation-direction: normal, normal;
 	animation-fill-mode: backwards, none;
 	// animation: hoverDown ease-in 2000ms 1000ms 1 backwards normal, ease-in-out hovering 3000ms 100ms infinite forwards normal;
+}
+
+// Triangle
+@mixin triangle($direction, $size, $color) {
+	width: 0;
+	height: 0;
+	@if $direction == 'up' { 
+		border-right: $size solid transparent;
+		border-bottom: $size * 1.732 solid $color; 
+		border-left: $size solid transparent; 
+	} @else if $direction == 'down' {
+		border-top: $size * 1.732 solid $color; 
+		border-right: $size solid transparent; 
+		border-left: $size solid transparent; 
+	} @else if $direction == 'left' {
+		border-top: $size solid transparent; 
+		border-right: $size * 1.732 solid $color; 
+		border-bottom: $size solid transparent; 
+	} @else if $direction == 'right' {
+		border-top: $size solid transparent; 
+		border-bottom: $size solid transparent; 
+		border-left: $size * 1.732 solid $color; 
+	}
+}
+
+@mixin corner-triangle($corner, $size, $color) {
+	width: 0;
+	height: 0;
+	@if $corner == 'top-left' { 
+		border-top: $size solid $color;
+		border-right: $size solid transparent;
+	} @else if $corner == 'top-right' {
+		border-top: $size solid $color;
+		border-left: $size solid transparent; 
+	} @else if $corner == 'bottom-left' {
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $corner == 'bottom-right' {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+	}
 }

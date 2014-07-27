@@ -55,11 +55,10 @@ body{
 	.entry-header,
 	.entry-content,
 	.entry-summary,
-	.page-content{
+	.page-content,
+	.entry-meta,
+	footer.entry-meta{
 		@extend %contentWidth;
-		background-color: transparent;
-	}
-	.entry-meta{
 		background-color: transparent;
 		max-width: 100%;
 	}

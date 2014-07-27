@@ -1,16 +1,172 @@
 /* 
 ---------------------------------------- */
-article.post {
-    margin-left: 0;
+article.post{
+	margin-left: 0;
 }
 
-.hentry {
-    margin: 0 auto;
-    max-width: 900px;
+.hentry{
+	margin: 0 auto;
+	max-width: 900px;
 }
 
-.entry-title a, .entry-title {
-    display: block;
-    width: 100%;
-    height: 100%;
+// Post title
+@mixin definePostTitle{
+	.site-content{
+		.entry-header{
+			@include hasPseudoClass(before);
+			@include hasPseudoClass(after, relative);
+			padding-right: 100px;
+			padding-bottom: 20px;
+			&:before{
+				@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 0.8);
+				right: -6px;
+				bottom: 6px;
+				z-index: 10;
+			}
+			&:after{
+				@include imageReplace('2014/07/ttl_postBtmLine.png', 100%, 15px, 1);
+				bottom: 0;
+				box-sizing: border-box;
+				background-position: bottom right;
+				background-size: auto 15px;
+				background-repeat: repeat-x;
+			}
+			> .entry-meta{
+				&:first-child{
+					@include hasPseudoClass(before);
+					.cat-links{
+						a{
+							color: $colorPink;
+							&:before{
+								@include genericon('\f301');
+							}
+						}
+					}
+				}
+				&:last-child{
+					@include hasPseudoClass(after);
+					display: inline-block;
+					background-color: $colorPink;
+					color: #fff;
+					padding: 0.25em 0.5em;
+					a{
+						color: #fff;
+					}
+					&:after{
+						// @include corner-triangle(bottom-left, 23px, $colorPink);
+						// right: -23px;
+						// bottom: 0;
+					}
+				}
+			}
+		}
+		.entry-title{
+			box-sizing: border-box;
+			padding-right: 60px;
+			a{
+				color: #000;
+			}
+		}
+	}
+}
+.blog,
+.arhive,
+.single,
+.page-template-default{
+	@extend %postTitle;
+}
+
+// Entry title
+.entry-title a,
+.entry-title{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+// Post footer
+@mixin definePostFooterDecolate{
+	.hentry{
+		position: relative;
+		padding: 200px 0 48px;
+		// &:before{
+		// 	@include genericon('\f433', 40px);
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	color: #e7e7e7;
+		// 	left: 0;
+		// }
+		// &:after{
+		// 	@include genericon('\f434', 40px);
+		// 	position: absolute;
+		// 	bottom: 0;
+		// 	color: #e7e7e7;
+		// 	right: 0;
+		// }
+	}
+}
+.list-view{
+	.site-content{
+		@extend %postFooterDecolate;
+	}
+}
+
+/* Post content styles
+---------------------------------------- */
+.entry-content h1{
+	@include hasPseudoClass(before);
+	display: block;
+	box-sizing: border-box;
+	margin: 20px 0 0;
+	padding: 12px 10px 10px 60px;
+	width: 100%;
+	border: 1px solid rgb(219, 219, 219);
+	box-shadow: rgba(240, 240, 240, 0.65098) -2px 0px 6px 2px;
+	color: #484848;
+	letter-spacing: 1px;
+	line-height: 1.8em;
+	&:before{
+		@include imageReplace('2014/07/ttl_entry-title01.png', 226px, 161px, 0.5);
+		top: -14px;
+		left: -54px;
+	}
+}
+article .entry-header{
+	padding-top: 44px;
+}
+.entry-content h2{
+	@include hasPseudoClass(after);
+	&:after{
+		bottom: -10px - 2;
+		left: 0;
+		width: 100%;
+		height: 10px;
+		background-color: #fff;
+		background-image: linear-gradient(315deg,rgba(231,185,85,1) 25%,rgba(231,185,85,0) 25%,rgba(231,185,85,0) 50%,rgba(231,185,85,1) 50%,rgba(231,185,85,1) 75%,rgba(231,185,85,0) 75%,rgba(231,185,85,0));
+		background-position: 0 20px;
+		background-size: 14px 14px;
+	}
+}
+.entry-content h3{
+	padding: 20px 20px 20px 50px;
+	background: url($filePath + "2014/07/ttl_entry-title03_left.png"), url($filePath + "2014/07/ttl_entry-title03.png");
+	background-size: 42px 52px;
+	background-size: 42px 52px,8px 52px;
+	background-repeat: no-repeat, repeat-x;
+}
+.entry-content h4{
+	padding: 0 10px 20px;
+	background: url($filePath + "2014/07/ttl_entry-title04.png") left bottom no-repeat;
+	background-size: 100% auto;
+}
+.entry-content h5{
+	padding: 10px 20px;
+	background: url($filePath + "2014/07/ttl_entry-title05.png") left bottom no-repeat;
+	background-size: 12px 38px;
+}
+.entry-content h6{
+	margin: 10px 0;
+	padding: 0 5px;
+	border-left: solid #e3e3e3 10px;
+	background-size: 12px 38px;
 }

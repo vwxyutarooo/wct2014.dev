@@ -73,12 +73,8 @@
 		background-color: transparent;
 	}
 	&:before{
-		display: inline-block;
+		@include genericon('\f104', 1.6rem, middle);
 		margin-top: -1px;
-		content: '\f104';
-		vertical-align: middle;
-		font-size: 1.6rem;
-		line-height: 16px;
 		transition: all 0.2s;
 	}
 	.toggled-on &:before{
@@ -98,8 +94,10 @@
 
 /* navigation
 ---------------------------------------- */
-$colorNav: #1d70ab;
 $colorNav: #177098;
+$colorNav: #ef86b4;
+$colorNavActive: #8dd0ee;
+$colorNavActive: #f1d755;
 .primary-navigation{
 	position: absolute;
 	top: 560px;
@@ -144,7 +142,8 @@ $colorNav: #177098;
 			}
 		}
 	}
-	.current-menu-item{
+	.current-menu-item,
+	.current_page_parent{
 		> a{
 			color: #fff;
 			font-weight: normal;
@@ -156,7 +155,7 @@ $colorNav: #177098;
 					left: -2px;
 					display: inline-block;
 					margin: -5px auto auto -15px;
-					color: #8dd0ee;
+					color: $colorNavActive;
 					content: '\25CF';
 					font-size: 10px;
 					line-height: 1;

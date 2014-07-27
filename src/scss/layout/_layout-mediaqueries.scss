@@ -31,7 +31,7 @@
 	}
 	.list-view{
 		.content-area{
-			padding: 30px;
+			padding: 30px 0;
 		}
 		.site-content{
 			.hentry{
@@ -74,7 +74,7 @@
 }
 
 
-/* any other devices width twentyfourteen
+/* any other devices following twentyfourteen
 ---------------------------------------- */
 @media screen and (min-width: 401px){
 	$hHeight: 640px - 48;
@@ -93,28 +93,8 @@
 	.primary-navigation{
 		top: $hHeight;
 	}
-	.list-view{
-		.site-content{
-			.hentry{
-				position: relative;
-				padding: 48px 0;
-				@mixin void{
-					content: '\25CF';
-					position: absolute;
-					bottom: 1em;
-					color: #e7e7e7;
-					font-size: 8px;
-				}
-				&:before{
-					@include void;
-					left: 1em;
-				}
-				&:after{
-					@include void;
-					right: 1em;
-				}
-			}
-		}
+	%postFooterDecolate{
+		@include definePostFooterDecolate;
 	}
 }
 @media only screen and (min-width: 594px){
@@ -123,11 +103,13 @@
 		padding-left: 30px;
 	}
 	%baseWidth{
-		box-sizing: border-box;
-		padding-right: 20px;
-		padding-left: 20px;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
+/* =========================================================
+	 Tablet Size
+========================================================= */
 @media only screen and (min-width: 641px){
 	$hHeight: 640px;
 	body{
@@ -154,6 +136,9 @@
 	.content-sidebar{
 		padding: 0;
 	}
+	%postTitle{
+		@include definePostTitle;
+	}
 }
 @media screen and (min-width: 673px){
 	.site-content{
@@ -168,6 +153,9 @@
 		}
 	}
 }
+/* =========================================================
+	 Navigation Expanded
+========================================================= */
 @media screen and (min-width: 783px){
 	$hHeight: 704px;
 	body{
@@ -209,6 +197,10 @@
 	}
 }
 @media screen and (min-width: 810px){}
+
+/* =========================================================
+	 PC Size
+========================================================= */
 @media screen and (min-width: 846px){
 	#masthead{
 		background-size: 1280px auto;
@@ -218,10 +210,25 @@
 		margin-left: -300px;
 	}
 	.site-content{
-		margin: 0 340px 0 auto;
+		margin: 0 360px 0 auto;
 	}
 	.content-sidebar{
 		width: 300px;
+	}
+	// postTitle
+	%postTitle{
+		.site-content{
+			.entry-header{
+				padding-right: 60px;
+				&:before{
+					right: -56px;
+				}
+			}
+		}
+	}
+	%baseWidth{
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 @media screen and (min-width: 1008px){
@@ -237,8 +244,21 @@
 		padding-left: 0;
 		padding-right: 0;
 	}
+	// postTitle
+	%postTitle{
+		.site-content{
+			.entry-header{
+				padding-right: 100px;
+				&:before{
+					@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 1.0);
+					bottom: 3px;
+				}
+			}
+		}
+	}
 }
 @media screen and (min-width: 1218px){
+	// Need to override TwentyFourteen
 	.archive-header,
 	.comments-area,
 	.image-navigation,
@@ -281,7 +301,9 @@
 		top: $hHeight;
 	}
 }
-
+/* =========================================================
+	 Retina dispaly devices
+========================================================= */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
 only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
@@ -302,5 +324,20 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 960px) 
 	}
 	.primary-navigation{
 		top: $hHeight;
+	}
+	// postTitle
+	%postTitle{
+		.site-content{
+			.entry-header{
+				&:before{
+					@include imageReplace('2014/07/ttl_postWapu@2x.png', 196px, 146px, 1.0);
+				}
+				&:after{
+					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 100%, 15px, 1.0);
+					background-size: auto 15px;
+					background-repeat: repeat-x;
+				}
+			}
+		}
 	}
 }
