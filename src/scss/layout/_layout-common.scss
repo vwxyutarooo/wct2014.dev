@@ -1,35 +1,6 @@
 /* =========================================================
 	 サイト全体共通スタイル
 ========================================================= */
-html{
-	font-size: 10px;
-}
-body{
-	background-color: #fff;
-	background-repeat: no-repeat;
-	color: $colorText;
-	font-family: $fontFamily;
-	a{
-		color: $colorLink;
-		&:hover{
-			color: $colorLinkHover;
-			text-decoration: underline;
-		}
-		&:visited{
-			color: $colorLinkVisited;
-		}
-	}
-	::selection{
-		background-color: $colorLinkSelect;
-	}
-	.fa{
-		display: inline-block;
-		text-decoration: none;
-	}
-	.fontEn{
-		font-family: $fontFamilyEn;
-	}
-}
 .site{
 	max-width: 100%;
 	background-color: transparent;

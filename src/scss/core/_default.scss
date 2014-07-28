@@ -3,30 +3,37 @@
 /** The root element */
 /* ----------------------------------------------- */
 html{
-	font-family: sans-serif;
-	height: 100%;
-	-webkit-text-size-adjust: 100%;
-		-ms-text-size-adjust: 100%;
+	font-size: 10px;
 }
 
 /* =============================================== */
 /** Sections */
 /* ----------------------------------------------- */
 body{
-	font: 13px/1.231 $fontFamily;
-	height: 100%;
-	*font-size: small;
-	*font: x-small;
-	&:before{
-		float: left;
-		width: 0;
-		height: 100%;
-		margin-top: -32767px;
-		content: '';
+	background-color: #fff;
+	background-repeat: no-repeat;
+	color: $colorText;
+	font-family: $fontFamily;
+	a{
+		color: $colorLink;
+		&:hover{
+			color: $colorLinkHover;
+			text-decoration: underline;
+		}
+		&:visited{
+			color: $colorLinkVisited;
+		}
 	}
-}
-html > /**/body{
-	font-size /*\**/: small\10;
+	::selection{
+		background-color: $colorLinkSelect;
+	}
+	.fa{
+		display: inline-block;
+		text-decoration: none;
+	}
+	.fontEn{
+		font-family: $fontFamilyEn;
+	}
 }
 
 /* =============================================== */
