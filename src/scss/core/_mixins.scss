@@ -98,7 +98,7 @@
 	}
 }
 
-// Insert genericon
+// Insert icon font
 @mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom){
 	position: static;
 	display: inline-block;
@@ -107,6 +107,17 @@
 	font-size: $fontsize;
 	font-family: Genericons;
 	line-height: 1em;
+}
+@mixin fa($content: '', $fontsize: 16px, $valaign: baseline){
+	display: inline-block;
+	content: $content;
+	vertical-align: $valaign;
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	font-size: $fontsize;
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
 }
 
 // Animates

@@ -206,3 +206,35 @@ article .entry-header{
 		margin-top: 2em;
 	}
 }
+
+blockquote{
+	@include hasPseudoClass(both);
+	padding:3em 1em;
+	position:relative;
+	&:before{
+		content: "“";
+		font-size: 600%;
+		line-height: 1em;
+		font-family: "ＭＳ Ｐゴシック",sans-serif;
+		color: #fad4e7;
+		left: 0;
+		top: 0;
+	}
+	&:after{
+		content: "”";
+		font-size: 600%;
+		line-height: 0em;
+		font-family: "ＭＳ Ｐゴシック",sans-serif;
+		color: #fad4e7;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.entry-meta .tag-links a:hover:before {
+	border-right-color: #F2A5C7;
+}
+.entry-meta .tag-links a:hover {
+	background-color: #F2A5C7;
+	text-decoration: none;
+}

@@ -24,6 +24,11 @@ body{
 			color: $colorLinkVisited;
 		}
 	}
+	p{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 	::selection{
 		background-color: $colorLinkSelect;
 	}
