@@ -105,8 +105,8 @@
 
 /* navigation
 ---------------------------------------- */
-$colorNav: #1d70ab;
-$colorNav: #177098;
+// $colorNav: #1d70ab;
+$colorNav: #ef84b3;
 .primary-navigation{
 	position: absolute;
 	top: 560px;
@@ -146,7 +146,7 @@ $colorNav: #177098;
 		&:hover{
 			> a{
 				background-color: transparent;
-				color: #8dd0ee;
+				color: #ffd7ff;
 				text-decoration: none;
 			}
 		}
@@ -163,7 +163,7 @@ $colorNav: #177098;
 					left: -2px;
 					display: inline-block;
 					margin: -5px auto auto -15px;
-					color: #8dd0ee;
+					color: #e7b955;
 					content: '\25CF';
 					font-size: 10px;
 					line-height: 1;
