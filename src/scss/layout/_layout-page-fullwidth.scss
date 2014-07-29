@@ -17,6 +17,10 @@
 		width: 100%;
 	}
 
+	.content-area {
+		padding-top: 0;
+	}
+
 	.site-content{
 		margin: 0 auto;
 		.entry-header{
@@ -56,9 +60,7 @@
 .entry-content{
 	.entry-content__row{
 		padding: 4em 0;
-		&:nth-child(odd){
-			background-color: #eee;
-		}
+		background-color: #eee;
 		.entry-content__row__inner{
 			@extend %fullWidthInner;
 		}

@@ -458,7 +458,7 @@ div.sharedaddy h3.sd-title {
   transition: all 0.2s; }
 .site-navigation li:hover > a {
   background-color: transparent;
-  color: #8dd0ee;
+  color: #ffd7ff;
   text-decoration: none; }
 .site-navigation .current-menu-item > a,
 .site-navigation .current_page_parent > a {
@@ -540,6 +540,47 @@ div.sharedaddy h3.sd-title {
   .row .subTitle {
     font-size: 3rem; }
 
+.content-area_front-page {
+  padding-top: 0; }
+
+/* entry-header
+---------------------------------------- */
+.full-width .site-content .entry-header {
+  display: none; }
+
+/* entry-content
+---------------------------------------- */
+.entry-content__row {
+  background-color: #fff4f4; }
+
+.entry-content__row__inner {
+  background-color: #ffffff; }
+
+.entry-content__row__inner_bkgConcept {
+  background-image: url("files/2014/07/CitySilhouette.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 734px;
+  height: 400px; }
+
+/* Media Queries
+---------------------------------------- */
+/* for Android @2 */
+@media screen and (max-width: 360px) {
+  .entry-content__row__inner_bkgConcept {
+    background-image: url("files/2014/07/CitySilhouette.jpg");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: 100%;
+    height: 400px; } }
+/* for iPhone @2 */
+@media screen and (max-width: 320px) {
+  .entry-content__row__inner_bkgConcept {
+    background-image: url("files/2014/07/CitySilhouette.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    height: 400px; } }
 /* 
 ---------------------------------------- */
 article.post {
@@ -737,6 +778,8 @@ blockquote {
     max-width: 100%; }
 .full-width #primary {
   width: 100%; }
+.full-width .content-area {
+  padding-top: 0; }
 .full-width .site-content {
   margin: 0 auto; }
   .full-width .site-content .entry-header {
@@ -759,9 +802,8 @@ blockquote {
 /* content inner
 ---------------------------------------- */
 .entry-content .entry-content__row {
-  padding: 4em 0; }
-  .entry-content .entry-content__row:nth-child(odd) {
-    background-color: #eee; }
+  padding: 4em 0;
+  background-color: #eee; }
 
 /* Archive title
 ---------------------------------------- */
