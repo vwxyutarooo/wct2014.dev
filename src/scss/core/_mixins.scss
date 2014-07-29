@@ -159,6 +159,20 @@
 	animation-fill-mode: backwards, none;
 	// animation: hoverDown ease-in 2000ms 1000ms 1 backwards normal, ease-in-out hovering 3000ms 100ms infinite forwards normal;
 }
+@mixin btnAction($color: rgba(0, 0, 0, 0.25)){
+	box-shadow: 0 4px $color;
+	&:hover{
+		box-shadow: 0 2px $color;
+		border-top: 2px solid #fff;
+		margin-bottom: -2px;
+	}
+	&:active{
+		box-shadow: 0 0 $color;
+		border-top: 4px solid #fff;
+		margin-bottom: -4px;
+	}
+}
+
 
 // Triangle
 @mixin triangle($direction, $size, $color) {

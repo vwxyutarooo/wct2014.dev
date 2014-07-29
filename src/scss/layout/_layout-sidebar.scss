@@ -43,7 +43,7 @@
 			border-top: none;
 			display: block;
 			font-size: 16px;
-			border-bottom: 2px solid #B4DFF3 !important;
+			border-bottom: 2px solid #B4DFF3;
 		}
 		a {
 			color: #666;
@@ -67,6 +67,18 @@ span.cat-links a:hover {
 .widget_recent_comments li
 .widget_recent_entries li {
 	border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+/* 
+---------------------------------------- */
+.footer-sidebar,
+.primary-sidebar{
+	.widget{
+		.widget-title{
+			font-size: 1.6rem;
+			border-bottom: 2px solid #b4dff3;
+		}
+	}
 }
 
 @media screen and (max-width: 672px) {
