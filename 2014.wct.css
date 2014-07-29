@@ -216,6 +216,7 @@ table {
 .site-content .entry-summary,
 .site-content .page-content,
 .site-content .entry-meta,
+.site-content .post-navigation,
 .site-content footer.entry-meta, .widget {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -251,6 +252,7 @@ table {
   .site-content .entry-summary,
   .site-content .page-content,
   .site-content .entry-meta,
+  .site-content .post-navigation,
   .site-content footer.entry-meta {
     background-color: transparent;
     max-width: 100%; }
@@ -552,6 +554,54 @@ article.post {
   display: block;
   width: 100%;
   height: 100%; }
+
+/* Single post navigation
+---------------------------------------- */
+.nav-links {
+  width: 100%; }
+  .nav-links a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .nav-links a:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .nav-links a:before {
+      position: static;
+      display: inline-block;
+      content: "\f104";
+      vertical-align: text-bottom;
+      font-size: 16px;
+      font-family: Genericons;
+      line-height: 1em;
+      top: 50%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-top: -18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+      background-color: #e6b85d;
+      color: #fff;
+      text-align: center;
+      line-height: 36px;
+      padding-left: 2px; }
+    .nav-links a:first-child {
+      padding: 10px 10px 10px 46px; }
+      .nav-links a:first-child:before {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        position: absolute;
+        left: 0; }
+    .nav-links a:last-child {
+      padding: 10px 46px 10px 10px;
+      text-align: right; }
+      .nav-links a:last-child:before {
+        position: absolute;
+        right: 0; }
 
 /* Post content styles
 ---------------------------------------- */
@@ -902,7 +952,9 @@ span.cat-links a:hover {
     border-bottom: none; }
 
   .content-sidebar {
-    margin-top: 0; } }
+    margin-top: 0; }
+    .single .content-sidebar {
+      border-top: 0; } }
 /* for Android @2
 ---------------------------------------- */
 @media screen and (max-width: 360px) {
@@ -959,7 +1011,10 @@ span.cat-links a:hover {
   .primary-sidebar .snsBtn {
     float: left;
     margin: 0 0.25%;
-    width: 33%; } }
+    width: 33%; }
+
+  .nav-links a {
+    width: 50%; } }
 /* =========================================================
 	 Tablet Size
 ========================================================= */

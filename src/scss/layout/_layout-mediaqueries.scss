@@ -43,6 +43,9 @@
 	}
 	.content-sidebar{
 		margin-top: 0;
+		.single &{
+			border-top: 0;
+		}
 	}
 }
 /* for Android @2
@@ -111,6 +114,11 @@
 		float: left;
 		margin: 0 (100% - ($btnWidth * 3)) / 4;
 		width: $btnWidth;
+	}
+	.nav-links{
+		a{
+			width: 50%;
+		}
 	}
 }
 /* =========================================================

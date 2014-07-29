@@ -115,6 +115,47 @@ article.post{
 		@extend %postFooterDecolate;
 	}
 }
+/* Single post navigation
+---------------------------------------- */
+.nav-links{
+	width: 100%;
+	a{
+		@include hasPseudoClass(before);
+		display: inline-block;
+		width: 100%;
+		box-sizing: border-box;
+		&:before{
+			@include genericon('\f104');
+			top: 50%;
+			box-sizing: border-box;
+			margin-top: -18px;
+			width: 36px;
+			height: 36px;
+			border-radius: 100%;
+			background-color: $colorOrange;
+			color: #fff;
+			text-align: center;
+			line-height: 36px;
+			padding-left: 2px;
+		}
+		&:first-child{
+			padding: 10px 10px 10px 46px;
+			&:before{
+				transform: rotate(180deg);
+				position: absolute;
+				left: 0;
+			}
+		}
+		&:last-child{
+			padding: 10px 46px 10px 10px;
+			text-align: right;
+			&:before{
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+}
 
 /* Post content styles
 ---------------------------------------- */

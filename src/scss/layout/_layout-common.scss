@@ -28,6 +28,7 @@
 	.entry-summary,
 	.page-content,
 	.entry-meta,
+	.post-navigation,
 	footer.entry-meta{
 		@extend %contentWidth;
 		background-color: transparent;
