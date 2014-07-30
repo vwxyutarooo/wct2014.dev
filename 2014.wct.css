@@ -3,12 +3,13 @@
  * 2014.tokyo.wordcamp.org
  * Custom CSS
 */
-/* ========================================
+/**
  * core files
-======================================== */
-/* =============================================== */
-/** extend */
-/* ----------------------------------------------- */
+ * -----------------------------------------------------------------------------
+ */
+/* =========================================================
+	 extend
+========================================================= */
 .primary-sidebar ul:after, .socialList:after {
   display: block;
   visibility: hidden;
@@ -116,19 +117,16 @@
   -webkit-animation-fill-mode: backwards, none;
   animation-fill-mode: backwards, none; }
 
-/* =============================================== */
-/** The root element */
-/* ----------------------------------------------- */
+/* =========================================================
+	 The root elemen
+========================================================= */
 html {
   font-size: 10px; }
 
-/* =============================================== */
-/** Sections */
-/* ----------------------------------------------- */
 body {
   background-color: #fff;
   background-repeat: no-repeat;
-  color: #2b2b2b;
+  color: #555555;
   font-family: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif; }
   body a {
     color: #1e5d8a; }
@@ -149,15 +147,15 @@ body {
   body .fontEn {
     font-family: HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif; }
 
-/* =============================================== */
-/** Grouping content */
-/* ----------------------------------------------- */
+/* =========================================================
+	 Grouping content
+========================================================= */
 iframe {
   vertical-align: middle; }
 
-/* =============================================== */
-/** Text-level semantics */
-/* ----------------------------------------------- */
+/* =========================================================
+	 Text-level semantics
+========================================================= */
 a:focus {
   outline: thin dotted; }
 a:link, a:visited {
@@ -166,9 +164,9 @@ a:hover, a:active {
   color: #1e5d8a;
   outline: 0; }
 
-/* =============================================== */
-/** Embedded content */
-/* ----------------------------------------------- */
+/* =========================================================
+	 Embedded content
+========================================================= */
 img {
   vertical-align: bottom;
   border: 0; }
@@ -176,18 +174,19 @@ img {
 svg:not(:root) {
   overflow: hidden; }
 
-/* =============================================== */
-/** Tabular data */
-/* ----------------------------------------------- */
+/* =========================================================
+	 Tabular data
+========================================================= */
 table {
   font: 100%;
   font-size: inherit;
   border-spacing: 0;
   border-collapse: collapse; }
 
-/* ========================================
- * module
-======================================== */
+/**
+ * modules
+ * -----------------------------------------------------------------------------
+ */
 #main, .primary-navigation .nav-menu {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -223,9 +222,10 @@ table {
   padding: 0;
   max-width: 900px; }
 
-/* ========================================
- * layout
-======================================== */
+/**
+ * layouts
+ * -----------------------------------------------------------------------------
+ */
 /* =========================================================
 	 サイト全体共通スタイル
 ========================================================= */
@@ -786,13 +786,13 @@ blockquote {
     background-color: transparent; }
     .full-width .site-content .entry-header .entry-title,
     .full-width .site-content .entry-header .entry-title a {
-      color: #2b2b2b; }
+      color: #555555; }
     .full-width .site-content .entry-header .entry-meta {
       background-color: transparent; }
   .full-width .site-content .entry-content {
     padding: 0;
     background-color: transparent;
-    color: #2b2b2b;
+    color: #555555;
     max-width: 100%; }
   .full-width .site-content .comments-area {
     display: none; }
@@ -896,7 +896,7 @@ span.page-links-title {
   width: 100%;
   border: none;
   background-color: transparent;
-  color: #2b2b2b; }
+  color: #555555; }
 
 .site-description {
   display: none; }
@@ -907,7 +907,7 @@ span.page-links-title {
     margin-bottom: 0; }
 
 .widget-title, .widget-title a {
-  color: #2b2b2b; }
+  color: #555555; }
 
 /* Content Sidebar
 ---------------------------------------- */
@@ -956,7 +956,7 @@ span.cat-links a:hover {
   background-color: #5198ce; }
   .site-footer .site-info {
     text-align: center;
-    color: #2b2b2b; }
+    color: #555555; }
     .site-footer .site-info a {
       color: #fff; }
 
@@ -997,7 +997,7 @@ span.cat-links a:hover {
     margin-top: 0; }
     .single .content-sidebar {
       border-top: 0; } }
-/* for Android @2
+/* for Android @2x
 ---------------------------------------- */
 @media screen and (max-width: 360px) {
   body {
@@ -1006,7 +1006,7 @@ span.cat-links a:hover {
   #masthead {
     background-size: 360px;
     height: 360px; } }
-/* for iPhone @2
+/* for iPhone @2x
 ---------------------------------------- */
 @media screen and (max-width: 320px) {
   body {
