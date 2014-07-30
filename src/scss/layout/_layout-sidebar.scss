@@ -58,13 +58,13 @@ span.cat-links a,
 span.cat-links a:hover {
 	color: #d35991;
 }
-.widget_archive li
-.widget_categories li
-.widget_links li
-.widget_meta li
-.widget_nav_menu li
-.widget_pages li
-.widget_recent_comments li
+.widget_archive li,
+.widget_categories li,
+.widget_links li,
+.widget_meta li,
+.widget_nav_menu li,
+.widget_pages li,
+.widget_recent_comments li,
 .widget_recent_entries li {
 	border-top: 1px dashed rgba(255, 255, 255, 0.2);
 }
