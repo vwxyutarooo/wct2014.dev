@@ -303,38 +303,38 @@ div.sharedaddy h3.sd-title {
   .primary-sidebar .snsBtn--Tw.snsBtn {
     margin-left: 0; }
     .primary-sidebar .snsBtn--Tw.snsBtn a {
-      box-shadow: 0 4px #3f81b2;
+      box-shadow: 0 4px #147bc9;
       background-color: #55acee; }
       .primary-sidebar .snsBtn--Tw.snsBtn a:hover {
-        box-shadow: 0 2px #3f81b2;
+        box-shadow: 0 2px #147bc9;
         border-top: 2px solid #fff;
         margin-bottom: -2px; }
       .primary-sidebar .snsBtn--Tw.snsBtn a:active {
-        box-shadow: 0 0 #3f81b2;
+        box-shadow: 0 0 #147bc9;
         border-top: 4px solid #fff;
         margin-bottom: -4px; }
   .primary-sidebar .snsBtn--Fb.snsBtn a {
-    box-shadow: 0 4px #2c4272;
+    box-shadow: 0 4px #1e2e4f;
     background-color: #3b5998; }
     .primary-sidebar .snsBtn--Fb.snsBtn a:hover {
-      box-shadow: 0 2px #2c4272;
+      box-shadow: 0 2px #1e2e4f;
       border-top: 2px solid #fff;
       margin-bottom: -2px; }
     .primary-sidebar .snsBtn--Fb.snsBtn a:active {
-      box-shadow: 0 0 #2c4272;
+      box-shadow: 0 0 #1e2e4f;
       border-top: 4px solid #fff;
       margin-bottom: -4px; }
   .primary-sidebar .snsBtn--Gp.snsBtn {
     margin-right: 0; }
     .primary-sidebar .snsBtn--Gp.snsBtn a {
-      box-shadow: 0 4px #a5382a;
+      box-shadow: 0 4px #96271a;
       background-color: #dd4b39; }
       .primary-sidebar .snsBtn--Gp.snsBtn a:hover {
-        box-shadow: 0 2px #a5382a;
+        box-shadow: 0 2px #96271a;
         border-top: 2px solid #fff;
         margin-bottom: -2px; }
       .primary-sidebar .snsBtn--Gp.snsBtn a:active {
-        box-shadow: 0 0 #a5382a;
+        box-shadow: 0 0 #96271a;
         border-top: 4px solid #fff;
         margin-bottom: -4px; }
 
@@ -608,6 +608,8 @@ article.post {
     position: absolute; }
   .entry-header > .entry-meta:first-child .cat-links a {
     color: #ef86b4; }
+    .entry-header > .entry-meta:first-child .cat-links a:hover {
+      color: #eb6ba3; }
     .entry-header > .entry-meta:first-child .cat-links a:before {
       position: static;
       display: inline-block;
@@ -628,12 +630,16 @@ article.post {
     position: absolute; }
   .entry-header > .entry-meta:last-child a {
     color: #fff; }
+    .entry-header > .entry-meta:last-child a:hover {
+      text-decoration: none;
+      color: #fbe0ec; }
 
-.entry-title a,
-.entry-title {
+.entry-title, .entry-title a {
   display: block;
   width: 100%;
   height: 100%; }
+  .entry-title:hover, .entry-title a:hover {
+    text-decoration: none; }
 
 /* Single post navigation
 ---------------------------------------- */

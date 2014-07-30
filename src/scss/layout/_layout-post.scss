@@ -17,6 +17,9 @@ article.post{
 			.cat-links{
 				a{
 					color: $colorPink;
+					&:hover{
+						color: darken($colorPink, 6%);
+					}
 					&:before{
 						@include genericon('\f301');
 					}
@@ -31,6 +34,10 @@ article.post{
 			padding: 0.25em 0.5em;
 			a{
 				color: #fff;
+				&:hover{
+					text-decoration: none;
+					color: $colorNavHover;
+				}
 			}
 			&:after{
 				// @include corner-triangle(bottom-left, 23px, $colorPink);
@@ -41,11 +48,16 @@ article.post{
 	}
 }
 // entry-title
-.entry-title a,
 .entry-title{
-	display: block;
-	width: 100%;
-	height: 100%;
+	&,
+	& a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		&:hover{
+			text-decoration: none;
+		}
+	}
 }
 .blog,
 .archive,

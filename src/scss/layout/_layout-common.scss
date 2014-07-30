@@ -87,25 +87,22 @@ div.sharedaddy h3.sd-title{
 		}
 	}
 	&.snsBtn--Tw{
-		$colorDarken: #3f81b2;
 		margin-left: 0;
 		a{
-			@include btnAction($colorDarken);
+			@include btnAction(darken($colorTw, 20%));
 			background-color: $colorTw;
 		}
 	}
 	&.snsBtn--Fb{
-		$colorDarken: #2c4272;
 		a{
-			@include btnAction($colorDarken);
+			@include btnAction(darken($colorFb, 20%));
 			background-color: $colorFb;
 		}
 	}
 	&.snsBtn--Gp{
-		$colorDarken: #a5382a;
 		margin-right: 0;
 		a{
-			@include btnAction($colorDarken);
+			@include btnAction(darken($colorGp, 20%));
 			background-color: $colorGp;
 		}
 	}
