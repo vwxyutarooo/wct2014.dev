@@ -10,31 +10,6 @@ body{
 	background-repeat: no-repeat;
 	color: $colorText;
 	font-family: $fontFamily;
-	a{
-		color: $colorLink;
-		&:hover{
-			color: $colorLinkHover;
-			text-decoration: underline;
-		}
-		&:visited{
-			color: $colorLinkVisited;
-		}
-	}
-	p{
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	::selection{
-		background-color: $colorLinkSelect;
-	}
-	.fa{
-		display: inline-block;
-		text-decoration: none;
-	}
-	.fontEn{
-		font-family: $fontFamilyEn;
-	}
 }
 
 /* =========================================================
@@ -48,16 +23,44 @@ iframe{
 	 Text-level semantics
 ========================================================= */
 a{
+	color: $colorLink;
+	transition: color 0.2s ease;
 	&:focus{
 		outline: thin dotted;
 	}
-	&:link, &:visited{
+	&:link,
+	&:visited{
 		color: $colorLink;
 	}
-	&:hover, &:active{
-		color: $colorLinkHover;
+	&:hover,
+	&:active{
 		outline: 0;
+		color: $colorLinkHover;
+		text-decoration: underline;
 	}
+}
+p{
+	color: $colorText;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+h1, h2, h3, h4, h5, h6{
+	&,
+	& > a{
+		color: $colorTitle;
+	}
+}
+::selection{
+	background-color: $colorSelection;
+	color: $colorText
+}
+.fa{
+	display: inline-block;
+	text-decoration: none;
+}
+.fontEn{
+	font-family: $fontFamilyEn;
 }
 
 /* =========================================================

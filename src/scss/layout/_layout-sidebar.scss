@@ -39,25 +39,23 @@
 	width: 100%;
 	.widget{
 		.widget-title{
+			display: block;
 			padding-top: 0;
 			border-top: none;
-			display: block;
-			font-size: 16px;
 			border-bottom: 2px solid #B4DFF3;
+			color: $colorTitle;
+			font-size: 16px;
 		}
 		a {
 			color: #666;
 			border: none;
 			&:hover {
-				color: #1e5d8a;
+				color: $colorPink;
 			}
 		}
 	}
 }
-span.cat-links a,
-span.cat-links a:hover {
-	color: #d35991;
-}
+
 .widget_archive li,
 .widget_categories li,
 .widget_links li,
@@ -67,6 +65,15 @@ span.cat-links a:hover {
 .widget_recent_comments li,
 .widget_recent_entries li {
 	border-top: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.cat-item{
+	color: #ccc;
+	a{
+		&:hover{
+			color: lighten($colorPink, 6%);
+		}
+	}
 }
 
 /* 

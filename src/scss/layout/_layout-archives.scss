@@ -31,13 +31,13 @@
 		border: 1px solid #F7DAE6;
 		color: #666;
 		&:hover {
-			background: #F2A5C7;
-			border: 1px solid #F2A5C7;
+			background: lighten($colorPink, 10%);
+			border: 1px solid lighten($colorPink, 10%);
 			color: #fff;
 		}
 	}
 	> span {
-		background-color: #F2A5C7;
+		background-color: lighten($colorPink, 10%);
 		color: #fff;
 	}
 }
@@ -47,13 +47,13 @@
 		background-color: #F7DAE6;
 	}
 	.page-numbers.current {
-		border-top: 5px solid #F2A5C7;
-		background: #F2A5C7;
+		border-top: 5px solid lighten($colorPink, 10%);
+		background: lighten($colorPink, 10%);
 		color: #fff;
 	}
 	a:hover {
-		border-top: 5px solid #F2A5C7;
-		background-color: #F2A5C7;
+		border-top: 5px solid lighten($colorPink, 10%);
+		background-color: lighten($colorPink, 10%);
 		color: #fff;
 		text-decoration: none;
 	}

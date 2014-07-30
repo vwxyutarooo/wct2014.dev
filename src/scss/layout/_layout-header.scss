@@ -94,10 +94,6 @@
 
 /* navigation
 ---------------------------------------- */
-$colorNav: #177098;
-$colorNav: #ef86b4;
-$colorNavActive: #8dd0ee;
-$colorNavActive: #f1d755;
 .primary-navigation{
 	position: absolute;
 	top: 560px;
@@ -137,7 +133,7 @@ $colorNavActive: #f1d755;
 		&:hover{
 			> a{
 				background-color: transparent;
-				color: #ffd7ff;
+				color: $colorNavHover;
 				text-decoration: none;
 			}
 		}

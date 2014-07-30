@@ -1,4 +1,4 @@
-/* 
+/* Posts
 ---------------------------------------- */
 article.post{
 	margin-left: 0;
@@ -9,80 +9,84 @@ article.post{
 	max-width: 900px;
 }
 
-// Post title
-@mixin definePostTitle{
-	.site-content{
-		.entry-header{
+// entry-header
+.entry-header{
+	> .entry-meta{
+		&:first-child{
 			@include hasPseudoClass(before);
-			@include hasPseudoClass(after, relative);
-			padding-right: 100px;
-			padding-bottom: 20px;
-			margin-bottom: 20px;
-			&:before{
-				@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 0.8);
-				right: -6px;
-				bottom: 6px;
-				z-index: 10;
-			}
-			&:after{
-				@include imageReplace('2014/07/ttl_postBtmLine.png', 100%, 15px, 1);
-				bottom: 0;
-				box-sizing: border-box;
-				background-position: bottom right;
-				background-size: auto 15px;
-				background-repeat: repeat-x;
-			}
-			> .entry-meta{
-				&:first-child{
-					@include hasPseudoClass(before);
-					.cat-links{
-						a{
-							color: $colorPink;
-							&:before{
-								@include genericon('\f301');
-							}
-						}
-					}
-				}
-				&:last-child{
-					@include hasPseudoClass(after);
-					display: inline-block;
-					background-color: $colorPink;
-					color: #fff;
-					padding: 0.25em 0.5em;
-					a{
-						color: #fff;
-					}
-					&:after{
-						// @include corner-triangle(bottom-left, 23px, $colorPink);
-						// right: -23px;
-						// bottom: 0;
+			.cat-links{
+				a{
+					color: $colorPink;
+					&:before{
+						@include genericon('\f301');
 					}
 				}
 			}
 		}
-		.entry-title{
-			box-sizing: border-box;
-			padding-right: 60px;
+		&:last-child{
+			@include hasPseudoClass(after);
+			display: inline-block;
+			background-color: $colorPink;
+			color: #fff;
+			padding: 0.25em 0.5em;
 			a{
-				color: #000;
+				color: #fff;
+			}
+			&:after{
+				// @include corner-triangle(bottom-left, 23px, $colorPink);
+				// right: -23px;
+				// bottom: 0;
 			}
 		}
 	}
 }
-.blog,
-.archive,
-.single,
-.page-template-default{
-	@extend %postTitle;
-}
-
-// Entry title
+// entry-title
 .entry-title a,
 .entry-title{
 	display: block;
 	width: 100%;
 	height: 100%;
+}
+.blog,
+.archive,
+.single,
+.page-template-default{
+	.site-content{
+		@extend %postTitle;
+	}
+}
+@mixin definePostTitle{
+	.entry-header{
+		@include hasPseudoClass(before);
+		@include hasPseudoClass(after, relative);
+		padding-right: 100px;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		&:before{
+			@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 0.8);
+			right: -6px;
+			bottom: 6px;
+			z-index: 10;
+		}
+		&:after{
+			@include imageReplace('2014/07/ttl_postBtmLine.png', 100%, 15px, 1);
+			bottom: 0;
+			box-sizing: border-box;
+			background-position: bottom right;
+			background-size: auto 15px;
+			background-repeat: repeat-x;
+		}
+	}
+	.entry-title{
+		box-sizing: border-box;
+		padding-right: 60px;
+		a{
+			color: $colorTitle;
+			&:hover{
+				color: $colorLinkHover;
+			}
+		}
+	}
 }
 
 // Post footer
@@ -115,6 +119,7 @@ article.post{
 		@extend %postFooterDecolate;
 	}
 }
+
 /* Single post navigation
 ---------------------------------------- */
 .nav-links{
@@ -157,11 +162,14 @@ article.post{
 	}
 }
 
-/* Post content styles
+/* Entry content styles
 ---------------------------------------- */
+// entry-header
 article .entry-header{
 	padding-top: 44px;
 }
+
+// entry-content
 .entry-content h1{
 	@include hasPseudoClass(before);
 	display: block;
@@ -170,7 +178,7 @@ article .entry-header{
 	max-width: 100%;
 	border: 3px solid rgb(239, 239, 239);
 	box-shadow: rgba(240, 240, 240, 0.35098) -2px 0px 1px;
-	color: #484848;
+	color: $colorTitle;
 	letter-spacing: 1px;
 	line-height: 1.2;
 	&:before{
@@ -272,10 +280,17 @@ blockquote{
 	}
 }
 
-.entry-meta .tag-links a:hover:before {
-	border-right-color: #F2A5C7;
-}
-.entry-meta .tag-links a:hover {
-	background-color: #F2A5C7;
-	text-decoration: none;
+// entry-meta
+.entry-meta{
+	.tag-links{
+		a{
+			&:hover {
+				background-color: lighten($colorPink, 6%);
+				text-decoration: none;
+				&:before {
+					border-right-color: lighten($colorPink, 6%);
+				}
+			}
+		}
+	}
 }

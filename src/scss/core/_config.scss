@@ -23,18 +23,24 @@ $menuItemHeight    : 36px;
 $menuHeight        : 48px;
 $menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically
 
-//Color
+// Basic Colors
 $colorBorder       : #000;
 $colorBkg          : #5198ce;
-$colorLink         : #1E5D8A;
-$colorLinkActive   : #1E5D8A;
-$colorLinkHover    : #1E5D8A;
-$colorLinkVisited  : #1E5D8A;
-$colorLinkSelect   : #1E5D8A; 
 $colorBlue         : #3595BE;
-$colorPink         : #D35991;
-$colorText         : #555555;
+$colorPink         : #ef86b4;  // #d35991
 $colorOrange       : #e6b85d;
+// Text Colors
+$colorText         : #555555;
+$colorTitle        : #555555;
+$colorLink         : #266b89;
+$colorLink         : darken($colorBlue, 14%);
+$colorLinkHover    : $colorLink;
+$colorSelection    : #accef7;
+// Navigation colors
+$colorNav          : #ef86b4;
+$colorNavHover     : lighten($colorNav, 20%);
+$colorNavActive    : lighten($colorNav, 17%);
+// Optional colors
 $colorTw           : #55acee;
 $colorFb           : #3b5998;
 $colorGp           : #dd4b39;

@@ -1,3 +1,6 @@
+/* =========================================================
+	 Media - Mobile sizes
+========================================================= */
 @media screen and (max-width: 640px){
 	html{
 		font-size: 10px;
@@ -122,7 +125,7 @@
 	}
 }
 /* =========================================================
-	 Tablet Size
+	 Media - Tablet Size
 ========================================================= */
 @media only screen and (min-width: 641px){
 	$hHeight: 640px;
@@ -168,7 +171,7 @@
 	}
 }
 /* =========================================================
-	 Navigation Expanded
+	 Media - Navigation Expanded
 ========================================================= */
 @media screen and (min-width: 783px){
 	$hHeight: 704px;
@@ -213,7 +216,7 @@
 @media screen and (min-width: 810px){}
 
 /* =========================================================
-	 PC Size
+	 Media - PC Size
 ========================================================= */
 @media screen and (min-width: 846px){
 	#masthead{
@@ -231,12 +234,10 @@
 	}
 	// postTitle
 	%postTitle{
-		.site-content{
-			.entry-header{
-				padding-right: 60px;
-				&:before{
-					right: -56px;
-				}
+		.entry-header{
+			padding-right: 60px;
+			&:before{
+				right: -56px;
 			}
 		}
 	}
@@ -260,13 +261,11 @@
 	}
 	// postTitle
 	%postTitle{
-		.site-content{
-			.entry-header{
-				padding-right: 100px;
-				&:before{
-					@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 1.0);
-					bottom: 3px;
-				}
+		.entry-header{
+			padding-right: 100px;
+			&:before{
+				@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 1.0);
+				bottom: 3px;
 			}
 		}
 	}
@@ -316,7 +315,7 @@
 	}
 }
 /* =========================================================
-	 Retina dispaly devices
+	 Media - Retina dispaly devices
 ========================================================= */
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
@@ -341,16 +340,14 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 960px) 
 	}
 	// postTitle
 	%postTitle{
-		.site-content{
-			.entry-header{
-				&:before{
-					@include imageReplace('2014/07/ttl_postWapu@2x.png', 196px, 146px, 1.0);
-				}
-				&:after{
-					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 100%, 15px, 1.0);
-					background-size: auto 15px;
-					background-repeat: repeat-x;
-				}
+		.entry-header{
+			&:before{
+				@include imageReplace('2014/07/ttl_postWapu@2x.png', 196px, 146px, 1.0);
+			}
+			&:after{
+				@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 100%, 15px, 1.0);
+				background-size: auto 15px;
+				background-repeat: repeat-x;
 			}
 		}
 	}
