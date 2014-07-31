@@ -88,6 +88,63 @@
 	}
 }
 
+/* Primary sidebar
+---------------------------------------- */
+// SNS icon area
+.primary-sidebar{
+	ul{
+		@extend %group;
+	}
+	.snsBtn{
+		@extend %snsBtn;
+	}
+}
+
+%snsBtn{
+	margin: 1em auto;
+	width: 100%;
+	text-align: center;
+	&:after{
+		position: absolute;
+		z-index: -1;
+		content: '';
+		transition: all 0.3s;
+	}
+	a{
+		position: relative;
+		display: block;
+		padding: 20px 0;
+		color: #fff;
+		font-size: 1.6rem;
+		&:hover{
+			text-decoration: none;
+		}
+		i{
+			margin-right: 0.75em;
+		}
+	}
+	&.snsBtn--Tw{
+		margin-left: 0;
+		a{
+			@include btnAction(darken($colorTw, 20%));
+			background-color: $colorTw;
+		}
+	}
+	&.snsBtn--Fb{
+		a{
+			@include btnAction(darken($colorFb, 20%));
+			background-color: $colorFb;
+		}
+	}
+	&.snsBtn--Gp{
+		margin-right: 0;
+		a{
+			@include btnAction(darken($colorGp, 20%));
+			background-color: $colorGp;
+		}
+	}
+}
+
 @media screen and (max-width: 672px) {
 	.content-sidebar {
 		margin-left: auto;
