@@ -250,25 +250,26 @@ article .entry-header{
 
 blockquote{
 	@include hasPseudoClass(both);
-	padding:3em 1em;
-	position:relative;
+	padding: 2em;
+	position: relative;
+	font-size: 0.9em;
 	&:before{
 		content: "“";
-		font-size: 600%;
+		font-size: 500%;
 		line-height: 1em;
 		font-family: "ＭＳ Ｐゴシック",sans-serif;
 		color: #fad4e7;
-		left: 0;
-		top: 0;
+		left: -15px;
+		top: 10px;
 	}
 	&:after{
 		content: "”";
-		font-size: 600%;
+		font-size: 500%;
 		line-height: 0em;
 		font-family: "ＭＳ Ｐゴシック",sans-serif;
 		color: #fad4e7;
-		right: 0;
-		bottom: 0;
+		right: 15px;
+		bottom: 10px;
 	}
 }
 

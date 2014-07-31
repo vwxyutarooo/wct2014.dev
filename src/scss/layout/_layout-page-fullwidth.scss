@@ -23,14 +23,18 @@
 
 	.site-content{
 		margin: 0 auto;
-		.entry-header{
+		
+		.entry-header {
+			display: none;
 			@extend %fullWidthInner;
 			background-color: transparent;
+			
 			.entry-title,
-			.entry-title a{
+			.entry-title a {
 				color: $colorText;
 			}
-			.entry-meta{
+
+			.entry-meta {
 				background-color: transparent;
 			}
 		}
@@ -39,6 +43,35 @@
 			background-color: transparent;
 			color: $colorText;
 			max-width: 100%;
+			
+			h1 {
+				@include hasPseudoClass(after, $position: relative);
+				padding: 35px 10px 10px 0;
+				border: none;
+				box-shadow: none;
+				
+				&:before {
+					background: none;
+				}
+				
+				&:after {
+					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px, 1);
+					background-size: 156px auto;
+					background-position: -15px bottom;
+					background-repeat: repeat-x;
+					padding-top: 25px;
+					min-width: 674px;
+				}
+			}
+
+			h2 {
+
+				font-size: 20px;
+
+				&:after {
+					background: none;
+				}
+			}
 		}
 		.comments-area{
 			display: none;
@@ -59,10 +92,84 @@
 ---------------------------------------- */
 .entry-content{
 	.entry-content__row{
-		padding: 4em 0;
+		padding: 3em 0;
 		background-color: #eee;
 		.entry-content__row__inner{
 			@extend %fullWidthInner;
+		}
+
+	}
+}
+
+/* Media Queries
+---------------------------------------- */
+	
+/* for Tablet Size */
+
+@media screen and (max-width: 641px){
+		
+	.full-width {
+		
+		.site-content
+		.entry-content h1 {
+			@include hasPseudoClass(after, $position: relative);
+			
+			 &:after {
+				@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 100%, 100%, 1);
+				background-size: 20% auto;
+				background-position: -10px bottom;
+				background-repeat: repeat-x;
+				padding-top: 25px;
+				min-width: 315px;
+				}
+		}
+	}
+
+}
+
+/* for Android @2 */
+	
+@media screen and (max-width: 360px){
+		
+	.full-width {
+		
+		.site-content
+		.entry-content h1 {
+			padding: 30px 10px 5px 0;
+			@include hasPseudoClass(after, $position: relative);
+			
+			&:after {
+				@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 50%, 50%, 1);
+				background-size: 25% auto;
+				background-position: -10px bottom;
+				background-repeat: repeat-x;
+				padding-top: 15px;
+				min-width: 315px;
+				}
+		}
+	}
+
+}
+	
+/* for iPhone @2 */
+
+@media screen and (max-width: 320px){
+		
+	.full-width {
+		
+		.site-content
+		.entry-content h1 {
+			@include hasPseudoClass(after, $position: relative);
+			
+			&:after {
+				@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 50%, 50%, 1);
+				background-size: 25% auto;
+				background-position: -10px bottom;
+				background-repeat: repeat-x;
+				padding-top: 15px;
+				padding-left: 20px;
+				min-width: 250px;
+			}
 		}
 	}
 }

@@ -17,14 +17,6 @@
 }
 
 
-
-
-/* entry-header
----------------------------------------- */
-.full-width .site-content .entry-header {
-    display: none;
-}
-
 /* entry-content
 ---------------------------------------- */
 
@@ -36,39 +28,184 @@
 	background-color: #ffffff;
 }
 
+.entry-content__row__inner_bkgWhatIsWordCamp {
+
+	@include hasPseudoClass(before, $position: relative);
+	padding-bottom: 237px;
+
+	&:before {
+		@include imageReplace('2014/07/WhatIsWordCamp@2x.png', 734px, 200px);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	
+}
+
+.entry-content__row__inner_bkgWhoCanParticipate {
+	@include hasPseudoClass(before, $position: relative);
+	padding-bottom: 200px;
+
+	&:before {
+		//@include imageReplace('2014/07/bkgWapu_pink@2x.png', 734px, 376px);
+		@include imageReplace('2014/07/InfographicPeople@2x.png', 734px, 376px);
+		position: absolute;
+		bottom: -94px;
+		left: 0;
+	}
+
+}
+
 .entry-content__row__inner_bkgConcept {
-	background-image: url($filePath + '2014/07/CitySilhouette.jpg');
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-size: 734px;		
-	height: 400px;
+	@include hasPseudoClass(before, $position: relative);
+	padding-bottom: 237px;
+
+	&:before {
+		@include imageReplace('2014/07/CitySilhouette@2x.png', 734px, 237px);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+
 }
 
 /* Media Queries
 ---------------------------------------- */
 	
+/* for Tablet Size */
+
+@media screen and (max-width: 641px){
+
+	.entry-content__row__inner_bkgWhatIsWordCamp {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 160px;
+
+		&:before {
+			@include imageReplace('2014/07/WhatIsWordCamp@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -192px;
+			left: 0;
+		}
+	}
+
+	.entry-content__row__inner_bkgWhoCanParticipate {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 200px;
+
+		&:before {
+			//@include imageReplace('2014/07/bkgWapu@2x.png', 100%, 100%);
+			@include imageReplace('2014/07/InfographicPeople@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -197px;
+			left: 0;
+		}
+
+	}
+
+
+	.entry-content__row__inner_bkgConcept {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 210px;
+
+		&:before {
+			@include imageReplace('2014/07/CitySilhouette@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -176px;
+			left: 0;
+			
+		}
+	}
+
+}
+
+	
 /* for Android @2 */
 
 @media screen and (max-width: 360px){
 
+	.entry-content__row__inner_bkgWhatIsWordCamp {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 100px;
+
+		&:before {
+			@include imageReplace('2014/07/WhatIsWordCamp@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -111px;
+			left: 0;
+		}
+	}
+
+	.entry-content__row__inner_bkgWhoCanParticipate {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 140px;
+
+		&:before {
+			//@include imageReplace('2014/07/bkgWapu@2x.png', 100%, 100%);
+			@include imageReplace('2014/07/InfographicPeople@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -114px;
+			left: 0;
+		}
+
+	}
+
 	.entry-content__row__inner_bkgConcept {
-		background-image: url($filePath + '2014/07/CitySilhouette.jpg');
-		background-repeat: repeat-x;
-		background-position: center bottom;
-		background-size: 100%;		
-		height: 400px;	
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 130px;
+
+		&:before {
+			@include imageReplace('2014/07/CitySilhouette@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -102px;
+			left: 0;
+			
+		}
 	}
 
 }
+
+
 /* for iPhone @2 */
 
 @media screen and (max-width: 320px){
 
-	.entry-content__row__inner_bkgConcept {
-		background-image: url($filePath + '2014/07/CitySilhouette.jpg');
-		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: 100%;		
-		height: 400px;	
+		.entry-content__row__inner_bkgWhatIsWordCamp {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 100px;
+
+		&:before {
+			@include imageReplace('2014/07/WhatIsWordCamp@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -96px;
+			left: 0;
+		}
 	}
+
+	.entry-content__row__inner_bkgWhoCanParticipate {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 140px;
+
+		&:before {
+			//@include imageReplace('2014/07/bkgWapu@2x.png', 100%, 100%);
+			@include imageReplace('2014/07/InfographicPeople@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -100px;
+			left: 0;
+		}
+
+	}
+
+	.entry-content__row__inner_bkgConcept {
+		@include hasPseudoClass(before, $position: relative);
+		padding-bottom: 130px;
+
+		&:before {
+			@include imageReplace('2014/07/CitySilhouette@2x.png', 100%, 100%);
+			position: absolute;
+			bottom: -88px;
+			left: 0;
+			
+		}
+	}
+
 }
