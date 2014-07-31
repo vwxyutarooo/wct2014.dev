@@ -562,24 +562,18 @@ article.post {
 .entry-header > .entry-meta:last-child {
   position: relative;
   display: inline-block;
-  background-color: #ef86b4;
-  color: #fff;
-  padding: 0.25em 40px 0.25em 0.5em; }
+  padding: 0.25em 0;
+  width: 100%;
+  color: #ef86b4; }
   .entry-header > .entry-meta:last-child:after {
     display: block;
     content: "";
     position: absolute; }
   .entry-header > .entry-meta:last-child a {
-    color: #fff; }
+    color: #ef86b4; }
     .entry-header > .entry-meta:last-child a:hover {
       text-decoration: none;
       color: #fbe0ec; }
-  .entry-header > .entry-meta:last-child:after {
-    top: 0;
-    right: 0;
-    border-top: 0 solid transparent;
-    border-right: 40px solid #fff;
-    border-bottom: 23px solid transparent; }
 
 .entry-title, .entry-title a {
   display: block;
@@ -1215,6 +1209,29 @@ span.page-links-title {
       background-position: bottom right;
       background-size: auto 15px;
       background-repeat: repeat-x; }
+    .blog .site-content .entry-header > .entry-meta:last-child,
+    .archive .site-content .entry-header > .entry-meta:last-child,
+    .single .site-content .entry-header > .entry-meta:last-child,
+    .page-template-default .site-content .entry-header > .entry-meta:last-child {
+      padding-right: 40px;
+      padding-left: 0.5em;
+      width: auto;
+      background-color: #ef86b4;
+      color: #fff; }
+      .blog .site-content .entry-header > .entry-meta:last-child a,
+      .archive .site-content .entry-header > .entry-meta:last-child a,
+      .single .site-content .entry-header > .entry-meta:last-child a,
+      .page-template-default .site-content .entry-header > .entry-meta:last-child a {
+        color: #fff; }
+      .blog .site-content .entry-header > .entry-meta:last-child:after,
+      .archive .site-content .entry-header > .entry-meta:last-child:after,
+      .single .site-content .entry-header > .entry-meta:last-child:after,
+      .page-template-default .site-content .entry-header > .entry-meta:last-child:after {
+        top: 0;
+        right: 0;
+        border-top: 0 solid transparent;
+        border-right: 40px solid #fff;
+        border-bottom: 23px solid transparent; }
   .blog .site-content .entry-title,
   .archive .site-content .entry-title,
   .single .site-content .entry-title,

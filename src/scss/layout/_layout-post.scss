@@ -29,22 +29,15 @@ article.post{
 		&:last-child{
 			@include hasPseudoClass(after);
 			display: inline-block;
-			background-color: $colorPink;
-			color: #fff;
-			padding: 0.25em 40px 0.25em 0.5em;
+			padding: 0.25em 0;
+			width: 100%;
+			color: $colorPink;
 			a{
-				color: #fff;
+				color: $colorPink;
 				&:hover{
 					text-decoration: none;
 					color: $colorNavHover;
 				}
-			}
-			&:after{
-				top: 0;
-				right: 0;
-				border-top: 0 solid transparent;
-				border-right: 40px solid #fff;
-				border-bottom: 23px solid transparent;
 			}
 		}
 	}
@@ -89,6 +82,25 @@ article.post{
 			background-position: bottom right;
 			background-size: auto 15px;
 			background-repeat: repeat-x;
+		}
+		> .entry-meta{
+			&:last-child{
+				padding-right: 40px;
+				padding-left: 0.5em;
+				width: auto;
+				background-color: $colorPink;
+				color: #fff;
+				a{
+					color: #fff;
+				}
+				&:after{
+					top: 0;
+					right: 0;
+					border-top: 0 solid transparent;
+					border-right: 40px solid #fff;
+					border-bottom: 23px solid transparent;
+				}
+			}
 		}
 	}
 	.entry-title{
