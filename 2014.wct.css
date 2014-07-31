@@ -127,6 +127,7 @@ body {
   background-color: #fff;
   background-repeat: no-repeat;
   color: #555555;
+  word-wrap: break-word;
   font-family: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif; }
 
 /* =========================================================
@@ -574,11 +575,11 @@ article.post {
       text-decoration: none;
       color: #fbe0ec; }
   .entry-header > .entry-meta:last-child:after {
+    top: 0;
+    right: 0;
     border-top: 0 solid transparent;
     border-right: 40px solid #fff;
-    border-bottom: 23px solid transparent;
-    right: 0;
-    top: 0; }
+    border-bottom: 23px solid transparent; }
 
 .entry-title, .entry-title a {
   display: block;
@@ -1095,7 +1096,16 @@ span.page-links-title {
     padding: 80px 0 48px; }
     .list-view .site-content .hentry.has-post-thumbnail {
       padding-top: 80px;
-      border-top: 1px solid rgba(0, 0, 0, 0.1); } }
+      border-top: 1px solid rgba(0, 0, 0, 0.1); }
+      .list-view .site-content .hentry.has-post-thumbnail .entry-meta .cat-links {
+        background-color: rgba(239, 134, 180, 0.8);
+        padding: 3px 5px;
+        color: #e1e1e1; }
+        .list-view .site-content .hentry.has-post-thumbnail .entry-meta .cat-links a {
+          display: inline-block;
+          color: #fff; }
+      .list-view .site-content .hentry.has-post-thumbnail .entry-title {
+        margin-top: 15px; } }
 @media only screen and (min-width: 594px) {
   .menu-toggle, .full-width .site-content .entry-header, .full-width #secondary #primary-sidebar, .entry-content .entry-content__row .entry-content__row__inner {
     padding-right: 30px;

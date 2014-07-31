@@ -40,11 +40,11 @@ article.post{
 				}
 			}
 			&:after{
+				top: 0;
+				right: 0;
 				border-top: 0 solid transparent;
 				border-right: 40px solid #fff;
 				border-bottom: 23px solid transparent;
-				right: 0;
-				top: 0;
 			}
 		}
 	}
@@ -125,6 +125,20 @@ article.post{
 		&.has-post-thumbnail{
 			padding-top: 80px;
 			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			.entry-meta{
+				.cat-links{
+					background-color: rgba($colorPink, 0.8);
+					padding: 3px 5px;
+					color: #e1e1e1;
+					a{
+						display: inline-block;
+						color: #fff;
+					}
+				}
+			}
+			.entry-title{
+				margin-top: 15px; // 20 - (.cat-link's padding-bottom size)
+			}
 		}
 	}
 }
