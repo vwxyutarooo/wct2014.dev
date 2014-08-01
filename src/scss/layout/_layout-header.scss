@@ -5,6 +5,7 @@
 	min-height: 0;
 	width: 100%;
 	height: 0;
+	background-repeat: no-repeat;
 }
 
 #site-header{
@@ -22,7 +23,6 @@
 	margin-bottom: $menuHeight;
 	max-width: 100%;
 	background-color: transparent;
-	background-repeat: no-repeat;
 
 	// Flying Wapuuuuuu
 	&:after{
@@ -162,4 +162,30 @@
 }
 .screen-reader-text{
 	display: none;
+}
+
+/* Set header bkg
+---------------------------------------- */
+@mixin setHeaderBkg($height: auto, $imgBkg: false, $imgTxt: false, $bkgSize: false, $txtSize: false){
+	body{
+		@if $imgBkg != false {
+			background-image: url($filePath + $imgBkg);
+		}
+		@if $bkgSize != false {
+			background-size: $bkgSize;
+		}
+	}
+	.header-main{
+		background-size: $height;
+		padding-top: $height;
+		@if $imgTxt != false {
+			background-image: url($filePath + $imgTxt);
+		}
+		@if $txtSize != false {
+			background-size: $txtSize;
+		}
+	}
+	.primary-navigation{
+		top: $height;
+	}
 }

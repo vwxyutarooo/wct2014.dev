@@ -285,7 +285,8 @@ div.sharedaddy h3.sd-title {
   padding: 560px 0 0 0;
   min-height: 0;
   width: 100%;
-  height: 0; }
+  height: 0;
+  background-repeat: no-repeat; }
 
 #site-header {
   position: relative;
@@ -299,8 +300,7 @@ div.sharedaddy h3.sd-title {
   position: relative;
   margin-bottom: 48px;
   max-width: 100%;
-  background-color: transparent;
-  background-repeat: no-repeat; }
+  background-color: transparent; }
   #masthead:after {
     display: block;
     content: "";
@@ -433,6 +433,8 @@ div.sharedaddy h3.sd-title {
 .screen-reader-text {
   display: none; }
 
+/* Set header bkg
+---------------------------------------- */
 .becomeStaff .fa {
   width: 2em;
   height: 2em;
@@ -1019,21 +1021,23 @@ span.page-links-title {
 
   body {
     background-image: url("files/2014/07/bkgHeaderS.jpg");
-    background-position: center top;
     background-size: 640px; }
 
-  #masthead {
-    background-image: url("files/2014/07/txtHeaderS.png");
-    background-position: center top;
+  .header-main {
     background-size: 640px;
-    height: 640px; } }
+    padding-top: 640px;
+    background-image: url("files/2014/07/txtHeaderS.png");
+    background-size: 640px; }
+
+  .primary-navigation {
+    top: 640px; } }
 @media screen and (max-width: 400px) {
   body {
-    background-size: 400px; }
+    background-size: 400px auto; }
 
-  #masthead {
+  .header-main {
     background-size: 400px;
-    height: 400px; }
+    padding-top: 400px; }
 
   .primary-navigation {
     top: 400px; }
@@ -1053,18 +1057,23 @@ span.page-links-title {
   body {
     background-size: 360px; }
 
-  #masthead {
+  .header-main {
     background-size: 360px;
-    height: 360px; } }
+    padding-top: 360px;
+    background-size: 360px; }
+
+  .primary-navigation {
+    top: 360px; } }
 /* for iPhone @2x
 ---------------------------------------- */
 @media screen and (max-width: 320px) {
   body {
     background-size: 320px; }
 
-  #masthead {
+  .header-main {
     background-size: 320px;
-    height: 320px; }
+    padding-top: 320px;
+    background-size: 320px; }
 
   .primary-navigation {
     top: 320px; } }
@@ -1072,18 +1081,23 @@ span.page-links-title {
 ---------------------------------------- */
 @media screen and (min-width: 401px) {
   body {
-    background-position: center top;
     background-size: 640px auto; }
 
-  #masthead {
-    height: 592px;
-    background-position: center;
+  .header-main {
+    background-size: 592px;
+    padding-top: 592px;
     background-size: 100%; }
-    #masthead:after {
-      margin-top: 20px; }
 
   .primary-navigation {
     top: 592px; }
+
+  body {
+    background-position: center top; }
+
+  .header-main {
+    background-position: center; }
+    .header-main:after {
+      margin-top: 20px; }
 
   .list-view .site-content .hentry {
     position: relative;
@@ -1124,29 +1138,28 @@ span.page-links-title {
     background-image: url("files/2014/07/bkgHeaderM.jpg");
     background-size: auto 640px; }
 
-  #masthead {
-    height: 640px;
+  .header-main {
+    background-size: 640px;
+    padding-top: 640px;
     background-image: url("files/2014/06/txtHeaderM.png");
     background-size: 860px auto; }
-    #masthead:after {
-      display: block;
-      overflow: hidden;
-      padding-top: 180px;
-      width: 180px;
-      height: 0;
-      background-image: url("files/2014/06/iconWapu.png");
-      background-position: 0, 0;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      top: 32%;
-      right: 4%;
-      margin-top: -90px; }
-
-  .header-main {
-    padding-top: 640px; }
 
   .primary-navigation {
     top: 640px; }
+
+  #masthead:after {
+    display: block;
+    overflow: hidden;
+    padding-top: 180px;
+    width: 180px;
+    height: 0;
+    background-image: url("files/2014/06/iconWapu.png");
+    background-position: 0, 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 32%;
+    right: 4%;
+    margin-top: -90px; }
 
   .content-sidebar {
     padding: 0; }
@@ -1263,15 +1276,21 @@ span.page-links-title {
 ========================================================= */
 @media screen and (min-width: 783px) {
   body {
-    background-position: center top;
     background-size: 1280px auto; }
 
-  #masthead {
-    height: 704px;
-    background-size: 1000px auto;
-    background-size: center top; }
-    #masthead:after {
-      right: 10%; }
+  .header-main {
+    background-size: 704px;
+    padding-top: 704px;
+    background-size: 1000px auto; }
+
+  .primary-navigation {
+    top: 704px; }
+
+  #masthead:after {
+    right: 10%; }
+
+  .header-main {
+    background-position: center top; }
 
   .site-navigation li {
     width: 12%;
@@ -1283,7 +1302,6 @@ span.page-links-title {
     line-height: 36px; }
 
   .primary-navigation {
-    top: 704px;
     padding: 6px 0; }
     .primary-navigation a {
       padding: 0 20px;
@@ -1295,7 +1313,7 @@ span.page-links-title {
 	 Media - PC Size
 ========================================================= */
 @media screen and (min-width: 846px) {
-  #masthead {
+  .header-main {
     background-size: 1280px auto; }
 
   .content-sidebar {
@@ -1323,7 +1341,7 @@ span.page-links-title {
     padding-left: 20px;
     padding-right: 20px; } }
 @media screen and (min-width: 1008px) {
-  #masthead {
+  .header-main {
     background-position: center center;
     background-size: 1280px auto; } }
 @media screen and (min-width: 1110px) {
@@ -1366,45 +1384,51 @@ span.page-links-title {
   body {
     background-size: 100%; }
 
-  #masthead {
-    background-size: 100%; } }
+  .header-main {
+    background-size: auto;
+    padding-top: auto;
+    background-size: 100%; }
+
+  .primary-navigation {
+    top: auto; } }
 @media only screen and (min-width: 1440px) {
   body {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
-    background-position: center top;
-    background-size: 1920px 1080px; }
+    background-size: 1920px auto; }
 
-  #masthead {
-    height: 1080px;
+  .header-main {
+    background-size: 1080px;
+    padding-top: 1080px;
     background-image: url("files/2014/06/txtHeaderL.png");
     background-size: 100%; }
-    #masthead:after {
-      display: block;
-      overflow: hidden;
-      padding-top: 300px;
-      width: 300px;
-      height: 0;
-      background-image: url("files/2014/06/iconWapu.png");
-      background-position: 0, 0;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      margin-top: -150px; }
 
   .primary-navigation {
-    top: 1080px; } }
+    top: 1080px; }
+
+  #masthead:after {
+    display: block;
+    overflow: hidden;
+    padding-top: 300px;
+    width: 300px;
+    height: 0;
+    background-image: url("files/2014/06/iconWapu.png");
+    background-position: 0, 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: -150px; } }
 /* =========================================================
 	 Media - Retina dispaly devices
 ========================================================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 960px) and (max-width: 1920px), only screen and (min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1920px), only screen and (min-resolution: 2dppx) and (min-width: 960px) and (max-width: 1920px) {
   body {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
-    background-size: 1280px auto;
-    background-position: center top; }
+    background-size: 100% auto; }
 
-  #masthead {
-    height: 704px;
+  .header-main {
+    background-size: 704px;
+    padding-top: 704px;
     background-image: url("files/2014/06/txtHeaderL.png");
-    background-size: 1280px auto; }
+    background-size: 100% auto; }
 
   .primary-navigation {
     top: 704px; }
