@@ -25,7 +25,7 @@
 	background-color: transparent;
 
 	// Flying Wapuuuuuu
-	&:after{
+	.home &:after{
 		@extend %hovering;
 		@include imageReplace('2014/06/iconWapu.png', 300px, 300px, .3);
 		right: 8%;
@@ -166,26 +166,61 @@
 
 /* Set header bkg
 ---------------------------------------- */
-@mixin setHeaderBkg($height: auto, $imgBkg: false, $imgTxt: false, $bkgSize: false, $txtSize: false){
-	body{
-		@if $imgBkg != false {
-			background-image: url($filePath + $imgBkg);
+@mixin setHeaderBkg($height: auto, $imgBkg: false, $imgTxt: false, $bkgSize: false, $txtSize: false, $bkgPos: false, $txtPos: false, $bodyClass: false){
+	@if $bodyClass == false {
+		body{
+			@if $imgBkg != false {
+				background-image: url($filePath + $imgBkg);
+			}
+			@if $bkgSize != false {
+				background-size: $bkgSize;
+			}
+			@if $bkgPos != false {
+				background-position: $bkgPos;
+			}
 		}
-		@if $bkgSize != false {
-			background-size: $bkgSize;
+		.header-main{
+			padding-top: $height;
+			@if $imgTxt != false {
+				background-image: url($filePath + $imgTxt);
+			}
+			@if $txtSize != false {
+				background-size: $txtSize;
+			}
+			@if $txtPos != false {
+				background-position: $txtPos;
+			}
 		}
-	}
-	.header-main{
-		background-size: $height;
-		padding-top: $height;
-		@if $imgTxt != false {
-			background-image: url($filePath + $imgTxt);
+		.primary-navigation{
+			top: $height;
 		}
-		@if $txtSize != false {
-			background-size: $txtSize;
+	} @else {
+		body#{$bodyClass}{
+			@if $imgBkg != false {
+				background-image: url($filePath + $imgBkg);
+			}
+			@if $bkgSize != false {
+				background-size: $bkgSize;
+			}
+			@if $bkgPos != false {
+				background-position: $bkgPos;
+			}
 		}
-	}
-	.primary-navigation{
-		top: $height;
+		#{$bodyClass} .header-main{
+			background-size: $height;
+			padding-top: $height;
+			@if $imgTxt != false {
+				background-image: url($filePath + $imgTxt);
+			}
+			@if $txtSize != false {
+				background-size: $txtSize;
+			}
+			@if $txtPos != false {
+				background-position: $txtPos;
+			}
+		}
+		#{$bodyClass} .primary-navigation{
+			top: $height;
+		}
 	}
 }

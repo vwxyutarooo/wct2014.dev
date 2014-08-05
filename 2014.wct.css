@@ -101,7 +101,7 @@
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
-#masthead:after {
+.home #masthead:after {
   -webkit-animation-name: hoverDown, hovering;
   animation-name: hoverDown, hovering;
   -webkit-animation-duration: 2s, 3s;
@@ -310,7 +310,7 @@ div.sharedaddy h3.sd-title {
     display: block;
     content: "";
     position: absolute; }
-  #masthead:after {
+  .home #masthead:after {
     display: block;
     overflow: hidden;
     padding-top: 90px;
@@ -1006,28 +1006,52 @@ span.page-links-title {
   .site-content {
     margin-right: 0; }
 
-  body {
+  body.home {
     background-image: url("files/2014/07/bkgHeaderS.jpg");
     background-size: 640px; }
 
-  .header-main {
+  .home .header-main {
     background-size: 640px;
     padding-top: 640px;
     background-image: url("files/2014/07/txtHeaderS.png");
     background-size: 640px; }
 
-  .primary-navigation {
-    top: 640px; } }
-@media screen and (max-width: 400px) {
+  .home .primary-navigation {
+    top: 640px; }
+
   body {
-    background-size: 400px auto; }
+    background-image: url("files/2014/08/bkgHeaderShortS.jpg");
+    background-size: 640px 320px;
+    background-position: center top; }
 
   .header-main {
+    padding-top: 320px;
+    background-image: url("files/2014/08/txtHeaderShortS.png");
+    background-size: 100% auto;
+    background-position: left top; }
+
+  .primary-navigation {
+    top: 320px; } }
+@media screen and (max-width: 400px) {
+  body.home {
+    background-size: 400px auto; }
+
+  .home .header-main {
     background-size: 400px;
     padding-top: 400px; }
 
-  .primary-navigation {
+  .home .primary-navigation {
     top: 400px; }
+
+  body {
+    background-size: 400px 200px; }
+
+  .header-main {
+    padding-top: 200px;
+    background-size: 400px 200px; }
+
+  .primary-navigation {
+    top: 200px; }
 
   .list-view .content-area {
     padding: 30px 0; }
@@ -1041,50 +1065,67 @@ span.page-links-title {
 /* for Android @2x
 ---------------------------------------- */
 @media screen and (max-width: 360px) {
-  body {
+  body.home {
     background-size: 360px; }
 
-  .header-main {
+  .home .header-main {
     background-size: 360px;
     padding-top: 360px;
     background-size: 360px; }
 
+  .home .primary-navigation {
+    top: 360px; }
+
+  body {
+    background-size: 360px; }
+
+  .header-main {
+    padding-top: 180px;
+    background-size: 360px; }
+
   .primary-navigation {
-    top: 360px; } }
+    top: 180px; } }
 /* for iPhone @2x
 ---------------------------------------- */
 @media screen and (max-width: 320px) {
-  body {
+  body.home {
     background-size: 320px; }
 
-  .header-main {
+  .home .header-main {
     background-size: 320px;
     padding-top: 320px;
     background-size: 320px; }
 
+  .home .primary-navigation {
+    top: 320px; }
+
+  body {
+    background-size: 320px 160px; }
+
+  .header-main {
+    padding-top: 160px;
+    background-size: 320px 160px; }
+
   .primary-navigation {
-    top: 320px; } }
+    top: 160px; } }
 /* any other devices following twentyfourteen
 ---------------------------------------- */
 @media screen and (min-width: 401px) {
-  body {
-    background-size: 640px auto; }
-
-  .header-main {
-    background-size: 592px;
-    padding-top: 592px;
-    background-size: 100%; }
-
-  .primary-navigation {
-    top: 592px; }
-
-  body {
+  body.home {
+    background-size: 640px auto;
     background-position: center top; }
 
-  .header-main {
+  .home .header-main {
+    background-size: 592px;
+    padding-top: 592px;
+    background-size: 100%;
     background-position: center; }
-    .header-main:after {
-      margin-top: 20px; }
+
+  .home .primary-navigation {
+    top: 592px; }
+
+  .header-main:after {
+    margin-top: 20px; }
 
   .list-view .site-content .hentry {
     position: relative;
@@ -1121,20 +1162,36 @@ span.page-links-title {
 	 Media - Tablet Size
 ========================================================= */
 @media only screen and (min-width: 641px) {
-  body {
+  body.home {
     background-image: url("files/2014/07/bkgHeaderM.jpg");
-    background-size: auto 640px; }
+    background-size: auto 640px;
+    background-position: center top; }
 
-  .header-main {
+  .home .header-main {
     background-size: 640px;
     padding-top: 640px;
     background-image: url("files/2014/06/txtHeaderM.png");
     background-size: 860px auto; }
 
-  .primary-navigation {
+  .home .primary-navigation {
     top: 640px; }
 
-  #masthead:after {
+  .header-main {
+    padding-top: 400px;
+    background-image: url("files/2014/08/txtHeaderShortM.png");
+    background-size: 1000px auto;
+    background-position: left center; }
+
+  .primary-navigation {
+    top: 400px; }
+
+  body {
+    background-image: url("files/2014/08/bkgHeaderShortM.jpg"), url("files/2014/08/bkgHeaderShortRepeatM.jpg");
+    background-position: right top, left top;
+    background-size: 1280px auto, 1px 400px;
+    background-repeat: no-repeat, repeat-x; }
+
+  .home #masthead:after {
     display: block;
     overflow: hidden;
     padding-top: 180px;
@@ -1269,22 +1326,27 @@ span.page-links-title {
 	 Media - Navigation Expanded
 ========================================================= */
 @media screen and (min-width: 783px) {
-  body {
+  body.home {
     background-size: 1280px auto; }
 
-  .header-main {
+  .home .header-main {
     background-size: 704px;
     padding-top: 704px;
-    background-size: 1000px auto; }
+    background-size: 1000px auto;
+    background-position: center top; }
 
-  .primary-navigation {
+  .home .primary-navigation {
     top: 704px; }
 
-  #masthead:after {
-    right: 10%; }
-
   .header-main {
-    background-position: center top; }
+    padding-top: auto;
+    background-size: 1280px 400px; }
+
+  .primary-navigation {
+    top: auto; }
+
+  .home #masthead:after {
+    right: 10%; }
 
   .site-navigation li {
     width: 12%;
@@ -1335,9 +1397,14 @@ span.page-links-title {
     padding-left: 20px;
     padding-right: 20px; } }
 @media screen and (min-width: 1008px) {
-  .header-main {
-    background-position: center center;
-    background-size: 1280px auto; } }
+  .home .header-main {
+    background-size: auto;
+    padding-top: auto;
+    background-size: 1280px auto;
+    background-position: center center; }
+
+  .home .primary-navigation {
+    top: auto; } }
 @media screen and (min-width: 1110px) {
   #main, .primary-navigation .nav-menu {
     padding-left: 0;
@@ -1375,31 +1442,31 @@ span.page-links-title {
   .site-content footer.entry-meta {
     margin-right: 0; } }
 @media screen and (min-width: 1281px) {
-  body {
+  body.home {
     background-size: 100%; }
 
-  .header-main {
+  .home .header-main {
     background-size: auto;
     padding-top: auto;
     background-size: 100%; }
 
-  .primary-navigation {
+  .home .primary-navigation {
     top: auto; } }
 @media only screen and (min-width: 1440px) {
-  body {
+  body.home {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
     background-size: 1920px auto; }
 
-  .header-main {
+  .home .header-main {
     background-size: 1080px;
     padding-top: 1080px;
     background-image: url("files/2014/06/txtHeaderL.png");
     background-size: 100%; }
 
-  .primary-navigation {
+  .home .primary-navigation {
     top: 1080px; }
 
-  #masthead:after {
+  .home #masthead:after {
     display: block;
     overflow: hidden;
     padding-top: 300px;
@@ -1414,17 +1481,17 @@ span.page-links-title {
 	 Media - Retina dispaly devices
 ========================================================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 960px) and (max-width: 1920px), only screen and (min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1920px), only screen and (min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1920px), only screen and (min-resolution: 2dppx) and (min-width: 960px) and (max-width: 1920px) {
-  body {
+  body.home {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
     background-size: 100% auto; }
 
-  .header-main {
+  .home .header-main {
     background-size: 704px;
     padding-top: 704px;
     background-image: url("files/2014/06/txtHeaderL.png");
     background-size: 100% auto; }
 
-  .primary-navigation {
+  .home .primary-navigation {
     top: 704px; }
 
   .blog .site-content .entry-header:before,

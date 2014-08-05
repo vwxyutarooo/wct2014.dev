@@ -8,10 +8,12 @@
 	.site-content{
 		margin-right: 0;
 	}
-	@include setHeaderBkg(640px, '2014/07/bkgHeaderS.jpg', '2014/07/txtHeaderS.png', 640px, 640px);
+	@include setHeaderBkg(640px, '2014/07/bkgHeaderS.jpg', '2014/07/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
+	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
 }
 @media screen and (max-width: 400px){
-	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto);
+	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto, $bodyClass: '.home');
+	@include setHeaderBkg($height: 200px, $bkgSize: 400px 200px, $txtSize: 400px 200px);
 	.list-view{
 		.content-area{
 			padding: 30px 0;
@@ -34,24 +36,29 @@
 /* for Android @2x
 ---------------------------------------- */
 @media screen and (max-width: 360px){
-	@include setHeaderBkg($height: 360px, $bkgSize: 360px, $txtSize: 360px);
+	@include setHeaderBkg($height: 360px, $bkgSize: 360px, $txtSize: 360px, $bodyClass: '.home');
+	@include setHeaderBkg($height: 180px, $bkgSize: 360px, $txtSize: 360px);
 }
 /* for iPhone @2x
 ---------------------------------------- */
 @media screen and (max-width: 320px){
-	@include setHeaderBkg($height: 320px, $bkgSize: 320px, $txtSize: 320px);
+	@include setHeaderBkg($height: 320px, $bkgSize: 320px, $txtSize: 320px, $bodyClass: '.home');
+	@include setHeaderBkg($height: 160px, $bkgSize: 320px 160px, $txtSize: 320px 160px);
 }
 
 
 /* any other devices following twentyfourteen
 ---------------------------------------- */
 @media screen and (min-width: 401px){
-	@include setHeaderBkg($height: 640px - 48, $bkgSize: 640px auto, $txtSize: 100%);
-	body{
-		background-position: center top;
-	}
+	@include setHeaderBkg(
+		$height: 640px - 48,
+		$bkgSize: 640px auto,
+		$txtSize: 100%,
+		$bkgPos: center top,
+		$txtPos: center,
+		$bodyClass: '.home'
+	);
 	.header-main{
-		background-position: center;
 		&:after{
 			margin-top: 20px;
 		}
@@ -85,13 +92,35 @@
 	 Media - Tablet Size
 ========================================================= */
 @media only screen and (min-width: 641px){
-	@include setHeaderBkg(640px, '2014/07/bkgHeaderM.jpg', '2014/06/txtHeaderM.png', auto 640px, 860px auto);
-	#masthead{
-		&:after{
-			@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 0.6);
-			top: 32%;
-			right: 4%;
-			margin-top: -(150px * 0.6);
+	@include setHeaderBkg(
+		$height: 640px,
+		$imgBkg: '2014/07/bkgHeaderM.jpg',
+		$imgTxt: '2014/06/txtHeaderM.png',
+		$bkgSize: auto 640px,
+		$txtSize: 860px auto,
+		$bkgPos: center top,
+		$bodyClass: '.home'
+	);
+	@include setHeaderBkg(
+		$height: 400px,
+		$imgTxt: '2014/08/txtHeaderShortM.png',
+		$txtSize: 1000px auto,
+		$txtPos: left center
+	);
+	body{
+		background-image: url($filePath + '2014/08/bkgHeaderShortM.jpg'), url($filePath + '2014/08/bkgHeaderShortRepeatM.jpg');
+		background-position: right top, left top;
+		background-size: 1280px auto, 1px 400px;
+		background-repeat: no-repeat, repeat-x;
+	}
+	.home{
+		#masthead{
+			&:after{
+				@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 0.6);
+				top: 32%;
+				right: 4%;
+				margin-top: -(150px * 0.6);
+			}
 		}
 	}
 	.content-sidebar{
@@ -126,14 +155,14 @@
 	 Media - Navigation Expanded
 ========================================================= */
 @media screen and (min-width: 783px){
-	@include setHeaderBkg($height: 704px, $bkgSize: 1280px auto, $txtSize: 1000px auto);
-	#masthead{
-		&:after{
-			right: 10%;
+	@include setHeaderBkg($height: 704px, $bkgSize: 1280px auto, $txtSize: 1000px auto, $txtPos: center top, $bodyClass: '.home');
+	@include setHeaderBkg($txtSize: 1280px 400px);
+	.home{
+		#masthead{
+			&:after{
+				right: 10%;
+			}
 		}
-	}
-	.header-main{
-		background-position: center top;
 	}
 	.site-navigation{
 		li{
@@ -194,10 +223,7 @@
 	}
 }
 @media screen and (min-width: 1008px){
-	.header-main{
-		background-position: center center;
-		background-size: 1280px auto;
-	}
+	@include setHeaderBkg($txtSize: 1280px auto, $txtPos: center center, $bodyClass: '.home');
 }
 @media screen and (min-width: 1040px){}
 @media screen and (min-width: 1080px){}
@@ -234,14 +260,16 @@
 }
 @media screen and (min-width: 1260px){}
 @media screen and (min-width: 1281px){
-	@include setHeaderBkg($bkgSize: 100%, $txtSize: 100%);
+	@include setHeaderBkg($bkgSize: 100%, $txtSize: 100%, $bodyClass: '.home');
 }
 @media only screen and (min-width: 1440px){
-	@include setHeaderBkg(1080px, '2014/06/bkgHeaderL.jpg', '2014/06/txtHeaderL.png', 1920px auto, 100%);
-	#masthead{
-		&:after{
-			@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 1.0);
-			margin-top: -(150px * 1.0);
+	@include setHeaderBkg(1080px, '2014/06/bkgHeaderL.jpg', '2014/06/txtHeaderL.png', 1920px auto, 100%, $bodyClass: '.home');
+	.home{
+		#masthead{
+			&:after{
+				@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 1.0);
+				margin-top: -(150px * 1.0);
+			}
 		}
 	}
 }
@@ -255,7 +283,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 960px) 
 only screen and (        min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
 only screen and (                min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1920px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 960px) and (max-width: 1920px){
-	@include setHeaderBkg(704px, '2014/06/bkgHeaderL.jpg', '2014/06/txtHeaderL.png', 100% auto, 100% auto);
+	@include setHeaderBkg(704px, '2014/06/bkgHeaderL.jpg', '2014/06/txtHeaderL.png', 100% auto, 100% auto, $bodyClass: '.home');
 	// postTitle
 	%postTitle{
 		.entry-header{
