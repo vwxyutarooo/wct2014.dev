@@ -249,7 +249,12 @@ table {
 /* main elemtns
 ---------------------------------------- */
 #main-content {
-  float: none; }
+  float: none;
+  margin-top: 60px; }
+  .full-width #main-content {
+    margin-top: 0; }
+  .blog #main-content {
+    margin-top: 20px; }
 
 #primary {
   -moz-box-sizing: border-box;
@@ -638,37 +643,36 @@ article .entry-header {
   padding-top: 44px; }
 
 .entry-content h1 {
-  position: relative;
-  display: block;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 8px 12px 8px 62px;
-  max-width: 100%;
-  border: 3px solid #efefef;
-  box-shadow: rgba(240, 240, 240, 0.35098) -2px 0px 1px;
-  color: #555555;
-  letter-spacing: 1px;
-  line-height: 1.2; }
-  .entry-content h1:before {
+  padding: 8px 20px 8px 32px;
+  background: url("files/2014/07/ttl_entry-title03_left.png");
+  background-size: 28px 34px;
+  background-repeat: no-repeat;
+  position: relative; }
+  .entry-content h1:before, .entry-content h1:after {
     display: block;
     content: "";
     position: absolute; }
   .entry-content h1:before {
-    display: block;
-    overflow: hidden;
-    padding-top: 80.5px;
-    width: 113px;
-    height: 0;
-    background-image: url("files/2014/07/ttl_entry-title01.png");
-    background-position: 0, 0;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    top: -20px;
-    left: -54px; }
-
+    top: 0;
+    left: 11px;
+    height: 100%;
+    width: 8px;
+    background-color: #e6b85d;
+    z-index: -1; }
+  .entry-content h1:after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(0deg, #fbeef9 25%, rgba(251, 238, 249, 0) 25%, rgba(251, 238, 249, 0) 50%, #fbeef9 50%, #fbeef9 75%, rgba(251, 238, 249, 0) 75%, rgba(251, 238, 249, 0));
+    background-image: linear-gradient(90deg, #fbeef9 25%, rgba(251, 238, 249, 0) 25%, rgba(251, 238, 249, 0) 50%, #fbeef9 50%, #fbeef9 75%, rgba(251, 238, 249, 0) 75%, rgba(251, 238, 249, 0));
+    background-position: 0 20px;
+    background-size: 16px 14px;
+    z-index: -2; }
 .entry-content h2 {
   position: relative;
-  padding-bottom: 14px; }
+  padding-bottom: 16px; }
   .entry-content h2:after {
     display: block;
     content: "";
@@ -683,46 +687,29 @@ article .entry-header {
     background-image: linear-gradient(315deg, #e7b955 25%, rgba(231, 185, 85, 0) 25%, rgba(231, 185, 85, 0) 50%, #e7b955 50%, #e7b955 75%, rgba(231, 185, 85, 0) 75%, rgba(231, 185, 85, 0));
     background-position: 0 20px;
     background-size: 14px 14px; }
-
 .entry-content h3 {
-  padding: 14px 20px 14px 50px;
-  background: url("files/2014/07/ttl_entry-title03_left.png");
-  background-size: 42px 52px;
-  background-repeat: no-repeat;
-  position: relative; }
-  .entry-content h3:after {
-    display: block;
-    content: "";
-    position: absolute; }
-  .entry-content h3:after {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    background-image: -webkit-linear-gradient(0deg, #fbeef9 25%, rgba(251, 238, 249, 0) 25%, rgba(251, 238, 249, 0) 50%, #fbeef9 50%, #fbeef9 75%, rgba(251, 238, 249, 0) 75%, rgba(251, 238, 249, 0));
-    background-image: linear-gradient(90deg, #fbeef9 25%, rgba(251, 238, 249, 0) 25%, rgba(251, 238, 249, 0) 50%, #fbeef9 50%, #fbeef9 75%, rgba(251, 238, 249, 0) 75%, rgba(251, 238, 249, 0));
-    background-position: 0 20px;
-    background-size: 16px 14px;
-    z-index: -1; }
-
-.entry-content h4 {
   padding: 0 10px 20px;
   background: url("files/2014/07/ttl_entry-title04.png") left bottom no-repeat;
   background-size: 100% auto; }
-
-.entry-content h5 {
+.entry-content h4 {
   padding: 5px 20px 4px;
   background: url("files/2014/07/ttl_entry-title05.png") left top repeat-y;
   background-size: 11px 35px; }
-
-.entry-content h6 {
+.entry-content h5 {
   padding: 0 5px;
   border-left: solid #e3e3e3 10px;
   background-size: 12px 38px; }
-
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
-  margin-top: 2em; }
+  margin-top: 2em;
+  margin-bottom: 1em; }
+.entry-content dl dt {
+  margin-bottom: 10px;
+  padding: 3px 12px;
+  border-left: 3px solid #bebebe;
+  background: #f2f2f2;
+  font-weight: normal; }
+.entry-content dl dd {
+  padding: 0 0 0 15px; }
 
 blockquote {
   position: relative;
@@ -1170,7 +1157,7 @@ span.page-links-title {
   .page-template-default .site-content .entry-header {
     position: relative;
     position: relative;
-    padding-right: 100px;
+    padding-right: 60px;
     padding-bottom: 20px;
     margin-bottom: 20px; }
     .blog .site-content .entry-header:before,
@@ -1193,15 +1180,15 @@ span.page-links-title {
     .page-template-default .site-content .entry-header:before {
       display: block;
       overflow: hidden;
-      padding-top: 116.8px;
-      width: 156.8px;
+      padding-top: 87.6px;
+      width: 117.6px;
       height: 0;
       background-image: url("files/2014/07/ttl_postWapu.png");
       background-position: 0, 0;
       background-size: 100%;
       background-repeat: no-repeat;
       right: -6px;
-      bottom: 6px;
+      bottom: 10px;
       z-index: 10; }
     .blog .site-content .entry-header:after,
     .archive .site-content .entry-header:after,
@@ -1261,7 +1248,14 @@ span.page-links-title {
       .archive .site-content .entry-title a:hover,
       .single .site-content .entry-title a:hover,
       .page-template-default .site-content .entry-title a:hover {
-        color: #256986; } }
+        color: #256986; }
+
+  .entry-content h1 {
+    padding-left: 50px;
+    background-size: 42px 52px; }
+    .entry-content h1:before {
+      left: 17px;
+      width: 12px; } }
 @media screen and (min-width: 673px) {
   .site-content .entry-header,
   .site-content .entry-content,
@@ -1324,7 +1318,7 @@ span.page-links-title {
     margin: 0 360px 0 auto; }
 
   .content-sidebar {
-    width: 300px; }
+    width: 280px; }
 
   .blog .site-content .entry-header,
   .archive .site-content .entry-header,

@@ -100,6 +100,14 @@
 	%postTitle{
 		@include definePostTitle;
 	}
+	.entry-content h1{
+		padding-left: 50px;
+		background-size: 42px 52px;
+		&:before{
+			left: 17px;
+			width: 12px;
+		}
+	}
 }
 @media screen and (min-width: 673px){
 	.site-content{
@@ -169,7 +177,7 @@
 		margin: 0 360px 0 auto;
 	}
 	.content-sidebar{
-		width: 300px;
+		width: 280px;
 	}
 	// postTitle
 	%postTitle{

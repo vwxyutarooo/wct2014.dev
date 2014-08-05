@@ -12,14 +12,21 @@
 /* main elemtns
 ---------------------------------------- */
 #main{
-    @extend %baseWidth;
+	@extend %baseWidth;
 }
 #main-content{
-    float: none;
+	float: none;
+	margin-top: 60px;
+	.full-width &{
+		margin-top: 0;
+	}
+	.blog &{
+		margin-top: 20px;
+	}
 }
 #primary{
-    box-sizing: border-box;
-    width: 100%;
+	box-sizing: border-box;
+	width: 100%;
 }
 .site-content{
 	margin: 0 0 0 auto;
