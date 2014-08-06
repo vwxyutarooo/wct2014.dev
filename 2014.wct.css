@@ -1237,14 +1237,14 @@ span.page-links-title {
     .page-template-default .site-content .entry-header:before {
       display: block;
       overflow: hidden;
-      padding-top: 87.6px;
-      width: 117.6px;
+      padding-top: 104px;
+      width: 108.8px;
       height: 0;
-      background-image: url("files/2014/07/ttl_postWapu.png");
+      background-image: url("files/2014/08/ttl_postWapu.png");
       background-position: 0, 0;
       background-size: 100%;
       background-repeat: no-repeat;
-      right: -6px;
+      right: 0;
       bottom: 10px;
       z-index: 10; }
     .blog .site-content .entry-header:after,
@@ -1391,7 +1391,7 @@ span.page-links-title {
     .archive .site-content .entry-header:before,
     .single .site-content .entry-header:before,
     .page-template-default .site-content .entry-header:before {
-      right: -56px; }
+      right: 0; }
 
   #main, .primary-navigation .nav-menu {
     padding-left: 20px;
@@ -1421,10 +1421,10 @@ span.page-links-title {
     .page-template-default .site-content .entry-header:before {
       display: block;
       overflow: hidden;
-      padding-top: 146px;
-      width: 196px;
+      padding-top: 130px;
+      width: 136px;
       height: 0;
-      background-image: url("files/2014/07/ttl_postWapu.png");
+      background-image: url("files/2014/08/ttl_postWapu.png");
       background-position: 0, 0;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -1500,10 +1500,10 @@ span.page-links-title {
   .page-template-default .site-content .entry-header:before {
     display: block;
     overflow: hidden;
-    padding-top: 146px;
-    width: 196px;
+    padding-top: 130px;
+    width: 136px;
     height: 0;
-    background-image: url("files/2014/07/ttl_postWapu@2x.png");
+    background-image: url("files/2014/08/ttl_postWapu@2x.png");
     background-position: 0, 0;
     background-size: 100%;
     background-repeat: no-repeat; }

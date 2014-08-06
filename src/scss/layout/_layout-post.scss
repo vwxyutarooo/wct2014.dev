@@ -70,8 +70,8 @@ article.post{
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 		&:before{
-			@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 0.6);
-			right: -6px;
+			@include imageReplace('2014/08/ttl_postWapu.png', 136px, 130px, 0.8);
+			right: 0;
 			bottom: 10px;
 			z-index: 10;
 		}

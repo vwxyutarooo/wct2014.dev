@@ -213,7 +213,7 @@
 		.entry-header{
 			padding-right: 60px;
 			&:before{
-				right: -56px;
+				right: 0;
 			}
 		}
 	}
@@ -237,7 +237,7 @@
 		.entry-header{
 			padding-right: 100px;
 			&:before{
-				@include imageReplace('2014/07/ttl_postWapu.png', 196px, 146px, 1.0);
+				@include imageReplace('2014/08/ttl_postWapu.png', 136px, 130px, 1.0);
 				bottom: 3px;
 			}
 		}
@@ -288,7 +288,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 960px) 
 	%postTitle{
 		.entry-header{
 			&:before{
-				@include imageReplace('2014/07/ttl_postWapu@2x.png', 196px, 146px, 1.0);
+				@include imageReplace('2014/08/ttl_postWapu@2x.png', 136px, 130px, 1.0);
 			}
 			&:after{
 				@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 100%, 15px, 1.0);
