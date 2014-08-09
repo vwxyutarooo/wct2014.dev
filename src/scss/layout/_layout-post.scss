@@ -248,18 +248,25 @@ article .entry-header{
 	}
 }
 
+.entry-content p {
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+
 blockquote{
 	@include hasPseudoClass(both);
+	max-width: 660px;
 	padding: 2em;
 	position: relative;
 	font-size: 0.9em;
+	background-color: #fdfdfd;
 	&:before{
 		content: "“";
 		font-size: 500%;
 		line-height: 1em;
 		font-family: "ＭＳ Ｐゴシック",sans-serif;
 		color: #fad4e7;
-		left: -15px;
+		left: 0;
 		top: 10px;
 	}
 	&:after{
@@ -268,9 +275,10 @@ blockquote{
 		line-height: 0em;
 		font-family: "ＭＳ Ｐゴシック",sans-serif;
 		color: #fad4e7;
-		right: 15px;
-		bottom: 10px;
+		right: 20px;
+		bottom: 0px;
 	}
+
 }
 
 .entry-meta .tag-links a:hover:before {
@@ -279,4 +287,17 @@ blockquote{
 .entry-meta .tag-links a:hover {
 	background-color: #F2A5C7;
 	text-decoration: none;
+}
+
+/* site-main background
+---------------------------------------- */
+
+.site-main {
+	padding-bottom: 20em;		
+	background-image: url($filePath + '2014/07/CitySilhouetteW1920.png');
+	width: 100%;
+	height: auto;
+	background-size: 100% auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;		
 }
