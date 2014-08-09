@@ -772,13 +772,13 @@ blockquote {
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 30px;
     border: none;
     font-size: 2em;
     font-weight: 400;
     box-shadow: none;
-    padding: 25px 80px 20px 0; }
+    padding: 25px 60px 20px 0; }
     .full-width .entry-content h1:after {
       display: block;
       content: "";
@@ -800,7 +800,7 @@ blockquote {
       width: 100%;
       height: auto;
       background-size: 156px auto;
-      background-position: 15px 0;
+      background-position: 10px 0;
       background-repeat: repeat-x; }
   .full-width .entry-content .bkg_WhatIsWordCamp {
     position: relative; }
@@ -883,12 +883,12 @@ blockquote {
     padding-bottom: 20px; }
   .full-width .entry-content h1 {
     width: 100%;
-    padding-right: 60px; }
+    padding-right: 90px; }
     .full-width .entry-content h1:after {
       display: block;
       overflow: hidden;
-      padding-top: 13.5px;
-      width: 140.4px;
+      padding-top: 15px;
+      width: 156px;
       height: 0;
       background-image: url("files/2014/07/ttl_postBtmLine@2x.png");
       background-position: 0, 0;
@@ -896,7 +896,7 @@ blockquote {
       background-repeat: no-repeat;
       left: 0;
       bottom: -10px;
-      width: 100%;
+      width: 110%;
       height: auto;
       background-size: 156px auto;
       background-position: 25px 0;
@@ -908,7 +908,7 @@ blockquote {
       content: "";
       position: absolute; }
     .full-width .entry-content .bkg_WhatIsWordCamp:before {
-      right: -10px;
+      right: 5px;
       bottom: 0;
       display: block;
       overflow: hidden;
@@ -926,7 +926,7 @@ blockquote {
       content: "";
       position: absolute; }
     .full-width .entry-content .bkg_WhoCanParticipate:before {
-      right: -10px;
+      right: 5px;
       bottom: 0;
       display: block;
       overflow: hidden;
@@ -947,7 +947,7 @@ blockquote {
       content: "";
       position: absolute; }
     .full-width .entry-content .bkg_Concept:before {
-      right: -10px;
+      right: 5px;
       bottom: 0;
       display: block;
       overflow: hidden;

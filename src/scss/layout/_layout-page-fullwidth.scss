@@ -85,13 +85,13 @@
 			@include hasPseudoClass(after, $position: relative);
 			width: 100%;
 			height: auto;
-			margin-top: 20px;
+			margin-top: 0;
 			margin-bottom: 30px;
 			border: none;
 			font-size: 2em;
 			font-weight: 400;
 			box-shadow: none;
-			padding: 25px 80px 20px 0;
+			padding: 25px 60px 20px 0;
 			
 			&:before {
 				display: none;
@@ -104,7 +104,7 @@
 				width: 100%;
 				height: auto;
 				background-size: 156px auto;
-				background-position: 15px 0;
+				background-position: 10px 0;
 				background-repeat: repeat-x;
 			}
 		}
@@ -182,13 +182,13 @@
 
 			h1 {
 				width: 100%;
-				padding-right: 60px;
+				padding-right: 90px;
 				
 				&:after {
-					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px, 0.9);
+					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px);
 					left: 0;
 					bottom: -10px;
-					width: 100%;
+					width: 110%;
 					height: auto;
 					background-size: 156px auto;
 					background-position: 25px 0;
@@ -199,7 +199,7 @@
 			.bkg_WhatIsWordCamp {
 				@include hasPseudoClass(before);
 				&:before {
-					right: -10px;
+					right: 5px;
 					bottom: 0;
 					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
 				}
@@ -208,7 +208,7 @@
 			.bkg_WhoCanParticipate {
 				@include hasPseudoClass(before);
 				&:before {
-					right: -10px;
+					right: 5px;
 					bottom: 0;
 					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
 					background-size: 100% auto;
@@ -220,7 +220,7 @@
 			.bkg_Concept {
 				@include hasPseudoClass(before);
 				&:before {
-					right: -10px;
+					right: 5px;
 					bottom: 0;
 					@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.7);
 					background-size: 100% auto;
@@ -242,9 +242,6 @@
 				padding-top: 0;
 				padding-bottom: 20px;
 			}
-				
-			// .entry-content__row__inner {
-			// }
 			
 			h1 {
 				width: 100%;
@@ -387,7 +384,7 @@
 }
 
 @media screen and (max-width: 540px) {
-		.full-width {
+	.full-width {
 
 		.entry-content {
 
