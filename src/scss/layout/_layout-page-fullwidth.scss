@@ -114,7 +114,7 @@
 			&:before {
 				@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.9);
 				right: -10px;
-				bottom: 15px;
+				bottom: -13px;
 				background-size: 100% auto;
 				background-position: 0 0;
 				z-index: 2;
@@ -125,7 +125,7 @@
 			@include hasPseudoClass(before);
 			&:before {
 				right: -10px;
-				bottom: 15px;
+				bottom: -13px;
 				@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.9);
 				background-size: 100% auto;
 				background-position: 0 0;
@@ -137,7 +137,7 @@
 			@include hasPseudoClass(before);
 			&:before {
 				right: -10px;
-				bottom: 15px;
+				bottom: -13px;
 				@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.9);
 				background-size: 100% auto;
 				background-position: 0 0;
@@ -187,7 +187,7 @@
 				&:after {
 					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px, 0.9);
 					left: 0;
-					bottom: -20px;
+					bottom: -10px;
 					width: 100%;
 					height: auto;
 					background-size: 156px auto;
@@ -200,7 +200,7 @@
 				@include hasPseudoClass(before);
 				&:before {
 					right: -10px;
-					bottom: 20px;
+					bottom: 0;
 					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
 				}
 			}
@@ -209,7 +209,7 @@
 				@include hasPseudoClass(before);
 				&:before {
 					right: -10px;
-					bottom: 20px;
+					bottom: 0;
 					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
 					background-size: 100% auto;
 					background-position: 0 0;
@@ -221,7 +221,7 @@
 				@include hasPseudoClass(before);
 				&:before {
 					right: -10px;
-					bottom: 20px;
+					bottom: 0;
 					@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.7);
 					background-size: 100% auto;
 					background-position: 0 0;
@@ -267,7 +267,7 @@
 				&:before {
 					position: absolute;
 					right: -10px;
-					bottom: 20px;
+					bottom: -10px;
 					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
 					background-size: 100% auto;
 					background-position: 0 0;
@@ -280,7 +280,7 @@
 				&:before {
 					position: absolute;
 					right: -10px;
-					bottom: 20px;
+					bottom: -10px;
 					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
 					background-size: 100% auto;
 					background-position: 0 0;
@@ -293,7 +293,7 @@
 				&:before {
 					position: absolute;
 					right: -10px;
-					bottom: 20px;
+					bottom: -10px;
 					@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.7);
 					background-size: 100% auto;
 					background-position: 0 0;

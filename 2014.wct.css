@@ -819,7 +819,7 @@ blockquote {
       background-size: 100%;
       background-repeat: no-repeat;
       right: -10px;
-      bottom: 15px;
+      bottom: -13px;
       background-size: 100% auto;
       background-position: 0 0;
       z-index: 2; }
@@ -831,7 +831,7 @@ blockquote {
       position: absolute; }
     .full-width .entry-content .bkg_WhoCanParticipate:before {
       right: -10px;
-      bottom: 15px;
+      bottom: -13px;
       display: block;
       overflow: hidden;
       padding-top: 117px;
@@ -852,7 +852,7 @@ blockquote {
       position: absolute; }
     .full-width .entry-content .bkg_Concept:before {
       right: -10px;
-      bottom: 15px;
+      bottom: -13px;
       display: block;
       overflow: hidden;
       padding-top: 117px;
@@ -895,7 +895,7 @@ blockquote {
       background-size: 100%;
       background-repeat: no-repeat;
       left: 0;
-      bottom: -20px;
+      bottom: -10px;
       width: 100%;
       height: auto;
       background-size: 156px auto;
@@ -909,7 +909,7 @@ blockquote {
       position: absolute; }
     .full-width .entry-content .bkg_WhatIsWordCamp:before {
       right: -10px;
-      bottom: 20px;
+      bottom: 0;
       display: block;
       overflow: hidden;
       padding-top: 91px;
@@ -927,7 +927,7 @@ blockquote {
       position: absolute; }
     .full-width .entry-content .bkg_WhoCanParticipate:before {
       right: -10px;
-      bottom: 20px;
+      bottom: 0;
       display: block;
       overflow: hidden;
       padding-top: 91px;
@@ -948,7 +948,7 @@ blockquote {
       position: absolute; }
     .full-width .entry-content .bkg_Concept:before {
       right: -10px;
-      bottom: 20px;
+      bottom: 0;
       display: block;
       overflow: hidden;
       padding-top: 91px;
@@ -994,7 +994,7 @@ blockquote {
     .full-width .entry-content .bkg_WhatIsWordCamp:before {
       position: absolute;
       right: -10px;
-      bottom: 20px;
+      bottom: -10px;
       display: block;
       overflow: hidden;
       padding-top: 91px;
@@ -1016,7 +1016,7 @@ blockquote {
     .full-width .entry-content .bkg_WhoCanParticipate:before {
       position: absolute;
       right: -10px;
-      bottom: 20px;
+      bottom: -10px;
       display: block;
       overflow: hidden;
       padding-top: 91px;
@@ -1038,7 +1038,7 @@ blockquote {
     .full-width .entry-content .bkg_Concept:before {
       position: absolute;
       right: -10px;
-      bottom: 20px;
+      bottom: -10px;
       display: block;
       overflow: hidden;
       padding-top: 91px;
