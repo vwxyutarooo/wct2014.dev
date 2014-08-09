@@ -156,7 +156,7 @@
 		}
 
 		p {
-			max-width: 780px;
+			max-width: 95%;
 			margin-top: 20px;
 		}
 				
@@ -182,7 +182,7 @@
 
 			h1 {
 				width: 100%;
-				padding-right: 50px;
+				padding-right: 60px;
 				
 				&:after {
 					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px, 0.9);
@@ -416,6 +416,10 @@
 				&:before {
 					display: none;
 				}
+			}
+
+			p {
+				max-width: 100%;
 			}	
 		}
 			
@@ -467,6 +471,10 @@
 			h2 {
 				padding-top: 20px;
 				font-size: 1em;
+			}
+
+			p {
+				max-width: 100%;
 			}					
 
 		}
