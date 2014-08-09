@@ -1056,15 +1056,83 @@ blockquote {
     padding-top: 0;
     padding-bottom: 20px; }
   .full-width .entry-content h1 {
-    width: 100%;
+    width: 95%;
     margin-bottom: 10px;
-    padding-right: 30px; }
+    padding-right: 30px;
+    padding-bottom: 10px;
+    border-bottom: 6px solid #e7b955; }
     .full-width .entry-content h1:after {
       display: none; }
   .full-width .entry-content .bkg_WhatIsWordCamp:before,
   .full-width .entry-content .bkg_WhoCanParticipate:before,
   .full-width .entry-content .bkg_Concept:before {
-    display: none; } }
+    display: none; }
+  .full-width .entry-content .bkg_WhatIsWordCamp {
+    position: relative; }
+    .full-width .entry-content .bkg_WhatIsWordCamp:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .full-width .entry-content .bkg_WhatIsWordCamp:before {
+      position: absolute;
+      right: -5px;
+      bottom: -6px;
+      display: block;
+      overflow: hidden;
+      padding-top: 65px;
+      width: 65px;
+      height: 0;
+      background-image: url("files/2014/07/ttl_WhatIsWordCamp_gray@2x.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: 0 0;
+      z-index: 2; }
+  .full-width .entry-content .bkg_WhoCanParticipate {
+    position: relative; }
+    .full-width .entry-content .bkg_WhoCanParticipate:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .full-width .entry-content .bkg_WhoCanParticipate:before {
+      position: absolute;
+      right: -5px;
+      bottom: -6px;
+      display: block;
+      overflow: hidden;
+      padding-top: 65px;
+      width: 65px;
+      height: 0;
+      background-image: url("files/2014/07/ttl_who@2x.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: 0 0;
+      z-index: 2; }
+  .full-width .entry-content .bkg_Concept {
+    position: relative; }
+    .full-width .entry-content .bkg_Concept:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .full-width .entry-content .bkg_Concept:before {
+      position: absolute;
+      right: -5px;
+      bottom: -6px;
+      display: block;
+      overflow: hidden;
+      padding-top: 65px;
+      width: 65px;
+      height: 0;
+      background-image: url("files/2014/07/ttl_Concept@2x.png");
+      background-position: 0, 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: 0 0;
+      z-index: 2; } }
 @media screen and (max-width: 540px) {
   .full-width .entry-content .entry-content__row {
     padding-top: 0;
@@ -1074,7 +1142,8 @@ blockquote {
     margin-bottom: 20px;
     padding-right: 0;
     padding-top: 30px;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    border-bottom: none; }
     .full-width .entry-content h1:after {
       display: none; }
   .full-width .entry-content .bkg_WhatIsWordCamp:before,
@@ -1095,7 +1164,8 @@ blockquote {
     margin-bottom: 0;
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    border-bottom: none; }
     .full-width .entry-content h1:after {
       display: none; }
   .full-width .entry-content .bkg_WhatIsWordCamp:before,
@@ -1115,7 +1185,8 @@ blockquote {
   .full-width .entry-content .entry-content__row__inner {
     padding: 25px; }
   .full-width .entry-content h1 {
-    width: 100%; }
+    width: 100%;
+    border-bottom: none; }
     .full-width .entry-content h1:after {
       display: none; }
   .full-width .entry-content .bkg_WhatIsWordCamp:before,

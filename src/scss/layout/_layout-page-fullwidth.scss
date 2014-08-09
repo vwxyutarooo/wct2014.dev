@@ -316,20 +316,14 @@
 			}
 				
 			h1 {
-				width: 100%;
+				width: 95%;
 				margin-bottom: 10px;
 				padding-right: 30px;
+				padding-bottom: 10px;
+				border-bottom: 6px solid #e7b955;
 				
 				&:after {
 					display: none;
-					// @include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px);
-					// left: 0;
-					// bottom: -20px;
-					// width: 100%;
-					// height: auto;
-					// background-size: 156px auto;
-					// background-position: 0 0;
-					// background-repeat: repeat-x;
 				}
 			}
 
@@ -342,44 +336,44 @@
 				}
 			}
 
-			// .bkg_WhatIsWordCamp {
-			// 	@include hasPseudoClass(before);
-			// 	&:before {
-			// 		position: absolute;
-			// 		right: -5px;
-			// 		bottom: 25px;
-			// 		@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.5);
-			// 		background-size: 100% auto;
-			// 		background-position: 0 0;
-			// 		z-index: 2;
-			// 	}
-			// }
+			.bkg_WhatIsWordCamp {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -5px;
+					bottom: -6px;
+					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.5);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
 
-			// .bkg_WhoCanParticipate {
-			// 	@include hasPseudoClass(before);
-			// 	&:before {
-			// 		position: absolute;
-			// 		right: -5px;
-			// 		bottom: 25px;
-			// 		@include imageReplace('2014/07/ttl_who@2x.png', 130px, 130px, 0.5);
-			// 		background-size: 100% auto;
-			// 		background-position: 0 0;
-			// 		z-index: 2;
-			// 	}
-			// }
+			.bkg_WhoCanParticipate {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -5px;
+					bottom: -6px;
+					@include imageReplace('2014/07/ttl_who@2x.png', 130px, 130px, 0.5);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
 
-			// .bkg_Concept {
-			// 	@include hasPseudoClass(before);
-			// 	&:before {
-			// 		position: absolute;
-			// 		right: -5px;
-			// 		bottom: 25px;
-			// 		@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.5);
-			// 		background-size: 100% auto;
-			// 		background-position: 0 0;
-			// 		z-index: 2;
-			// 	}
-			// }
+			.bkg_Concept {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -5px;
+					bottom: -6px;
+					@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.5);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
 		}
 			
 	}
@@ -401,7 +395,7 @@
 				padding-right: 0;
 				padding-top: 30px;
 				padding-bottom: 10px;
-				//border-bottom: 2px solid #e7b955;
+				border-bottom: none;
 
 				&:after {
 					display: none;
@@ -449,8 +443,7 @@
 				padding-right: 0;
 				padding-top: 0;
 				padding-bottom: 0;
-				// border-left: 2px solid #e7b955;
-				// border-bottom: none;
+				border-bottom: none;
 				
 				&:after {
 					display: none;
@@ -501,10 +494,7 @@
 
 			h1 {
 				width: 100%;
-				// padding-left: 10px;
-				// border-left: 2px solid #e7b955;
-				// border-bottom: none;
-				// font-size: 1.5em;
+				border-bottom: none;
 				
 				&:after {
 					display: none;
