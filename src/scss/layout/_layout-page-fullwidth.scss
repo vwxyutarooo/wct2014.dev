@@ -379,45 +379,6 @@
 	}
 }
 
-@media screen and (max-width: 540px) {
-	.full-width {
-
-		.entry-content {
-
-			.entry-content__row {
-				padding-top: 0;
-				padding-bottom: 20px;
-			}
-			
-			h1 {
-				width: 100%;
-				margin-bottom: 20px;				
-				padding-right: 0;
-				padding-top: 30px;
-				padding-bottom: 10px;
-				border-bottom: none;
-
-				&:after {
-					display: none;
-				}
-			}
-
-			.bkg_WhatIsWordCamp,
-			.bkg_WhoCanParticipate,
-			.bkg_Concept {
-
-				&:before {
-					display: none;
-				}
-			}
-
-			p {
-				max-width: 100%;
-			}	
-		}
-			
-	}
-}
 
 /* for Android @2 */
 	
@@ -442,8 +403,8 @@
 				margin-bottom: 0;				
 				padding-right: 0;
 				padding-top: 0;
-				padding-bottom: 0;
-				border-bottom: none;
+				padding-bottom: 10px;
+				border-bottom: 3px solid #e7b955;
 				
 				&:after {
 					display: none;
@@ -494,7 +455,8 @@
 
 			h1 {
 				width: 100%;
-				border-bottom: none;
+				padding-bottom: 10px;
+				border-bottom: 3px solid #e7b955;
 				
 				&:after {
 					display: none;

@@ -1133,25 +1133,6 @@ blockquote {
       background-size: 100% auto;
       background-position: 0 0;
       z-index: 2; } }
-@media screen and (max-width: 540px) {
-  .full-width .entry-content .entry-content__row {
-    padding-top: 0;
-    padding-bottom: 20px; }
-  .full-width .entry-content h1 {
-    width: 100%;
-    margin-bottom: 20px;
-    padding-right: 0;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    border-bottom: none; }
-    .full-width .entry-content h1:after {
-      display: none; }
-  .full-width .entry-content .bkg_WhatIsWordCamp:before,
-  .full-width .entry-content .bkg_WhoCanParticipate:before,
-  .full-width .entry-content .bkg_Concept:before {
-    display: none; }
-  .full-width .entry-content p {
-    max-width: 100%; } }
 /* for Android @2 */
 @media screen and (max-width: 360px) {
   .full-width .entry-content .entry-content__row {
@@ -1164,8 +1145,8 @@ blockquote {
     margin-bottom: 0;
     padding-right: 0;
     padding-top: 0;
-    padding-bottom: 0;
-    border-bottom: none; }
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e7b955; }
     .full-width .entry-content h1:after {
       display: none; }
   .full-width .entry-content .bkg_WhatIsWordCamp:before,
@@ -1186,7 +1167,8 @@ blockquote {
     padding: 25px; }
   .full-width .entry-content h1 {
     width: 100%;
-    border-bottom: none; }
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e7b955; }
     .full-width .entry-content h1:after {
       display: none; }
   .full-width .entry-content .bkg_WhatIsWordCamp:before,
