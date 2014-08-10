@@ -394,14 +394,17 @@ div.sharedaddy h3.sd-title {
     font-size: 14px; }
   .primary-navigation.toggled-on {
     padding: 0; }
+  .primary-navigation ul ul li {
+    border-top: 1px dashed rgba(255, 255, 255, 0.2); }
 
 .site-navigation li > a {
   color: #fff;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  text-align: center; }
 .site-navigation li:hover > a {
   background-color: transparent;
-  color: #fbe0ec;
+  color: #f9d3e3;
   text-decoration: none; }
 .site-navigation .current-menu-item > a,
 .site-navigation .current_page_parent > a {
@@ -414,13 +417,17 @@ div.sharedaddy h3.sd-title {
     .site-navigation .current_page_parent > a > span:before {
       position: absolute;
       top: 50%;
-      left: -2px;
       display: inline-block;
-      margin: -5px auto auto -15px;
+      margin: -5px auto auto -16px;
       color: #f9d3e3;
       content: '\25CF';
       font-size: 10px;
       line-height: 1; }
+.site-navigation .current-page-ancestor > a > span:before,
+.site-navigation .current-menu-ancestor > a > span:before,
+.site-navigation .current-menu-parent > a > span:before {
+  margin-top: -3px;
+  font-size: 6px; }
 
 .screen-reader-text {
   display: none; }
@@ -468,7 +475,7 @@ article.post {
     color: #ef86b4; }
     .entry-header > .entry-meta:last-child a:hover {
       text-decoration: none;
-      color: #fbe0ec; }
+      color: #f9d3e3; }
 
 .entry-title {
   font-size: 3.3rem; }
@@ -513,6 +520,12 @@ article.post {
       text-align: center;
       line-height: 36px;
       padding-left: 2px; }
+    .nav-links a:last-child {
+      padding: 10px 46px 10px 10px;
+      text-align: right; }
+      .nav-links a:last-child:before {
+        position: absolute;
+        right: 0; }
     .nav-links a:first-child {
       padding: 10px 10px 10px 46px; }
       .nav-links a:first-child:before {
@@ -520,12 +533,6 @@ article.post {
         transform: rotate(180deg);
         position: absolute;
         left: 0; }
-    .nav-links a:last-child {
-      padding: 10px 46px 10px 10px;
-      text-align: right; }
-      .nav-links a:last-child:before {
-        position: absolute;
-        right: 0; }
 
 /* Entry content styles
 ---------------------------------------- */
@@ -1695,18 +1702,31 @@ span.page-links-title {
 
   .site-navigation li {
     width: 12%;
-    height: 36px;
-    line-height: 36px; }
-  .site-navigation a {
+    height: 48px;
+    line-height: 48px; }
+  .site-navigation > a {
     text-align: center;
-    height: 36px;
-    line-height: 36px; }
+    height: 48px;
+    line-height: 48px; }
 
-  .primary-navigation {
-    padding: 6px 0; }
-    .primary-navigation a {
-      padding: 0 20px;
-      width: 100%; }
+  .primary-navigation a {
+    padding: 0 20px;
+    width: 100%; }
+  .primary-navigation ul ul {
+    background-color: #ef86b4;
+    top: 48px;
+    box-shadow: 0 1.2px 1px rgba(0, 0, 0, 0.125); }
+    .primary-navigation ul ul a {
+      text-align: center; }
+      .primary-navigation ul ul a:hover {
+        background-color: transparent; }
+  .primary-navigation .menu-item-has-children > a:after,
+  .primary-navigation .page_item_has_children > a:after {
+    position: static;
+    line-height: 45px;
+    vertical-align: middle;
+    padding-top: 3px;
+    margin-left: 0.25em; }
 
   .primary-sidebar .widget {
     max-width: 100%; } }

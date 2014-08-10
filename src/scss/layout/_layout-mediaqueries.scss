@@ -186,20 +186,40 @@
 	.site-navigation{
 		li{
 			width: $menuItemWidth;
-			height: $menuItemHeight;
-			line-height: $menuItemHeight;
+			height: $menuHeight;
+			line-height: $menuHeight;
 		}
-		a{
+		> a{
 			text-align: center;
-			height: $menuItemHeight;
-			line-height: $menuItemHeight;
+			height: $menuHeight;
+			line-height: $menuHeight;
 		}
 	}
 	.primary-navigation{
-		padding: $menuPadding 0;
 		a{
 			padding: 0 20px;
 			width: 100%;
+		}
+		ul{
+			ul{
+				background-color: $colorPink;
+				top: $menuHeight;
+				box-shadow: 0 1.2px 1px rgba(0, 0, 0, 0.125);
+				a{
+					text-align: center;
+					&:hover{
+						background-color: transparent;
+					}
+				}
+			}
+		}
+		.menu-item-has-children > a:after,
+		.page_item_has_children > a:after{
+			position: static;
+			line-height: $menuHeight - 3;
+			vertical-align: middle;
+			padding-top: 3px;
+			margin-left: 0.25em;
 		}
 	}
 	.primary-sidebar{

@@ -171,20 +171,20 @@ article.post{
 			line-height: 36px;
 			padding-left: 2px;
 		}
-		&:first-child{
-			padding: 10px 10px 10px 46px;
-			&:before{
-				transform: rotate(180deg);
-				position: absolute;
-				left: 0;
-			}
-		}
 		&:last-child{
 			padding: 10px 46px 10px 10px;
 			text-align: right;
 			&:before{
 				position: absolute;
 				right: 0;
+			}
+		}
+		&:first-child{
+			padding: 10px 10px 10px 46px;
+			&:before{
+				transform: rotate(180deg);
+				position: absolute;
+				left: 0;
 			}
 		}
 	}

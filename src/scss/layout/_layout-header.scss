@@ -123,12 +123,20 @@
 		padding: 0;
 
 	}
+	ul{
+		ul{
+			li{
+				border-top: 1px dashed rgba(255, 255, 255, 0.2); 
+			}
+		}
+	}
 }
 .site-navigation{
 	li{
 		> a{
 			color: #fff;
 			transition: all 0.2s;
+			text-align: center;
 		}
 		&:hover{
 			> a{
@@ -148,13 +156,24 @@
 				&:before{
 					position: absolute;
 					top: 50%;
-					left: -2px;
 					display: inline-block;
-					margin: -5px auto auto -15px;
+					margin: -5px auto auto -16px;
 					color: $colorNavActive;
 					content: '\25CF';
 					font-size: 10px;
 					line-height: 1;
+				}
+			}
+		}
+	}
+	.current-page-ancestor,
+	.current-menu-ancestor,
+	.current-menu-parent{
+		> a{
+			> span{
+				&:before{
+					margin-top: -3px;
+					font-size: 6px;
 				}
 			}
 		}
