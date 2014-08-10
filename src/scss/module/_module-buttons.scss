@@ -1,0 +1,77 @@
+/* Btn SNS which is in primary sidebar
+---------------------------------------- */
+%snsBtn{
+	margin: 1em auto;
+	width: 100%;
+	text-align: center;
+	&:after{
+		position: absolute;
+		z-index: -1;
+		content: '';
+		transition: all 0.3s;
+	}
+	a{
+		position: relative;
+		display: block;
+		padding: 20px 0;
+		color: #fff;
+		font-size: 16px;
+		&:hover{
+			text-decoration: none;
+		}
+		i{
+			margin-right: 0.75em;
+		}
+	}
+	&.snsBtn--Tw{
+		margin-left: 0;
+		a{
+			@include btnAction(darken($colorTw, 20%));
+			background-color: $colorTw;
+		}
+	}
+	&.snsBtn--Fb{
+		a{
+			@include btnAction(darken($colorFb, 20%));
+			background-color: $colorFb;
+		}
+	}
+	&.snsBtn--Gp{
+		margin-right: 0;
+		a{
+			@include btnAction(darken($colorGp, 20%));
+			background-color: $colorGp;
+		}
+	}
+}
+
+/* Btn register to volunteer staff
+---------------------------------------- */
+.button--staff{
+	display: inline-block;
+	margin: 1em auto;
+	border: 2px solid $colorBlue;
+	background-color: transparent;
+	color: $colorBlue;
+	font-size: 16px;
+	&:hover{
+		border: 2px solid darken($colorBlue, 8%);
+		color: darken($colorBlue, 8%);
+	}
+	.icon-group{
+		display: inline-block;
+		margin-right: 0.5em;
+		padding-top: 1px;
+		vertical-align: middle;
+		font-size: 1.25em;
+		line-height: 1.4;
+	}
+	.icon-double-angle-right{
+		display: inline-block;
+		margin-left: 0.25em;
+		padding-top: 1px;
+		vertical-align: middle;
+		font-size: 1.25em;
+		line-height: 1.4;
+	}
+}

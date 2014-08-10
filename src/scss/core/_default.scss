@@ -53,6 +53,16 @@ h1, h2, h3, h4, h5, h6{
 		color: $colorTitle;
 	}
 }
+pre{
+	background-color: #f4f4f4;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+code{
+	color: $colorSubText;
+	font-size: 0.9em;
+}
 ::selection{
 	background-color: $colorSelection;
 	color: $colorText
@@ -63,6 +73,25 @@ h1, h2, h3, h4, h5, h6{
 }
 .fontEn{
 	font-family: $fontFamilyEn;
+}
+
+/* =========================================================
+	 List items
+========================================================= */
+dl{
+	margin-bottom: 2em;
+	&:last-child{
+		margin-bottom: 0;
+	}
+	dt{
+		margin-bottom: 1em;
+	}
+	dd{
+		margin-bottom: 1em;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 
 /* =========================================================
