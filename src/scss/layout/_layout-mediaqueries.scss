@@ -8,7 +8,7 @@
 	.site-content{
 		margin-right: 0;
 	}
-	@include setHeaderBkg(640px, '2014/07/bkgHeaderS.jpg', '2014/07/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
+	@include setHeaderBkg(640px, '2014/08/bkgHeaderS.jpg', '2014/08/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
 }
 @media screen and (max-width: 400px){
@@ -23,6 +23,25 @@
 				&:last-child{
 					border-bottom: none;
 				}
+			}
+		}
+	}
+	.site-content{
+		.entry-title{
+			.page-template-default &{
+				border-bottom: 3px solid $colorOrange;
+			}
+		}
+		.entry-header{
+			.single &{
+				border-bottom: 3px solid $colorOrange;
+				margin-bottom: 20px;
+			}
+		}
+		.hentry{
+			.blog &,
+			.arhive &{
+				border-bottom: 1px solid $colorOrange
 			}
 		}
 	}
@@ -63,6 +82,9 @@
 			margin-top: 20px;
 		}
 	}
+	%postTitle{
+		@include definePostTitle;
+	}
 	%postFooterDecolate{
 		@include definePostFooterDecolate;
 	}
@@ -94,8 +116,8 @@
 @media only screen and (min-width: 641px){
 	@include setHeaderBkg(
 		$height: 640px,
-		$imgBkg: '2014/07/bkgHeaderM.jpg',
-		$imgTxt: '2014/06/txtHeaderM.png',
+		$imgBkg: '2014/08/bkgHeaderM.jpg',
+		$imgTxt: '2014/08/txtHeaderM.png',
 		$bkgSize: auto 640px,
 		$txtSize: 860px auto,
 		$bkgPos: center top,
@@ -125,9 +147,6 @@
 	}
 	.content-sidebar{
 		padding: 0;
-	}
-	%postTitle{
-		@include definePostTitle;
 	}
 	.entry-content h1{
 		padding-left: 50px;
@@ -263,7 +282,7 @@
 	@include setHeaderBkg($bkgSize: 100%, $txtSize: 100%, $bodyClass: '.home');
 }
 @media only screen and (min-width: 1440px){
-	@include setHeaderBkg(1080px, '2014/06/bkgHeaderL.jpg', '2014/06/txtHeaderL.png', 1920px auto, 100%, $bodyClass: '.home');
+	@include setHeaderBkg(1080px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1920px auto, 100%, $bodyClass: '.home');
 	.home{
 		#masthead{
 			&:after{
@@ -283,15 +302,16 @@ only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 960px) 
 only screen and (        min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
 only screen and (                min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1920px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 960px) and (max-width: 1920px){
-	@include setHeaderBkg(704px, '2014/06/bkgHeaderL.jpg', '2014/06/txtHeaderL.png', 100% auto, 100% auto, $bodyClass: '.home');
+	@include setHeaderBkg(704px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1280px auto, 1280px auto, $bodyClass: '.home');
+	@include setHeaderBkg(400px, '2014/08/bkgHeaderShortM@2x.jpg', '2014/08/txtHeaderShortM@2x.png', 1280px auto, 1280px auto);
 	// postTitle
 	%postTitle{
 		.entry-header{
 			&:before{
-				@include imageReplace('2014/08/ttl_postWapu@2x.png', 136px, 130px, 1.0);
+				@include imageReplace('2014/08/ttl_postWapu@2x.png', 130px, 130px, 1.0);
 			}
 			&:after{
-				@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 100%, 15px, 1.0);
+				@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 100%, 15px, 1.0);
 				background-size: auto 15px;
 				background-repeat: repeat-x;
 			}

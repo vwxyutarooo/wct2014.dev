@@ -62,6 +62,7 @@ article.post{
 		@extend %postTitle;
 	}
 }
+
 @mixin definePostTitle{
 	.entry-header{
 		@include hasPseudoClass(before);
@@ -70,13 +71,13 @@ article.post{
 		padding-bottom: 20px;
 		margin-bottom: 20px;
 		&:before{
-			@include imageReplace('2014/08/ttl_postWapu.png', 136px, 130px, 0.8);
+			@include imageReplace('2014/08/ttl_postWapu.png', 130px, 130px, 0.8);
 			right: 0;
 			bottom: 10px;
 			z-index: 10;
 		}
 		&:after{
-			@include imageReplace('2014/07/ttl_postBtmLine.png', 100%, 15px, 1);
+			@include imageReplace('2014/08/ttl_postBtmLine.png', 100%, 15px, 1);
 			bottom: 0;
 			box-sizing: border-box;
 			background-position: bottom right;
@@ -209,14 +210,14 @@ article .entry-header{
 	// 	letter-spacing: 1px;
 	// 	line-height: 1.2;
 	// 	&:before{
-	// 		@include imageReplace('2014/07/ttl_entry-title01.png', 226px, 161px, 0.5);
+	// 		@include imageReplace('2014/08/ttl_entry-title01.png', 226px, 161px, 0.5);
 	// 		top: -20px;
 	// 		left: -54px;
 	// 	}
 	// }
 	h1{
 		padding: 8px 20px 8px 32px;
-		background: url($filePath + "2014/07/ttl_entry-title03_left.png");
+		background: url($filePath + "2014/08/ttl_entry-title03_left.png");
 		background-size: 28px 34px;
 		background-repeat: no-repeat;
 		@include hasPseudoClass(both);
@@ -272,12 +273,12 @@ article .entry-header{
 	}
 	h3{
 		padding: 0 10px 20px;
-		background: url($filePath + "2014/07/ttl_entry-title04.png") left bottom no-repeat;
+		background: url($filePath + "2014/08/ttl_entry-title04.png") left bottom no-repeat;
 		background-size: 100% auto;
 	}
 	h4{
 		padding: 5px 20px 4px;
-		background: url($filePath + "2014/07/ttl_entry-title05.png") left top repeat-y;
+		background: url($filePath + "2014/08/ttl_entry-title05.png") left top repeat-y;
 		background-size: 11px 35px;
 	}
 	h5{
