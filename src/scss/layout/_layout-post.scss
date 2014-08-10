@@ -44,6 +44,7 @@ article.post{
 }
 // entry-title
 .entry-title{
+	font-size: 3.3rem;
 	&,
 	& a{
 		display: block;
@@ -220,6 +221,7 @@ article .entry-header{
 		background: url($filePath + "2014/08/ttl_entry-title03_left.png");
 		background-size: 28px 34px;
 		background-repeat: no-repeat;
+		font-size: 2.6rem;
 		@include hasPseudoClass(both);
 		&:before{
 			top: 0;
@@ -252,6 +254,7 @@ article .entry-header{
 	h2{
 		@include hasPseudoClass(after);
 		padding-bottom: 16px;
+		font-size: 2.4rem;
 		&:after{
 			bottom: 0;
 			left: 0;
@@ -272,19 +275,25 @@ article .entry-header{
 		}
 	}
 	h3{
-		padding: 0 10px 20px;
+		padding: 0 10px 0.9em;
 		background: url($filePath + "2014/08/ttl_entry-title04.png") left bottom no-repeat;
 		background-size: 100% auto;
+		font-size: 2.2rem;
 	}
 	h4{
 		padding: 5px 20px 4px;
 		background: url($filePath + "2014/08/ttl_entry-title05.png") left top repeat-y;
 		background-size: 11px 35px;
+		font-size: 2.0rem;
 	}
 	h5{
 		padding: 0 5px;
 		border-left: solid #e3e3e3 10px;
 		background-size: 12px 38px;
+		font-size: 1.8rem;
+	}
+	h6{
+		font-size: 1.6rem;
 	}
 	h1, h2, h3, h4, h5, h6{
 		margin-top: 2em;

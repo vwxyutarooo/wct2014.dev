@@ -348,7 +348,7 @@ div.sharedaddy h3.sd-title {
     display: inline-block;
     content: "\f104";
     vertical-align: middle;
-    font-size: 1.6rem;
+    font-size: 16px;
     font-family: Genericons;
     line-height: 1em;
     margin-top: -1px;
@@ -364,7 +364,7 @@ div.sharedaddy h3.sd-title {
     color: #fff;
     content: 'Menu';
     vertical-align: middle;
-    font-size: 1.4rem;
+    font-size: 14px;
     line-height: 16px; }
 
 /* navigation
@@ -391,7 +391,7 @@ div.sharedaddy h3.sd-title {
     text-align: left;
     letter-spacing: .125em;
     font-weight: normal;
-    font-size: 1.4rem; }
+    font-size: 14px; }
   .primary-navigation.toggled-on {
     padding: 0; }
 
@@ -470,12 +470,14 @@ article.post {
       text-decoration: none;
       color: #fbe0ec; }
 
-.entry-title, .entry-title a {
-  display: block;
-  width: 100%;
-  height: 100%; }
-  .entry-title:hover, .entry-title a:hover {
-    text-decoration: none; }
+.entry-title {
+  font-size: 3.3rem; }
+  .entry-title, .entry-title a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+    .entry-title:hover, .entry-title a:hover {
+      text-decoration: none; }
 
 /* Single post navigation
 ---------------------------------------- */
@@ -535,6 +537,7 @@ article .entry-header {
   background: url("files/2014/08/ttl_entry-title03_left.png");
   background-size: 28px 34px;
   background-repeat: no-repeat;
+  font-size: 2.6rem;
   position: relative; }
   .entry-content h1:before, .entry-content h1:after {
     display: block;
@@ -560,7 +563,8 @@ article .entry-header {
     z-index: -2; }
 .entry-content h2 {
   position: relative;
-  padding-bottom: 16px; }
+  padding-bottom: 16px;
+  font-size: 2.4rem; }
   .entry-content h2:after {
     display: block;
     content: "";
@@ -576,17 +580,22 @@ article .entry-header {
     background-position: 0 20px;
     background-size: 14px 14px; }
 .entry-content h3 {
-  padding: 0 10px 20px;
+  padding: 0 10px 0.9em;
   background: url("files/2014/08/ttl_entry-title04.png") left bottom no-repeat;
-  background-size: 100% auto; }
+  background-size: 100% auto;
+  font-size: 2.2rem; }
 .entry-content h4 {
   padding: 5px 20px 4px;
   background: url("files/2014/08/ttl_entry-title05.png") left top repeat-y;
-  background-size: 11px 35px; }
+  background-size: 11px 35px;
+  font-size: 2.0rem; }
 .entry-content h5 {
   padding: 0 5px;
   border-left: solid #e3e3e3 10px;
-  background-size: 12px 38px; }
+  background-size: 12px 38px;
+  font-size: 1.8rem; }
+.entry-content h6 {
+  font-size: 1.6rem; }
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   margin-top: 2em;
   margin-bottom: 1em; }
@@ -1254,7 +1263,7 @@ span.page-links-title {
     display: block;
     padding: 20px 0;
     color: #fff;
-    font-size: 1.6rem; }
+    font-size: 16px; }
     .primary-sidebar .snsBtn a:hover {
       text-decoration: none; }
     .primary-sidebar .snsBtn a i {
@@ -1329,7 +1338,7 @@ span.page-links-title {
 ========================================================= */
 @media screen and (max-width: 640px) {
   html {
-    font-size: 10px; }
+    font-size: 8px; }
 
   .site-content {
     margin-right: 0; }
