@@ -303,28 +303,37 @@ article .entry-header{
 	}
 }
 
+.entry-content p {
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+
 blockquote{
 	@include hasPseudoClass(both);
-	padding:3em 1em;
-	position:relative;
+	max-width: 660px;
+	padding: 2em;
+	position: relative;
+	font-size: 0.9em;
+	background-color: #fdfdfd;
 	&:before{
 		content: "“";
-		font-size: 600%;
+		font-size: 500%;
 		line-height: 1em;
 		font-family: "ＭＳ Ｐゴシック",sans-serif;
 		color: #fad4e7;
 		left: 0;
-		top: 0;
+		top: 10px;
 	}
 	&:after{
 		content: "”";
-		font-size: 600%;
+		font-size: 500%;
 		line-height: 0em;
 		font-family: "ＭＳ Ｐゴシック",sans-serif;
 		color: #fad4e7;
-		right: 0;
-		bottom: 0;
+		right: 20px;
+		bottom: 0px;
 	}
+
 }
 
 // entry-meta

@@ -3,7 +3,6 @@
 .full-width{
 	#main{
 		@extend %fullWidth;
-		background-color: #f7f7f7;
 	}
 
 	#main-content{
@@ -22,24 +21,29 @@
 	}
 
 	.site-content{
-		margin: 0 auto;
-		.entry-header{
+		margin: 0;
+		
+		.entry-content {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		.entry-header {
+			display: none;
 			@extend %fullWidthInner;
 			background-color: transparent;
+			
 			.entry-title,
-			.entry-title a{
+			.entry-title a {
 				color: $colorText;
 			}
-			.entry-meta{
+
+			.entry-meta {
 				background-color: transparent;
 			}
 		}
-		.entry-content{
-			padding: 0;
-			background-color: transparent;
-			color: $colorText;
-			max-width: 100%;
-		}
+
+		
 		.comments-area{
 			display: none;
 		}
@@ -55,14 +59,429 @@
 	}
 }
 
-/* content inner
+
+/* content-inner
 ---------------------------------------- */
-.entry-content{
-	.entry-content__row{
-		padding: 4em 0;
-		background-color: #eee;
-		.entry-content__row__inner{
+	    
+.full-width{ 
+	.entry-content {
+		background-color: transparent;
+		color: $colorText;
+		max-width: 100%;
+		
+		.entry-content__row {
+			padding: 3em 0;
+			//border-bottom: 2px solid #b4dff3; blue
+			//border-bottom: 2px solid #f5b3d0; pink
+			border-bottom: 2px solid #ededed;
+		}
+			
+		.entry-content__row__inner {
 			@extend %fullWidthInner;
+			max-width: 810px;
+			padding: 0 40px 40px 40px;
+			background-color: #ffffff;
+		}
+			
+		h1  {
+			@include hasPseudoClass(after, $position: relative);
+			box-sizing: border-box;
+			margin-top: 0;
+			margin-bottom: 30px;
+			padding: 35px 60px 20px 0;
+			width: 100%;
+			height: auto;
+			border: none;
+			background-image: none;
+			box-shadow: none;
+			font-weight: 400;
+			font-size: 2em;
+			
+			&:before {
+				display: none;
+			}
+
+			&:after {
+				@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px);
+				bottom: -20px;
+				left: 0;
+				z-index: 1;
+				width: 100%;
+				height: auto;
+				background-position: 10px 0;
+				background-size: 156px auto;
+				background-repeat: repeat-x;
+			}
+		}
+
+		.bkg_WhatIsWordCamp {
+			@include hasPseudoClass(before);
+			&:before {
+				@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.9);
+				right: -10px;
+				bottom: -13px;
+				background-size: 100% auto;
+				background-position: 0 0;
+				z-index: 2;
+			}
+		}
+
+		.bkg_WhoCanParticipate {
+			@include hasPseudoClass(before);
+			&:before {
+				right: -10px;
+				bottom: -13px;
+				@include imageReplace('2014/07/ttl_who@2x.png', 130px, 130px, 0.9);
+				background-size: 100% auto;
+				background-position: 0 0;
+				z-index: 2;
+			}
+		}
+
+		.bkg_Concept {
+			@include hasPseudoClass(before);
+			&:before {
+				right: -10px;
+				bottom: -13px;
+				@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.9);
+				background-size: 100% auto;
+				background-position: 0 0;
+				z-index: 2;
+			}
+		}
+
+
+		h2 {
+			margin-top: 1.4em;
+			font-size: 1.3em;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		p {
+			max-width: 95%;
+			margin-top: 20px;
+		}
+				
+	}
+}
+
+
+/* media queries
+---------------------------------------- */
+	    
+/* for Tablet Size */
+
+@media screen and (max-width: 781px){
+		
+	.full-width {
+
+		.entry-content {
+
+			.entry-content__row {
+				padding-top: 0;
+				padding-bottom: 20px;
+			}
+
+			h1 {
+				width: 100%;
+				padding-right: 90px;
+				
+				&:after {
+					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px);
+					left: 0;
+					bottom: -10px;
+					width: 110%;
+					height: auto;
+					background-size: 156px auto;
+					background-position: 25px 0;
+					background-repeat: repeat-x;
+				} 
+			}
+
+			.bkg_WhatIsWordCamp {
+				@include hasPseudoClass(before);
+				&:before {
+					right: 5px;
+					bottom: 0;
+					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
+				}
+			}
+
+			.bkg_WhoCanParticipate {
+				@include hasPseudoClass(before);
+				&:before {
+					right: 5px;
+					bottom: 0;
+					@include imageReplace('2014/07/ttl_who@2x.png', 130px, 130px, 0.7);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
+
+			.bkg_Concept {
+				@include hasPseudoClass(before);
+				&:before {
+					right: 5px;
+					bottom: 0;
+					@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.7);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
 		}
 	}
+}
+
+@media screen and (max-width: 641px){
+		
+	.full-width {
+
+		.entry-content {
+
+			.entry-content__row {
+				padding-top: 0;
+				padding-bottom: 20px;
+			}
+			
+			h1 {
+				width: 100%;
+				padding-right: 50px;
+				
+				&:after {
+					@include imageReplace('2014/07/ttl_postBtmLine@2x.png', 156px, 15px, 0.9);
+					left: 0;
+					bottom: -20px;
+					width: 100%;
+					height: auto;
+					background-size: 156px auto;
+					background-position: 15px 0;
+					background-repeat: repeat-x;
+				} 
+			}
+
+			.bkg_WhatIsWordCamp {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -10px;
+					bottom: -10px;
+					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
+
+			.bkg_WhoCanParticipate {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -10px;
+					bottom: -10px;
+					@include imageReplace('2014/07/ttl_who@2x.png', 130px, 130px, 0.7);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
+
+			.bkg_Concept {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -10px;
+					bottom: -10px;
+					@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.7);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
+		}
+			
+	}
+
+}
+
+@media screen and (max-width: 541px) {
+	.full-width {
+
+		.entry-content {
+
+			.entry-content__row {
+				padding-top: 0;
+				padding-bottom: 20px;
+			}
+				
+			h1 {
+				width: 95%;
+				margin-bottom: 10px;
+				padding-right: 30px;
+				padding-bottom: 10px;
+				border-bottom: 6px solid #e7b955;
+				
+				&:after {
+					display: none;
+				}
+			}
+
+			.bkg_WhatIsWordCamp,
+			.bkg_WhoCanParticipate,
+			.bkg_Concept {
+
+				&:before {
+					display: none;
+				}
+			}
+
+			.bkg_WhatIsWordCamp {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -5px;
+					bottom: -6px;
+					@include imageReplace('2014/07/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.5);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
+
+			.bkg_WhoCanParticipate {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -5px;
+					bottom: -6px;
+					@include imageReplace('2014/07/ttl_who@2x.png', 130px, 130px, 0.5);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
+
+			.bkg_Concept {
+				@include hasPseudoClass(before);
+				&:before {
+					position: absolute;
+					right: -5px;
+					bottom: -6px;
+					@include imageReplace('2014/07/ttl_Concept@2x.png', 130px, 130px, 0.5);
+					background-size: 100% auto;
+					background-position: 0 0;
+					z-index: 2;
+				}
+			}
+		}
+			
+	}
+}
+
+
+/* for Android @2 */
+	
+@media screen and (max-width: 360px){
+		
+	.full-width {
+
+		.entry-content {
+
+			.entry-content__row {
+				padding-top: 0;
+				padding-bottom: 20px;
+			}
+				
+			.entry-content__row__inner {
+				padding: 25px;
+			}
+
+			
+			h1 {
+				width: 100%;
+				margin-bottom: 0;				
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 10px;
+				border-bottom: 3px solid #e7b955;
+				
+				&:after {
+					display: none;
+				}
+			}
+	
+				
+			.bkg_WhatIsWordCamp,
+			.bkg_WhoCanParticipate,
+			.bkg_Concept {
+
+				&:before {
+					display: none;
+				}
+			}
+
+			h2 {
+				padding-top: 20px;
+				font-size: 1em;
+			}
+
+			p {
+				max-width: 100%;
+			}					
+
+		}
+			
+	}
+	
+}
+	
+/* for iPhone @2 */
+
+@media screen and (max-width: 320px){
+		
+	.full-width {
+
+		.entry-content {
+
+			.entry-content__row {
+				padding-top: 0;
+				padding-bottom: 20px;
+			}
+				
+			.entry-content__row__inner {
+				padding: 25px;
+			}
+
+			h1 {
+				width: 100%;
+				padding-bottom: 10px;
+				border-bottom: 3px solid #e7b955;
+				
+				&:after {
+					display: none;
+				}
+			}
+				
+			.bkg_WhatIsWordCamp,
+			.bkg_WhoCanParticipate,
+			.bkg_Concept {
+
+				&:before {
+					display: none;
+				}
+			}
+
+			h2 {
+				padding-top: 20px;
+				font-size: 1em;
+			}		
+
+		}
+	
+	}
+	
 }
