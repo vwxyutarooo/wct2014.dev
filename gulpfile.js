@@ -30,7 +30,7 @@ var paths = {
 ,	'htmlDest':		'src/html'
 ,	'htmlDir':		'src/html/*.html'
 ,	'imgDest':		'files'
-,	'imgDir':		'src/img/**'
+,	'imgDir':		'files/**'
 ,	'jadeDir':		'src/jade/*.jade'
 ,	'jsLib':		'src/lib/*.js'
 ,	'jsDest':		'src/js'
