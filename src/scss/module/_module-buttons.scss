@@ -47,18 +47,23 @@
 
 /* Btn register to volunteer staff
 ---------------------------------------- */
-.button--staff{
+.btnLinkSet{
 	display: inline-block;
+	box-sizing: border-box;
 	margin: 1em auto;
+	max-width: 280px;
+	width: 100%;
 	border: 2px solid $colorBlue;
 	background-color: transparent;
 	color: $colorBlue;
 	font-size: 16px;
 	&:hover{
 		border: 2px solid darken($colorBlue, 8%);
+		background-color: transparent;
+		box-shadow: 0 0 2px rgba(darken($colorBlue, 8%), 0.5);
 		color: darken($colorBlue, 8%);
 	}
-	.icon-group{
+	i{
 		display: inline-block;
 		margin-right: 0.5em;
 		padding-top: 1px;
@@ -66,12 +71,15 @@
 		font-size: 1.25em;
 		line-height: 1.4;
 	}
-	.icon-double-angle-right{
-		display: inline-block;
-		margin-left: 0.25em;
-		padding-top: 1px;
-		vertical-align: middle;
-		font-size: 1.25em;
-		line-height: 1.4;
+	.icon-group{
+		margin-right: 0.5em;
 	}
+	.icon-double-angle-right{
+		margin-left: 0.25em;
+		margin-right: 0;
+	}
+}
+.doubleBtn{
+	@extend %group;
+	text-align: center;
 }

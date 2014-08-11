@@ -104,6 +104,21 @@
 		margin: 0 (100% - ($btnWidth * 3)) / 4;
 		width: $btnWidth;
 	}
+	.btnLinkSet{
+		max-width: 400px;
+	}
+	.doubleBtn{
+		.full-width &{
+			max-width: 95%;
+			margin-right: auto;
+		}
+		.btnLinkSet{
+			width: 48%;
+			&:first-child{
+				margin-right: 4%;
+			}
+		}
+	}
 	.nav-links{
 		a{
 			width: 50%;

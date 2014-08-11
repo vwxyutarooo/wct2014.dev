@@ -10,7 +10,7 @@
 /* =========================================================
 	 extends
 ========================================================= */
-.primary-sidebar ul:after {
+.doubleBtn:after, .primary-sidebar ul:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -305,30 +305,37 @@ table {
 
 /* Btn register to volunteer staff
 ---------------------------------------- */
-.button--staff {
+.btnLinkSet {
   display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 1em auto;
+  max-width: 280px;
+  width: 100%;
   border: 2px solid #3595be;
   background-color: transparent;
   color: #3595be;
   font-size: 16px; }
-  .button--staff:hover {
+  .btnLinkSet:hover {
     border: 2px solid #2c7c9e;
+    background-color: transparent;
+    box-shadow: 0 0 2px rgba(44, 124, 158, 0.5);
     color: #2c7c9e; }
-  .button--staff .icon-group {
+  .btnLinkSet i {
     display: inline-block;
     margin-right: 0.5em;
     padding-top: 1px;
     vertical-align: middle;
     font-size: 1.25em;
     line-height: 1.4; }
-  .button--staff .icon-double-angle-right {
-    display: inline-block;
+  .btnLinkSet .icon-group {
+    margin-right: 0.5em; }
+  .btnLinkSet .icon-double-angle-right {
     margin-left: 0.25em;
-    padding-top: 1px;
-    vertical-align: middle;
-    font-size: 1.25em;
-    line-height: 1.4; }
+    margin-right: 0; }
+
+.doubleBtn {
+  text-align: center; }
 
 /**
  * layouts
@@ -1660,6 +1667,17 @@ span.page-links-title {
     float: left;
     margin: 0 0.25%;
     width: 33%; }
+
+  .btnLinkSet {
+    max-width: 400px; }
+
+  .full-width .doubleBtn {
+    max-width: 95%;
+    margin-right: auto; }
+  .doubleBtn .btnLinkSet {
+    width: 48%; }
+    .doubleBtn .btnLinkSet:first-child {
+      margin-right: 4%; }
 
   .nav-links a {
     width: 50%; } }
