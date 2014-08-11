@@ -149,8 +149,8 @@ gulp.task('sprite', function () {
  * 8. gulp Tasks
 *******************************************************************************/
 gulp.task('watch', function() {
-	gulp.watch([paths.jadeDir], ['jade']);
-	gulp.watch([paths.imgDir], ['image']);
+	// gulp.watch([paths.jadeDir], ['jade']);
+	// gulp.watch([paths.imgDir], ['image']);
 	// gulp.watch([paths.imgDest + '/sprite/*.png'], ['sprite']);
 	// gulp.watch([paths.jsDir], ['concat']);
 	gulp.watch([paths.scssDir], ['scss']);
@@ -161,7 +161,7 @@ gulp.task('default', [
 	'browser-sync',
 	'scss',
 	'jade',
-	'image',
+	// 'image',
 	// 'sprite',
 	'watch'
 ]);

@@ -188,11 +188,11 @@
 			width: $menuItemWidth;
 			height: $menuHeight;
 			line-height: $menuHeight;
-		}
-		> a{
-			text-align: center;
-			height: $menuHeight;
-			line-height: $menuHeight;
+			> a{
+				text-align: center;
+				height: $menuHeight;
+				line-height: $menuHeight;
+			}
 		}
 	}
 	.primary-navigation{
@@ -202,24 +202,39 @@
 		}
 		ul{
 			ul{
-				background-color: $colorPink;
 				top: $menuHeight;
+				margin-left: 0;
+				background-color: $colorPink;
 				box-shadow: 0 1.2px 1px rgba(0, 0, 0, 0.125);
 				a{
 					text-align: center;
+					padding-top: 0;
+					padding-bottom: 0;
 					&:hover{
 						background-color: transparent;
 					}
 				}
+				li{
+					border-top: 0;
+					width: 100%;
+				}
 			}
 		}
-		.menu-item-has-children > a:after,
-		.page_item_has_children > a:after{
-			position: static;
-			line-height: $menuHeight - 3;
-			vertical-align: middle;
-			padding-top: 3px;
-			margin-left: 0.25em;
+		.menu-item-has-children > a,
+		.page_item_has_children > a{
+			padding: 0 20px;
+			&:after{
+				top: 28px;
+				right: 0;
+				left: 0;
+				margin: 0 auto;
+				padding-top: 3px;
+				width: 10px;
+				content: '\f431';
+				vertical-align: middle;
+				font-size: 10px;
+				line-height: 1;
+			}
 		}
 	}
 	.primary-sidebar{

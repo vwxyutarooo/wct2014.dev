@@ -497,46 +497,49 @@ div.sharedaddy h3.sd-title {
   .primary-navigation a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 20px 3em;
+    padding: 20px 2.2em;
     text-align: left;
     letter-spacing: .125em;
     font-weight: normal;
     font-size: 14px; }
   .primary-navigation.toggled-on {
     padding: 0; }
-  .primary-navigation ul ul li {
-    border-top: 1px dashed rgba(255, 255, 255, 0.2); }
 
+.site-navigation ul ul {
+  margin-left: 2em; }
+  .site-navigation ul ul li {
+    border-top: 1px dashed rgba(255, 255, 255, 0.2); }
+.site-navigation li:hover a {
+  background-color: transparent; }
 .site-navigation li > a {
+  position: relative;
   color: #fff;
+  text-align: left;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  text-align: center; }
-.site-navigation li:hover > a {
-  background-color: transparent;
-  color: #f9d3e3;
-  text-decoration: none; }
+  transition: all 0.2s; }
+  .site-navigation li > a:hover {
+    background-color: transparent;
+    color: #f9d3e3;
+    text-decoration: none; }
 .site-navigation .current-menu-item > a,
 .site-navigation .current_page_parent > a {
   color: #fff;
   font-weight: normal; }
-  .site-navigation .current-menu-item > a > span,
-  .site-navigation .current_page_parent > a > span {
-    position: relative; }
-    .site-navigation .current-menu-item > a > span:before,
-    .site-navigation .current_page_parent > a > span:before {
-      position: absolute;
-      top: 50%;
-      display: inline-block;
-      margin: -5px auto auto -16px;
-      color: #f9d3e3;
-      content: '\25CF';
-      font-size: 10px;
-      line-height: 1; }
-.site-navigation .current-page-ancestor > a > span:before,
-.site-navigation .current-menu-ancestor > a > span:before,
-.site-navigation .current-menu-parent > a > span:before {
+  .site-navigation .current-menu-item > a:before,
+  .site-navigation .current_page_parent > a:before {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -5px auto auto -15px;
+    color: #f9d3e3;
+    content: '\25CF';
+    font-size: 10px;
+    line-height: 1; }
+.site-navigation .current-page-ancestor > a:before,
+.site-navigation .current-menu-ancestor > a:before,
+.site-navigation .current-menu-parent > a:before {
   margin-top: -3px;
+  margin-left: -13px;
   font-size: 6px; }
 
 .screen-reader-text {
@@ -1752,32 +1755,46 @@ span.page-links-title {
     right: 10%; }
 
   .site-navigation li {
-    width: 12%;
+    width: 14%;
     height: 48px;
     line-height: 48px; }
-  .site-navigation > a {
-    text-align: center;
-    height: 48px;
-    line-height: 48px; }
+    .site-navigation li > a {
+      text-align: center;
+      height: 48px;
+      line-height: 48px; }
 
   .primary-navigation a {
     padding: 0 20px;
     width: 100%; }
   .primary-navigation ul ul {
-    background-color: #ef86b4;
     top: 48px;
+    margin-left: 0;
+    background-color: #ef86b4;
     box-shadow: 0 1.2px 1px rgba(0, 0, 0, 0.125); }
     .primary-navigation ul ul a {
-      text-align: center; }
+      text-align: center;
+      padding-top: 0;
+      padding-bottom: 0; }
       .primary-navigation ul ul a:hover {
         background-color: transparent; }
-  .primary-navigation .menu-item-has-children > a:after,
-  .primary-navigation .page_item_has_children > a:after {
-    position: static;
-    line-height: 45px;
-    vertical-align: middle;
-    padding-top: 3px;
-    margin-left: 0.25em; }
+    .primary-navigation ul ul li {
+      border-top: 0;
+      width: 100%; }
+  .primary-navigation .menu-item-has-children > a,
+  .primary-navigation .page_item_has_children > a {
+    padding: 0 20px; }
+    .primary-navigation .menu-item-has-children > a:after,
+    .primary-navigation .page_item_has_children > a:after {
+      top: 28px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      padding-top: 3px;
+      width: 10px;
+      content: '\f431';
+      vertical-align: middle;
+      font-size: 10px;
+      line-height: 1; }
 
   .primary-sidebar .widget {
     max-width: 100%; } }
