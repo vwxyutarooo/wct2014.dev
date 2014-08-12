@@ -254,7 +254,8 @@ article .entry-header{
 	h2{
 		@include hasPseudoClass(after);
 		padding-bottom: 16px;
-		font-size: 2.4rem;
+		font-size: 2.3rem;
+		line-height: 1.4;
 		&:after{
 			bottom: 0;
 			left: 0;
@@ -296,8 +297,8 @@ article .entry-header{
 		font-size: 1.6rem;
 	}
 	h1, h2, h3, h4, h5, h6{
-		margin-top: 2em;
-		margin-bottom: 1em;
+		margin-top: 2.3em;
+		margin-bottom: 1.2em;
 	}
 	dl{
 		dt{
@@ -315,6 +316,11 @@ article .entry-header{
 .entry-content p {
 	text-align: justify;
 	text-justify: inter-ideograph;
+	line-height: 1.75;
+}
+
+.entry-content li {
+	line-height: 1.6;
 }
 
 blockquote{
