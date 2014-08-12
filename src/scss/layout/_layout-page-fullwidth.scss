@@ -102,26 +102,19 @@
 			}
 
 			&:after {
-				@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 156px, 15px);
+				@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 100%, 15px, 1.0, 10px 0, 156px auto, repeat-x);
 				bottom: -20px;
 				left: 0;
 				z-index: 1;
-				width: 100%;
-				height: auto;
-				background-position: 10px 0;
-				background-size: 156px auto;
-				background-repeat: repeat-x;
 			}
 		}
 
 		.bkg_WhatIsWordCamp {
 			@include hasPseudoClass(before);
 			&:before {
-				@include imageReplace('2014/08/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.9);
+				@include imageReplace('2014/08/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.9, 0 0, 100% auto);
 				right: -10px;
 				bottom: -13px;
-				background-size: 100% auto;
-				background-position: 0 0;
 				z-index: 2;
 			}
 		}
@@ -131,9 +124,7 @@
 			&:before {
 				right: -10px;
 				bottom: -13px;
-				@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.9);
-				background-size: 100% auto;
-				background-position: 0 0;
+				@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.9, 0 0, 100% auto);
 				z-index: 2;
 			}
 		}
@@ -143,9 +134,7 @@
 			&:before {
 				right: -10px;
 				bottom: -13px;
-				@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.9);
-				background-size: 100% auto;
-				background-position: 0 0;
+				@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.9, 0 0, 100% auto);
 				z-index: 2;
 			}
 		}
@@ -190,14 +179,11 @@
 				padding-right: 90px;
 				
 				&:after {
-					@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 156px, 15px);
+					@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 156px, 15px, 1.0, 25px 0, 156px auto, repeat-x);
 					left: 0;
 					bottom: -10px;
 					width: 110%;
 					height: auto;
-					background-size: 156px auto;
-					background-position: 25px 0;
-					background-repeat: repeat-x;
 				} 
 			}
 
@@ -215,9 +201,7 @@
 				&:before {
 					right: 5px;
 					bottom: 0;
-					@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.7);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.7, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}
@@ -227,9 +211,7 @@
 				&:before {
 					right: 5px;
 					bottom: 0;
-					@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.7);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.7, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}
@@ -253,14 +235,9 @@
 				padding-right: 50px;
 				
 				&:after {
-					@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 156px, 15px, 0.9);
+					@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 111%, 15px, 0.9, 15px 0, 156px auto, repeat-x);
 					left: 0;
 					bottom: -20px;
-					width: 100%;
-					height: auto;
-					background-size: 156px auto;
-					background-position: 15px 0;
-					background-repeat: repeat-x;
 				} 
 			}
 
@@ -270,9 +247,7 @@
 					position: absolute;
 					right: -10px;
 					bottom: -10px;
-					@include imageReplace('2014/08/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.7, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}
@@ -283,9 +258,7 @@
 					position: absolute;
 					right: -10px;
 					bottom: -10px;
-					@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.7);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.7, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}
@@ -296,9 +269,7 @@
 					position: absolute;
 					right: -10px;
 					bottom: -10px;
-					@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.7);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.7, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}
@@ -345,9 +316,7 @@
 					position: absolute;
 					right: -5px;
 					bottom: -6px;
-					@include imageReplace('2014/08/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.5);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_WhatIsWordCamp_gray@2x.png', 130px, 130px, 0.5, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}
@@ -358,9 +327,7 @@
 					position: absolute;
 					right: -5px;
 					bottom: -6px;
-					@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.5);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_who@2x.png', 130px, 130px, 0.5, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}
@@ -371,9 +338,7 @@
 					position: absolute;
 					right: -5px;
 					bottom: -6px;
-					@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.5);
-					background-size: 100% auto;
-					background-position: 0 0;
+					@include imageReplace('2014/08/ttl_Concept@2x.png', 130px, 130px, 0.5, 0 0, 100% auto);
 					z-index: 2;
 				}
 			}

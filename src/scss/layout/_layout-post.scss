@@ -78,12 +78,9 @@ article.post{
 			z-index: 10;
 		}
 		&:after{
-			@include imageReplace('2014/08/ttl_postBtmLine.png', 100%, 15px, 1);
+			@include imageReplace('2014/08/ttl_postBtmLine.png', 100%, 15px, 1, bottom right, auto 15px, repeat-x);
 			bottom: 0;
 			box-sizing: border-box;
-			background-position: bottom right;
-			background-size: auto 15px;
-			background-repeat: repeat-x;
 		}
 		> .entry-meta{
 			&:last-child{
