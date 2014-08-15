@@ -346,12 +346,12 @@
 	 Media - Retina dispaly devices
 ========================================================= */
 @media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 960px) and (max-width: 1920px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1920px),
-only screen and (                min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1920px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 960px) and (max-width: 1920px){
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1280px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1280px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 960px) and (max-width: 1280px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 960px) and (max-width: 1280px),
+only screen and (                min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1280px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 960px) and (max-width: 1280px){
 	@include setHeaderBkg(704px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1280px auto, 1280px auto, $bodyClass: '.home');
 	@include setHeaderBkg(400px, '2014/08/bkgHeaderShortM@2x.jpg', '2014/08/txtHeaderShortM@2x.png', 1280px auto, 1280px auto);
 	// postTitle
@@ -366,5 +366,19 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 960px) 
 				background-repeat: repeat-x;
 			}
 		}
+	}
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1281px) and (max-width: 1920px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1281px) and (max-width: 1920px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1281px) and (max-width: 1920px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1281px) and (max-width: 1920px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1281px) and (max-width: 1920px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1281px) and (max-width: 1920px){
+	body{
+		background-image: url($filePath + '2014/08/bkgHeaderShortM@2x.jpg'), url($filePath + '2014/08/bkgHeaderShortRepeatM@2x.jpg');
+		background-position: right top, left top;
+		background-size: 1280px auto, 1px 400px;
+		background-repeat: no-repeat, repeat-x;
 	}
 }
