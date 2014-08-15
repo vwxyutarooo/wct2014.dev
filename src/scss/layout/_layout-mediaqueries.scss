@@ -10,6 +10,8 @@
 	}
 	@include setHeaderBkg(640px, '2014/08/bkgHeaderS.jpg', '2014/08/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
+	// Page template full-width
+	@include full-width-small;
 }
 @media screen and (max-width: 400px){
 	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto, $bodyClass: '.home');
@@ -30,6 +32,7 @@
 		.entry-title{
 			.page-template-default &{
 				border-bottom: 3px solid $colorOrange;
+				padding-bottom: 0.4em;
 			}
 		}
 		.entry-header{
@@ -52,17 +55,23 @@
 		}
 	}
 }
+
 /* for Android @2x
 ---------------------------------------- */
 @media screen and (max-width: 360px){
 	@include setHeaderBkg($height: 360px, $bkgSize: 360px, $txtSize: 360px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 180px, $bkgSize: 360px, $txtSize: 360px);
+	// Page template full-width
+	@include full-width-Android
 }
+
 /* for iPhone @2x
 ---------------------------------------- */
 @media screen and (max-width: 320px){
 	@include setHeaderBkg($height: 320px, $bkgSize: 320px, $txtSize: 320px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 160px, $bkgSize: 320px 160px, $txtSize: 320px 160px);
+	// Page template full-width
+	@include full-width-iPhone;
 }
 
 
@@ -89,6 +98,7 @@
 		@include definePostFooterDecolate;
 	}
 }
+
 @media only screen and (min-width: 594px){
 	%fullWidthInner{
 		padding-right: 30px;
@@ -124,7 +134,10 @@
 			width: 50%;
 		}
 	}
+	// Page template full-width
+	@include full-width-medium;
 }
+
 /* =========================================================
 	 Media - Tablet Size
 ========================================================= */
@@ -172,6 +185,7 @@
 		}
 	}
 }
+
 @media screen and (min-width: 673px){
 	.site-content{
 		.entry-header,
@@ -184,7 +198,11 @@
 			max-width: 100%;
 		}
 	}
+
+	// Page template full-width
+	@include full-width-tablet;
 }
+
 /* =========================================================
 	 Media - Navigation Expanded
 ========================================================= */
@@ -258,6 +276,7 @@
 		}
 	}
 }
+
 @media screen and (min-width: 810px){}
 
 /* =========================================================
@@ -290,12 +309,18 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	// Page template full-width
+	@include full-width-pc;
 }
+
 @media screen and (min-width: 1008px){
 	@include setHeaderBkg($txtSize: 1280px auto, $txtPos: center center, $bodyClass: '.home');
 }
+
 @media screen and (min-width: 1040px){}
+
 @media screen and (min-width: 1080px){}
+
 @media screen and (min-width: 1110px){
 	%baseWidth{
 		padding-left: 0;
@@ -312,6 +337,7 @@
 		}
 	}
 }
+
 @media screen and (min-width: 1218px){
 	// Need to override TwentyFourteen
 	.archive-header,
@@ -327,10 +353,13 @@
 		margin-right: 0;
 	}
 }
+
 @media screen and (min-width: 1260px){}
+
 @media screen and (min-width: 1281px){
 	@include setHeaderBkg($bkgSize: 100%, $txtSize: 100%, $bodyClass: '.home');
 }
+
 @media only screen and (min-width: 1440px){
 	@include setHeaderBkg(1080px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1920px auto, 100%, $bodyClass: '.home');
 	.home{
@@ -368,6 +397,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 960px) 
 		}
 	}
 }
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1281px) and (max-width: 1920px),
 only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1281px) and (max-width: 1920px),
