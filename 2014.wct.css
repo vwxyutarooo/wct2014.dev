@@ -126,16 +126,17 @@ iframe {
 	 Text-level semantics
 ========================================================= */
 a {
-  color: #256986;
+  color: #286f8e;
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease; }
+          transition: color 0.2s ease;
+  text-decoration: none; }
   a:focus {
     outline: thin dotted; }
   a:link, a:visited {
-    color: #256986; }
+    color: #286f8e; }
   a:hover, a:active {
     outline: 0;
-    color: #256986;
+    color: #52a9cf;
     text-decoration: underline; }
 
 p {
@@ -727,10 +728,10 @@ article .entry-header {
   font-weight: normal; }
 .entry-content dl dd {
   padding: 0 0 0 15px; }
+.entry-content a {
+  text-decoration: none; }
 
 .entry-content p {
-  text-align: justify;
-  text-justify: inter-ideograph;
   line-height: 1.75; }
 
 .entry-content li {
@@ -1371,7 +1372,7 @@ span.page-links-title {
       .archive .site-content .entry-title a:hover,
       .single .site-content .entry-title a:hover,
       .page-template-default .site-content .entry-title a:hover {
-        color: #256986; }
+        color: #52a9cf; }
 
   .list-view .site-content .hentry {
     position: relative;

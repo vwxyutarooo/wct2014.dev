@@ -26,6 +26,7 @@ iframe{
 a{
 	color: $colorLink;
 	transition: color 0.2s ease;
+	text-decoration: none;
 	&:focus{
 		outline: thin dotted;
 	}
