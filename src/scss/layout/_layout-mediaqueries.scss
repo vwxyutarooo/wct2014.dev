@@ -331,7 +331,7 @@
 		.entry-header{
 			padding-right: 100px;
 			&:before{
-				@include imageReplace('2014/08/ttl_postWapu.png', 136px, 130px, 1.0);
+				@include imageReplace('2014/08/ttl_postWapu.png', 130px, 130px, 1.0);
 				bottom: 3px;
 			}
 		}

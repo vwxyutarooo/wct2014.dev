@@ -21,21 +21,18 @@
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 
 @keyframes fadeIn {
   0% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 @-webkit-keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
-
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -43,7 +40,6 @@
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
-
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -51,11 +47,9 @@
   0% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); }
-
   50% {
     -webkit-transform: translate(0, 8%);
     transform: translate(0, 8%); }
-
   100% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); } }
@@ -63,11 +57,9 @@
   0% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); }
-
   50% {
     -webkit-transform: translate(0, 8%);
     transform: translate(0, 8%); }
-
   100% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); } }
@@ -75,7 +67,6 @@
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
-
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -83,7 +74,6 @@
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
-
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -153,7 +143,7 @@ pre {
     margin-bottom: 0; }
 
 code {
-  color: #666666;
+  color: #666;
   font-size: 0.9em; }
 
 ::-moz-selection {
@@ -312,9 +302,9 @@ table {
   margin: 1em auto;
   max-width: 280px;
   width: 100%;
-  border: 2px solid #3595be;
+  border: 2px solid #3595BE;
   background-color: transparent;
-  color: #3595be;
+  color: #3595BE;
   font-size: 16px; }
   .btnLinkSet:hover {
     border: 2px solid #2c7c9e;
@@ -463,7 +453,7 @@ div.sharedaddy h3.sd-title {
   .menu-toggle:before {
     position: static;
     display: inline-block;
-    content: "\f104";
+    content: "";
     vertical-align: middle;
     font-size: 16px;
     font-family: Genericons;
@@ -576,7 +566,7 @@ article.post {
     .entry-header > .entry-meta:first-child .cat-links a:before {
       position: static;
       display: inline-block;
-      content: "\f301";
+      content: "";
       vertical-align: text-bottom;
       font-size: 16px;
       font-family: Genericons;
@@ -623,7 +613,7 @@ article.post {
     .nav-links a:before {
       position: static;
       display: inline-block;
-      content: "\f104";
+      content: "";
       vertical-align: text-bottom;
       font-size: 16px;
       font-family: Genericons;
@@ -876,7 +866,7 @@ blockquote {
   .archive-title:before,
   .page-title:before {
     display: inline-block;
-    content: "\f187";
+    content: "";
     vertical-align: baseline;
     text-decoration: inherit;
     font-weight: normal;
@@ -1852,7 +1842,7 @@ span.page-links-title {
       display: block;
       overflow: hidden;
       padding-top: 130px;
-      width: 136px;
+      width: 130px;
       height: 0;
       background-image: url("files/2014/08/ttl_postWapu.png");
       background-position: 0 0;
