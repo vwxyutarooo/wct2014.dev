@@ -33,9 +33,8 @@ $colorOrange       : #e6b85d;
 $colorText         : #555555;
 $colorSubText      : #666;
 $colorTitle        : #555555;
-$colorLink         : #266b89;
-$colorLink         : darken($colorBlue, 14%);
-$colorLinkHover    : $colorLink;
+$colorLink         : darken($colorBlue, 12%);
+$colorLinkHover    : lighten($colorBlue, 9%);
 $colorSelection    : #accef7;
 // Navigation colors
 $colorNav          : #ef86b4;
