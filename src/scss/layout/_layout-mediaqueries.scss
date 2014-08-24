@@ -240,9 +240,11 @@
 				background-color: $colorPink;
 				box-shadow: 0 1.2px 1px rgba(0, 0, 0, 0.125);
 				a{
+					width: auto;
+					min-width: 176px;
+					padding: 0 20px;
 					text-align: center;
-					padding-top: 0;
-					padding-bottom: 0;
+					white-space: nowrap;
 					&:hover{
 						background-color: transparent;
 					}

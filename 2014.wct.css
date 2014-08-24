@@ -1686,9 +1686,11 @@ span.page-links-title {
     background-color: #ef86b4;
     box-shadow: 0 1.2px 1px rgba(0, 0, 0, 0.125); }
     .primary-navigation ul ul a {
+      width: auto;
+      min-width: 176px;
+      padding: 0 20px;
       text-align: center;
-      padding-top: 0;
-      padding-bottom: 0; }
+      white-space: nowrap; }
       .primary-navigation ul ul a:hover {
         background-color: transparent; }
     .primary-navigation ul ul li {
