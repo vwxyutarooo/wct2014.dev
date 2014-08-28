@@ -392,9 +392,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 960px) 
 				@include imageReplace('2014/08/ttl_postWapu@2x.png', 130px, 130px, 1.0);
 			}
 			&:after{
-				@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 100%, 15px, 1.0);
-				background-size: auto 15px;
-				background-repeat: repeat-x;
+				@include imageReplace('2014/08/ttl_postBtmLine@2x.png', 100%, 15px, 1.0, $size: auto 15px, $repeat: repeat-x);
 			}
 		}
 	}
