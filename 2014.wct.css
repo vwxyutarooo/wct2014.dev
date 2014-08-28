@@ -386,8 +386,15 @@ table {
 
 /* jetpack
 ---------------------------------------- */
-div.sharedaddy h3.sd-title {
-  display: block; }
+div.sharedaddy {
+  max-width: 810px;
+  margin: 10px auto; }
+  div.sharedaddy h3.sd-title {
+    display: block;
+    background: transparent;
+    padding: 0; }
+    div.sharedaddy h3.sd-title:before {
+      border-top: 0; }
 
 /* header
 ---------------------------------------- */
