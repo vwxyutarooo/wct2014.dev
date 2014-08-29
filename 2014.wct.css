@@ -1167,6 +1167,12 @@ span.page-links-title {
   .blog .site-content .hentry, .arhive .site-content .hentry {
     border-bottom: 1px solid #e6b85d; }
 
+  .entry-content h4 {
+    padding-top: 1px;
+    padding-bottom: 0;
+    background-size: 8px auto;
+    line-height: 1.6; }
+
   .content-sidebar {
     margin-top: 0; }
     .single .content-sidebar {

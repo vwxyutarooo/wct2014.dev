@@ -48,6 +48,14 @@
 			}
 		}
 	}
+	.entry-content{
+		h4{
+			padding-top: 1px;
+			padding-bottom: 0;
+			background-size: 8px auto;
+			line-height: 1.6;
+		}
+	}
 	.content-sidebar{
 		margin-top: 0;
 		.single &{
