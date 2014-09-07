@@ -21,18 +21,21 @@
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
+
   100% {
     opacity: 1; } }
 
 @keyframes fadeIn {
   0% {
     opacity: 0; }
+
   100% {
     opacity: 1; } }
 @-webkit-keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -40,6 +43,7 @@
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -47,9 +51,11 @@
   0% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); }
+
   50% {
     -webkit-transform: translate(0, 8%);
     transform: translate(0, 8%); }
+
   100% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); } }
@@ -57,9 +63,11 @@
   0% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); }
+
   50% {
     -webkit-transform: translate(0, 8%);
     transform: translate(0, 8%); }
+
   100% {
     -webkit-transform: translate(0, 0px);
     transform: translate(0, 0px); } }
@@ -67,6 +75,7 @@
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -74,6 +83,7 @@
   0% {
     -webkit-transform: translate(0, -500px);
     transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); } }
@@ -144,7 +154,7 @@ pre {
     margin-bottom: 0; }
 
 code {
-  color: #666;
+  color: #666666;
   font-size: 0.9em; }
 
 ::-moz-selection {
@@ -303,9 +313,9 @@ table {
   margin: 1em auto;
   max-width: 280px;
   width: 100%;
-  border: 2px solid #3595BE;
+  border: 2px solid #3595be;
   background-color: transparent;
-  color: #3595BE;
+  color: #3595be;
   font-size: 16px; }
   .btnLinkSet:hover {
     border: 2px solid #2c7c9e;
@@ -376,8 +386,15 @@ table {
 
 /* jetpack
 ---------------------------------------- */
-div.sharedaddy h3.sd-title {
-  display: block; }
+div.sharedaddy {
+  max-width: 810px;
+  margin: 10px auto; }
+  div.sharedaddy h3.sd-title {
+    display: block;
+    background: transparent;
+    padding: 0; }
+    div.sharedaddy h3.sd-title:before {
+      border-top: 0; }
 
 /* header
 ---------------------------------------- */
@@ -454,7 +471,7 @@ div.sharedaddy h3.sd-title {
   .menu-toggle:before {
     position: static;
     display: inline-block;
-    content: "";
+    content: "\f104";
     vertical-align: middle;
     font-size: 16px;
     font-family: Genericons;
@@ -567,7 +584,7 @@ article.post {
     .entry-header > .entry-meta:first-child .cat-links a:before {
       position: static;
       display: inline-block;
-      content: "";
+      content: "\f301";
       vertical-align: text-bottom;
       font-size: 16px;
       font-family: Genericons;
@@ -614,7 +631,7 @@ article.post {
     .nav-links a:before {
       position: static;
       display: inline-block;
-      content: "";
+      content: "\f104";
       vertical-align: text-bottom;
       font-size: 16px;
       font-family: Genericons;
@@ -867,7 +884,7 @@ blockquote {
   .archive-title:before,
   .page-title:before {
     display: inline-block;
-    content: "";
+    content: "\f187";
     vertical-align: baseline;
     text-decoration: inherit;
     font-weight: normal;
@@ -1959,8 +1976,6 @@ span.page-links-title {
     height: 0;
     background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
     background-position: 0 0;
-    background-size: 100%;
-    background-repeat: no-repeat;
     background-size: auto 15px;
     background-repeat: repeat-x; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 192dpi) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 2dppx) and (min-width: 1281px) and (max-width: 1920px) {

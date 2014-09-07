@@ -55,6 +55,15 @@
 
 /* jetpack
 ---------------------------------------- */
-div.sharedaddy h3.sd-title{
-	display: block;
+div.sharedaddy{
+	max-width: 810px;
+	margin: 10px auto;
+	h3.sd-title {
+		display: block;
+		background: transparent;
+		padding: 0;
+		&:before{
+			border-top: 0;
+		}
+	}
 }
