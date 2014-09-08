@@ -31,63 +31,62 @@
 
   100% {
     opacity: 1; } }
-
 @-webkit-keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
 
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 @keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
 
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 @-webkit-keyframes hovering {
   0% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); }
+            transform: translate(0, 0px); }
 
   50% {
     -webkit-transform: translate(0, 8%);
-    transform: translate(0, 8%); }
+            transform: translate(0, 8%); }
 
   100% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); } }
+            transform: translate(0, 0px); } }
 @keyframes hovering {
   0% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); }
+            transform: translate(0, 0px); }
 
   50% {
     -webkit-transform: translate(0, 8%);
-    transform: translate(0, 8%); }
+            transform: translate(0, 8%); }
 
   100% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); } }
+            transform: translate(0, 0px); } }
 @-webkit-keyframes weight {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
 
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 @keyframes weight {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
 
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 .home #masthead:after {
   -webkit-animation-name: hoverDown, hovering;
           animation-name: hoverDown, hovering;
@@ -1029,6 +1028,13 @@ span.page-links-title {
     .site-footer .site-info a {
       color: #fff; }
 
+/* media queries
+---------------------------------------- */
+/* for PC size (min-width: 1920px)*/
+/* for PC size (min-width: 846px)*/
+/* for tablet size */
+/* for mobile size */
+/* for iPhone@2 and Android@2 */
 /* =========================================================
 	 Media - Mobile sizes
 ========================================================= */
@@ -1065,6 +1071,9 @@ span.page-links-title {
 
   .primary-navigation {
     top: 320px; }
+
+  .site-footer:before {
+    padding-top: 150px; }
 
   .full-width .entry-content .entry-content__row {
     padding-top: 0;
@@ -1162,6 +1171,9 @@ span.page-links-title {
   .primary-navigation {
     top: 200px; }
 
+  .site-footer:before {
+    padding-top: 150px; }
+
   .list-view .content-area {
     padding: 30px 0; }
   .list-view .site-content .hentry:last-child {
@@ -1210,6 +1222,9 @@ span.page-links-title {
   .primary-navigation {
     top: 180px; }
 
+  .site-footer:before {
+    padding-top: 90px; }
+
   .full-width .entry-content .entry-content__row {
     padding-top: 0;
     padding-bottom: 20px; }
@@ -1256,6 +1271,9 @@ span.page-links-title {
 
   .primary-navigation {
     top: 160px; }
+
+  .site-footer:before {
+    padding-top: 90px; }
 
   .full-width .entry-content .entry-content__row {
     padding-top: 0;
@@ -1540,6 +1558,9 @@ span.page-links-title {
   .primary-navigation {
     top: 400px; }
 
+  .site-footer:before {
+    padding-top: 250px; }
+
   body {
     background-image: url("files/2014/08/bkgHeaderShortM.jpg"), url("files/2014/08/bkgHeaderShortRepeatM.jpg");
     background-position: right top, left top;
@@ -1655,6 +1676,9 @@ span.page-links-title {
       z-index: 2;
       right: 5px;
       bottom: -12px; } }
+@media screen and (min-width: 735px) {
+  .site-footer:before {
+    padding-top: 250px; } }
 /* =========================================================
 	 Media - Navigation Expanded
 ========================================================= */
@@ -1758,6 +1782,9 @@ span.page-links-title {
   #main, .primary-navigation .nav-menu {
     padding-left: 20px;
     padding-right: 20px; }
+
+  .site-footer:before {
+    padding-top: 400px; }
 
   .full-width .entry-content .entry-content__row {
     padding-top: 3em; }
@@ -1913,6 +1940,9 @@ span.page-links-title {
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: -150px; } }
+@media screen and (min-width: 1920px) {
+  .site-footer:before {
+    padding-top: 550px; } }
 /* =========================================================
 	 Media - Retina dispaly devices
 ========================================================= */

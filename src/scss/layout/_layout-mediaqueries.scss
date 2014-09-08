@@ -10,12 +10,14 @@
 	}
 	@include setHeaderBkg(640px, '2014/08/bkgHeaderS.jpg', '2014/08/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
+	@include setFooterBkg-small;
 	// Page template full-width
 	@include full-width-small;
 }
 @media screen and (max-width: 400px){
 	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto, $bodyClass: '.home');
 	@include setHeaderBkg($height: 200px, $bkgSize: 400px 200px, $txtSize: 400px 200px);
+	@include setFooterBkg-small;
 	.list-view{
 		.content-area{
 			padding: 30px 0;
@@ -69,6 +71,7 @@
 @media screen and (max-width: 360px){
 	@include setHeaderBkg($height: 360px, $bkgSize: 360px, $txtSize: 360px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 180px, $bkgSize: 360px, $txtSize: 360px);
+	@include setFooterBkg-xsmall;
 	// Page template full-width
 	@include full-width-Android
 }
@@ -78,6 +81,7 @@
 @media screen and (max-width: 320px){
 	@include setHeaderBkg($height: 320px, $bkgSize: 320px, $txtSize: 320px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 160px, $bkgSize: 320px 160px, $txtSize: 320px 160px);
+	@include setFooterBkg-xsmall;
 	// Page template full-width
 	@include full-width-iPhone;
 }
@@ -165,6 +169,7 @@
 		$txtSize: 1000px auto,
 		$txtPos: left center
 	);
+	@include setFooterBkg-tablet;
 	body{
 		background-image: url($filePath + '2014/08/bkgHeaderShortM.jpg'), url($filePath + '2014/08/bkgHeaderShortRepeatM.jpg');
 		background-position: right top, left top;
@@ -209,6 +214,10 @@
 
 	// Page template full-width
 	@include full-width-tablet;
+}
+
+@media screen and (min-width: 735px){
+	@include setFooterBkg-tablet;
 }
 
 /* =========================================================
@@ -319,6 +328,7 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+	@include setFooterBkg-medium; 
 	// Page template full-width
 	@include full-width-pc;
 }
@@ -380,6 +390,9 @@
 			}
 		}
 	}
+}
+@media screen and (min-width: 1920px) {
+	@include setFooterBkg-large;
 }
 /* =========================================================
 	 Media - Retina dispaly devices

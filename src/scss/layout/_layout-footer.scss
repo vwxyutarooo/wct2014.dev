@@ -20,3 +20,46 @@
 		}
 	}
 }
+
+/* media queries
+---------------------------------------- */
+/* for PC size (min-width: 1920px)*/
+@mixin setFooterBkg-large {
+	.site-footer {
+		&:before {
+			padding-top: 550px;
+		}
+	}
+}
+/* for PC size (min-width: 846px)*/
+@mixin setFooterBkg-medium {
+	.site-footer {
+		&:before {
+			padding-top: 400px;
+		}
+	}
+}
+/* for tablet size */
+@mixin setFooterBkg-tablet {
+	.site-footer {
+		&:before {
+			padding-top: 250px;
+		}
+	}
+}
+/* for mobile size */
+@mixin setFooterBkg-small {
+	.site-footer {
+		&:before {
+			padding-top: 150px;
+		}
+	}
+}
+/* for iPhone@2 and Android@2 */
+@mixin setFooterBkg-xsmall {
+	.site-footer{
+		&:before {
+			padding-top: 90px;
+		}
+	}
+}
