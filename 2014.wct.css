@@ -1059,7 +1059,18 @@ span.page-links-title {
 /* Site footer
 ---------------------------------------- */
 .site-footer {
+  position: relative;
+  border-width: 0;
   background-color: transparent; }
+  .site-footer:before {
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    content: 'Sponsors';
+    text-align: center;
+    color: #fff;
+    background-color: #3a9ec8; }
   .site-footer #supplementary {
     padding: 0;
     position: relative; }
@@ -1078,7 +1089,8 @@ span.page-links-title {
       background-size: 100% auto; }
   .site-footer .footer-sidebar {
     position: static !important;
-    height: auto !important; }
+    height: auto !important;
+    padding-top: 0; }
     .site-footer .footer-sidebar .widget {
       position: static !important;
       top: auto !important;
@@ -1088,11 +1100,11 @@ span.page-links-title {
       max-width: 100%;
       padding: 0; }
       .site-footer .footer-sidebar .widget.widget_text {
-        border-style: solid;
-        border-color: #ededed;
-        border-width: 2px 0 0 0;
+        font-size: 26px;
         margin-bottom: 3em;
-        font-size: 26px; }
+        border-width: 2px 0 0 0;
+        border-style: solid;
+        border-color: #ededed; }
   .site-footer .widget .widget-title {
     text-align: center;
     border-width: 0; }
@@ -1111,18 +1123,19 @@ span.page-links-title {
 /* Sponsor logo widget in footer-sidebar
 ---------------------------------------- */
 .sponsorTitle {
-  font-size: 1em;
   font-weight: normal;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 810px;
   height: 82px;
-  margin: 0 auto 2em !important;
+  margin: 0 auto 1.8em !important;
   padding-top: 1.5em;
   text-align: center;
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: auto 82px; }
+  .footer-sidebar .widget .sponsorTitle {
+    font-size: 2.6rem; }
   .sponsorTitle--platinum {
     background-image: url("files/2014/09/ttl_sponcer_platinum.png"); }
 
@@ -1954,7 +1967,7 @@ span.page-links-title {
       bottom: -13px; }
 
   .sponsorTitle {
-    padding-top: 3em;
+    padding-top: 2.2em;
     background-size: 792px 125px; }
 
   .sponsorList {

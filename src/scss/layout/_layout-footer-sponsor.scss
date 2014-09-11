@@ -3,17 +3,19 @@
 ---------------------------------------- */
 // .footer-sidebar -> .widget -> &
 .sponsorTitle {
-  font-size: 1em;
   font-weight: normal;
   box-sizing: border-box;
   max-width: 810px;
   height: 82px;
-  margin: 0 auto 2em !important;
+  margin: 0 auto 1.8em !important;
   padding-top: 1.5em;
   text-align: center;
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: auto 82px;
+  .footer-sidebar .widget & {
+    font-size: 2.6rem;
+  }
   &--platinum {
     background-image: url($filePath+'2014/09/ttl_sponcer_platinum.png');
   }
@@ -57,7 +59,7 @@
 @mixin footer-sidebar-over-846 {
   // .footer-sidebar -> .widget -> &
   .sponsorTitle {
-    padding-top: 3em;
+    padding-top: 2.2em;
     background-size: 792px 125px;
   }
   .sponsorList {
