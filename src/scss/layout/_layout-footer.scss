@@ -26,40 +26,50 @@
 /* for PC size (min-width: 1920px)*/
 @mixin setFooterBkg-large {
 	.site-footer {
-		&:before {
+		#supplementary {
+			&:before {
 			padding-top: 550px;
+			}
 		}
 	}
 }
 /* for PC size (min-width: 846px)*/
 @mixin setFooterBkg-medium {
 	.site-footer {
-		&:before {
+		#supplementary {
+			&:before {
 			padding-top: 400px;
+			}
 		}
 	}
 }
 /* for tablet size */
 @mixin setFooterBkg-tablet {
 	.site-footer {
-		&:before {
-			padding-top: 250px;
+		#supplementary {
+				&:before {
+				padding-top: 250px;
+			}
 		}
-	}
+	}	
 }
-/* for mobile size */
+/* for mobile size (min-width: 361px) **/
 @mixin setFooterBkg-small {
 	.site-footer {
-		&:before {
-			padding-top: 150px;
-		}
+		#supplementary {
+			&:before {
+				padding-top: 150px;
+			}
+		}		
 	}
 }
-/* for iPhone@2 and Android@2 */
+/* for iPhone@2 and Android@2 (max-width: 360px) */
 @mixin setFooterBkg-xsmall {
 	.site-footer{
-		&:before {
-			padding-top: 90px;
+		#supplementary {
+			&:before {
+				padding-top: 90px;
+			}
 		}
 	}
 }

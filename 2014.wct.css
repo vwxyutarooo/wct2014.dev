@@ -1033,8 +1033,8 @@ span.page-links-title {
 /* for PC size (min-width: 1920px)*/
 /* for PC size (min-width: 846px)*/
 /* for tablet size */
-/* for mobile size */
-/* for iPhone@2 and Android@2 */
+/* for mobile size (min-width: 361px) **/
+/* for iPhone@2 and Android@2 (max-width: 360px) */
 /* =========================================================
 	 Media - Mobile sizes
 ========================================================= */
@@ -1072,7 +1072,7 @@ span.page-links-title {
   .primary-navigation {
     top: 320px; }
 
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 150px; }
 
   .full-width .entry-content .entry-content__row {
@@ -1171,7 +1171,7 @@ span.page-links-title {
   .primary-navigation {
     top: 200px; }
 
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 150px; }
 
   .list-view .content-area {
@@ -1222,7 +1222,7 @@ span.page-links-title {
   .primary-navigation {
     top: 180px; }
 
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 90px; }
 
   .full-width .entry-content .entry-content__row {
@@ -1272,7 +1272,7 @@ span.page-links-title {
   .primary-navigation {
     top: 160px; }
 
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 90px; }
 
   .full-width .entry-content .entry-content__row {
@@ -1558,7 +1558,7 @@ span.page-links-title {
   .primary-navigation {
     top: 400px; }
 
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 250px; }
 
   body {
@@ -1677,7 +1677,7 @@ span.page-links-title {
       right: 5px;
       bottom: -12px; } }
 @media screen and (min-width: 735px) {
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 250px; } }
 /* =========================================================
 	 Media - Navigation Expanded
@@ -1783,7 +1783,7 @@ span.page-links-title {
     padding-left: 20px;
     padding-right: 20px; }
 
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 400px; }
 
   .full-width .entry-content .entry-content__row {
@@ -1941,7 +1941,7 @@ span.page-links-title {
     background-repeat: no-repeat;
     margin-top: -150px; } }
 @media screen and (min-width: 1920px) {
-  .site-footer:before {
+  .site-footer #supplementary:before {
     padding-top: 550px; } }
 /* =========================================================
 	 Media - Retina dispaly devices
