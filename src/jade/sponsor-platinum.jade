@@ -1,0 +1,34 @@
+include inc/core/_config
+extends inc/core/_base_modern
+block title
+  - var title = ''
+  title= title
+block prepend meta
+  - var sitename = name
+  - var keywords = ''
+  - var description = ''
+  - var ogpimage = ''
+  - var bodyClass = 'home'
+  - var siteDomain = 'http://wct2014.dev'
+block append meta
+block body
+  .l-container
+    include inc/layout/_layout_header
+
+      h1.sponsorTitle.sponsorTitle--platinum Platinum
+      ul.sponsorList.sponsorList--platinum
+        li
+          a.sponsorList__sponsorLogo(href="http://192.168.1.29:3000/?wcb_sponsor=platinum_wordpress_3")
+            img.attachment-post-thumbnail.wp-post-image(width="450" height="100" src="http://192.168.1.29:3000/wp-content/uploads/2014/09/logo_dummy_wordpress.png" alt="logo_dummy_wordpress")
+        li
+          a.sponsorList__sponsorLogo(href="http://192.168.1.29:3000/?wcb_sponsor=platinum_wordpress_3")
+            img.attachment-post-thumbnail.wp-post-image(width="450" height="100" src="http://192.168.1.29:3000/wp-content/uploads/2014/09/logo_dummy_wordpress.png" alt="logo_dummy_wordpress")
+
+      h1.sponsorTitle.sponsorTitle--gold Gold
+      ul.sponsorList.sponsorList--gold
+        li
+          a.sponsorList__sponsorLogo()
+            img.attachment-post-thumbnail.wp-post-image(width="300" height="100" src="http://192.168.1.29:3000/wp-content/uploads/2014/09/logo_gold_wordpress.png" class="attachment-post-thumbnail wp-post-image" alt="logo_gold_wordpress")
+
+    include inc/layout/_layout_footer
+block append scriptFooter

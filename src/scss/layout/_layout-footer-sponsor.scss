@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* Sponsor logo widget in footer-sidebar
+---------------------------------------- */
+// .footer-sidebar -> .widget -> &
+.sponsorTitle {
+  font-weight: normal;
+  box-sizing: border-box;
+  max-width: 810px;
+  height: 82px;
+  margin: 0 auto 1.8em !important;
+  padding-top: 1.5em;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto 82px;
+  .footer-sidebar .widget & {
+    font-size: 2.6rem;
+  }
+  &--platinum {
+    background-image: url($filePath+'2014/09/ttl_sponcer_platinum.png');
+  }
+}
+
+.sponsorList {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto !important;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  > li {
+    margin-bottom: 1.5em;
+  }
+  &--platinum {
+    > li {
+      img {
+        width: 100%;
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+
+// Tablet size
+@mixin footer-sidebar-over-641 {
+  .sponsorTitle {
+    height: 125px;
+    padding-top: 2em;
+    background-size: 792px 125px;
+    &--platinum {
+      background-image: url($filePath+'2014/09/ttl_sponcer_platinum@2x.png');
+    }
+  }
+}
+
+
+// PC size
+@mixin footer-sidebar-over-846 {
+  // .footer-sidebar -> .widget -> &
+  .sponsorTitle {
+    padding-top: 2.2em;
+    background-size: 792px 125px;
+  }
+  .sponsorList {
+    display: table;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto !important;
+    text-align: center;
+    > li {
+      display: table-cell;
+      width: 50%;
+      > a {
+        display: block;
+        box-sizing: border-box;
+      }
+      &:nth-child(odd) a {
+        padding-right: 20px;
+      }
+      &:nth-child(even) a {
+        padding-left: 20px;
+      }
+      img {
+      }
+    }
+  }
+  .sponsorList--platinum {
+    > li {
+    }
+  }
+}

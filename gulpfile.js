@@ -87,8 +87,7 @@ gulp.task('jade', function() {
 	return gulp.src(paths.jadeDir)
 		.pipe(changed(paths.htmlDest, { extension: '.html' }))
 		.pipe(jade())
-		.pipe(gulp.dest(paths.htmlDest))
-		.pipe(prettify())
+		.pipe(prettify({indent_size: 2}))
 		.pipe(gulp.dest(paths.htmlDest))
 		.pipe(browserSync.reload({stream: true}));
 });
@@ -149,7 +148,7 @@ gulp.task('sprite', function () {
  * 8. gulp Tasks
 *******************************************************************************/
 gulp.task('watch', function() {
-	// gulp.watch([paths.jadeDir], ['jade']);
+	gulp.watch([paths.jadeDir], ['jade']);
 	// gulp.watch([paths.imgDir], ['image']);
 	// gulp.watch([paths.imgDest + '/sprite/*.png'], ['sprite']);
 	// gulp.watch([paths.jsDir], ['concat']);

@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* =========================================================
 	 Media - Mobile sizes
 ========================================================= */
@@ -120,8 +121,8 @@
 		padding-left: 30px;
 		padding-right: 30px;
 	}
-	%snsBtn{
-		$btnWidth: 33%;
+	%snsButton{
+		$btnWidth: 32.8%;
 		float: left;
 		margin: 0 (100% - ($btnWidth * 3)) / 4;
 		width: $btnWidth;
@@ -197,6 +198,8 @@
 			width: 12px;
 		}
 	}
+	// Footer widget such as sponsor logo
+	@include footer-sidebar-over-641;
 }
 
 @media screen and (min-width: 673px){
@@ -331,6 +334,8 @@
 	@include setFooterBkg-medium; 
 	// Page template full-width
 	@include full-width-pc;
+	// Footer widget such as sponsor logo
+	@include footer-sidebar-over-846;
 }
 
 @media screen and (min-width: 1008px){

@@ -99,8 +99,8 @@
 }
 
 // Insert icon font
-@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom){
-	position: static;
+@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static){
+	position: $position;
 	display: inline-block;
 	content: $content;
 	vertical-align: $valaign;
@@ -159,41 +159,63 @@
 	animation-fill-mode: backwards, none;
 	// animation: hoverDown ease-in 2000ms 1000ms 1 backwards normal, ease-in-out hovering 3000ms 100ms infinite forwards normal;
 }
-@mixin btnAction($color: rgba(0, 0, 0, 0.25)){
-	box-shadow: 0 4px $color;
+
+@mixin buttonAction($color: rgba(0, 0, 0, 0.25), $height: 20px, $depth: 2px){
+	&:before{
+		transition: all 0.1s;
+		display: block;
+		content: "";
+		background-color: transparent;
+		height: 0;
+		width: 100%;
+		top: 0;
+		position: relative;
+	}
 	&:hover{
-		box-shadow: 0 2px $color;
-		border-top: 2px solid #fff;
-		margin-bottom: -2px;
+		&:before{
+			height: 2px;
+		}
+		.snsButton__wrap{
+			box-shadow: 0 2px $color;
+			margin-bottom: -2px;
+		}
 	}
 	&:active{
-		box-shadow: 0 0 $color;
-		border-top: 4px solid #fff;
-		margin-bottom: -4px;
+		&:before{
+			height: 4px;
+		}
+		.snsButton__wrap{
+			box-shadow: 0 0 $color;
+			margin-bottom: -4px;
+		}
+	}
+	.snsButton__wrap{
+		box-shadow: 0 4px $color;
+		transition: all 0.1s;
 	}
 }
 
 
 // Triangle
-@mixin triangle($direction, $size, $color) {
+@mixin triangle($direction, $width, $height, $color) {
 	width: 0;
 	height: 0;
 	@if $direction == 'up' { 
-		border-right: $size solid transparent;
-		border-bottom: $size * 1.732 solid $color; 
-		border-left: $size solid transparent; 
+		border-right: $height / 2 solid transparent;
+		border-bottom: $width solid $color; 
+		border-left: $height / 2 solid transparent; 
 	} @else if $direction == 'down' {
-		border-top: $size * 1.732 solid $color; 
-		border-right: $size solid transparent; 
-		border-left: $size solid transparent; 
+		border-top: $width solid $color; 
+		border-right: $height / 2 solid transparent; 
+		border-left: $height / 2 solid transparent; 
 	} @else if $direction == 'left' {
-		border-top: $size solid transparent; 
-		border-right: $size * 1.732 solid $color; 
-		border-bottom: $size solid transparent; 
+		border-top: $height / 2 solid transparent; 
+		border-right: $width solid $color; 
+		border-bottom: $height / 2 solid transparent; 
 	} @else if $direction == 'right' {
-		border-top: $size solid transparent; 
-		border-bottom: $size solid transparent; 
-		border-left: $size * 1.732 solid $color; 
+		border-top: $height / 2 solid transparent; 
+		border-bottom: $height / 2 solid transparent; 
+		border-left: $width solid $color; 
 	}
 }
 
