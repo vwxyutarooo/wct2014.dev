@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* Posts
 ---------------------------------------- */
 article.post{
@@ -40,6 +41,12 @@ article.post{
 				}
 			}
 		}
+		.single-wcb_sponsor & {
+			display: none;
+		}
+	}
+	.single-wcb_sponsor & {
+		margin-top: 50px;
 	}
 }
 // entry-title
@@ -150,7 +157,7 @@ article.post{
 .nav-links{
 	width: 100%;
 	a{
-		@include hasPseudoClass(before);
+		position: relative;
 		display: inline-block;
 		width: 100%;
 		box-sizing: border-box;
@@ -183,6 +190,13 @@ article.post{
 				position: absolute;
 				left: 0;
 			}
+		}
+	}
+}
+.navigation {
+	&.post-navigation {
+			.single-wcb_sponsor & {
+			display: none;
 		}
 	}
 }

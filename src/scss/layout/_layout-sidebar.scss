@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* set secondart && Primary Sidebar
 ---------------------------------------- */
 #secondary{
@@ -95,8 +96,8 @@
 	ul{
 		@extend %group;
 	}
-	.snsBtn{
-		@extend %snsBtn;
+	.snsButton{
+		@extend %snsButton;
 	}
 }
 

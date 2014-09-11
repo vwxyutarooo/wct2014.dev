@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* header
 ---------------------------------------- */
 .header-main{
@@ -153,7 +154,7 @@
 		}
 	}
 	.current-menu-item,
-	.current_page_parent{
+	.current-menu-parent{
 		> a{
 			color: #fff;
 			font-weight: normal;

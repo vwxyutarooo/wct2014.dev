@@ -1,9 +1,11 @@
+@charset "utf-8";
 /* Btn SNS which is in primary sidebar
 ---------------------------------------- */
-%snsBtn{
+%snsButton{
 	margin: 1em auto;
 	width: 100%;
 	text-align: center;
+	position: relative;
 	&:after{
 		position: absolute;
 		z-index: -1;
@@ -13,9 +15,13 @@
 	a{
 		position: relative;
 		display: block;
-		padding: 20px 0;
 		color: #fff;
 		font-size: 16px;
+		.snsButton__wrap{
+			display: block;
+			border-radius: 2px;
+			padding: 20px 0;
+		}
 		&:hover{
 			text-decoration: none;
 		}
@@ -23,24 +29,30 @@
 			margin-right: 0.75em;
 		}
 	}
-	&.snsBtn--Tw{
+	&.snsButton--Tw{
 		margin-left: 0;
 		a{
-			@include btnAction(darken($colorTw, 20%));
-			background-color: $colorTw;
+			@include buttonAction(darken($colorTw, 20%));
+			.snsButton__wrap{
+				background-color: $colorTw;
+			}
 		}
 	}
-	&.snsBtn--Fb{
+	&.snsButton--Fb{
 		a{
-			@include btnAction(darken($colorFb, 20%));
-			background-color: $colorFb;
+			@include buttonAction(darken($colorFb, 20%));
+			.snsButton__wrap{
+				background-color: $colorFb;
+			}
 		}
 	}
-	&.snsBtn--Gp{
+	&.snsButton--Gp{
 		margin-right: 0;
 		a{
-			@include btnAction(darken($colorGp, 20%));
-			background-color: $colorGp;
+			@include buttonAction(darken($colorGp, 20%));
+			.snsButton__wrap{
+				background-color: $colorGp;
+			}
 		}
 	}
 }
