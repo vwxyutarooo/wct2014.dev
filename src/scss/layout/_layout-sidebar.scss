@@ -57,6 +57,38 @@
 	}
 }
 
+.widget{
+	a.widget__link{
+		display: block;
+		width: 100%;
+		background-color: $colorPink;
+		line-height: 1.5;
+		color: #fff;
+		overflow: hidden;
+		box-shadow: 0 0 3px rgba($colorPink, 0.25);
+		&:hover{
+			color: darken(#fff, 8%);
+			text-decoration: none;
+		}
+		&.widget__link--english{
+			position: relative;
+			text-align: center;
+			font-size: 18px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			letter-spacing: 0.2em;
+			height: 58px;
+			line-height: 58px;
+			&:after{
+				@include fa('\f0ac', 90px);
+				position: absolute;
+				bottom: -10px;
+				left: -12px;
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
 .widget_archive li,
 .widget_categories li,
 .widget_links li,
