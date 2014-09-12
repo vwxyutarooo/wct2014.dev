@@ -1,68 +1,76 @@
-@charset "utf-8";
+@charset 'utf-8';
 /* Site footer
 ---------------------------------------- */
 .site-footer {
-	background-color: transparent;
-
-	#supplementary {
-		padding: 0;
-		// CitySilhouette image
-		@include hasPseudoClass(after, $position: relative);
-		&:after {
-			width: 100%;
-			height: 0;
-			padding-top: 412px;
-			background-color: transparent;
-			background-image: url($filePath+'2014/08/CitySilhouetteW1920.png');
-			background-repeat: no-repeat;
-			background-position: center bottom;
-			background-size: 100% auto;;
-		}
-	}
-
-	.footer-sidebar {
-		position: static !important;
-		height: auto !important;
-		.widget {
-			position: static !important;
-			top: auto !important;
-			left: auto !important;
-			float: none;
-			width: 100%;
-			max-width: 100%;
-			padding: 0;
-			&.widget_text {
-				border-style: solid;
-				border-color: #ededed;
-				border-width: 2px 0 0 0;
-				margin-bottom: 3em;
-				font-size: 26px;
-			}
-		}
-	}
-
-	.widget {
-		.widget-title {
-			text-align: center;
-			border-width: 0;
-		}
-		&.wcb_widget_sponsors {
-			.widget-title {
-				margin-bottom: 0;
-				padding: 20px 0;
-				color: #fff;
-				background-color: lighten($colorBlue, 3%);
-			}
-		}
-	}
-
-
-	.site-info {
-		text-align: center;
-		color: $colorText;
-		background-color: lighten($colorBlue, 3%);
-		a {
-			color: #fff;
-		}
-	}
+  position: relative;
+  border-width: 0;
+  background-color: transparent;
+  &:before {
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    content: 'Sponsors';
+    text-align: center;
+    color: #fff;
+    background-color: lighten($colorBlue, 3%);
+  }
+  #supplementary {
+    padding: 0;
+    // CitySilhouette image
+    @include hasPseudoClass(after, $position: relative);
+    &:after {
+      width: 100%;
+      height: 0;
+      padding-top: 412px;
+      background-color: transparent;
+      background-image: url($filePath+'2014/08/CitySilhouetteW1920.png');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100% auto;;
+    }
+  }
+  .footer-sidebar {
+    position: static !important;
+    height: auto !important;
+    padding-top: 0;
+    .widget {
+      position: static !important;
+      top: auto !important;
+      left: auto !important;
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      &.widget_text {
+        font-size: 26px;
+        margin-bottom: 3em;
+        border-width: 2px 0 0 0;
+        border-style: solid;
+        border-color: #ededed;
+      }
+    }
+  }
+  .widget {
+    .widget-title {
+      text-align: center;
+      border-width: 0;
+    }
+    &.wcb_widget_sponsors {
+      .widget-title {
+        margin-bottom: 0;
+        padding: 20px 0;
+        color: #fff;
+        background-color: lighten($colorBlue, 3%);
+      }
+    }
+  }
+  .site-info {
+    text-align: center;
+    color: $colorText;
+    background-color: lighten($colorBlue, 3%);
+    a {
+      color: #fff;
+    }
+  }
 }
