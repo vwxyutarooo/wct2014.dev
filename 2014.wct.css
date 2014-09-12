@@ -1035,6 +1035,40 @@ span.page-links-title {
     .content-sidebar .widget a:hover {
       color: #ef86b4; }
 
+.widget a.widget__link {
+  display: block;
+  width: 100%;
+  background-color: #ef86b4;
+  line-height: 1.5;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(239, 134, 180, 0.25); }
+  .widget a.widget__link:hover {
+    color: #ebebeb;
+    text-decoration: none; }
+  .widget a.widget__link.widget__link--english {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2em;
+    height: 58px;
+    line-height: 58px; }
+    .widget a.widget__link.widget__link--english:after {
+      display: inline-block;
+      content: "";
+      vertical-align: baseline;
+      text-decoration: inherit;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 90px;
+      font-family: FontAwesome;
+      -webkit-font-smoothing: antialiased;
+      position: absolute;
+      bottom: -10px;
+      left: -12px;
+      opacity: 0.3; }
+
 .widget_archive li,
 .widget_categories li,
 .widget_links li,
