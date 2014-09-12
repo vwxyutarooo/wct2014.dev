@@ -836,6 +836,16 @@ blockquote {
   .entry-meta .tag-links a:hover:before {
     border-right-color: #f3a1c5; }
 
+.page #tix-attendees li {
+  border-bottom: 1px solid #dedede;
+  min-height: 80px; }
+
+/* media queries for attendees
+---------------------------------------- */
+/* 3 columns for large size (min-width: 735px) */
+/* 2 columns for medium size 
+* (max-width: 734px) and (min-width: 594px) */
+/* 3 columns for small size (max-width: 594px) */
 /* page tmeplate full width
 ---------------------------------------- */
 .full-width #main-content {
@@ -1056,7 +1066,7 @@ span.page-links-title {
     line-height: 58px; }
     .widget a.widget__link.widget__link--english:after {
       display: inline-block;
-      content: "";
+      content: "\f0ac";
       vertical-align: baseline;
       text-decoration: inherit;
       font-weight: normal;
@@ -1838,9 +1848,6 @@ span.page-links-title {
       z-index: 2;
       right: 5px;
       bottom: -12px; } }
-@media screen and (min-width: 735px) {
-  .site-footer #supplementary:after {
-    padding-top: 400px; } }
 /* =========================================================
 	 Media - Navigation Expanded
 ========================================================= */
@@ -2126,6 +2133,18 @@ span.page-links-title {
 @media screen and (min-width: 1600px) {
   .site-footer #supplementary:after {
     padding-top: 500px; } }
+/* =========================================================
+	 Media - Page attendees
+========================================================= */
+@media screen and (min-width: 735px) {
+  .page #tix-attendees li {
+    width: 33.333%; } }
+@media only screen and (min-width: 595px) and (max-width: 734px) {
+  .page #tix-attendees li {
+    width: 50%; } }
+@media screen and (max-width: 594px) {
+  .page #tix-attendees li {
+    width: 100%; } }
 /* =========================================================
 	 Media - Retina dispaly devices
 ========================================================= */

@@ -2,4 +2,47 @@
 // ========================================
 // 固定ページ
 // ========================================
-.page{}
+.page{
+	#tix-attendees {
+		li {
+			border-bottom: 1px solid #dedede;
+			min-height: 80px;
+		}
+	}
+}
+
+/* media queries for attendees
+---------------------------------------- */
+/* 3 columns for large size (min-width: 735px) */
+@mixin attendees-large-3columns {
+	.page{
+		#tix-attendees {
+			li {
+				width: 33.333%;
+			}
+		}
+	}
+}
+
+/* 2 columns for medium size 
+* (max-width: 734px) and (min-width: 594px) */
+@mixin attendees-medium-2columns {
+	.page{
+		#tix-attendees {
+			li {
+				width: 50%;
+			}
+		}
+	}
+}
+
+/* 3 columns for small size (max-width: 594px) */
+@mixin attendees-small-column {
+	.page{
+		#tix-attendees {
+			li {
+				width: 100%;
+			}
+		}
+	}
+}
