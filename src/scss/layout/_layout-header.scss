@@ -34,7 +34,8 @@
 		margin-top: -(0 * .3);
 		top: 28%;
 	}
-	.site-title{	// for header link
+	// for header link
+	.site-title{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -72,7 +73,8 @@
 	padding-top: $menuHeight;
 	&:active,
 	&:focus,
-	&:hover{
+	&:hover,
+	&::selection{
 		background-color: transparent;
 	}
 	&:before{
@@ -131,6 +133,14 @@
 		padding: 0;
 
 	}
+	li{
+		&:hover,
+		&.focus{
+			> a{
+				background-color: transparent;
+			}
+		}
+	}
 }
 .site-navigation{
 	ul{
@@ -142,7 +152,8 @@
 		}
 	}
 	li{
-		&:hover{
+		&:hover,
+		&.focus{
 			a{
 				background-color: transparent;
 			}

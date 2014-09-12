@@ -361,7 +361,7 @@
 @media screen and (min-width: 1260px){}
 
 @media screen and (min-width: 1281px){
-	@include setHeaderBkg($bkgSize: 100%, $txtSize: 100%, $bodyClass: '.home');
+	@include setHeaderBkg($height: 792px, $bkgSize: 1440px, $txtSize: 100%, $bodyClass: '.home');
 }
 
 @media only screen and (min-width: 1440px){

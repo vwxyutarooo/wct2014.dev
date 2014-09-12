@@ -558,7 +558,9 @@ div.sharedaddy {
     display: block;
     content: "";
     position: absolute; }
-  .menu-toggle:active, .menu-toggle:focus, .menu-toggle:hover {
+  .menu-toggle:active, .menu-toggle:focus, .menu-toggle:hover, .menu-toggle::-moz-selection {
+    background-color: transparent; }
+  .menu-toggle:active, .menu-toggle:focus, .menu-toggle:hover, .menu-toggle::selection {
     background-color: transparent; }
   .menu-toggle:before {
     position: static;
@@ -616,12 +618,14 @@ div.sharedaddy {
     font-size: 14px; }
   .primary-navigation.toggled-on {
     padding: 0; }
+  .primary-navigation li:hover > a, .primary-navigation li.focus > a {
+    background-color: transparent; }
 
 .site-navigation ul ul {
   margin-left: 2em; }
   .site-navigation ul ul li {
     border-top: 1px dashed rgba(255, 255, 255, 0.2); }
-.site-navigation li:hover a {
+.site-navigation li:hover a, .site-navigation li.focus a {
   background-color: transparent; }
 .site-navigation li > a {
   position: relative;
@@ -2160,15 +2164,15 @@ span.page-links-title {
     margin-right: 0; } }
 @media screen and (min-width: 1281px) {
   body.home {
-    background-size: 100%; }
+    background-size: 1440px; }
 
   .home .header-main {
-    background-size: auto;
-    padding-top: auto;
+    background-size: 792px;
+    padding-top: 792px;
     background-size: 100%; }
 
   .home .primary-navigation {
-    top: auto; } }
+    top: 792px; } }
 @media only screen and (min-width: 1440px) {
   body.home {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
