@@ -8,7 +8,7 @@
  * -----------------------------------------------------------------------------
  */
 /* =========================================================
-   extends
+	 extends
 ========================================================= */
 .doubleBtn:after, .primary-sidebar ul:after {
   display: block;
@@ -21,80 +21,90 @@
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
+
   100% {
     opacity: 1; } }
 
 @keyframes fadeIn {
   0% {
     opacity: 0; }
+
   100% {
     opacity: 1; } }
 @-webkit-keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 @keyframes hoverDown {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 @-webkit-keyframes hovering {
   0% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); }
+            transform: translate(0, 0px); }
+
   50% {
     -webkit-transform: translate(0, 8%);
-    transform: translate(0, 8%); }
+            transform: translate(0, 8%); }
+
   100% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); } }
+            transform: translate(0, 0px); } }
 @keyframes hovering {
   0% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); }
+            transform: translate(0, 0px); }
+
   50% {
     -webkit-transform: translate(0, 8%);
-    transform: translate(0, 8%); }
+            transform: translate(0, 8%); }
+
   100% {
     -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); } }
+            transform: translate(0, 0px); } }
 @-webkit-keyframes weight {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 @keyframes weight {
   0% {
     -webkit-transform: translate(0, -500px);
-    transform: translate(0, -500px); }
+            transform: translate(0, -500px); }
+
   100% {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0); } }
+            transform: translate(0, 0); } }
 .home #masthead:after {
   -webkit-animation-name: hoverDown, hovering;
-  animation-name: hoverDown, hovering;
+          animation-name: hoverDown, hovering;
   -webkit-animation-duration: 2s, 3s;
-  animation-duration: 2s, 3s;
+          animation-duration: 2s, 3s;
   -webkit-animation-timing-function: ease-out, ease-in-out;
-  animation-timing-function: ease-out, ease-in-out;
+          animation-timing-function: ease-out, ease-in-out;
   -webkit-animation-delay: 1s, 0.1s;
-  animation-delay: 1s, 0.1s;
+          animation-delay: 1s, 0.1s;
   -webkit-animation-iteration-count: 1, infinite;
-  animation-iteration-count: 1, infinite;
+          animation-iteration-count: 1, infinite;
   -webkit-animation-direction: normal, normal;
-  animation-direction: normal, normal;
+          animation-direction: normal, normal;
   -webkit-animation-fill-mode: backwards, none;
-  animation-fill-mode: backwards, none; }
+          animation-fill-mode: backwards, none; }
 
 /* =========================================================
-   The root elemen
+	 The root elemen
 ========================================================= */
 html {
   font-size: 10px; }
@@ -107,18 +117,18 @@ body {
   font-family: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Verdana, Arial, Helvetica, sans-serif; }
 
 /* =========================================================
-   Grouping content
+	 Grouping content
 ========================================================= */
 iframe {
   vertical-align: middle; }
 
 /* =========================================================
-   Text-level semantics
+	 Text-level semantics
 ========================================================= */
 a {
   color: #286f8e;
   -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+          transition: color 0.2s ease;
   text-decoration: none; }
   a:focus {
     outline: thin dotted; }
@@ -144,7 +154,7 @@ pre {
     margin-bottom: 0; }
 
 code {
-  color: #666;
+  color: #666666;
   font-size: 0.9em; }
 
 ::-moz-selection {
@@ -163,7 +173,7 @@ code {
   font-family: HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif; }
 
 /* =========================================================
-   List items
+	 List items
 ========================================================= */
 dl {
   margin-bottom: 2em; }
@@ -177,7 +187,7 @@ dl {
       margin-bottom: 0; }
 
 /* =========================================================
-   Embedded content
+	 Embedded content
 ========================================================= */
 img {
   vertical-align: bottom;
@@ -187,7 +197,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 /* =========================================================
-   Tabular data
+	 Tabular data
 ========================================================= */
 table {
   font: 100%;
@@ -200,7 +210,6 @@ table {
  * -----------------------------------------------------------------------------
  */
 #main, .primary-navigation .nav-menu {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -229,7 +238,6 @@ table {
 .site-content .entry-meta,
 .site-content .post-navigation,
 .site-content footer.entry-meta, .widget {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
   max-width: 900px; }
@@ -246,7 +254,7 @@ table {
     z-index: -1;
     content: '';
     -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
+            transition: all 0.3s; }
   .primary-sidebar .snsButton a {
     position: relative;
     display: block;
@@ -264,7 +272,7 @@ table {
     margin-left: 0; }
     .primary-sidebar .snsButton--Tw.snsButton a:before {
       -webkit-transition: all 0.1s;
-      transition: all 0.1s;
+              transition: all 0.1s;
       display: block;
       content: "";
       background-color: transparent;
@@ -285,12 +293,12 @@ table {
     .primary-sidebar .snsButton--Tw.snsButton a .snsButton__wrap {
       box-shadow: 0 4px #147bc9;
       -webkit-transition: all 0.1s;
-      transition: all 0.1s; }
+              transition: all 0.1s; }
     .primary-sidebar .snsButton--Tw.snsButton a .snsButton__wrap {
       background-color: #55acee; }
   .primary-sidebar .snsButton--Fb.snsButton a:before {
     -webkit-transition: all 0.1s;
-    transition: all 0.1s;
+            transition: all 0.1s;
     display: block;
     content: "";
     background-color: transparent;
@@ -311,14 +319,14 @@ table {
   .primary-sidebar .snsButton--Fb.snsButton a .snsButton__wrap {
     box-shadow: 0 4px #1e2e4f;
     -webkit-transition: all 0.1s;
-    transition: all 0.1s; }
+            transition: all 0.1s; }
   .primary-sidebar .snsButton--Fb.snsButton a .snsButton__wrap {
     background-color: #3b5998; }
   .primary-sidebar .snsButton--Gp.snsButton {
     margin-right: 0; }
     .primary-sidebar .snsButton--Gp.snsButton a:before {
       -webkit-transition: all 0.1s;
-      transition: all 0.1s;
+              transition: all 0.1s;
       display: block;
       content: "";
       background-color: transparent;
@@ -339,7 +347,7 @@ table {
     .primary-sidebar .snsButton--Gp.snsButton a .snsButton__wrap {
       box-shadow: 0 4px #96271a;
       -webkit-transition: all 0.1s;
-      transition: all 0.1s; }
+              transition: all 0.1s; }
     .primary-sidebar .snsButton--Gp.snsButton a .snsButton__wrap {
       background-color: #dd4b39; }
 
@@ -347,14 +355,13 @@ table {
 ---------------------------------------- */
 .btnLinkSet {
   display: inline-block;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 1em auto;
   max-width: 280px;
   width: 100%;
-  border: 2px solid #3595BE;
+  border: 2px solid #3595be;
   background-color: transparent;
-  color: #3595BE;
+  color: #3595be;
   font-size: 16px; }
   .btnLinkSet:hover {
     border: 2px solid #2c7c9e;
@@ -398,7 +405,6 @@ table {
     margin-top: 20px; }
 
 #primary {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%; }
 
@@ -507,17 +513,17 @@ div.sharedaddy {
   .menu-toggle:before {
     position: static;
     display: inline-block;
-    content: "";
+    content: "\f104";
     vertical-align: middle;
     font-size: 16px;
     font-family: Genericons;
     line-height: 1em;
     margin-top: -1px;
     -webkit-transition: all 0.2s;
-    transition: all 0.2s; }
+            transition: all 0.2s; }
   .toggled-on .menu-toggle:before {
     -webkit-transform: rotate(90deg);
-    transform: rotate(90deg); }
+            transform: rotate(90deg); }
   .menu-toggle:after {
     position: static;
     display: inline;
@@ -546,7 +552,6 @@ div.sharedaddy {
     width: auto;
     text-align: center; }
   .primary-navigation a {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 20px 2.2em;
     text-align: left;
@@ -567,7 +572,7 @@ div.sharedaddy {
   color: #fff;
   text-align: left;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+          transition: all 0.2s; }
   .site-navigation li > a:hover {
     background-color: transparent;
     color: #f9d3e3;
@@ -623,7 +628,7 @@ article.post {
     .entry-header > .entry-meta:first-child .cat-links a:before {
       position: static;
       display: inline-block;
-      content: "";
+      content: "\f301";
       vertical-align: text-bottom;
       font-size: 16px;
       font-family: Genericons;
@@ -665,18 +670,16 @@ article.post {
     position: relative;
     display: inline-block;
     width: 100%;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .nav-links a:before {
       position: static;
       display: inline-block;
-      content: "";
+      content: "\f104";
       vertical-align: text-bottom;
       font-size: 16px;
       font-family: Genericons;
       line-height: 1em;
       top: 50%;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       margin-top: -18px;
       width: 36px;
@@ -697,7 +700,7 @@ article.post {
       padding: 10px 10px 10px 46px; }
       .nav-links a:first-child:before {
         -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
+                transform: rotate(180deg);
         position: absolute;
         left: 0; }
 
@@ -871,7 +874,6 @@ blockquote {
     position: relative;
     font-size: 3.2rem;
     font-weight: 400;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     height: auto;
@@ -926,7 +928,7 @@ blockquote {
   .archive-title:before,
   .page-title:before {
     display: inline-block;
-    content: "";
+    content: "\f187";
     vertical-align: baseline;
     text-decoration: inherit;
     font-weight: normal;
@@ -988,7 +990,6 @@ span.page-links-title {
 ---------------------------------------- */
 #secondary {
   display: block;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 4em 0;
@@ -1062,15 +1063,6 @@ span.page-links-title {
   position: relative;
   border-width: 0;
   background-color: transparent; }
-  .site-footer:before {
-    font-size: 2rem;
-    display: block;
-    width: 100%;
-    padding: 20px 0;
-    content: 'Sponsors';
-    text-align: center;
-    color: #fff;
-    background-color: #3a9ec8; }
   .site-footer #supplementary {
     padding: 0;
     position: relative; }
@@ -1120,11 +1112,17 @@ span.page-links-title {
     .site-footer .site-info a {
       color: #fff; }
 
+/* media queries
+---------------------------------------- */
+/* for xlarge size (min-width: 1600px) and (max-width: 1919px) */
+/* for large size (min-width: 846px) */
+/* for medium size (min-width: 641px) */
+/* for small size (min-width: 361px) */
+/* for xsmall size (max-width: 360px) */
 /* Sponsor logo widget in footer-sidebar
 ---------------------------------------- */
 .sponsorTitle {
   font-weight: normal;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 810px;
   height: 82px;
@@ -1140,7 +1138,6 @@ span.page-links-title {
     background-image: url("files/2014/09/ttl_sponcer_platinum.png"); }
 
 .sponsorList {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto !important;
@@ -1154,7 +1151,7 @@ span.page-links-title {
     max-width: 450px; }
 
 /* =========================================================
-   Media - Mobile sizes
+	 Media - Mobile sizes
 ========================================================= */
 @media screen and (max-width: 640px) {
   html {
@@ -1189,6 +1186,9 @@ span.page-links-title {
 
   .primary-navigation {
     top: 320px; }
+
+  .site-footer #supplementary:after {
+    padding-top: 150px; }
 
   .full-width .entry-content .entry-content__row {
     padding-top: 0;
@@ -1286,6 +1286,9 @@ span.page-links-title {
   .primary-navigation {
     top: 200px; }
 
+  .site-footer #supplementary:after {
+    padding-top: 150px; }
+
   .list-view .content-area {
     padding: 30px 0; }
   .list-view .site-content .hentry:last-child {
@@ -1334,6 +1337,9 @@ span.page-links-title {
   .primary-navigation {
     top: 180px; }
 
+  .site-footer #supplementary:after {
+    padding-top: 90px; }
+
   .full-width .entry-content .entry-content__row {
     padding-top: 0;
     padding-bottom: 20px; }
@@ -1380,6 +1386,9 @@ span.page-links-title {
 
   .primary-navigation {
     top: 160px; }
+
+  .site-footer #supplementary:after {
+    padding-top: 90px; }
 
   .full-width .entry-content .entry-content__row {
     padding-top: 0;
@@ -1471,7 +1480,6 @@ span.page-links-title {
       background-size: auto 15px;
       background-repeat: repeat-x;
       bottom: 0;
-      -moz-box-sizing: border-box;
       box-sizing: border-box; }
     .blog .site-content .entry-header > .entry-meta:last-child,
     .archive .site-content .entry-header > .entry-meta:last-child,
@@ -1500,7 +1508,6 @@ span.page-links-title {
   .archive .site-content .entry-title,
   .single .site-content .entry-title,
   .page-template-default .site-content .entry-title {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-right: 60px; }
     .blog .site-content .entry-title a,
@@ -1640,7 +1647,7 @@ span.page-links-title {
       right: -10px;
       bottom: -10px; } }
 /* =========================================================
-   Media - Tablet Size
+	 Media - Tablet Size
 ========================================================= */
 @media only screen and (min-width: 641px) {
   body.home {
@@ -1665,6 +1672,9 @@ span.page-links-title {
 
   .primary-navigation {
     top: 400px; }
+
+  .site-footer #supplementary:after {
+    padding-top: 250px; }
 
   body {
     background-image: url("files/2014/08/bkgHeaderShortM.jpg"), url("files/2014/08/bkgHeaderShortRepeatM.jpg");
@@ -1788,8 +1798,11 @@ span.page-links-title {
       z-index: 2;
       right: 5px;
       bottom: -12px; } }
+@media screen and (min-width: 735px) {
+  .site-footer #supplementary:after {
+    padding-top: 400px; } }
 /* =========================================================
-   Media - Navigation Expanded
+	 Media - Navigation Expanded
 ========================================================= */
 @media screen and (min-width: 783px) {
   body.home {
@@ -1861,7 +1874,7 @@ span.page-links-title {
   .primary-sidebar .widget {
     max-width: 100%; } }
 /* =========================================================
-   Media - PC Size
+	 Media - PC Size
 ========================================================= */
 @media screen and (min-width: 846px) {
   .header-main {
@@ -1891,6 +1904,9 @@ span.page-links-title {
   #main, .primary-navigation .nav-menu {
     padding-left: 20px;
     padding-right: 20px; }
+
+  .site-footer #supplementary:after {
+    padding-top: 400px; }
 
   .full-width .entry-content .entry-content__row {
     padding-top: 3em; }
@@ -1981,7 +1997,6 @@ span.page-links-title {
       width: 50%; }
       .sponsorList > li > a {
         display: block;
-        -moz-box-sizing: border-box;
         box-sizing: border-box; }
       .sponsorList > li:nth-child(odd) a {
         padding-right: 20px; }
@@ -2068,8 +2083,11 @@ span.page-links-title {
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: -150px; } }
+@media screen and (min-width: 1600px) {
+  .site-footer #supplementary:after {
+    padding-top: 500px; } }
 /* =========================================================
-   Media - Retina dispaly devices
+	 Media - Retina dispaly devices
 ========================================================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 960px) and (max-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 960px) and (max-width: 1280px) {
   body.home {

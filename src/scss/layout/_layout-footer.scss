@@ -5,16 +5,7 @@
   position: relative;
   border-width: 0;
   background-color: transparent;
-  &:before {
-    font-size: 2rem;
-    display: block;
-    width: 100%;
-    padding: 20px 0;
-    content: 'Sponsors';
-    text-align: center;
-    color: #fff;
-    background-color: lighten($colorBlue, 3%);
-  }
+  
   #supplementary {
     padding: 0;
     // CitySilhouette image
@@ -77,51 +68,51 @@
 
 /* media queries
 ---------------------------------------- */
-/* for PC size (min-width: 1920px)*/
-@mixin setFooterBkg-large {
+/* for xlarge size (min-width: 1600px) and (max-width: 1919px) */
+@mixin setFooterBkg-over-1600 {
 	.site-footer {
 		#supplementary {
-			&:before {
-			padding-top: 550px;
+			&:after {
+			padding-top: 500px;
 			}
 		}
 	}
 }
-/* for PC size (min-width: 846px)*/
-@mixin setFooterBkg-medium {
+/* for large size (min-width: 846px) */
+@mixin setFooterBkg-over-735 {
 	.site-footer {
 		#supplementary {
-			&:before {
+			&:after {
 			padding-top: 400px;
 			}
 		}
 	}
 }
-/* for tablet size */
-@mixin setFooterBkg-tablet {
+/* for medium size (min-width: 641px) */
+@mixin setFooterBkg-over-641 {
 	.site-footer {
 		#supplementary {
-				&:before {
+				&:after {
 				padding-top: 250px;
 			}
 		}
 	}	
 }
-/* for mobile size (min-width: 361px) **/
-@mixin setFooterBkg-small {
+/* for small size (min-width: 361px) */
+@mixin setFooterBkg-over-361 {
 	.site-footer {
 		#supplementary {
-			&:before {
+			&:after {
 				padding-top: 150px;
 			}
 		}		
 	}
 }
-/* for iPhone@2 and Android@2 (max-width: 360px) */
-@mixin setFooterBkg-xsmall {
+/* for xsmall size (max-width: 360px) */
+@mixin setFooterBkg-within-360 {
 	.site-footer{
 		#supplementary {
-			&:before {
+			&:after {
 				padding-top: 90px;
 			}
 		}
