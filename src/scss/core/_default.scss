@@ -35,7 +35,8 @@ a{
 		color: $colorLink;
 	}
 	&:hover,
-	&:active{
+	&:active,
+	&:focus{
 		outline: 0;
 		color: $colorLinkHover;
 		text-decoration: underline;
@@ -65,6 +66,7 @@ code{
 	font-size: 0.9em;
 }
 ::selection{
+	background: transparent;
 	background-color: $colorSelection;
 	color: $colorText
 }

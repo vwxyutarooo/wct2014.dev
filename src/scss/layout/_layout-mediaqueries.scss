@@ -12,8 +12,7 @@
 	@include setHeaderBkg(640px, '2014/08/bkgHeaderS.jpg', '2014/08/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
 	@include setFooterBkg-over-361;
-	// Page template full-width
-	@include full-width-small;
+	@include full-width-small;	// Page template full-width
 }
 @media screen and (max-width: 400px){
 	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto, $bodyClass: '.home');
@@ -73,8 +72,7 @@
 	@include setHeaderBkg($height: 360px, $bkgSize: 360px, $txtSize: 360px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 180px, $bkgSize: 360px, $txtSize: 360px);
 	@include setFooterBkg-within-360;
-	// Page template full-width
-	@include full-width-Android
+	@include full-width-Android	// Page template full-width
 }
 
 /* for iPhone @2x
@@ -83,8 +81,7 @@
 	@include setHeaderBkg($height: 320px, $bkgSize: 320px, $txtSize: 320px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 160px, $bkgSize: 320px 160px, $txtSize: 320px 160px);
 	@include setFooterBkg-within-360;
-	// Page template full-width
-	@include full-width-iPhone;
+	@include full-width-iPhone;	// Page template full-width
 }
 
 
@@ -147,29 +144,15 @@
 			width: 50%;
 		}
 	}
-	// Page template full-width
-	@include full-width-medium;
+	@include full-width-medium;	// Page template full-width
 }
 
 /* =========================================================
 	 Media - Tablet Size
 ========================================================= */
 @media only screen and (min-width: 641px){
-	@include setHeaderBkg(
-		$height: 640px,
-		$imgBkg: '2014/08/bkgHeaderM.jpg',
-		$imgTxt: '2014/08/txtHeaderM.png',
-		$bkgSize: auto 640px,
-		$txtSize: 860px auto,
-		$bkgPos: center top,
-		$bodyClass: '.home'
-	);
-	@include setHeaderBkg(
-		$height: 400px,
-		$imgTxt: '2014/08/txtHeaderShortM.png',
-		$txtSize: 1000px auto,
-		$txtPos: left center
-	);
+	@include setHeaderBkg($height: 640px, $imgBkg: '2014/08/bkgHeaderM.jpg', $imgTxt: '2014/08/txtHeaderM.png', $bkgSize: auto 640px, $txtSize: 860px auto, $bkgPos: center top, $bodyClass: '.home');
+	@include setHeaderBkg($height: 400px, $imgTxt: '2014/08/txtHeaderShortM.png', $txtSize: 1000px auto, $txtPos: left center);
 	@include setFooterBkg-over-641;
 	body{
 		background-image: url($filePath + '2014/08/bkgHeaderShortM.jpg'), url($filePath + '2014/08/bkgHeaderShortRepeatM.jpg');
@@ -198,8 +181,8 @@
 			width: 12px;
 		}
 	}
-	// Footer widget such as sponsor logo
-	@include footer-sidebar-over-641;
+	@include footer-sidebar-over-641;	// Footer widget such as sponsor logo
+	@include module-button-over-641;
 }
 
 @media screen and (min-width: 673px){
@@ -214,9 +197,7 @@
 			max-width: 100%;
 		}
 	}
-
-	// Page template full-width
-	@include full-width-tablet;
+	@include full-width-tablet;	// Page template full-width
 }
 
 @media screen and (min-width: 735px){
@@ -332,10 +313,8 @@
 		padding-right: 20px;
 	}
 	@include setFooterBkg-over-735; 
-	// Page template full-width
-	@include full-width-pc;
-	// Footer widget such as sponsor logo
-	@include footer-sidebar-over-846;
+	@include full-width-pc;	// Page template full-width
+	@include footer-sidebar-over-846;	// Footer widget such as sponsor logo
 }
 
 @media screen and (min-width: 1008px){
