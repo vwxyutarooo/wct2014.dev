@@ -503,7 +503,8 @@ div.sharedaddy {
   position: relative;
   background-color: transparent;
   width: auto;
-  height: 48px; }
+  height: 0;
+  padding-top: 48px; }
   .menu-toggle:after {
     display: block;
     content: "";
@@ -518,6 +519,9 @@ div.sharedaddy {
     font-size: 16px;
     font-family: Genericons;
     line-height: 1em;
+    position: absolute;
+    top: 0;
+    right: 130px;
     margin-top: -1px;
     -webkit-transition: all 0.2s;
             transition: all 0.2s; }
@@ -525,8 +529,10 @@ div.sharedaddy {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); }
   .menu-toggle:after {
-    position: static;
-    display: inline;
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 95px;
     margin-left: 0.5em;
     color: #fff;
     content: 'Menu';

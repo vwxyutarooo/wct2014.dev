@@ -67,7 +67,9 @@
 	@include hasPseudoClass(after);
 	background-color: transparent;
 	width: auto;
-	height: $menuHeight;
+	//height: $menuHeight;
+	height: 0;
+	padding-top: $menuHeight;
 	&:active,
 	&:focus,
 	&:hover{
@@ -75,6 +77,9 @@
 	}
 	&:before{
 		@include genericon('\f104', 16px, middle);
+		position: absolute;
+		top: 0;
+		right: 130px;
 		margin-top: -1px;
 		transition: all 0.2s;
 	}
@@ -82,8 +87,10 @@
 		transform: rotate(90deg);
 	}
 	&:after{
-		position: static;
-		display: inline;
+		display: block;
+		position: absolute;
+		top: 16px;
+		right: 95px;
 		margin-left: 0.5em;
 		color: #fff;
 		content: 'Menu';
