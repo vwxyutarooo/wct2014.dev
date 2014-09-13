@@ -837,8 +837,9 @@ blockquote {
     border-right-color: #f3a1c5; }
 
 .page #tix-attendees li {
-  border-bottom: 1px solid #dedede;
-  min-height: 80px; }
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 30px; }
 
 /* media queries for attendees
 ---------------------------------------- */
@@ -2138,7 +2139,7 @@ span.page-links-title {
 ========================================================= */
 @media screen and (min-width: 735px) {
   .page #tix-attendees li {
-    width: 33.333%; } }
+    width: 30.333%; } }
 @media only screen and (min-width: 595px) and (max-width: 734px) {
   .page #tix-attendees li {
     width: 50%; } }
