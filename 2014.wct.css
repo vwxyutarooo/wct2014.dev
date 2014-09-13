@@ -1267,6 +1267,11 @@ span.page-links-title {
   text-align: center; }
   .sponsorList > li {
     margin-bottom: 1.5em; }
+    .sponsorList > li img {
+      -webkit-transition: all .3s;
+      transition: all .3s; }
+      .sponsorList > li img:hover {
+        box-shadow: 0 0 3px rgba(53, 149, 190, 0.3); }
   .sponsorList--platinum > li img {
     width: 100%;
     max-width: 450px; }
@@ -2299,7 +2304,7 @@ span.page-links-title {
     background-repeat: repeat-x; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 192dpi) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 2dppx) and (min-width: 1281px) and (max-width: 1920px) {
   body {
-    background-image: url("files/2014/08/bkgHeaderShortM@2x.jpg"), url("files/2014/08/bkgHeaderShortRepeatM@2x.jpg");
+    background-image: url("files/2014/08/bkgHeaderShortM@2x.jpg"), url("files/2014/09/bkgHeaderShortRepeatM@2x.jpg");
     background-position: right top, left top;
     background-size: 1280px auto, 1px 400px;
     background-repeat: no-repeat, repeat-x; } }

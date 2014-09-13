@@ -424,7 +424,7 @@ only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1281px)
 only screen and (                min-resolution: 192dpi) and (min-width: 1281px) and (max-width: 1920px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 1281px) and (max-width: 1920px){
 	body{
-		background-image: url($filePath + '2014/08/bkgHeaderShortM@2x.jpg'), url($filePath + '2014/08/bkgHeaderShortRepeatM@2x.jpg');
+		background-image: url($filePath + '2014/08/bkgHeaderShortM@2x.jpg'), url($filePath + '2014/09/bkgHeaderShortRepeatM@2x.jpg');
 		background-position: right top, left top;
 		background-size: 1280px auto, 1px 400px;
 		background-repeat: no-repeat, repeat-x;

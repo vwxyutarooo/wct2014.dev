@@ -30,6 +30,12 @@
   text-align: center;
   > li {
     margin-bottom: 1.5em;
+    img {
+      transition: all .3s;
+      &:hover {
+        box-shadow: 0 0 3px rgba($colorBlue, 0.3);
+      }
+    }
   }
   &--platinum {
     > li {
