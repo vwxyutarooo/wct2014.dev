@@ -200,10 +200,6 @@
 	@include full-width-tablet;	// Page template full-width
 }
 
-@media screen and (min-width: 735px){
-	@include setFooterBkg-over-735;
-}
-
 /* =========================================================
 	 Media - Navigation Expanded
 ========================================================= */
@@ -378,6 +374,23 @@
 @media screen and (min-width: 1600px){
 	@include setFooterBkg-over-1600;
 }
+
+/* =========================================================
+	 Media - Page attendees
+========================================================= */
+
+@media screen and (min-width: 735px){
+	@include attendees-large-3columns;
+}
+
+@media only screen and (min-width: 595px) and (max-width: 734px){
+	@include attendees-medium-2columns;
+}
+
+@media screen and (max-width: 594px){
+	@include attendees-small-column;
+}
+
 /* =========================================================
 	 Media - Retina dispaly devices
 ========================================================= */
