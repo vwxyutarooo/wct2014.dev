@@ -6,8 +6,13 @@
 	#tix-attendees {
 		li {
 			height: auto;
-			margin-right: 10px;
 			margin-bottom: 30px;
+			
+			.tix-attendee-name,
+			.tix-attendee-twitter,
+			.tix-attendee-url {
+				margin-right: 10px;
+			}
 		}
 		
 	}

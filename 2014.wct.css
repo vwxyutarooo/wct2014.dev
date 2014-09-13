@@ -838,8 +838,11 @@ blockquote {
 
 .page #tix-attendees li {
   height: auto;
-  margin-right: 10px;
   margin-bottom: 30px; }
+  .page #tix-attendees li .tix-attendee-name,
+  .page #tix-attendees li .tix-attendee-twitter,
+  .page #tix-attendees li .tix-attendee-url {
+    margin-right: 10px; }
 
 /* media queries for attendees
 ---------------------------------------- */
