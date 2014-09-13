@@ -45,9 +45,9 @@
 // Tablet size
 @mixin footer-sidebar-over-641 {
   .sponsorTitle {
-    height: 125px;
+    height: 120px;
     padding-top: 2em;
-    background-size: 792px 125px;
+    background-size: 792px 120px;
     &--platinum {
       background-image: url($filePath+'2014/09/ttl_sponcer_platinum@2x.png');
     }
@@ -60,7 +60,7 @@
   // .footer-sidebar -> .widget -> &
   .sponsorTitle {
     padding-top: 2.2em;
-    background-size: 792px 125px;
+    background-size: 792px 120px;
   }
   .sponsorList {
     display: table;

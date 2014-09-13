@@ -563,17 +563,16 @@ div.sharedaddy {
   .menu-toggle:active, .menu-toggle:focus, .menu-toggle:hover, .menu-toggle::selection {
     background-color: transparent; }
   .menu-toggle:before {
-    position: static;
+    position: absolute;
     display: inline-block;
     content: "";
     vertical-align: middle;
     font-size: 16px;
     font-family: Genericons;
     line-height: 1em;
-    position: absolute;
     top: 0;
-    right: 130px;
-    margin-top: -1px;
+    left: 9px;
+    padding: 16px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
   .toggled-on .menu-toggle:before {
@@ -583,7 +582,7 @@ div.sharedaddy {
     display: block;
     position: absolute;
     top: 16px;
-    right: 95px;
+    left: 40px;
     margin-left: 0.5em;
     color: #fff;
     content: 'Menu';
@@ -892,6 +891,26 @@ blockquote {
   .entry-meta .tag-links a:hover:before {
     border-right-color: #f3a1c5; }
 
+.page #tix-attendees ul {
+  overflow: hidden; }
+.page #tix-attendees li {
+  height: auto;
+  margin-bottom: 30px;
+  border-style: solid;
+  border-color: #ededed;
+  border-bottom-width: 1px; }
+  .page #tix-attendees li .tix-attendee-name,
+  .page #tix-attendees li .tix-attendee-twitter,
+  .page #tix-attendees li .tix-attendee-url {
+    margin-right: 20px;
+    margin-left: 60px; }
+
+/* media queries for attendees
+---------------------------------------- */
+/* 3 columns for large size (min-width: 735px) */
+/* 2 columns for medium size 
+* (max-width: 734px) and (min-width: 594px) */
+/* 3 columns for small size (max-width: 594px) */
 /* page tmeplate full width
 ---------------------------------------- */
 .full-width #main-content {
@@ -932,8 +951,9 @@ blockquote {
     max-width: 810px;
     padding: 0 40px 40px 40px;
     background-color: #fff; }
+    .full-width .entry-content .entry-content__row__inner--tix-attendees {
+      max-width: 880px; }
   .full-width .entry-content h1 {
-    position: relative;
     font-size: 3.2rem;
     font-weight: 400;
     -moz-box-sizing: border-box;
@@ -945,7 +965,8 @@ blockquote {
     padding: 35px 60px 20px 0;
     border: none;
     background-image: none;
-    box-shadow: none; }
+    box-shadow: none;
+    position: relative; }
     .full-width .entry-content h1:after {
       display: block;
       content: "";
@@ -1809,9 +1830,9 @@ span.page-links-title {
       width: 12px; }
 
   .sponsorTitle {
-    height: 125px;
+    height: 120px;
     padding-top: 2em;
-    background-size: 792px 125px; }
+    background-size: 792px 120px; }
     .sponsorTitle--platinum {
       background-image: url("files/2014/09/ttl_sponcer_platinum@2x.png"); }
 
@@ -1912,9 +1933,6 @@ span.page-links-title {
       z-index: 2;
       right: 5px;
       bottom: -12px; } }
-@media screen and (min-width: 735px) {
-  .site-footer #supplementary:after {
-    padding-top: 400px; } }
 /* =========================================================
 	 Media - Navigation Expanded
 ========================================================= */
@@ -2098,7 +2116,7 @@ span.page-links-title {
 
   .sponsorTitle {
     padding-top: 2.2em;
-    background-size: 792px 125px; }
+    background-size: 792px 120px; }
 
   .sponsorList {
     display: table;
@@ -2201,6 +2219,29 @@ span.page-links-title {
 @media screen and (min-width: 1600px) {
   .site-footer #supplementary:after {
     padding-top: 500px; } }
+/* =========================================================
+	 Media - Page attendees
+========================================================= */
+@media screen and (min-width: 735px) {
+  .page #tix-attendees li {
+    height: 80px; }
+  .page .tix-field {
+    white-space: nowrap;
+    overflow: hidden; } }
+@media only screen and (min-width: 595px) and (max-width: 734px) {
+  .page #tix-attendees li {
+    width: 50%;
+    height: 80px; }
+  .page .tix-field {
+    white-space: nowrap;
+    overflow: hidden; } }
+@media screen and (max-width: 594px) {
+  .page .tix-attendee-list {
+    margin-top: 40px; }
+  .page #tix-attendees li {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px; } }
 /* =========================================================
 	 Media - Retina dispaly devices
 ========================================================= */

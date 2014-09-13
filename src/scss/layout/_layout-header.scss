@@ -78,11 +78,10 @@
 		background-color: transparent;
 	}
 	&:before{
-		@include genericon('\f104', 16px, middle);
-		position: absolute;
+		@include genericon('\f104', 16px, middle, $position: absolute);
 		top: 0;
-		right: 130px;
-		margin-top: -1px;
+		left: 9px;
+		padding: 16px;
 		transition: all 0.2s;
 	}
 	.toggled-on &:before{
@@ -92,7 +91,7 @@
 		display: block;
 		position: absolute;
 		top: 16px;
-		right: 95px;
+		left: 40px;
 		margin-left: 0.5em;
 		color: #fff;
 		content: 'Menu';

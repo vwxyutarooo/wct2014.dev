@@ -1,5 +1,74 @@
-@charset "utf-8";
+@charset 'utf-8';
 // ========================================
 // 固定ページ
 // ========================================
-.page{}
+.page {
+  #tix-attendees {
+    ul {
+      overflow: hidden;
+    }
+    li {
+      height: auto;
+      margin-bottom: 30px;
+      border-style: solid;
+      border-color: #ededed;
+      border-bottom-width: 1px;
+      .tix-attendee-name,
+      .tix-attendee-twitter,
+      .tix-attendee-url {
+        margin-right: 20px;
+        margin-left: 60px;
+      }
+    }
+  }
+}
+
+/* media queries for attendees
+---------------------------------------- */
+/* 3 columns for large size (min-width: 735px) */
+@mixin attendees-large-3columns {
+  .page {
+    #tix-attendees {
+      li {
+        height: 80px;
+      }
+    }
+    .tix-field {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+/* 2 columns for medium size 
+* (max-width: 734px) and (min-width: 594px) */
+@mixin attendees-medium-2columns {
+  .page{
+    #tix-attendees {
+      li {
+        width: 50%;
+        height: 80px;
+      }
+    }
+    .tix-field {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+
+/* 3 columns for small size (max-width: 594px) */
+@mixin attendees-small-column {
+  .page {
+    .tix-attendee-list {
+      margin-top: 40px;
+    }
+    #tix-attendees {
+      li {
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
