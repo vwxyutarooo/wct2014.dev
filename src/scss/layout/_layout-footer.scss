@@ -2,24 +2,20 @@
 /* Site footer
 ---------------------------------------- */
 .site-footer {
-  position: relative;
   border-width: 0;
   background-color: transparent;
-  
-  #supplementary {
-    padding: 0;
-    // CitySilhouette image
-    @include hasPseudoClass(after, $position: relative);
-    &:after {
-      width: 100%;
-      height: 0;
-      padding-top: 412px;
-      background-color: transparent;
-      background-image: url($filePath+'2014/08/CitySilhouetteW1920.png');
-      background-repeat: no-repeat;
-      background-position: center bottom;
-      background-size: 100% auto;;
-    }
+  padding: 0;
+  // CitySilhouette image
+  @include hasPseudoClass(before, $position: relative);
+  &:before {
+    width: 100%;
+    height: 0;
+    padding-top: 412px;
+    background-color: transparent;
+    background-image: url($filePath+'2014/08/CitySilhouetteW1920.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;;
   }
   .footer-sidebar {
     position: static !important;
@@ -71,50 +67,40 @@
 /* for xlarge size (min-width: 1600px) and (max-width: 1919px) */
 @mixin setFooterBkg-over-1600 {
 	.site-footer {
-		#supplementary {
-			&:after {
-			padding-top: 500px;
-			}
+		&:before {
+  		padding-top: 500px;
 		}
 	}
 }
 /* for large size (min-width: 846px) */
 @mixin setFooterBkg-over-735 {
 	.site-footer {
-		#supplementary {
-			&:after {
-			padding-top: 400px;
-			}
+		&:before {
+  		padding-top: 400px;
 		}
 	}
 }
 /* for medium size (min-width: 641px) */
 @mixin setFooterBkg-over-641 {
 	.site-footer {
-		#supplementary {
-				&:after {
-				padding-top: 250px;
-			}
+		&:before {
+			padding-top: 250px;
 		}
 	}	
 }
 /* for small size (min-width: 361px) */
 @mixin setFooterBkg-over-361 {
 	.site-footer {
-		#supplementary {
-			&:after {
-				padding-top: 150px;
-			}
+		&:before {
+			padding-top: 150px;
 		}		
 	}
 }
 /* for xsmall size (max-width: 360px) */
 @mixin setFooterBkg-within-360 {
 	.site-footer{
-		#supplementary {
-			&:after {
-				padding-top: 90px;
-			}
+		&:before {
+			padding-top: 90px;
 		}
 	}
 }
