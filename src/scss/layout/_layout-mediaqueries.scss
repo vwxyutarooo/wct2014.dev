@@ -11,6 +11,7 @@
 	}
 	@include setHeaderBkg(640px, '2014/08/bkgHeaderS.jpg', '2014/08/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
+	@include relayBlog-under-640;
 	@include setFooterBkg-over-361;
 	@include full-width-small;	// Page template full-width
 }
