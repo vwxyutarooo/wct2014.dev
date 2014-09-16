@@ -1113,7 +1113,7 @@ blockquote {
     display: block;
     float: left;
     font-style: normal;
-    font-size: 25px; }
+    font-size: 20px; }
   .relay-blog-table .thumb {
     float: right;
     padding-bottom: 1.1em; }
@@ -2401,7 +2401,7 @@ span.page-links-title {
 /* =========================================================
 	 Media - Page relay-blog
 ========================================================= */
-@media only screen and (min-width: 641px) and (max-width: 845px) {
+@media screen and (max-width: 845px) {
   .full-width
   .entry-content__row .entry-content__row__inner--relay-blog {
     max-width: 100%;
@@ -2443,62 +2443,7 @@ span.page-links-title {
       text-align: center;
       padding-left: 10px;
       width: 2em;
-      text-align: center; }
-    .relay-blog-table .thumb {
-      float: left; }
-    .relay-blog-table .name {
-      clear: none; }
-    .relay-blog-table .title {
-      clear: both; } }
-@media screen and (max-width: 640px) {
-  .full-width
-  .entry-content__row .entry-content__row__inner--relay-blog {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box; }
-    .full-width
-    .entry-content__row .entry-content__row__inner--relay-blog p {
-      font-size: 1.5rem;
-      line-height: 1.4; }
-    .full-width
-    .entry-content__row .entry-content__row__inner--relay-blog .name,
-    .full-width
-    .entry-content__row .entry-content__row__inner--relay-blog .twitter,
-    .full-width
-    .entry-content__row .entry-content__row__inner--relay-blog .title {
-      margin-left: 70px; }
-  .full-width
-  .entry-content__row .relay-blog-month {
-    padding-bottom: 10px;
-    font-size: 2rem;
-    font-weight: 300;
-    background: none;
-    border-bottom: 2px solid #56abd0; }
-
-  .relay-blog-inner td i,
-  .relay-blog-inner td .relay-box-inner {
-    display: table-cell; }
-
-  /* relay-blog-table */
-  .relay-blog-table {
-    border: none;
-    .sp-none-display: none !important; }
-    .relay-blog-table .relay-box-inner {
-      padding: 0 15px; }
-    .relay-blog-table td {
-      display: block;
-      padding: 10px 0;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      border-bottom: 6px solid #fff; }
-    .relay-blog-table i {
-      float: none;
-      text-align: center;
-      padding-left: 10px;
-      width: 2em;
-      text-align: center; }
+      font-size: 1.7rem; }
     .relay-blog-table .thumb {
       float: left; }
     .relay-blog-table .name {

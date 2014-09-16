@@ -395,16 +395,8 @@
 	 Media - Page relay-blog
 ========================================================= */
 
-// @media screen and (min-width: 846px){
-// 	@include relayblog-over-846;
-// }
-
-@media only screen and (min-width: 641px) and (max-width: 845px){
+@media screen and (max-width: 845px){
 	@include relayblog-under-845;
-}
-
-@media screen and (max-width: 640px){
-	@include relayBlog-under-640;	
 }
 
 /* =========================================================
