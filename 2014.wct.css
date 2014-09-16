@@ -1267,6 +1267,24 @@ span.page-links-title {
     position: static !important;
     height: auto !important;
     padding-top: 0; }
+    .site-footer .footer-sidebar:before {
+      font-size: 3.6rem;
+      font-weight: bold;
+      display: block;
+      width: 100%;
+      height: 120px;
+      padding-top: .8em;
+      content: 'Sponsors';
+      text-align: center;
+      color: #555555;
+      border-style: solid;
+      border-color: #ededed;
+      border-top-width: 2px;
+      border-bottom-width: 0;
+      background-image: url("files/2014/09/ttl_sponcers.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: auto 74px; }
     .site-footer .footer-sidebar .widget {
       position: static !important;
       top: auto !important;
@@ -1276,51 +1294,56 @@ span.page-links-title {
       max-width: 100%;
       padding: 0; }
       .site-footer .footer-sidebar .widget.widget_text {
-        font-size: 26px;
-        margin-bottom: 3em;
-        border-width: 2px 0 0 0;
-        border-style: solid;
-        border-color: #ededed; }
+        font-size: 26px; }
   .site-footer .widget .widget-title {
     text-align: center;
     border-width: 0; }
   .site-footer .widget.wcb_widget_sponsors .widget-title {
     margin-bottom: 0;
-    padding: 20px 0;
-    color: #fff;
-    background-color: #3a9ec8; }
+    padding: 20px 0; }
   .site-footer .site-info {
     text-align: center;
     color: #555555;
-    background-color: #3a9ec8; }
+    background-color: #3595BE; }
     .site-footer .site-info a {
       color: #fff; }
 
 /* media queries
 ---------------------------------------- */
-/* for xlarge size (min-width: 1600px) and (max-width: 1919px) */
-/* for large size (min-width: 846px) */
-/* for medium size (min-width: 641px) */
-/* for small size (min-width: 361px) */
 /* for xsmall size (max-width: 360px) */
+/* for small size (min-width: 361px) */
+/* for medium size (min-width: 641px) */
+/* for large size (min-width: 846px) */
+/* for xlarge size (min-width: 1600px) and (max-width: 1919px) */
 /* Sponsor logo widget in footer-sidebar
 ---------------------------------------- */
 .sponsorTitle {
+  position: relative;
   font-weight: normal;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 810px;
-  height: 82px;
+  max-width: 940px;
   margin: 0 auto 1.8em !important;
-  padding-top: 1.5em;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: auto 82px; }
+  text-align: center; }
+  .sponsorTitle__inner {
+    background-color: #fff;
+    position: relative;
+    z-index: 20;
+    display: inline-block;
+    padding: 0 1em; }
+  .sponsorTitle:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    position: absolute; }
   .footer-sidebar .widget .sponsorTitle {
-    font-size: 2.6rem; }
-  .sponsorTitle--platinum {
-    background-image: url("files/2014/09/ttl_sponcer_platinum.png"); }
+    font-size: 2rem; }
+  .sponsorTitle--platinum:before {
+    background-color: #E5E4E2; }
+  .sponsorTitle--gold:before {
+    background-color: #ffe766; }
 
 .sponsorList {
   -moz-box-sizing: border-box;
@@ -1333,13 +1356,15 @@ span.page-links-title {
   .sponsorList > li {
     margin-bottom: 1.5em; }
     .sponsorList > li img {
+      width: 100%;
       -webkit-transition: all .3s;
       transition: all .3s; }
       .sponsorList > li img:hover {
-        box-shadow: 0 0 3px rgba(53, 149, 190, 0.3); }
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.25); }
   .sponsorList--platinum > li img {
-    width: 100%;
     max-width: 450px; }
+  .sponsorList--gold > li img {
+    max-width: 300px; }
 
 /* =========================================================
 	 Media - Mobile sizes
@@ -1891,6 +1916,9 @@ span.page-links-title {
 
   .site-footer #supplementary:after {
     padding-top: 250px; }
+  .site-footer .footer-sidebar:before {
+    background-image: url("files/2014/09/ttl_sponcers@2x.png");
+    background-size: auto 120px; }
 
   body {
     background-image: url("files/2014/08/bkgHeaderShortM.jpg"), url("files/2014/08/bkgHeaderShortRepeatM.jpg");
@@ -1921,13 +1949,6 @@ span.page-links-title {
     .entry-content h1:before {
       left: 17px;
       width: 12px; }
-
-  .sponsorTitle {
-    height: 120px;
-    padding-top: 2em;
-    background-size: 792px 120px; }
-    .sponsorTitle--platinum {
-      background-image: url("files/2014/09/ttl_sponcer_platinum@2x.png"); }
 
   .tix-js button,
   .tix-js .button,
@@ -2206,10 +2227,6 @@ span.page-links-title {
       z-index: 2;
       right: -10px;
       bottom: -13px; }
-
-  .sponsorTitle {
-    padding-top: 2.2em;
-    background-size: 792px 120px; }
 
   .sponsorList {
     display: table;
