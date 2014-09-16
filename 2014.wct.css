@@ -294,11 +294,14 @@ table {
 .button--blue {
   position: relative;
   bottom: 0;
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   max-width: 400px;
-  background-color: transparent;
-  display: block;
-  text-align: center; }
+  padding: 0;
+  text-align: center;
+  background-color: transparent; }
   .button--blue:before {
     -webkit-transition: all 0.1s;
     transition: all 0.1s;
@@ -327,8 +330,8 @@ table {
     -webkit-transition: all 0.1s;
     transition: all 0.1s; }
   .button--blue:active, .button--blue:hover, .button--blue:link, .button--blue:visited {
-    background-color: transparent;
-    color: #fff; }
+    color: #fff;
+    background-color: transparent; }
   .button--blue .button__wrap {
     display: block;
     padding: 20px 0;

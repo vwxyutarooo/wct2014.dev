@@ -45,17 +45,19 @@
   @include buttonAction(darken($colorBlue, 9%));
   position: relative;
   bottom: 0;
+  display: block;
+  box-sizing: border-box;
   width: 100%;
   max-width: 400px;
-  background-color: transparent;
-  display: block;
+  padding: 0;
   text-align: center;
+  background-color: transparent;
   &:active,
   &:hover,
   &:link,
   &:visited {
-    background-color: transparent;
     color: #fff;
+    background-color: transparent;
   }
   .button__wrap {
     display: block;
@@ -64,6 +66,7 @@
     background-color: $colorBlue;
   }
 }
+
 
 
 
