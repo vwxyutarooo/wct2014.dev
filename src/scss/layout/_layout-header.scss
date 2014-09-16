@@ -74,6 +74,7 @@
 	&:active,
 	&:focus,
 	&:hover,
+	&:visited,
 	&::selection{
 		background-color: transparent;
 	}

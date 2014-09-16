@@ -72,7 +72,8 @@ gulp.task('foundation-init', function() {
 
 gulp.task('browser-sync', function() {
 	browserSync.init('./*.css', {
-		proxy: paths.vhost
+		proxy: paths.vhost,
+		open: 'external'
 	});
 });
 

@@ -84,20 +84,6 @@
 //***********************
 // Original functions
 //***********************
-// Button actions
-%buttonAct{
-	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
-	transition: all 0.2s;
-	&:hover{
-		transform: translateY(3px);
-		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-	}
-	&:active{
-		transform: translateY(3px);
-		transition: all 0.1s;
-	}
-}
-
 // Insert icon font
 @mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static){
 	position: $position;
@@ -175,7 +161,8 @@
 		&:before{
 			height: 2px;
 		}
-		.snsButton__wrap{
+		.snsButton__wrap,
+		.button__wrap {
 			box-shadow: 0 2px $color;
 			margin-bottom: -2px;
 		}
@@ -184,12 +171,14 @@
 		&:before{
 			height: 4px;
 		}
-		.snsButton__wrap{
+		.snsButton__wrap,
+		.button__wrap {
 			box-shadow: 0 0 $color;
 			margin-bottom: -4px;
 		}
 	}
-	.snsButton__wrap{
+	.snsButton__wrap,
+	.button__wrap {
 		box-shadow: 0 4px $color;
 		transition: all 0.1s;
 	}

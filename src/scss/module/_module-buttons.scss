@@ -1,4 +1,5 @@
 @charset "utf-8";
+// Camptix button
 .tix-js {
   p {
     &:last-child {
@@ -39,8 +40,34 @@
   }
 }
 
+// Make anchor link as button
+.button--blue {
+  @include buttonAction(darken($colorBlue, 9%));
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  background-color: transparent;
+  display: block;
+  text-align: center;
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
+    background-color: transparent;
+    color: #fff;
+  }
+  .button__wrap {
+    display: block;
+    padding: 20px 0;
+    border-radius: 2px;
+    background-color: $colorBlue;
+  }
+}
 
-/* Btn SNS which is in primary sidebar
+
+
+/* Btn SNS in primary sidebar
 ---------------------------------------- */
 %snsButton {
   position: relative;
