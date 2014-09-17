@@ -1,0 +1,129 @@
+@charset 'utf-8';
+
+// Variables
+$colorBorder: #efefef;
+$colorRest:   lighten(#87e6ad, 10%);
+
+/* ライン 425 */
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+.timetable {
+  width: 100%;
+  margin: 0 0 20px 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-width: 0 0 0 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ededed;
+  thead tr {
+    border-color: lighten($colorBlue, 3%);
+    &:first-child th {
+      color: #fff;
+      border-width: 0 1px 4px 1px;
+      border-style: solid;
+      border-color: $colorBlue lighten($colorBlue, 12%) darken($colorBlue, 9%);
+      background-color: lighten($colorBlue, 3%);
+    }
+  }
+  tr{
+    border-width: 0 4px 0 4px;
+    border-color: $colorBorder;
+    border-style: solid;
+    &.restRow {
+      border-color: lighten($colorRest, 9%);
+    }
+    %tdth {
+      border-color: $colorBorder;
+      border-width: 0 1px 1px 0;
+      padding: 16px 8px;
+      background-color: lighten($colorBorder, 6%);
+      &.rest {
+        text-align: center;
+        background-color: lighten($colorRest, 9%);
+        border-color: lighten($colorRest, 3%);
+      }
+      &.time{
+        text-align: center;
+      }
+    }
+    th {
+      @extend %tdth;
+      font-weight: bold;
+      text-align: center;
+      // background-color: lighten($colorBorder, 3%);
+      border-width: 0 1px 1px 0;
+      &.rest {
+        border-bottom-width: 0;
+      }
+    }
+    td {
+      @extend %tdth;
+      border-bottom-width: 4px;
+      &.rest {
+        padding-top: 0;
+      }
+      &.none {
+        background-color: darken($colorBorder, 3%);
+      }
+    }
+  }
+  dl {
+    dt {
+      background: transparent;
+      border-left-width: 0;
+      color: $colorBlue;
+    }
+    dd {
+      &.time {
+        display: none;
+      }
+    }
+  }
+  .speaker-name {
+    &:before {
+      @include genericon('\f304');
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .timetable th,
+  .timetable td {
+    display: block;
+    width: auto !important;
+    padding: 0;
+    border: medium none;
+  }
+  .timetable td.rest {
+    border-left: 0 none;
+  }
+  .timetable thead {
+    display: none;
+  }
+  .timetable .none {
+    display: none;
+  }
+  .timetable tbody th {
+    padding: 10px 0;
+    border-bottom: 0 none;
+  }
+  .timetable tbody dl dt.time,
+  .timetable tbody dl dd.time {
+    display: block;
+    padding-bottom: 10px;
+    &:before{
+      font-family: 'Genericons';
+      font-size: 17px;
+      display: inline-block;
+      content: '*';
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (min-width: 846px) {}

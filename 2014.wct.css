@@ -1018,6 +1018,8 @@ blockquote {
     background-color: #fff; }
     .full-width .entry-content .entry-content__row__inner--tix-attendees {
       max-width: 880px; }
+    .full-width .entry-content .entry-content__row__inner--sessions {
+      max-width: 1040px; }
   .full-width .entry-content h1 {
     font-size: 3.2rem;
     font-weight: 400;
@@ -1056,6 +1058,105 @@ blockquote {
 /* (min-width: 594px) */
 /* for Tablet Size (min-wdith: 673px) */
 /* PC size (min-width: 846px) */
+/* ライン 425 */
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left; }
+
+.timetable {
+  width: 100%;
+  margin: 0 0 20px 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-width: 0 0 0 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ededed; }
+  .timetable thead tr {
+    border-color: #3a9ec8; }
+    .timetable thead tr:first-child th {
+      color: #fff;
+      border-width: 0 1px 4px 1px;
+      border-style: solid;
+      border-color: #3595BE #5eafd2 #2b799a;
+      background-color: #3a9ec8; }
+  .timetable tr {
+    border-width: 0 4px 0 4px;
+    border-color: #efefef;
+    border-style: solid; }
+    .timetable tr.restRow {
+      border-color: #d7f7e4; }
+    .timetable tr th, .timetable tr td {
+      border-color: #efefef;
+      border-width: 0 1px 1px 0;
+      padding: 16px 8px;
+      background-color: #fefefe; }
+      .timetable tr th.rest, .timetable tr td.rest {
+        text-align: center;
+        background-color: #d7f7e4;
+        border-color: #bef1d2; }
+      .timetable tr th.time, .timetable tr td.time {
+        text-align: center; }
+    .timetable tr th {
+      font-weight: bold;
+      text-align: center;
+      border-width: 0 1px 1px 0; }
+      .timetable tr th.rest {
+        border-bottom-width: 0; }
+    .timetable tr td {
+      border-bottom-width: 4px; }
+      .timetable tr td.rest {
+        padding-top: 0; }
+      .timetable tr td.none {
+        background-color: #e7e7e7; }
+  .timetable dl dt {
+    background: transparent;
+    border-left-width: 0;
+    color: #3595BE; }
+  .timetable dl dd.time {
+    display: none; }
+  .timetable .speaker-name:before {
+    position: static;
+    display: inline-block;
+    content: "";
+    vertical-align: text-bottom;
+    font-size: 16px;
+    font-family: Genericons;
+    line-height: 1em; }
+
+@media (max-width: 640px) {
+  .timetable th,
+  .timetable td {
+    display: block;
+    width: auto !important;
+    padding: 0;
+    border: medium none; }
+
+  .timetable td.rest {
+    border-left: 0 none; }
+
+  .timetable thead {
+    display: none; }
+
+  .timetable .none {
+    display: none; }
+
+  .timetable tbody th {
+    padding: 10px 0;
+    border-bottom: 0 none; }
+
+  .timetable tbody dl dt.time,
+  .timetable tbody dl dd.time {
+    display: block;
+    padding-bottom: 10px; }
+    .timetable tbody dl dt.time:before,
+    .timetable tbody dl dd.time:before {
+      font-family: 'Genericons';
+      font-size: 17px;
+      display: inline-block;
+      content: '*';
+      vertical-align: middle; } }
 /* Archive title
 ---------------------------------------- */
 .archive-header,
