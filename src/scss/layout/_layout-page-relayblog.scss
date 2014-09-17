@@ -44,6 +44,9 @@ $colorBkgCell: #F1F1F1;
   .twitter,
   .title {
     margin-bottom: 0;
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 

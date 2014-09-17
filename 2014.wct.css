@@ -1093,6 +1093,13 @@ blockquote {
 .full-width
 .entry-content__row .title {
   margin-bottom: 0; }
+  .full-width
+  .entry-content__row .name a:hover,
+  .full-width
+  .entry-content__row .twitter a:hover,
+  .full-width
+  .entry-content__row .title a:hover {
+    text-decoration: underline; }
 
 /* clearfix */
 .clearfix {
