@@ -18,8 +18,10 @@ $colorBkgCell: #F1F1F1;
     max-width: 940px;
     margin: 0 auto;
     
-    p, a, i {
-      color: #ffffff;
+    p,
+    a,
+    i {
+      color: #fff;
     }
 
     p {
@@ -75,6 +77,11 @@ $colorBkgCell: #F1F1F1;
   .thumb {
     float: right;
     padding-bottom: 1.1em;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+    }
   }
 
   .name {
