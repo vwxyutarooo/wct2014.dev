@@ -1,0 +1,185 @@
+@charset 'utf-8';
+
+// Variables
+$colorBorder: #efefef;
+$colorRest: lighten(#87e6ad, 10%);
+
+/* ライン 425 */
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+.timetable {
+  width: 100%;
+  margin: 0 0 20px 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-width: 0 0 0 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ededed;
+  thead tr {
+    border-color: lighten($colorBlue, 3%);
+    &:first-child th {
+      color: #fff;
+      border-width: 0 1px 4px 1px;
+      border-style: solid;
+      border-color: $colorBlue lighten($colorBlue, 12%) darken($colorBlue, 9%);
+      background-color: lighten($colorBlue, 3%);
+    }
+  }
+  tr {
+    border-width: 0 4px 0 4px;
+    border-style: solid;
+    border-color: $colorBorder;
+    &.restRow {
+      border-color: lighten($colorRest, 9%);
+    }
+    %tdth {
+      padding: 16px 8px;
+      border-width: 0 1px 1px 0;
+      border-color: $colorBorder;
+      background-color: lighten($colorBorder, 6%);
+      &.rest {
+        text-align: center;
+        border-color: lighten($colorRest, 3%);
+        background-color: lighten($colorRest, 9%);
+      }
+      &.time {
+        text-align: center;
+      }
+    }
+    th {
+      @extend %tdth;
+      font-weight: bold;
+      text-align: center;
+      border-width: 0 1px 1px 0;
+      &:before {
+        @include genericon('\f303', 1.2em);
+      }
+      &.rest {
+        border-bottom-width: 0;
+      }
+    }
+    td {
+      @extend %tdth;
+      border-bottom-width: 4px;
+      &.rest {
+        padding-top: 0;
+      }
+      &.none {
+        background-color: darken($colorBorder, 3%);
+      }
+    }
+  }
+  dl {
+    dt {
+      color: $colorBlue;
+      border-left-width: 0;
+      background: transparent;
+    }
+  }
+  .speaker-name {
+    &:before {
+      @include genericon('\f304');
+    }
+  }
+}
+
+@mixin page-sessions-under-640 {
+  .timetable {
+    border-color: $colorBorder;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    thead {
+      display: none;
+    }
+    %thtd {
+      display: block;
+      width: auto !important;
+      border: medium none;
+    }
+    tr {
+      &.opening {
+        border-bottom-width: 1px;
+      }
+      th {
+        @extend %thtd;
+        font-size: 1.2em;
+        padding: 10px 15px;
+        text-align: left;
+        border-bottom: 0 none;
+      }
+      td {
+        @extend %thtd;
+        padding: 10px 15px;
+        &.rest {
+          border-left: 0 none;
+        }
+      }
+    }
+    .none {
+      display: none;
+    }
+    dl {
+      position: relative;
+      margin-bottom: 1.25em;
+      border-style: solid;
+      border-color: $colorBlue;
+      border-left-width: 2px;
+      &:before {
+        @include genericon('\f417', 1.4em, $position: absolute);
+        top: .5em;
+        left: .25em;
+      }
+      dt {
+        margin-bottom: 0;
+        padding: .5em 1.65em 0;
+        &.stage {
+          &:before {
+            font-size: 1.3em;
+            display: block;
+            margin: 0 0 .25em;
+            color: $colorText;
+          }
+          &.stage--01 {
+            &:before {
+              content: 'わぷーステージ';
+            }
+          }
+          &.stage--02 {
+            &:before {
+              content: 'これからステージ';
+            }
+          }
+          &.stage--03 {
+            &:before {
+              content: 'ステージ脇';
+            }
+          }
+          &.stage--04 {
+            &:before {
+              content: 'たたみ';
+            }
+          }
+          &.stage--05 {
+            &:before {
+              content: '会議室A';
+            }
+          }
+          &.stage--06 {
+            &:before {
+              content: '会議室B';
+            }
+          }
+        }
+      }
+      dd {
+        margin-bottom: 0;
+        padding: .5em 1.65em;
+      }
+    }
+  }
+}

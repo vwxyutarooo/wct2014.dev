@@ -13,6 +13,7 @@
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
 	@include setFooterBkg-over-361;
 	@include full-width-small;	// Page template full-width
+	@include page-sessions-under-640;
 }
 @media screen and (max-width: 400px){
 	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto, $bodyClass: '.home');

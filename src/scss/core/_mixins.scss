@@ -85,9 +85,9 @@
 // Original functions
 //***********************
 // Insert icon font
-@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static){
+@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block){
 	position: $position;
-	display: inline-block;
+	display: $display;
 	content: $content;
 	vertical-align: $valaign;
 	font-size: $fontsize;

@@ -1018,6 +1018,8 @@ blockquote {
     background-color: #fff; }
     .full-width .entry-content .entry-content__row__inner--tix-attendees {
       max-width: 880px; }
+    .full-width .entry-content .entry-content__row__inner--sessions {
+      max-width: 1040px; }
   .full-width .entry-content h1 {
     font-size: 3.2rem;
     font-weight: 400;
@@ -1139,6 +1141,79 @@ blockquote {
 /* =========================================================
    Media - Mobile sizes
 ========================================================= */
+/* ライン 425 */
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left; }
+
+.timetable {
+  width: 100%;
+  margin: 0 0 20px 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-width: 0 0 0 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ededed; }
+  .timetable thead tr {
+    border-color: #3a9ec8; }
+    .timetable thead tr:first-child th {
+      color: #fff;
+      border-width: 0 1px 4px 1px;
+      border-style: solid;
+      border-color: #3595BE #5eafd2 #2b799a;
+      background-color: #3a9ec8; }
+  .timetable tr {
+    border-width: 0 4px 0 4px;
+    border-style: solid;
+    border-color: #efefef; }
+    .timetable tr.restRow {
+      border-color: #d7f7e4; }
+    .timetable tr th, .timetable tr td {
+      padding: 16px 8px;
+      border-width: 0 1px 1px 0;
+      border-color: #efefef;
+      background-color: #fefefe; }
+      .timetable tr th.rest, .timetable tr td.rest {
+        text-align: center;
+        border-color: #bef1d2;
+        background-color: #d7f7e4; }
+      .timetable tr th.time, .timetable tr td.time {
+        text-align: center; }
+    .timetable tr th {
+      font-weight: bold;
+      text-align: center;
+      border-width: 0 1px 1px 0; }
+      .timetable tr th:before {
+        position: static;
+        display: inline-block;
+        content: "";
+        vertical-align: text-bottom;
+        font-size: 1.2em;
+        font-family: Genericons;
+        line-height: 1em; }
+      .timetable tr th.rest {
+        border-bottom-width: 0; }
+    .timetable tr td {
+      border-bottom-width: 4px; }
+      .timetable tr td.rest {
+        padding-top: 0; }
+      .timetable tr td.none {
+        background-color: #e7e7e7; }
+  .timetable dl dt {
+    color: #3595BE;
+    border-left-width: 0;
+    background: transparent; }
+  .timetable .speaker-name:before {
+    position: static;
+    display: inline-block;
+    content: "";
+    vertical-align: text-bottom;
+    font-size: 16px;
+    font-family: Genericons;
+    line-height: 1em; }
+
 /* Archive title
 ---------------------------------------- */
 .archive-header,
@@ -1565,7 +1640,70 @@ span.page-links-title {
       position: absolute;
       z-index: 2;
       right: -5px;
-      bottom: -6px; } }
+      bottom: -6px; }
+
+  .timetable {
+    border-color: #efefef;
+    border-top-width: 4px;
+    border-bottom-width: 4px; }
+    .timetable thead {
+      display: none; }
+    .timetable tr th, .timetable tr td {
+      display: block;
+      width: auto !important;
+      border: medium none; }
+    .timetable tr.opening {
+      border-bottom-width: 1px; }
+    .timetable tr th {
+      font-size: 1.2em;
+      padding: 10px 15px;
+      text-align: left;
+      border-bottom: 0 none; }
+    .timetable tr td {
+      padding: 10px 15px; }
+      .timetable tr td.rest {
+        border-left: 0 none; }
+    .timetable .none {
+      display: none; }
+    .timetable dl {
+      position: relative;
+      margin-bottom: 1.25em;
+      border-style: solid;
+      border-color: #3595BE;
+      border-left-width: 2px; }
+      .timetable dl:before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        vertical-align: text-bottom;
+        font-size: 1.4em;
+        font-family: Genericons;
+        line-height: 1em;
+        top: .5em;
+        left: .25em; }
+      .timetable dl dt {
+        margin-bottom: 0;
+        padding: .5em 1.65em 0; }
+        .timetable dl dt.stage:before {
+          font-size: 1.3em;
+          display: block;
+          margin: 0 0 .25em;
+          color: #555555; }
+        .timetable dl dt.stage.stage--01:before {
+          content: 'わぷーステージ'; }
+        .timetable dl dt.stage.stage--02:before {
+          content: 'これからステージ'; }
+        .timetable dl dt.stage.stage--03:before {
+          content: 'ステージ脇'; }
+        .timetable dl dt.stage.stage--04:before {
+          content: 'たたみ'; }
+        .timetable dl dt.stage.stage--05:before {
+          content: '会議室A'; }
+        .timetable dl dt.stage.stage--06:before {
+          content: '会議室B'; }
+      .timetable dl dd {
+        margin-bottom: 0;
+        padding: .5em 1.65em; } }
 @media screen and (max-width: 400px) {
   body.home {
     background-size: 400px auto; }

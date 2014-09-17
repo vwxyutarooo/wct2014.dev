@@ -31,7 +31,7 @@ var paths = {
 ,	'htmlDir':		'src/html/*.html'
 ,	'imgDest':		'files'
 ,	'imgDir':		'files/**'
-,	'jadeDir':		['src/jade/*.jade', 'src/jade/**/*.jade']
+,	'jadeDir':		['src/jade/*.jade', 'src/jade/**/*.jade', '!src/jade/_*.jade', '!src/jade/**/_*.jade']
 ,	'jsLib':		'src/lib/*.js'
 ,	'jsDest':		'src/js'
 ,	'jsDir':		'src/js/*.js'
@@ -87,6 +87,7 @@ gulp.task('bs-reload', function() {
 gulp.task('jade', function() {
 	return gulp.src(paths.jadeDir)
 		.pipe(changed(paths.htmlDest, { extension: '.html' }))
+		.pipe(plumber())
 		.pipe(jade())
 		.pipe(prettify({indent_size: 2}))
 		.pipe(gulp.dest(paths.htmlDest))
