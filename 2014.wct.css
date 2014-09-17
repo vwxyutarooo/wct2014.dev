@@ -1185,7 +1185,7 @@ td {
       font-weight: bold;
       text-align: center;
       border-width: 0 1px 1px 0; }
-      .timetable tr th:before {
+      .timetable tr th.time:before {
         position: static;
         display: inline-block;
         content: "";

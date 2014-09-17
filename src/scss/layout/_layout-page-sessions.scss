@@ -56,8 +56,10 @@ td {
       font-weight: bold;
       text-align: center;
       border-width: 0 1px 1px 0;
-      &:before {
-        @include genericon('\f303', 1.2em);
+      &.time {
+        &:before {
+          @include genericon('\f303', 1.2em);
+        }
       }
       &.rest {
         border-bottom-width: 0;
