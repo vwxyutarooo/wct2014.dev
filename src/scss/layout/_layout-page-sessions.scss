@@ -78,11 +78,7 @@ td {
       border-left-width: 0;
       color: $colorBlue;
     }
-    dd {
-      &.time {
-        display: none;
-      }
-    }
+    dd {}
   }
   .speaker-name {
     &:before {
@@ -92,36 +88,96 @@ td {
 }
 
 @media (max-width: 640px) {
-  .timetable th,
-  .timetable td {
-    display: block;
-    width: auto !important;
-    padding: 0;
-    border: medium none;
-  }
-  .timetable td.rest {
-    border-left: 0 none;
-  }
-  .timetable thead {
-    display: none;
-  }
-  .timetable .none {
-    display: none;
-  }
-  .timetable tbody th {
-    padding: 10px 0;
-    border-bottom: 0 none;
-  }
-  .timetable tbody dl dt.time,
-  .timetable tbody dl dd.time {
-    display: block;
-    padding-bottom: 10px;
-    &:before{
-      font-family: 'Genericons';
-      font-size: 17px;
-      display: inline-block;
-      content: '*';
-      vertical-align: middle;
+  .timetable {
+      border-top-width: 4px;
+      border-bottom-width: 4px;
+      border-color: $colorBorder;
+    thead {
+      display: none;
+    }
+    %thtd {
+      display: block;
+      width: auto !important;
+      padding: 0;
+      border: medium none;
+    }
+    tr{
+      &.opening {
+        border-bottom-width: 1px;
+      }
+      th {
+        @extend %thtd;
+        padding: 10px 0;
+        border-bottom: 0 none;
+      }
+      td {
+        @extend %thtd;
+        padding: 10px 15px;
+        &.rest {
+          border-left: 0 none;
+        }
+      }
+    }
+    .none {
+      display: none;
+    }
+    dl {
+      margin-bottom: 1.25em;
+      position: relative;
+      border-left-width: 2px;
+      border-color: $colorBlue;
+      border-style: solid;
+      &:before {
+        @include genericon('\f417', 1.4em, $position: absolute);
+        left: .25em;
+        top: .5em;
+      }
+      dt {
+        margin-bottom: 0;
+        padding: 0.5em 1.65em 0;
+        &.stage {
+          &:before {
+            margin: 0 0 .25em;
+            color: $colorText;
+            display: block;
+            font-size: 1.3em;
+          }
+          &.stage--01 {
+            &:before {
+              content: 'わぷーステージ';
+            }
+          }
+          &.stage--02 {
+            &:before {
+              content: 'これからステージ' 
+            }
+          }
+          &.stage--03 {
+            &:before {
+              content: 'ステージ脇';
+            }
+          }
+          &.stage--04 {
+            &:before {
+              content: 'たたみ';
+            }
+          }
+          &.stage--05 {
+            &:before {
+              content: '会議室A';
+            }
+          }
+          &.stage--06 {
+            &:before {
+              content: '会議室B';
+            }
+          }
+        }
+      }
+      dd {
+        margin-bottom: 0;
+        padding: 0.5em 1.65em;
+      }
     }
   }
 }

@@ -1114,8 +1114,6 @@ td {
     background: transparent;
     border-left-width: 0;
     color: #3595BE; }
-  .timetable dl dd.time {
-    display: none; }
   .timetable .speaker-name:before {
     position: static;
     display: inline-block;
@@ -1126,37 +1124,67 @@ td {
     line-height: 1em; }
 
 @media (max-width: 640px) {
-  .timetable th,
-  .timetable td {
-    display: block;
-    width: auto !important;
-    padding: 0;
-    border: medium none; }
-
-  .timetable td.rest {
-    border-left: 0 none; }
-
-  .timetable thead {
-    display: none; }
-
-  .timetable .none {
-    display: none; }
-
-  .timetable tbody th {
-    padding: 10px 0;
-    border-bottom: 0 none; }
-
-  .timetable tbody dl dt.time,
-  .timetable tbody dl dd.time {
-    display: block;
-    padding-bottom: 10px; }
-    .timetable tbody dl dt.time:before,
-    .timetable tbody dl dd.time:before {
-      font-family: 'Genericons';
-      font-size: 17px;
-      display: inline-block;
-      content: '*';
-      vertical-align: middle; } }
+  .timetable {
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-color: #efefef; }
+    .timetable thead {
+      display: none; }
+    .timetable tr th, .timetable tr td {
+      display: block;
+      width: auto !important;
+      padding: 0;
+      border: medium none; }
+    .timetable tr.opening {
+      border-bottom-width: 1px; }
+    .timetable tr th {
+      padding: 10px 0;
+      border-bottom: 0 none; }
+    .timetable tr td {
+      padding: 10px 15px; }
+      .timetable tr td.rest {
+        border-left: 0 none; }
+    .timetable .none {
+      display: none; }
+    .timetable dl {
+      margin-bottom: 1.25em;
+      position: relative;
+      border-left-width: 2px;
+      border-color: #3595BE;
+      border-style: solid; }
+      .timetable dl:before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        vertical-align: text-bottom;
+        font-size: 1.4em;
+        font-family: Genericons;
+        line-height: 1em;
+        left: .25em;
+        top: .5em; }
+      .timetable dl dt {
+        margin-bottom: 0;
+        padding: 0.5em 1.65em 0; }
+        .timetable dl dt.stage:before {
+          margin: 0 0 .25em;
+          color: #555555;
+          display: block;
+          font-size: 1.3em; }
+        .timetable dl dt.stage.stage--01:before {
+          content: 'わぷーステージ'; }
+        .timetable dl dt.stage.stage--02:before {
+          content: "これからステージ"; }
+        .timetable dl dt.stage.stage--03:before {
+          content: 'ステージ脇'; }
+        .timetable dl dt.stage.stage--04:before {
+          content: 'たたみ'; }
+        .timetable dl dt.stage.stage--05:before {
+          content: '会議室A'; }
+        .timetable dl dt.stage.stage--06:before {
+          content: '会議室B'; }
+      .timetable dl dd {
+        margin-bottom: 0;
+        padding: 0.5em 1.65em; } }
 /* Archive title
 ---------------------------------------- */
 .archive-header,
