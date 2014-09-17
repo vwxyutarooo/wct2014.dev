@@ -90,7 +90,7 @@ td {
   }
 }
 
-@mixin page-sessions-under-640 {
+@media screen and (max-width: 810px) {
   .timetable {
     border-color: $colorBorder;
     border-top-width: 4px;

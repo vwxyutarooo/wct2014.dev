@@ -1214,6 +1214,69 @@ td {
     font-family: Genericons;
     line-height: 1em; }
 
+@media screen and (max-width: 810px) {
+  .timetable {
+    border-color: #efefef;
+    border-top-width: 4px;
+    border-bottom-width: 4px; }
+    .timetable thead {
+      display: none; }
+    .timetable tr th, .timetable tr td {
+      display: block;
+      width: auto !important;
+      border: medium none; }
+    .timetable tr.opening {
+      border-bottom-width: 1px; }
+    .timetable tr th {
+      font-size: 1.2em;
+      padding: 10px 15px;
+      text-align: left;
+      border-bottom: 0 none; }
+    .timetable tr td {
+      padding: 10px 15px; }
+      .timetable tr td.rest {
+        border-left: 0 none; }
+    .timetable .none {
+      display: none; }
+    .timetable dl {
+      position: relative;
+      margin-bottom: 1.25em;
+      border-style: solid;
+      border-color: #3595BE;
+      border-left-width: 2px; }
+      .timetable dl:before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        vertical-align: text-bottom;
+        font-size: 1.4em;
+        font-family: Genericons;
+        line-height: 1em;
+        top: .5em;
+        left: .25em; }
+      .timetable dl dt {
+        margin-bottom: 0;
+        padding: .5em 1.65em 0; }
+        .timetable dl dt.stage:before {
+          font-size: 1.3em;
+          display: block;
+          margin: 0 0 .25em;
+          color: #555555; }
+        .timetable dl dt.stage.stage--01:before {
+          content: 'わぷーステージ'; }
+        .timetable dl dt.stage.stage--02:before {
+          content: 'これからステージ'; }
+        .timetable dl dt.stage.stage--03:before {
+          content: 'ステージ脇'; }
+        .timetable dl dt.stage.stage--04:before {
+          content: 'たたみ'; }
+        .timetable dl dt.stage.stage--05:before {
+          content: '会議室A'; }
+        .timetable dl dt.stage.stage--06:before {
+          content: '会議室B'; }
+      .timetable dl dd {
+        margin-bottom: 0;
+        padding: .5em 1.65em; } }
 /* Archive title
 ---------------------------------------- */
 .archive-header,
@@ -1640,70 +1703,7 @@ span.page-links-title {
       position: absolute;
       z-index: 2;
       right: -5px;
-      bottom: -6px; }
-
-  .timetable {
-    border-color: #efefef;
-    border-top-width: 4px;
-    border-bottom-width: 4px; }
-    .timetable thead {
-      display: none; }
-    .timetable tr th, .timetable tr td {
-      display: block;
-      width: auto !important;
-      border: medium none; }
-    .timetable tr.opening {
-      border-bottom-width: 1px; }
-    .timetable tr th {
-      font-size: 1.2em;
-      padding: 10px 15px;
-      text-align: left;
-      border-bottom: 0 none; }
-    .timetable tr td {
-      padding: 10px 15px; }
-      .timetable tr td.rest {
-        border-left: 0 none; }
-    .timetable .none {
-      display: none; }
-    .timetable dl {
-      position: relative;
-      margin-bottom: 1.25em;
-      border-style: solid;
-      border-color: #3595BE;
-      border-left-width: 2px; }
-      .timetable dl:before {
-        position: absolute;
-        display: inline-block;
-        content: "";
-        vertical-align: text-bottom;
-        font-size: 1.4em;
-        font-family: Genericons;
-        line-height: 1em;
-        top: .5em;
-        left: .25em; }
-      .timetable dl dt {
-        margin-bottom: 0;
-        padding: .5em 1.65em 0; }
-        .timetable dl dt.stage:before {
-          font-size: 1.3em;
-          display: block;
-          margin: 0 0 .25em;
-          color: #555555; }
-        .timetable dl dt.stage.stage--01:before {
-          content: 'わぷーステージ'; }
-        .timetable dl dt.stage.stage--02:before {
-          content: 'これからステージ'; }
-        .timetable dl dt.stage.stage--03:before {
-          content: 'ステージ脇'; }
-        .timetable dl dt.stage.stage--04:before {
-          content: 'たたみ'; }
-        .timetable dl dt.stage.stage--05:before {
-          content: '会議室A'; }
-        .timetable dl dt.stage.stage--06:before {
-          content: '会議室B'; }
-      .timetable dl dd {
-        margin-bottom: 0;
-        padding: .5em 1.65em; } }
+      bottom: -6px; } }
 @media screen and (max-width: 400px) {
   body.home {
     background-size: 400px auto; }
