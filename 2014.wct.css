@@ -1169,7 +1169,7 @@ td {
     border-style: solid;
     border-color: #efefef; }
     .timetable tr.restRow {
-      border-color: #d7f7e4; }
+      border-color: #f1fcf5; }
     .timetable tr th, .timetable tr td {
       padding: 16px 8px;
       border-width: 0 1px 1px 0;
@@ -1177,8 +1177,8 @@ td {
       background-color: #fefefe; }
       .timetable tr th.rest, .timetable tr td.rest {
         text-align: center;
-        border-color: #bef1d2;
-        background-color: #d7f7e4; }
+        border-color: #d7f7e4;
+        background-color: #f1fcf5; }
       .timetable tr th.time, .timetable tr td.time {
         text-align: center; }
     .timetable tr th {
