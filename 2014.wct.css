@@ -797,8 +797,6 @@ article.post {
       vertical-align: text-bottom;
       font-size: 16px;
       font-family: Genericons;
-      line-height: 1em;
-      line-height: 36px;
       line-height: 36px;
       top: 50%;
       -moz-box-sizing: border-box;
@@ -1019,7 +1017,7 @@ blockquote {
     .full-width .entry-content .entry-content__row__inner--tix-attendees {
       max-width: 880px; }
     .full-width .entry-content .entry-content__row__inner--sessions {
-      max-width: 1040px; }
+      max-width: 1100px; }
   .full-width .entry-content h1 {
     font-size: 3.2rem;
     font-weight: 400;
@@ -1205,14 +1203,16 @@ td {
     color: #3595BE;
     border-left-width: 0;
     background: transparent; }
-  .timetable .speaker-name:before {
-    position: static;
-    display: inline-block;
-    content: "";
-    vertical-align: text-bottom;
-    font-size: 16px;
-    font-family: Genericons;
-    line-height: 1em; }
+  .timetable .speaker-name {
+    margin-bottom: 0.5em; }
+    .timetable .speaker-name:before {
+      position: static;
+      display: inline-block;
+      content: "";
+      vertical-align: text-bottom;
+      font-size: 16px;
+      font-family: Genericons;
+      line-height: 1em; }
 
 @media screen and (max-width: 810px) {
   .timetable {
@@ -2017,7 +2017,7 @@ span.page-links-title {
   .btnLinkSet {
     max-width: 400px; }
 
-  .full-width .doubleBtn {
+  .home.full-width .doubleBtn {
     max-width: 95%;
     margin-right: auto; }
   .doubleBtn .btnLinkSet {

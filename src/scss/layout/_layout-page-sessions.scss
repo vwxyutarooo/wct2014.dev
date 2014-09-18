@@ -84,6 +84,7 @@ td {
     }
   }
   .speaker-name {
+    margin-bottom: 0.5em;
     &:before {
       @include genericon('\f304');
     }

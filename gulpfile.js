@@ -90,6 +90,7 @@ gulp.task('jade', function() {
 		.pipe(plumber())
 		.pipe(jade())
 		.pipe(prettify({indent_size: 2}))
+		.pipe(rename({ suffix: '.html', extname: '.php' }))
 		.pipe(gulp.dest(paths.htmlDest))
 		.pipe(browserSync.reload({stream: true}));
 });
@@ -155,7 +156,7 @@ gulp.task('watch', function() {
 	// gulp.watch([paths.imgDest + '/sprite/*.png'], ['sprite']);
 	// gulp.watch([paths.jsDir], ['concat']);
 	gulp.watch([paths.scssDir], ['scss']);
-	gulp.watch(['./*.php'], ['bs-reload']);
+	gulp.watch(['./*.php', './**/*.php'], ['bs-reload']);
 });
 
 gulp.task('default', [

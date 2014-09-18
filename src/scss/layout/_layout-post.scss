@@ -168,9 +168,7 @@ article.post {
     box-sizing: border-box;
     width: 100%;
     &:before {
-      @include genericon('\f104');
-      line-height: 36px;
-      line-height: 36px;
+      @include genericon('\f104', $line-height: 36px);
       top: 50%;
       box-sizing: border-box;
       width: 36px;

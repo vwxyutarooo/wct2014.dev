@@ -31,7 +31,12 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/2014.wct.css">
 </head>
 
-<body <?php body_class(); ?>>
+<?php if ( is_page_template( 'page-templates/page-sessions.php' ) ) : ?>
+	<body <?php body_class( 'full-width' ); ?>>
+<?php else : ?>
+	<body <?php body_class(); ?>>
+<?php endif; ?>
+
 <div id="page" class="hfeed site">
 	<?php if ( get_header_image() ) : ?>
 	<div id="site-header">

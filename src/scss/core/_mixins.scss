@@ -85,14 +85,14 @@
 // Original functions
 //***********************
 // Insert icon font
-@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block){
+@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1em){
 	position: $position;
 	display: $display;
 	content: $content;
 	vertical-align: $valaign;
 	font-size: $fontsize;
 	font-family: Genericons;
-	line-height: 1em;
+	line-height: $line-height;
 }
 @mixin fa($content: '', $fontsize: 16px, $valaign: baseline){
 	display: inline-block;
