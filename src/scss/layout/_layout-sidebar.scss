@@ -1,92 +1,108 @@
-@charset "utf-8";
+@charset 'utf-8';
 /* set secondart && Primary Sidebar
 ---------------------------------------- */
-#secondary{
-	display: block;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 4em 0;
-	min-height: 0;
-	width: 100%;
-	border: none;
-	background-color: transparent;
-	color: $colorText;
+#secondary {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 4em 0;
+  color: $colorText;
+  border: none;
+  background-color: transparent;
 }
 
-.site-description{
-	display: none;
+.site-description {
+  display: none;
 }
 
-.widget{
-	@extend %contentWidth;
-	background-color: #fff;
-	&:last-child{
-		margin-bottom: 0;
-	}
+.widget {
+  @extend %contentWidth;
+  background-color: #fff;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.widget-title{
-	&,
-	& a{
-		color: $colorText;
-	}
+.widget-title {
+  &,
+  & a {
+    color: $colorText;
+  }
 }
 
 /* Content Sidebar
 ---------------------------------------- */
 .content-sidebar {
-	margin: 30px auto;
-	padding: 30px 0;
-	width: 100%;
-	.widget{
-		.widget-title{
-			display: block;
-			padding-top: 0;
-			border-top: none;
-			border-bottom: 2px solid #B4DFF3;
-			color: $colorTitle;
-			font-size: 16px;
-		}
-		a {
-			color: #666;
-			border: none;
-			&:hover {
-				color: $colorPink;
-			}
-		}
-	}
+  width: 100%;
+  margin: 30px auto;
+  padding: 30px 0;
+  .widget {
+    .widget-title {
+      font-size: 16px;
+      display: block;
+      padding-top: 0;
+      color: $colorTitle;
+      border-top: none;
+      border-bottom: 2px solid #b4dff3;
+    }
+    a {
+      color: #666;
+      border: none;
+      &:hover {
+        color: $colorPink;
+      }
+    }
+  }
 }
 
-.widget{
-	a.widget__link{
-		display: block;
-		width: 100%;
-		background-color: $colorPink;
-		line-height: 1.5;
-		color: #fff;
-		overflow: hidden;
-		box-shadow: 0 0 3px rgba($colorPink, 0.25);
-		&:hover{
-			color: darken(#fff, 8%);
-			text-decoration: none;
-		}
-		&.widget__link--english{
-			position: relative;
-			text-align: center;
-			font-size: 18px;
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			letter-spacing: 0.2em;
-			height: 58px;
-			line-height: 58px;
-			&:after{
-				@include fa('\f0ac', 90px);
-				position: absolute;
-				bottom: -10px;
-				left: -12px;
-				opacity: 0.3;
-			}
-		}
-	}
+.widget {
+  a.widget__link {
+    line-height: 1.5;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    background-color: $colorPink;
+    box-shadow: 0 0 3px rgba($colorPink, .25);
+    &:hover {
+      text-decoration: none;
+      color: darken(#fff, 8%);
+    }
+    &.widget__link--english {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 58px;
+      position: relative;
+      height: 58px;
+      text-align: center;
+      letter-spacing: .2em;
+      &:after {
+        position: absolute;
+        bottom: -10px;
+        left: -12px;
+        opacity: .3;
+
+        @include fa('\f0ac', 90px);
+      }
+    }
+  }
+}
+
+.textwidget {
+  &__banner-list {
+    li {
+      margin-bottom: 40px;
+      a {
+        &:hover {
+          img {
+            opacity: .9;
+          }
+        }
+      }
+    }
+  }
 }
 
 .widget_archive li,
@@ -97,45 +113,45 @@
 .widget_pages li,
 .widget_recent_comments li,
 .widget_recent_entries li {
-	border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  border-top: 1px dashed rgba(255, 255, 255, .2);
 }
 
-.cat-item{
-	color: #ccc;
-	a{
-		&:hover{
-			color: lighten($colorPink, 6%);
-		}
-	}
+.cat-item {
+  color: #ccc;
+  a {
+    &:hover {
+      color: lighten($colorPink, 6%);
+    }
+  }
 }
 
 /* 
 ---------------------------------------- */
 .footer-sidebar,
-.primary-sidebar{
-	.widget{
-		.widget-title{
-			font-size: 1.6rem;
-			border-bottom: 2px solid #b4dff3;
-		}
-	}
+.primary-sidebar {
+  .widget {
+    .widget-title {
+      font-size: 1.6rem;
+      border-bottom: 2px solid #b4dff3;
+    }
+  }
 }
 
 /* Primary sidebar
 ---------------------------------------- */
 // SNS icon area
-.primary-sidebar{
-	ul{
-		@extend %group;
-	}
-	.snsButton{
-		@extend %snsButton;
-	}
+.primary-sidebar {
+  ul {
+    @extend %group;
+  }
+  .snsButton {
+    @extend %snsButton;
+  }
 }
 
 @media screen and (max-width: 672px) {
-	.content-sidebar {
-		margin-left: auto;
-		width: 100%;
-	}
+  .content-sidebar {
+    width: 100%;
+    margin-left: auto;
+  }
 }

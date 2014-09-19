@@ -46,3 +46,17 @@
 	padding: 0;
 	max-width: 900px;
 }
+
+
+/* media queries
+---------------------------------------- */
+@mixin module-grid-over-594 {
+	%fullWidthInner{
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	%baseWidth{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}

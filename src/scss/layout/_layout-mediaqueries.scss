@@ -3,12 +3,7 @@
 	 Media - Mobile sizes
 ========================================================= */
 @media screen and (max-width: 640px){
-	html{
-		font-size: 8px;
-	}
-	.site-content{
-		margin-right: 0;
-	}
+	@include layout-common-under-640;
 	@include setHeaderBkg(640px, '2014/08/bkgHeaderS.jpg', '2014/08/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
 	@include setFooterBkg-over-361;
@@ -18,46 +13,7 @@
 	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto, $bodyClass: '.home');
 	@include setHeaderBkg($height: 200px, $bkgSize: 400px 200px, $txtSize: 400px 200px);
 	@include setFooterBkg-over-361;
-	.list-view{
-		.content-area{
-			padding: 30px 0;
-		}
-		.site-content{
-			.hentry{
-				&:last-child{
-					border-bottom: none;
-				}
-			}
-		}
-	}
-	.site-content{
-		.entry-title{
-			.page-template-default &{
-				border-bottom: 3px solid $colorOrange;
-				padding-bottom: 0.4em;
-			}
-		}
-		.entry-header{
-			.single &{
-				border-bottom: 3px solid $colorOrange;
-				margin-bottom: 20px;
-			}
-		}
-		.hentry{
-			.blog &,
-			.arhive &{
-				border-bottom: 1px solid $colorOrange
-			}
-		}
-	}
-	.entry-content{
-		h4{
-			padding-top: 1px;
-			padding-bottom: 0;
-			background-size: 8px auto;
-			line-height: 1.6;
-		}
-	}
+	@include layout-common-under-400;
 	.content-sidebar{
 		margin-top: 0;
 		.single &{
@@ -88,19 +44,8 @@
 /* any other devices following twentyfourteen
 ---------------------------------------- */
 @media screen and (min-width: 401px){
-	@include setHeaderBkg(
-		$height: 640px - 48,
-		$bkgSize: 640px auto,
-		$txtSize: 100%,
-		$bkgPos: center top,
-		$txtPos: center,
-		$bodyClass: '.home'
-	);
-	.header-main{
-		&:after{
-			margin-top: 20px;
-		}
-	}
+	@include setHeaderBkg($height: 640px - 48, $bkgSize: 640px auto, $txtSize: 100%, $bkgPos: center top, $txtPos: center, $bodyClass: '.home');
+	@include layout-header-over-401;
 	%postTitle{
 		@include definePostTitle;
 	}
@@ -110,40 +55,9 @@
 }
 
 @media only screen and (min-width: 594px){
-	%fullWidthInner{
-		padding-right: 30px;
-		padding-left: 30px;
-	}
-	%baseWidth{
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	%snsButton{
-		$btnWidth: 32.8%;
-		float: left;
-		margin: 0 (100% - ($btnWidth * 3)) / 4;
-		width: $btnWidth;
-	}
-	.btnLinkSet{
-		max-width: 400px;
-	}
-	.doubleBtn{
-		.home.full-width &{
-			max-width: 95%;
-			margin-right: auto;
-		}
-		.btnLinkSet{
-			width: 48%;
-			&:first-child{
-				margin-right: 4%;
-			}
-		}
-	}
-	.nav-links{
-		a{
-			width: 50%;
-		}
-	}
+	@include module-grid-over-594;
+	@include module-button-over-594;
+	@include layout-header-over-594;
 	@include full-width-medium;	// Page template full-width
 }
 
@@ -154,49 +68,17 @@
 	@include setHeaderBkg($height: 640px, $imgBkg: '2014/08/bkgHeaderM.jpg', $imgTxt: '2014/08/txtHeaderM.png', $bkgSize: auto 640px, $txtSize: 860px auto, $bkgPos: center top, $bodyClass: '.home');
 	@include setHeaderBkg($height: 400px, $imgTxt: '2014/08/txtHeaderShortM.png', $txtSize: 1000px auto, $txtPos: left center);
 	@include setFooterBkg-over-641;
-	body{
-		background-image: url($filePath + '2014/08/bkgHeaderShortM.jpg'), url($filePath + '2014/08/bkgHeaderShortRepeatM.jpg');
-		background-position: right top, left top;
-		background-size: 1280px auto, 1px 400px;
-		background-repeat: no-repeat, repeat-x;
-	}
-	.home{
-		#masthead{
-			&:after{
-				@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 0.6);
-				top: 32%;
-				right: 4%;
-				margin-top: -(150px * 0.6);
-			}
-		}
-	}
+	@include layout-common-over-641;
+	@include layout-front-over-641;
+	@include footer-sidebar-over-641;	// Footer widget such as sponsor logo
+	@include module-button-over-641;
 	.content-sidebar{
 		padding: 0;
 	}
-	.entry-content h1{
-		padding-left: 50px;
-		background-size: 42px 52px;
-		&:before{
-			left: 17px;
-			width: 12px;
-		}
-	}
-	@include footer-sidebar-over-641;	// Footer widget such as sponsor logo
-	@include module-button-over-641;
 }
 
 @media screen and (min-width: 673px){
-	.site-content{
-		.entry-header,
-		.entry-content,
-		.entry-summary,
-		.entry-meta,
-		.page-content,
-		.comments-area{
-			max-width: 780px;
-			max-width: 100%;
-		}
-	}
+	@include layout-common-over-673;
 	@include full-width-tablet;	// Page template full-width
 }
 
@@ -206,69 +88,8 @@
 @media screen and (min-width: 783px){
 	@include setHeaderBkg($height: 704px, $bkgSize: 1280px auto, $txtSize: 1000px auto, $txtPos: center top, $bodyClass: '.home');
 	@include setHeaderBkg($txtSize: 1280px 400px);
-	.home{
-		#masthead{
-			&:after{
-				right: 10%;
-			}
-		}
-	}
-	.site-navigation{
-		li{
-			width: $menuItemWidth;
-			height: $menuHeight;
-			line-height: $menuHeight;
-			> a{
-				text-align: center;
-				height: $menuHeight;
-				line-height: $menuHeight;
-			}
-		}
-	}
-	.primary-navigation{
-		a{
-			padding: 0 20px;
-			width: 100%;
-		}
-		ul{
-			ul{
-				top: $menuHeight;
-				margin-left: 0;
-				background-color: $colorPink;
-				box-shadow: 0 1.2px 1px rgba(0, 0, 0, 0.125);
-				a{
-					width: auto;
-					min-width: 176px;
-					padding: 0 20px;
-					text-align: center;
-					white-space: nowrap;
-					&:hover{
-						background-color: transparent;
-					}
-				}
-				li{
-					border-top: 0;
-					width: 100%;
-				}
-			}
-		}
-		.menu-item-has-children > a,
-		.page_item_has_children > a{
-			padding: 0 20px;
-			&:after{
-				top: 28px;
-				right: 0;
-				left: 0;
-				margin: 0 auto;
-				padding-top: 3px;
-				width: 10px;
-				content: '\f431';
-				vertical-align: middle;
-				font-size: 10px;
-				line-height: 1;
-			}
-		}
-	}
+	@include layout-common-over-783;
+	@include layout-header-over-783;
 	.primary-sidebar{
 		.widget{
 			max-width: 100%;
@@ -282,9 +103,10 @@
 	 Media - PC Size
 ========================================================= */
 @media screen and (min-width: 846px){
-	.header-main{
-		background-size: 1280px auto;
-	}
+	@include layout-header-over-846;
+	@include setFooterBkg-over-735;
+	@include full-width-pc;	// Page template full-width
+	@include footer-sidebar-over-846;	// Footer widget such as sponsor logo
 	.content-sidebar{
 		margin-top: 72px;
 		margin-left: -300px;
@@ -308,9 +130,6 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
-	@include setFooterBkg-over-735;
-	@include full-width-pc;	// Page template full-width
-	@include footer-sidebar-over-846;	// Footer widget such as sponsor logo
 }
 
 @media screen and (min-width: 1008px){
@@ -339,19 +158,7 @@
 }
 
 @media screen and (min-width: 1218px){
-	// Need to override TwentyFourteen
-	.archive-header,
-	.comments-area,
-	.image-navigation,
-	.page-header,
-	.page-content,
-	.post-navigation,
-	.site-content .entry-header,
-	.site-content .entry-content,
-	.site-content .entry-summary,
-	.site-content footer.entry-meta{
-		margin-right: 0;
-	}
+	@include layout-common-over-1218;
 }
 
 @media screen and (min-width: 1260px){}
@@ -362,14 +169,7 @@
 
 @media only screen and (min-width: 1440px){
 	@include setHeaderBkg(1080px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1920px auto, 100%, $bodyClass: '.home');
-	.home{
-		#masthead{
-			&:after{
-				@include imageReplace('2014/06/iconWapu.png', 300px, 300px, 1.0);
-				margin-top: -(150px * 1.0);
-			}
-		}
-	}
+	@include layout-front-over-1440;
 }
 @media screen and (min-width: 1600px){
 	@include setFooterBkg-over-1600;
@@ -378,7 +178,6 @@
 /* =========================================================
 	 Media - Page attendees
 ========================================================= */
-
 @media screen and (min-width: 735px){
 	@include attendees-large-3columns;
 }
@@ -394,7 +193,6 @@
 /* =========================================================
 	 Media - Page relay-blog
 ========================================================= */
-
 @media screen and (max-width: 845px){
 	@include relayblog-under-845;
 }

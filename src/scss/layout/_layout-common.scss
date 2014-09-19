@@ -2,69 +2,181 @@
 // ========================================
 // サイト全体共通スタイル
 // ========================================
-.site{
-	max-width: 100%;
-	background-color: transparent;
-	&:before{
-		display: none;
-	}
+.site {
+  max-width: 100%;
+  background-color: transparent;
+  &:before {
+    display: none;
+  }
 }
 
 /* main elemtns
 ---------------------------------------- */
-#main{
-	@extend %baseWidth;
+#main {
+  @extend %baseWidth;
 }
-#main-content{
-	float: none;
-	margin-top: 60px;
-	.full-width &{
-		margin-top: 0;
-	}
-	.blog &{
-		margin-top: 20px;
-	}
+#main-content {
+  float: none;
+  margin-top: 60px;
+  .full-width & {
+    margin-top: 0;
+  }
+  .blog & {
+    margin-top: 20px;
+  }
 }
-#primary{
-	box-sizing: border-box;
-	width: 100%;
+#primary {
+  box-sizing: border-box;
+  width: 100%;
 }
-.site-content{
-	margin: 0 0 0 auto;
-	.entry-header,
-	.entry-content,
-	.entry-summary,
-	.page-content,
-	.entry-meta,
-	.post-navigation,
-	footer.entry-meta{
-		@extend %contentWidth;
-		background-color: transparent;
-		max-width: 100%;
-	}
-}
-
-.hentry{
-	&:last-child{
-		border-bottom: none;
-	}
+.site-content {
+  margin: 0 0 0 auto;
+  .entry-header,
+  .entry-content,
+  .entry-summary,
+  .page-content,
+  .entry-meta,
+  .post-navigation,
+  footer.entry-meta {
+    @extend %contentWidth;
+    max-width: 100%;
+    background-color: transparent;
+  }
 }
 
-#secondary{
-	clear: both;
+.hentry {
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+#secondary {
+  clear: both;
 }
 
 /* jetpack
 ---------------------------------------- */
-div.sharedaddy{
-	max-width: 810px;
-	margin: 10px auto;
-	h3.sd-title {
-		display: block;
-		background: transparent;
-		padding: 0;
-		&:before{
-			border-top: 0;
-		}
-	}
+div.sharedaddy {
+  max-width: 810px;
+  margin: 10px auto;
+  h3.sd-title {
+    display: block;
+    padding: 0;
+    background: transparent;
+    &:before {
+      border-top: 0;
+    }
+  }
+}
+
+
+/* media queries
+---------------------------------------- */
+@mixin layout-common-under-640 {
+  html {
+    font-size: 8px;
+  }
+  .site-content {
+    margin-right: 0;
+  }
+}
+
+@mixin layout-common-under-400 {
+  .list-view {
+    .content-area {
+      padding: 30px 0;
+    }
+    .site-content {
+      .hentry {
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .site-content {
+    .entry-title {
+      .page-template-default & {
+        padding-bottom: .4em;
+        border-bottom: 3px solid $colorOrange;
+      }
+    }
+    .entry-header {
+      .single & {
+        margin-bottom: 20px;
+        border-bottom: 3px solid $colorOrange;
+      }
+    }
+    .hentry {
+      .blog &,
+      .arhive & {
+        border-bottom: 1px solid $colorOrange;
+      }
+    }
+  }
+  .entry-content {
+    h4 {
+      line-height: 1.6;
+      padding-top: 1px;
+      padding-bottom: 0;
+      background-size: 8px auto;
+    }
+  }
+}
+
+@mixin layout-common-over-641 {
+  body {
+    background-image: url($filePath+'2014/08/bkgHeaderShortM.jpg'), url($filePath+'2014/08/bkgHeaderShortRepeatM.jpg');
+    background-repeat: no-repeat, repeat-x;
+    background-position: right top, left top;
+    background-size: 1280px auto, 1px 400px;
+  }
+  .entry-content h1 {
+    padding-left: 50px;
+    background-size: 42px 52px;
+    &:before {
+      left: 17px;
+      width: 12px;
+    }
+  }
+}
+
+@mixin layout-common-over-673 {
+  .site-content {
+    .entry-header,
+    .entry-content,
+    .entry-summary,
+    .entry-meta,
+    .page-content,
+    .comments-area {
+      max-width: 780px;
+      max-width: 100%;
+    }
+  }
+}
+
+@mixin layout-common-over-783 {
+  .home {
+    #masthead {
+      &:after {
+        right: 10%;
+      }
+    }
+  }
+}
+
+@mixin layout-common-over-1218 {
+  // Need to override TwentyFourteen
+  .archive-header,
+  .comments-area,
+  .image-navigation,
+  .page-header,
+  .page-content,
+  .post-navigation,
+  .site-content .entry-header,
+  .site-content .entry-content,
+  .site-content .entry-summary,
+  .site-content footer.entry-meta {
+    margin-right: 0;
+  }
 }

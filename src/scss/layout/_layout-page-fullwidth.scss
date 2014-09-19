@@ -59,20 +59,27 @@
     background-color: transparent;
     .entry-content__row {
       border-bottom: 2px solid #ededed;
+      &--gray {
+        background-color: #f3f3f3;
+      }
     }
     .entry-content__row__inner {
       @extend %fullWidthInner;
       max-width: 810px;
-      padding: 0 40px 40px 40px;
-      background-color: #fff;
+      padding: 50px 40px;
       &--tix-attendees {
         max-width: 880px;
       }
       &--sessions {
         max-width: 1100px;
       }
+      &--banner-area {
+        padding-top: 40px;
+        padding-bottom: 20px;
+      }
     }
     h1 {
+      @include hasPseudoClass(after, $position: relative);
       font-size: 3.2rem;
       font-weight: 400;
       box-sizing: border-box;
@@ -80,12 +87,10 @@
       height: auto;
       margin-top: 0;
       margin-bottom: 30px;
-      padding: 35px 60px 20px 0;
+      padding: 0 60px 20px 0;
       border: none;
       background-image: none;
       box-shadow: none;
-
-      @include hasPseudoClass(after, $position: relative);
       &:before {
         display: none;
       }
@@ -97,10 +102,6 @@
       &:after {
         display: none;
       }
-    }
-    p {
-      max-width: 95%;
-      margin-top: 1.4em;
     }
   }
 }
@@ -251,7 +252,7 @@
       }
       h1 {
         width: 100%;
-        padding-top: 70px;
+        padding-top: 30px;
         padding-right: 66px;
         padding-bottom: 10px;
         border-bottom-width: 0;
@@ -300,10 +301,6 @@
 @mixin full-width-tablet {
   .full-width {
     .entry-content {
-      .entry-content__row {
-        padding-top: 0;
-        padding-bottom: 20px;
-      }
       h1 {
         width: 100%;
         padding-right: 90px;
@@ -350,7 +347,6 @@
   .full-width {
     .entry-content {
       .entry-content__row {
-        padding-top: 3em;
       }
       h1 {
         padding-bottom: 20px;

@@ -1,6 +1,6 @@
 @charset "utf-8";
 $filePath          : "http://2014.tokyo.wordcamp.org/files/";
-$filePath          : "files/";
+// $filePath          : "files/";
 
 // HTML5
 $html5             : true;
@@ -27,7 +27,7 @@ $menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding si
 $colorBorder       : #000;
 $colorBkg          : #5198ce;
 $colorBlue         : #3595BE;
-$colorPink         : #ef86b4;  // #d35991
+$colorPink         : #ef86b4;
 $colorOrange       : #e6b85d;
 // Text Colors
 $colorText         : #555555;

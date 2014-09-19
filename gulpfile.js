@@ -86,13 +86,15 @@ gulp.task('bs-reload', function() {
 *******************************************************************************/
 gulp.task('jade', function() {
 	return gulp.src(paths.jadeDir)
-		.pipe(changed(paths.htmlDest, { extension: '.html' }))
+		.pipe(changed(paths.htmlDest, { extension: '.php' }))
 		.pipe(plumber())
 		.pipe(jade())
-		.pipe(prettify({indent_size: 2}))
-		.pipe(rename({ suffix: '.html', extname: '.php' }))
+		.pipe(rename({ extname: '.php' }))
 		.pipe(gulp.dest(paths.htmlDest))
-		.pipe(browserSync.reload({stream: true}));
+		.pipe(prettify({indent_size: 2}))
+		.pipe(rename({ extname: '.html' }))
+		.pipe(gulp.dest(paths.htmlDest))
+		.pipe(browserSync.reload({stream: true, once: true}));
 });
 
 /*******************************************************************************

@@ -169,7 +169,31 @@
 }
 
 
-
+/* media queries
+---------------------------------------- */
+@mixin module-button-over-594 {
+  %snsButton{
+    $btnWidth: 32.8%;
+    float: left;
+    margin: 0 (100% - ($btnWidth * 3)) / 4;
+    width: $btnWidth;
+  }
+  .btnLinkSet{
+    max-width: 400px;
+  }
+  .doubleBtn{
+    .home.full-width &{
+      max-width: 95%;
+      margin-right: auto;
+    }
+    .btnLinkSet{
+      width: 48%;
+      &:first-child{
+        margin-right: 4%;
+      }
+    }
+  }
+}
 // Tablet size
 @mixin module-button-over-641 {
   .tix-js {

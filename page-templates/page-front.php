@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: page-sessions
+ * Template Name: page-front
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -27,7 +27,7 @@ get_header(); ?>
 					the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' );
 				?>
 				<div class="entry-content">
-					<?php include(get_stylesheet_directory() . '/src/html/content-sessions.php'); ?>
+					<?php include(get_stylesheet_directory() . '/src/html/content-front.php'); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->
 		</div><!-- #content -->

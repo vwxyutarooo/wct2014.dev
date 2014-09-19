@@ -1,6 +1,61 @@
-@charset "utf-8";
+@charset 'utf-8';
 .home {
   .featured-content {
     display: none;
+  }
+  .banner-area {
+    position: relative;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      width: 100%;
+      max-width: 
+      &.link-en {
+        position: absolute;
+        background-color: $colorPink;
+        top: -40px;
+        left: 0;
+      }
+      a {
+        &:hover {
+          opacity: .9;
+        }
+      }
+    }
+  }
+  .entry-content {
+    p {
+      max-width: 95%;
+      margin-top: 1.4em;
+    }
+  }
+}
+
+
+/* media queries
+---------------------------------------- */
+@mixin layout-front-over-641 {
+  .home {
+    #masthead {
+      &:after {
+        @include imageReplace('2014/06/iconWapu.png', 300px, 300px, .6);
+        top: 32%;
+        right: 4%;
+        margin-top: -(150px * .6);
+      }
+    }
+  }
+}
+
+@mixin layout-front-over-1440 {
+  .home {
+    #masthead {
+      &:after {
+        @include imageReplace('2014/06/iconWapu.png', 300px, 300px, 1.0);
+        margin-top: -(150px * 1.0);
+      }
+    }
   }
 }

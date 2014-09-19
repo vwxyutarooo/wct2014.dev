@@ -162,11 +162,16 @@ article.post {
 ---------------------------------------- */
 .nav-links {
   width: 100%;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: rgba(0,0,0, .1);
   a {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
+    border-bottom-width: 0;
+    vertical-align: top;
     &:before {
       @include genericon('\f104', $line-height: 36px);
       top: 50%;

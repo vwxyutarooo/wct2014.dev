@@ -238,6 +238,8 @@ table {
   padding: 0;
   max-width: 900px; }
 
+/* media queries
+---------------------------------------- */
 .tix-js p:last-child {
   position: relative;
   height: 40px;
@@ -490,6 +492,8 @@ table {
 .doubleBtn {
   text-align: center; }
 
+/* media queries
+---------------------------------------- */
 /**
  * layouts
  * -----------------------------------------------------------------------------
@@ -524,8 +528,8 @@ table {
   .site-content .entry-meta,
   .site-content .post-navigation,
   .site-content footer.entry-meta {
-    background-color: transparent;
-    max-width: 100%; }
+    max-width: 100%;
+    background-color: transparent; }
 
 .hentry:last-child {
   border-bottom: none; }
@@ -540,18 +544,20 @@ div.sharedaddy {
   margin: 10px auto; }
   div.sharedaddy h3.sd-title {
     display: block;
-    background: transparent;
-    padding: 0; }
+    padding: 0;
+    background: transparent; }
     div.sharedaddy h3.sd-title:before {
       border-top: 0; }
 
+/* media queries
+---------------------------------------- */
 /* header
 ---------------------------------------- */
 .header-main {
-  padding: 560px 0 0 0;
-  min-height: 0;
   width: 100%;
   height: 0;
+  min-height: 0;
+  padding: 560px 0 0 0;
   background-repeat: no-repeat; }
 
 #site-header {
@@ -564,8 +570,8 @@ div.sharedaddy {
 ---------------------------------------- */
 #masthead {
   position: relative;
-  margin-bottom: 48px;
   max-width: 100%;
+  margin-bottom: 48px;
   background-color: transparent; }
   #masthead:after {
     display: block;
@@ -577,14 +583,14 @@ div.sharedaddy {
     padding-top: 90px;
     width: 90px;
     height: 0;
-    background-image: url("files/2014/06/iconWapu.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/iconWapu.png");
     background-position: 0 0;
     background-size: 100%;
     background-repeat: no-repeat;
-    right: 8%;
     z-index: 50;
-    margin-top: 0;
-    top: 28%; }
+    top: 28%;
+    right: 8%;
+    margin-top: 0; }
   #masthead .site-title {
     position: absolute;
     top: 0;
@@ -593,11 +599,11 @@ div.sharedaddy {
     width: 100%;
     height: 100%; }
     #masthead .site-title a {
+      font: 0/0 a;
       display: block;
       width: 100%;
       height: 100%;
-      color: transparent;
-      font: 0/0 a; }
+      color: transparent; }
       #masthead .site-title a:hover {
         text-decoration: none; }
   #masthead .search-toggle {
@@ -608,10 +614,10 @@ div.sharedaddy {
 
 .menu-toggle {
   position: relative;
-  background-color: transparent;
   width: auto;
   height: 0;
-  padding-top: 48px; }
+  padding-top: 48px;
+  background-color: transparent; }
   .menu-toggle:after {
     display: block;
     content: "";
@@ -631,48 +637,48 @@ div.sharedaddy {
     top: 0;
     left: 9px;
     padding: 16px;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s; }
+    -webkit-transition: all .2s;
+    transition: all .2s; }
   .toggled-on .menu-toggle:before {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg); }
   .menu-toggle:after {
-    display: block;
+    font-size: 14px;
+    line-height: 16px;
     position: absolute;
     top: 16px;
     left: 40px;
-    margin-left: 0.5em;
-    color: #fff;
+    display: block;
+    margin-left: .5em;
     content: 'Menu';
     vertical-align: middle;
-    font-size: 14px;
-    line-height: 16px; }
+    color: #fff; }
 
 /* navigation
 ---------------------------------------- */
 .primary-navigation {
   position: absolute;
+  z-index: 100;
   top: 560px;
   left: 0;
-  z-index: 100;
   float: none;
+  width: 100%;
+  min-height: 48px;
   margin: 0 auto;
   padding: 0;
-  min-height: 48px;
-  width: 100%;
   background-color: #ef86b4;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.125); }
   .primary-navigation .nav-menu {
     width: auto;
     text-align: center; }
   .primary-navigation a {
+    font-size: 14px;
+    font-weight: normal;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 20px 2.2em;
     text-align: left;
-    letter-spacing: .125em;
-    font-weight: normal;
-    font-size: 14px; }
+    letter-spacing: .125em; }
   .primary-navigation.toggled-on {
     padding: 0; }
   .primary-navigation li:hover > a, .primary-navigation li.focus > a {
@@ -686,43 +692,64 @@ div.sharedaddy {
   background-color: transparent; }
 .site-navigation li > a {
   position: relative;
-  color: #fff;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   text-align: left;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s; }
+  color: #fff; }
   .site-navigation li > a:hover {
-    background-color: transparent;
+    text-decoration: none;
     color: #f9d3e3;
-    text-decoration: none; }
+    background-color: transparent; }
 .site-navigation .current-menu-item > a,
 .site-navigation .current-menu-parent > a {
-  color: #fff;
-  font-weight: normal; }
+  font-weight: normal;
+  color: #fff; }
   .site-navigation .current-menu-item > a:before,
   .site-navigation .current-menu-parent > a:before {
+    font-size: 10px;
+    line-height: 1;
     position: absolute;
     top: 50%;
     display: inline-block;
     margin: -5px auto auto -15px;
-    color: #f9d3e3;
     content: '\25CF';
-    font-size: 10px;
-    line-height: 1; }
+    color: #f9d3e3; }
 .site-navigation .current-page-ancestor > a:before,
 .site-navigation .current-menu-ancestor > a:before,
 .site-navigation .current-menu-parent > a:before {
+  font-size: 6px;
   margin-top: -3px;
-  margin-left: -13px;
-  font-size: 6px; }
+  margin-left: -13px; }
 
 .screen-reader-text {
   display: none; }
 
 /* Set header bkg
 ---------------------------------------- */
+/* media queries
+---------------------------------------- */
 .home .featured-content {
   display: none; }
+.home .banner-area {
+  position: relative;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center; }
+  .home .banner-area li {
+    display: inline-block; }
+    .home .banner-area li.link-en {
+      position: absolute;
+      background-color: #ef86b4;
+      top: -40px;
+      left: 0; }
+    .home .banner-area li a:hover {
+      opacity: .9; }
+.home .entry-content p {
+  max-width: 95%;
+  margin-top: 1.4em; }
 
+/* media queries
+---------------------------------------- */
 /* Posts
 ---------------------------------------- */
 article.post {
@@ -783,13 +810,18 @@ article.post {
 /* Single post navigation
 ---------------------------------------- */
 .nav-links {
-  width: 100%; }
+  width: 100%;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1); }
   .nav-links a {
     position: relative;
     display: inline-block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%; }
+    width: 100%;
+    border-bottom-width: 0;
+    vertical-align: top; }
     .nav-links a:before {
       position: static;
       display: inline-block;
@@ -834,7 +866,7 @@ article .entry-header {
 .entry-content h1 {
   font-size: 2.6rem;
   padding: 8px 20px 8px 32px;
-  background: url("files/2014/08/ttl_entry-title03_left.png");
+  background: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_entry-title03_left.png");
   background-repeat: no-repeat;
   background-size: 28px 34px;
   position: relative; }
@@ -882,12 +914,12 @@ article .entry-header {
 .entry-content h3 {
   font-size: 2.2rem;
   padding: 0 10px .9em;
-  background: url("files/2014/08/ttl_entry-title04.png") left bottom no-repeat;
+  background: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_entry-title04.png") left bottom no-repeat;
   background-size: 100% auto; }
 .entry-content h4 {
   font-size: 2.0rem;
   padding: 5px 20px 4px;
-  background: url("files/2014/08/ttl_entry-title05.png") left top repeat-y;
+  background: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_entry-title05.png") left top repeat-y;
   background-size: 11px 35px; }
 .entry-content h5 {
   font-size: 1.8rem;
@@ -1010,15 +1042,20 @@ blockquote {
   background-color: transparent; }
   .full-width .entry-content .entry-content__row {
     border-bottom: 2px solid #ededed; }
+    .full-width .entry-content .entry-content__row--gray {
+      background-color: #f3f3f3; }
   .full-width .entry-content .entry-content__row__inner {
     max-width: 810px;
-    padding: 0 40px 40px 40px;
-    background-color: #fff; }
+    padding: 50px 40px; }
     .full-width .entry-content .entry-content__row__inner--tix-attendees {
       max-width: 880px; }
     .full-width .entry-content .entry-content__row__inner--sessions {
       max-width: 1100px; }
+    .full-width .entry-content .entry-content__row__inner--banner-area {
+      padding-top: 40px;
+      padding-bottom: 20px; }
   .full-width .entry-content h1 {
+    position: relative;
     font-size: 3.2rem;
     font-weight: 400;
     -moz-box-sizing: border-box;
@@ -1027,11 +1064,10 @@ blockquote {
     height: auto;
     margin-top: 0;
     margin-bottom: 30px;
-    padding: 35px 60px 20px 0;
+    padding: 0 60px 20px 0;
     border: none;
     background-image: none;
-    box-shadow: none;
-    position: relative; }
+    box-shadow: none; }
     .full-width .entry-content h1:after {
       display: block;
       content: "";
@@ -1044,9 +1080,6 @@ blockquote {
     margin-bottom: 1em; }
     .full-width .entry-content h2:after {
       display: none; }
-  .full-width .entry-content p {
-    max-width: 95%;
-    margin-top: 1.4em; }
 
 /* media queries
 ---------------------------------------- */
@@ -1267,9 +1300,9 @@ td {
         .timetable dl dt.stage.stage--02:before {
           content: 'これからステージ'; }
         .timetable dl dt.stage.stage--03:before {
-          content: 'ステージ脇'; }
+          content: 'ブルーたたみ'; }
         .timetable dl dt.stage.stage--04:before {
-          content: 'たたみ'; }
+          content: 'イエローたたみ'; }
         .timetable dl dt.stage.stage--05:before {
           content: '会議室A'; }
         .timetable dl dt.stage.stage--06:before {
@@ -1362,13 +1395,13 @@ span.page-links-title {
   display: block;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
   margin: 0;
   padding: 4em 0;
-  min-height: 0;
-  width: 100%;
+  color: #555555;
   border: none;
-  background-color: transparent;
-  color: #555555; }
+  background-color: transparent; }
 
 .site-description {
   display: none; }
@@ -1384,16 +1417,16 @@ span.page-links-title {
 /* Content Sidebar
 ---------------------------------------- */
 .content-sidebar {
+  width: 100%;
   margin: 30px auto;
-  padding: 30px 0;
-  width: 100%; }
+  padding: 30px 0; }
   .content-sidebar .widget .widget-title {
+    font-size: 16px;
     display: block;
     padding-top: 0;
-    border-top: none;
-    border-bottom: 2px solid #B4DFF3;
     color: #555555;
-    font-size: 16px; }
+    border-top: none;
+    border-bottom: 2px solid #b4dff3; }
   .content-sidebar .widget a {
     color: #666;
     border: none; }
@@ -1401,25 +1434,29 @@ span.page-links-title {
       color: #ef86b4; }
 
 .widget a.widget__link {
-  display: block;
-  width: 100%;
-  background-color: #ef86b4;
   line-height: 1.5;
-  color: #fff;
+  display: block;
   overflow: hidden;
+  width: 100%;
+  color: #fff;
+  background-color: #ef86b4;
   box-shadow: 0 0 3px rgba(239, 134, 180, 0.25); }
   .widget a.widget__link:hover {
-    color: #ebebeb;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #ebebeb; }
   .widget a.widget__link.widget__link--english {
-    position: relative;
-    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 18px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 0.2em;
+    line-height: 58px;
+    position: relative;
     height: 58px;
-    line-height: 58px; }
+    text-align: center;
+    letter-spacing: .2em; }
     .widget a.widget__link.widget__link--english:after {
+      position: absolute;
+      bottom: -10px;
+      left: -12px;
+      opacity: .3;
       display: inline-block;
       content: "";
       vertical-align: baseline;
@@ -1428,11 +1465,12 @@ span.page-links-title {
       font-style: normal;
       font-size: 90px;
       font-family: FontAwesome;
-      -webkit-font-smoothing: antialiased;
-      position: absolute;
-      bottom: -10px;
-      left: -12px;
-      opacity: 0.3; }
+      -webkit-font-smoothing: antialiased; }
+
+.textwidget__banner-list li {
+  margin-bottom: 40px; }
+  .textwidget__banner-list li a:hover img {
+    opacity: .9; }
 
 .widget_archive li,
 .widget_categories li,
@@ -1460,8 +1498,8 @@ span.page-links-title {
 ---------------------------------------- */
 @media screen and (max-width: 672px) {
   .content-sidebar {
-    margin-left: auto;
-    width: 100%; } }
+    width: 100%;
+    margin-left: auto; } }
 /* Site footer
 ---------------------------------------- */
 .site-footer {
@@ -1480,7 +1518,7 @@ span.page-links-title {
       height: 0;
       padding-top: 412px;
       background-color: transparent;
-      background-image: url("files/2014/08/CitySilhouetteW1920.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/CitySilhouetteW1920.png");
       background-repeat: no-repeat;
       background-position: center bottom;
       background-size: 100% auto; }
@@ -1504,7 +1542,7 @@ span.page-links-title {
       border-right-width: 0;
       border-bottom-width: 0;
       border-left-width: 0;
-      background-image: url("files/2014/09/ttl_sponcers.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/09/ttl_sponcers.png");
       background-repeat: no-repeat;
       background-position: top center;
       background-size: auto 74px; }
@@ -1600,26 +1638,26 @@ span.page-links-title {
     margin-right: 0; }
 
   body.home {
-    background-image: url("files/2014/08/bkgHeaderS.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderS.jpg");
     background-size: 640px; }
 
   .home .header-main {
     background-size: 640px;
     padding-top: 640px;
-    background-image: url("files/2014/08/txtHeaderS.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderS.png");
     background-size: 640px; }
 
   .home .primary-navigation {
     top: 640px; }
 
   body {
-    background-image: url("files/2014/08/bkgHeaderShortS.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortS.jpg");
     background-size: 640px 320px;
     background-position: center top; }
 
   .header-main {
     padding-top: 320px;
-    background-image: url("files/2014/08/txtHeaderShortS.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderShortS.png");
     background-size: 100% auto;
     background-position: left top; }
 
@@ -1656,7 +1694,7 @@ span.page-links-title {
       padding-top: 65px;
       width: 65px;
       height: 0;
-      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -1676,7 +1714,7 @@ span.page-links-title {
       padding-top: 65px;
       width: 65px;
       height: 0;
-      background-image: url("files/2014/08/ttl_who@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -1696,7 +1734,7 @@ span.page-links-title {
       padding-top: 65px;
       width: 65px;
       height: 0;
-      background-image: url("files/2014/08/ttl_Concept@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -1734,19 +1772,19 @@ span.page-links-title {
     border-bottom: none; }
 
   .page-template-default .site-content .entry-title {
-    border-bottom: 3px solid #e6b85d;
-    padding-bottom: 0.4em; }
+    padding-bottom: .4em;
+    border-bottom: 3px solid #e6b85d; }
   .single .site-content .entry-header {
-    border-bottom: 3px solid #e6b85d;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    border-bottom: 3px solid #e6b85d; }
   .blog .site-content .hentry, .arhive .site-content .hentry {
     border-bottom: 1px solid #e6b85d; }
 
   .entry-content h4 {
+    line-height: 1.6;
     padding-top: 1px;
     padding-bottom: 0;
-    background-size: 8px auto;
-    line-height: 1.6; }
+    background-size: 8px auto; }
 
   .content-sidebar {
     margin-top: 0; }
@@ -1898,7 +1936,7 @@ span.page-links-title {
       padding-top: 104px;
       width: 104px;
       height: 0;
-      background-image: url("files/2014/08/ttl_postWapu.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postWapu.png");
       background-position: 0 0;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -1914,7 +1952,7 @@ span.page-links-title {
       padding-top: 15px;
       width: 100%;
       height: 0;
-      background-image: url("files/2014/08/ttl_postBtmLine.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine.png");
       background-position: bottom right;
       background-size: auto 15px;
       background-repeat: repeat-x;
@@ -2033,7 +2071,7 @@ span.page-links-title {
     padding-bottom: 20px; }
   .full-width .entry-content h1 {
     width: 100%;
-    padding-top: 70px;
+    padding-top: 30px;
     padding-right: 66px;
     padding-bottom: 10px;
     border-bottom-width: 0; }
@@ -2043,7 +2081,7 @@ span.page-links-title {
       padding-top: 13.5px;
       width: 99.9%;
       height: 0;
-      background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
       background-position: 15px 0;
       background-size: 156px auto;
       background-repeat: repeat-x;
@@ -2062,7 +2100,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2082,7 +2120,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("files/2014/08/ttl_who@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2102,7 +2140,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("files/2014/08/ttl_Concept@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2115,14 +2153,14 @@ span.page-links-title {
 ========================================================= */
 @media only screen and (min-width: 641px) {
   body.home {
-    background-image: url("files/2014/08/bkgHeaderM.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderM.jpg");
     background-size: auto 640px;
     background-position: center top; }
 
   .home .header-main {
     background-size: 640px;
     padding-top: 640px;
-    background-image: url("files/2014/08/txtHeaderM.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderM.png");
     background-size: 860px auto; }
 
   .home .primary-navigation {
@@ -2130,7 +2168,7 @@ span.page-links-title {
 
   .header-main {
     padding-top: 400px;
-    background-image: url("files/2014/08/txtHeaderShortM.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderShortM.png");
     background-size: 1000px auto;
     background-position: left center; }
 
@@ -2140,31 +2178,14 @@ span.page-links-title {
   .site-footer #supplementary:after {
     padding-top: 250px; }
   .site-footer .footer-sidebar:before {
-    background-image: url("files/2014/09/ttl_sponcers@2x.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/09/ttl_sponcers@2x.png");
     background-size: auto 120px; }
 
   body {
-    background-image: url("files/2014/08/bkgHeaderShortM.jpg"), url("files/2014/08/bkgHeaderShortRepeatM.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortM.jpg"), url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortRepeatM.jpg");
+    background-repeat: no-repeat, repeat-x;
     background-position: right top, left top;
-    background-size: 1280px auto, 1px 400px;
-    background-repeat: no-repeat, repeat-x; }
-
-  .home #masthead:after {
-    display: block;
-    overflow: hidden;
-    padding-top: 180px;
-    width: 180px;
-    height: 0;
-    background-image: url("files/2014/06/iconWapu.png");
-    background-position: 0 0;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    top: 32%;
-    right: 4%;
-    margin-top: -90px; }
-
-  .content-sidebar {
-    padding: 0; }
+    background-size: 1280px auto, 1px 400px; }
 
   .entry-content h1 {
     padding-left: 50px;
@@ -2172,6 +2193,20 @@ span.page-links-title {
     .entry-content h1:before {
       left: 17px;
       width: 12px; }
+
+  .home #masthead:after {
+    display: block;
+    overflow: hidden;
+    padding-top: 180px;
+    width: 180px;
+    height: 0;
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/iconWapu.png");
+    background-position: 0 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 32%;
+    right: 4%;
+    margin-top: -90px; }
 
   .tix-js button,
   .tix-js .button,
@@ -2183,7 +2218,10 @@ span.page-links-title {
     bottom: 0;
     max-width: 260px;
     -webkit-transition: border-width .1s, margin .1s;
-    transition: border-width .1s, margin .1s; } }
+    transition: border-width .1s, margin .1s; }
+
+  .content-sidebar {
+    padding: 0; } }
 @media screen and (min-width: 673px) {
   .site-content .entry-header,
   .site-content .entry-content,
@@ -2194,9 +2232,6 @@ span.page-links-title {
     max-width: 780px;
     max-width: 100%; }
 
-  .full-width .entry-content .entry-content__row {
-    padding-top: 0;
-    padding-bottom: 20px; }
   .full-width .entry-content h1 {
     width: 100%;
     padding-right: 90px; }
@@ -2206,7 +2241,7 @@ span.page-links-title {
       padding-top: 15px;
       width: 156px;
       height: 0;
-      background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
       background-position: 25px 0;
       background-size: 156px auto;
       background-repeat: repeat-x;
@@ -2226,7 +2261,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
       background-position: 0 0;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -2244,7 +2279,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("files/2014/08/ttl_who@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2263,7 +2298,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("files/2014/08/ttl_Concept@2x.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2297,17 +2332,17 @@ span.page-links-title {
     right: 10%; }
 
   .site-navigation li {
+    line-height: 48px;
     width: 13%;
-    height: 48px;
-    line-height: 48px; }
+    height: 48px; }
     .site-navigation li > a {
-      text-align: center;
+      line-height: 48px;
       height: 48px;
-      line-height: 48px; }
+      text-align: center; }
 
   .primary-navigation a {
-    padding: 0 20px;
-    width: 100%; }
+    width: 100%;
+    padding: 0; }
   .primary-navigation ul ul {
     top: 48px;
     margin-left: 0;
@@ -2322,23 +2357,33 @@ span.page-links-title {
       .primary-navigation ul ul a:hover {
         background-color: transparent; }
     .primary-navigation ul ul li {
-      border-top: 0;
-      width: 100%; }
+      width: 100%;
+      border-top: 0; }
   .primary-navigation .menu-item-has-children > a,
   .primary-navigation .page_item_has_children > a {
-    padding: 0 20px; }
+    padding: 0; }
     .primary-navigation .menu-item-has-children > a:after,
     .primary-navigation .page_item_has_children > a:after {
-      top: 28px;
-      right: 0;
-      left: 0;
-      margin: 0 auto;
-      padding-top: 3px;
-      width: 10px;
-      content: '\f431';
+      position: absolute;
+      display: inline-block;
+      content: "";
       vertical-align: middle;
       font-size: 10px;
-      line-height: 1; }
+      font-family: Genericons;
+      line-height: 1em;
+      top: 31px;
+      right: 0;
+      left: 0;
+      width: 10px;
+      margin: 0 auto;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg); }
+    .primary-navigation .menu-item-has-children > a:hover:after,
+    .primary-navigation .page_item_has_children > a:hover:after {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
 
   .primary-sidebar .widget {
     max-width: 100%; } }
@@ -2348,6 +2393,99 @@ span.page-links-title {
 @media screen and (min-width: 846px) {
   .header-main {
     background-size: 1280px auto; }
+
+  .site-footer #supplementary:after {
+    padding-top: 400px; }
+
+  .full-width .entry-content h1 {
+    padding-bottom: 20px; }
+    .full-width .entry-content h1:after {
+      display: block;
+      overflow: hidden;
+      padding-top: 15px;
+      width: 100%;
+      height: 0;
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
+      background-position: 10px 0;
+      background-size: 156px auto;
+      background-repeat: repeat-x;
+      bottom: -20px;
+      left: 0; }
+  .full-width .entry-content .bkg_WhatIsWordCamp {
+    position: relative; }
+    .full-width .entry-content .bkg_WhatIsWordCamp:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .full-width .entry-content .bkg_WhatIsWordCamp:before {
+      display: block;
+      overflow: hidden;
+      padding-top: 117px;
+      width: 117px;
+      height: 0;
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-position: 0 0;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      z-index: 2;
+      right: -10px;
+      bottom: -13px; }
+  .full-width .entry-content .bkg_WhoCanParticipate {
+    position: relative; }
+    .full-width .entry-content .bkg_WhoCanParticipate:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .full-width .entry-content .bkg_WhoCanParticipate:before {
+      display: block;
+      overflow: hidden;
+      padding-top: 117px;
+      width: 117px;
+      height: 0;
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
+      background-position: 0 0;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      z-index: 2;
+      right: -10px;
+      bottom: -13px; }
+  .full-width .entry-content .bkg_Concept {
+    position: relative; }
+    .full-width .entry-content .bkg_Concept:before {
+      display: block;
+      content: "";
+      position: absolute; }
+    .full-width .entry-content .bkg_Concept:before {
+      display: block;
+      overflow: hidden;
+      padding-top: 117px;
+      width: 117px;
+      height: 0;
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
+      background-position: 0 0;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      z-index: 2;
+      right: -10px;
+      bottom: -13px; }
+
+  .sponsorList {
+    display: table;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto !important;
+    text-align: center; }
+    .sponsorList > li {
+      display: table-cell;
+      width: 50%; }
+      .sponsorList > li > a {
+        display: block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+      .sponsorList > li:nth-child(odd) a {
+        padding-right: 20px; }
+      .sponsorList > li:nth-child(even) a {
+        padding-left: 20px; }
 
   .content-sidebar {
     margin-top: 72px;
@@ -2372,102 +2510,7 @@ span.page-links-title {
 
   #main, .primary-navigation .nav-menu {
     padding-left: 20px;
-    padding-right: 20px; }
-
-  .site-footer #supplementary:after {
-    padding-top: 400px; }
-
-  .full-width .entry-content .entry-content__row {
-    padding-top: 3em; }
-  .full-width .entry-content h1 {
-    padding-bottom: 20px; }
-    .full-width .entry-content h1:after {
-      display: block;
-      overflow: hidden;
-      padding-top: 15px;
-      width: 100%;
-      height: 0;
-      background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
-      background-position: 10px 0;
-      background-size: 156px auto;
-      background-repeat: repeat-x;
-      bottom: -20px;
-      left: 0; }
-  .full-width .entry-content .bkg_WhatIsWordCamp {
-    position: relative; }
-    .full-width .entry-content .bkg_WhatIsWordCamp:before {
-      display: block;
-      content: "";
-      position: absolute; }
-    .full-width .entry-content .bkg_WhatIsWordCamp:before {
-      display: block;
-      overflow: hidden;
-      padding-top: 117px;
-      width: 117px;
-      height: 0;
-      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
-      background-position: 0 0;
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-      z-index: 2;
-      right: -10px;
-      bottom: -13px; }
-  .full-width .entry-content .bkg_WhoCanParticipate {
-    position: relative; }
-    .full-width .entry-content .bkg_WhoCanParticipate:before {
-      display: block;
-      content: "";
-      position: absolute; }
-    .full-width .entry-content .bkg_WhoCanParticipate:before {
-      display: block;
-      overflow: hidden;
-      padding-top: 117px;
-      width: 117px;
-      height: 0;
-      background-image: url("files/2014/08/ttl_who@2x.png");
-      background-position: 0 0;
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-      z-index: 2;
-      right: -10px;
-      bottom: -13px; }
-  .full-width .entry-content .bkg_Concept {
-    position: relative; }
-    .full-width .entry-content .bkg_Concept:before {
-      display: block;
-      content: "";
-      position: absolute; }
-    .full-width .entry-content .bkg_Concept:before {
-      display: block;
-      overflow: hidden;
-      padding-top: 117px;
-      width: 117px;
-      height: 0;
-      background-image: url("files/2014/08/ttl_Concept@2x.png");
-      background-position: 0 0;
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-      z-index: 2;
-      right: -10px;
-      bottom: -13px; }
-
-  .sponsorList {
-    display: table;
-    width: 100%;
-    max-width: 940px;
-    margin: 0 auto !important;
-    text-align: center; }
-    .sponsorList > li {
-      display: table-cell;
-      width: 50%; }
-      .sponsorList > li > a {
-        display: block;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box; }
-      .sponsorList > li:nth-child(odd) a {
-        padding-right: 20px; }
-      .sponsorList > li:nth-child(even) a {
-        padding-left: 20px; } }
+    padding-right: 20px; } }
 @media screen and (min-width: 1008px) {
   .home .header-main {
     background-size: auto;
@@ -2496,7 +2539,7 @@ span.page-links-title {
       padding-top: 130px;
       width: 130px;
       height: 0;
-      background-image: url("files/2014/08/ttl_postWapu.png");
+      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postWapu.png");
       background-position: 0 0;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -2526,13 +2569,13 @@ span.page-links-title {
     top: 792px; } }
 @media only screen and (min-width: 1440px) {
   body.home {
-    background-image: url("files/2014/06/bkgHeaderL.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/bkgHeaderL.jpg");
     background-size: 1920px auto; }
 
   .home .header-main {
     background-size: 1080px;
     padding-top: 1080px;
-    background-image: url("files/2014/08/txtHeaderL.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderL.png");
     background-size: 100%; }
 
   .home .primary-navigation {
@@ -2544,7 +2587,7 @@ span.page-links-title {
     padding-top: 300px;
     width: 300px;
     height: 0;
-    background-image: url("files/2014/06/iconWapu.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/iconWapu.png");
     background-position: 0 0;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -2632,25 +2675,25 @@ span.page-links-title {
 ========================================================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 960px) and (max-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 960px) and (max-width: 1280px) {
   body.home {
-    background-image: url("files/2014/06/bkgHeaderL.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/bkgHeaderL.jpg");
     background-size: 1280px auto; }
 
   .home .header-main {
     background-size: 704px;
     padding-top: 704px;
-    background-image: url("files/2014/08/txtHeaderL.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderL.png");
     background-size: 1280px auto; }
 
   .home .primary-navigation {
     top: 704px; }
 
   body {
-    background-image: url("files/2014/08/bkgHeaderShortM@2x.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortM@2x.jpg");
     background-size: 1280px auto; }
 
   .header-main {
     padding-top: 400px;
-    background-image: url("files/2014/08/txtHeaderShortM@2x.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderShortM@2x.png");
     background-size: 1280px auto; }
 
   .primary-navigation {
@@ -2665,7 +2708,7 @@ span.page-links-title {
     padding-top: 130px;
     width: 130px;
     height: 0;
-    background-image: url("files/2014/08/ttl_postWapu@2x.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postWapu@2x.png");
     background-position: 0 0;
     background-size: 100%;
     background-repeat: no-repeat; }
@@ -2678,13 +2721,13 @@ span.page-links-title {
     padding-top: 15px;
     width: 100%;
     height: 0;
-    background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
     background-position: 0 0;
     background-size: auto 15px;
     background-repeat: repeat-x; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 192dpi) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 2dppx) and (min-width: 1281px) and (max-width: 1920px) {
   body {
-    background-image: url("files/2014/08/bkgHeaderShortM@2x.jpg"), url("files/2014/09/bkgHeaderShortRepeatM@2x.jpg");
+    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortM@2x.jpg"), url("http://2014.tokyo.wordcamp.org/files/2014/09/bkgHeaderShortRepeatM@2x.jpg");
     background-position: right top, left top;
     background-size: 1280px auto, 1px 400px;
     background-repeat: no-repeat, repeat-x; } }
