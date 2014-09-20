@@ -31,7 +31,8 @@ var paths = {
 ,	'htmlDir':		'src/html/*.html'
 ,	'imgDest':		'files'
 ,	'imgDir':		'files/**'
-,	'jadeDir':		['src/jade/*.jade', 'src/jade/**/*.jade', '!src/jade/_*.jade', '!src/jade/**/_*.jade']
+,	'jadeDir':		'src/jade/*.jade'
+,	'jadeWatch':	['src/jade/*.jade', 'src/jade/**/*.jade']
 ,	'jsLib':		'src/lib/*.js'
 ,	'jsDest':		'src/js'
 ,	'jsDir':		'src/js/*.js'
@@ -71,7 +72,7 @@ gulp.task('foundation-init', function() {
 });
 
 gulp.task('browser-sync', function() {
-	browserSync.init('./*.css', {
+	browserSync.init(null, {
 		proxy: paths.vhost,
 		open: 'external'
 	});
@@ -86,7 +87,6 @@ gulp.task('bs-reload', function() {
 *******************************************************************************/
 gulp.task('jade', function() {
 	return gulp.src(paths.jadeDir)
-		.pipe(changed(paths.htmlDest, { extension: '.php' }))
 		.pipe(plumber())
 		.pipe(jade())
 		.pipe(rename({ extname: '.php' }))
@@ -153,7 +153,7 @@ gulp.task('sprite', function () {
  * 8. gulp Tasks
 *******************************************************************************/
 gulp.task('watch', function() {
-	gulp.watch([paths.jadeDir], ['jade']);
+	gulp.watch([paths.jadeWatch], ['jade']);
 	// gulp.watch([paths.imgDir], ['image']);
 	// gulp.watch([paths.imgDest + '/sprite/*.png'], ['sprite']);
 	// gulp.watch([paths.jsDir], ['concat']);
