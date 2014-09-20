@@ -583,7 +583,7 @@ div.sharedaddy {
     padding-top: 90px;
     width: 90px;
     height: 0;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/iconWapu.png");
+    background-image: url("files/2014/06/iconWapu.png");
     background-position: 0 0;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -736,7 +736,9 @@ div.sharedaddy {
   list-style: none;
   text-align: center; }
   .home .banner-area li {
-    display: inline-block; }
+    display: inline-block;
+    width: 100%;
+    max-width: 280px; }
     .home .banner-area li.link-en {
       position: absolute;
       background-color: #ef86b4;
@@ -866,7 +868,7 @@ article .entry-header {
 .entry-content h1 {
   font-size: 2.6rem;
   padding: 8px 20px 8px 32px;
-  background: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_entry-title03_left.png");
+  background: url("files/2014/08/ttl_entry-title03_left.png");
   background-repeat: no-repeat;
   background-size: 28px 34px;
   position: relative; }
@@ -914,12 +916,12 @@ article .entry-header {
 .entry-content h3 {
   font-size: 2.2rem;
   padding: 0 10px .9em;
-  background: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_entry-title04.png") left bottom no-repeat;
+  background: url("files/2014/08/ttl_entry-title04.png") left bottom no-repeat;
   background-size: 100% auto; }
 .entry-content h4 {
   font-size: 2.0rem;
   padding: 5px 20px 4px;
-  background: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_entry-title05.png") left top repeat-y;
+  background: url("files/2014/08/ttl_entry-title05.png") left top repeat-y;
   background-size: 11px 35px; }
 .entry-content h5 {
   font-size: 1.8rem;
@@ -1518,7 +1520,7 @@ span.page-links-title {
       height: 0;
       padding-top: 412px;
       background-color: transparent;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/CitySilhouetteW1920.png");
+      background-image: url("files/2014/08/CitySilhouetteW1920.png");
       background-repeat: no-repeat;
       background-position: center bottom;
       background-size: 100% auto; }
@@ -1542,7 +1544,7 @@ span.page-links-title {
       border-right-width: 0;
       border-bottom-width: 0;
       border-left-width: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/09/ttl_sponcers.png");
+      background-image: url("files/2014/09/ttl_sponcers.png");
       background-repeat: no-repeat;
       background-position: top center;
       background-size: auto 74px; }
@@ -1638,26 +1640,26 @@ span.page-links-title {
     margin-right: 0; }
 
   body.home {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderS.jpg");
+    background-image: url("files/2014/08/bkgHeaderS.jpg");
     background-size: 640px; }
 
   .home .header-main {
     background-size: 640px;
     padding-top: 640px;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderS.png");
+    background-image: url("files/2014/08/txtHeaderS.png");
     background-size: 640px; }
 
   .home .primary-navigation {
     top: 640px; }
 
   body {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortS.jpg");
+    background-image: url("files/2014/08/bkgHeaderShortS.jpg");
     background-size: 640px 320px;
     background-position: center top; }
 
   .header-main {
     padding-top: 320px;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderShortS.png");
+    background-image: url("files/2014/08/txtHeaderShortS.png");
     background-size: 100% auto;
     background-position: left top; }
 
@@ -1694,7 +1696,7 @@ span.page-links-title {
       padding-top: 65px;
       width: 65px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -1714,7 +1716,7 @@ span.page-links-title {
       padding-top: 65px;
       width: 65px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
+      background-image: url("files/2014/08/ttl_who@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -1734,7 +1736,7 @@ span.page-links-title {
       padding-top: 65px;
       width: 65px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
+      background-image: url("files/2014/08/ttl_Concept@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -1936,7 +1938,7 @@ span.page-links-title {
       padding-top: 104px;
       width: 104px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postWapu.png");
+      background-image: url("files/2014/08/ttl_postWapu.png");
       background-position: 0 0;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -1952,7 +1954,7 @@ span.page-links-title {
       padding-top: 15px;
       width: 100%;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine.png");
+      background-image: url("files/2014/08/ttl_postBtmLine.png");
       background-position: bottom right;
       background-size: auto 15px;
       background-repeat: repeat-x;
@@ -2081,7 +2083,7 @@ span.page-links-title {
       padding-top: 13.5px;
       width: 99.9%;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
+      background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
       background-position: 15px 0;
       background-size: 156px auto;
       background-repeat: repeat-x;
@@ -2100,7 +2102,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2120,7 +2122,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
+      background-image: url("files/2014/08/ttl_who@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2140,7 +2142,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
+      background-image: url("files/2014/08/ttl_Concept@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2153,14 +2155,14 @@ span.page-links-title {
 ========================================================= */
 @media only screen and (min-width: 641px) {
   body.home {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderM.jpg");
+    background-image: url("files/2014/08/bkgHeaderM.jpg");
     background-size: auto 640px;
     background-position: center top; }
 
   .home .header-main {
     background-size: 640px;
     padding-top: 640px;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderM.png");
+    background-image: url("files/2014/08/txtHeaderM.png");
     background-size: 860px auto; }
 
   .home .primary-navigation {
@@ -2168,7 +2170,7 @@ span.page-links-title {
 
   .header-main {
     padding-top: 400px;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderShortM.png");
+    background-image: url("files/2014/08/txtHeaderShortM.png");
     background-size: 1000px auto;
     background-position: left center; }
 
@@ -2178,11 +2180,11 @@ span.page-links-title {
   .site-footer #supplementary:after {
     padding-top: 250px; }
   .site-footer .footer-sidebar:before {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/09/ttl_sponcers@2x.png");
+    background-image: url("files/2014/09/ttl_sponcers@2x.png");
     background-size: auto 120px; }
 
   body {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortM.jpg"), url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortRepeatM.jpg");
+    background-image: url("files/2014/08/bkgHeaderShortM.jpg"), url("files/2014/08/bkgHeaderShortRepeatM.jpg");
     background-repeat: no-repeat, repeat-x;
     background-position: right top, left top;
     background-size: 1280px auto, 1px 400px; }
@@ -2200,7 +2202,7 @@ span.page-links-title {
     padding-top: 180px;
     width: 180px;
     height: 0;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/iconWapu.png");
+    background-image: url("files/2014/06/iconWapu.png");
     background-position: 0 0;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -2241,7 +2243,7 @@ span.page-links-title {
       padding-top: 15px;
       width: 156px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
+      background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
       background-position: 25px 0;
       background-size: 156px auto;
       background-repeat: repeat-x;
@@ -2261,7 +2263,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
       background-position: 0 0;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -2279,7 +2281,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
+      background-image: url("files/2014/08/ttl_who@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2298,7 +2300,7 @@ span.page-links-title {
       padding-top: 91px;
       width: 91px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
+      background-image: url("files/2014/08/ttl_Concept@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2405,7 +2407,7 @@ span.page-links-title {
       padding-top: 15px;
       width: 100%;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
+      background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
       background-position: 10px 0;
       background-size: 156px auto;
       background-repeat: repeat-x;
@@ -2423,7 +2425,7 @@ span.page-links-title {
       padding-top: 117px;
       width: 117px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
+      background-image: url("files/2014/08/ttl_WhatIsWordCamp_gray@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2442,7 +2444,7 @@ span.page-links-title {
       padding-top: 117px;
       width: 117px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_who@2x.png");
+      background-image: url("files/2014/08/ttl_who@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2461,7 +2463,7 @@ span.page-links-title {
       padding-top: 117px;
       width: 117px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_Concept@2x.png");
+      background-image: url("files/2014/08/ttl_Concept@2x.png");
       background-position: 0 0;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -2539,7 +2541,7 @@ span.page-links-title {
       padding-top: 130px;
       width: 130px;
       height: 0;
-      background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postWapu.png");
+      background-image: url("files/2014/08/ttl_postWapu.png");
       background-position: 0 0;
       background-size: 100%;
       background-repeat: no-repeat;
@@ -2569,13 +2571,13 @@ span.page-links-title {
     top: 792px; } }
 @media only screen and (min-width: 1440px) {
   body.home {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/bkgHeaderL.jpg");
+    background-image: url("files/2014/06/bkgHeaderL.jpg");
     background-size: 1920px auto; }
 
   .home .header-main {
     background-size: 1080px;
     padding-top: 1080px;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderL.png");
+    background-image: url("files/2014/08/txtHeaderL.png");
     background-size: 100%; }
 
   .home .primary-navigation {
@@ -2587,7 +2589,7 @@ span.page-links-title {
     padding-top: 300px;
     width: 300px;
     height: 0;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/iconWapu.png");
+    background-image: url("files/2014/06/iconWapu.png");
     background-position: 0 0;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -2675,25 +2677,25 @@ span.page-links-title {
 ========================================================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 960px) and (max-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 960px) and (max-width: 1280px) {
   body.home {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/06/bkgHeaderL.jpg");
+    background-image: url("files/2014/06/bkgHeaderL.jpg");
     background-size: 1280px auto; }
 
   .home .header-main {
     background-size: 704px;
     padding-top: 704px;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderL.png");
+    background-image: url("files/2014/08/txtHeaderL.png");
     background-size: 1280px auto; }
 
   .home .primary-navigation {
     top: 704px; }
 
   body {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortM@2x.jpg");
+    background-image: url("files/2014/08/bkgHeaderShortM@2x.jpg");
     background-size: 1280px auto; }
 
   .header-main {
     padding-top: 400px;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/txtHeaderShortM@2x.png");
+    background-image: url("files/2014/08/txtHeaderShortM@2x.png");
     background-size: 1280px auto; }
 
   .primary-navigation {
@@ -2708,7 +2710,7 @@ span.page-links-title {
     padding-top: 130px;
     width: 130px;
     height: 0;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postWapu@2x.png");
+    background-image: url("files/2014/08/ttl_postWapu@2x.png");
     background-position: 0 0;
     background-size: 100%;
     background-repeat: no-repeat; }
@@ -2721,13 +2723,13 @@ span.page-links-title {
     padding-top: 15px;
     width: 100%;
     height: 0;
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/ttl_postBtmLine@2x.png");
+    background-image: url("files/2014/08/ttl_postBtmLine@2x.png");
     background-position: 0 0;
     background-size: auto 15px;
     background-repeat: repeat-x; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-device-pixel-ratio: 2) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 192dpi) and (min-width: 1281px) and (max-width: 1920px), only screen and (min-resolution: 2dppx) and (min-width: 1281px) and (max-width: 1920px) {
   body {
-    background-image: url("http://2014.tokyo.wordcamp.org/files/2014/08/bkgHeaderShortM@2x.jpg"), url("http://2014.tokyo.wordcamp.org/files/2014/09/bkgHeaderShortRepeatM@2x.jpg");
+    background-image: url("files/2014/08/bkgHeaderShortM@2x.jpg"), url("files/2014/09/bkgHeaderShortRepeatM@2x.jpg");
     background-position: right top, left top;
     background-size: 1280px auto, 1px 400px;
     background-repeat: no-repeat, repeat-x; } }
