@@ -35,7 +35,12 @@
   }
   &--gold{
     &:before {
-      background-color: #ffe766;
+      background-color: #c3a400;
+    }
+  }
+  &--silver{
+    &:before {
+      background-color: #c0c0c0;
     }
   }
 }
@@ -68,6 +73,13 @@
     > li {
       img {
         max-width: 300px;
+      }
+    }
+  }
+  &--silver {
+    > li {
+      img {
+        max-width: 200px;
       }
     }
   }
@@ -112,6 +124,19 @@
   }
   .sponsorList--platinum {
     > li {
+    }
+  }
+  .sponsorList--silver {
+    display: block;
+    > li {
+      display: inline-block;
+      width: 33.333%;
+      > a {
+        display: inline-block;
+        box-sizing: border-box;
+        padding-right: 50px !important;
+        padding-left: 50px !important;
+      }
     }
   }
 }
