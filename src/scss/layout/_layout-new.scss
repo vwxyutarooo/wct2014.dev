@@ -1,0 +1,37 @@
+@charset 'utf-8';
+/* layout new
+---------------------------------------- */
+
+
+/* =========================================================
+	 Media - Mobile sizes
+========================================================= */
+@mixin layout-new-under-320 {}
+@mixin layout-new-under-360 {}
+@mixin layout-new-under-400 {}
+@mixin layout-new-under-640 {}
+@mixin layout-new-over-401 {}
+@mixin layout-new-over-594 {}
+/* =========================================================
+	 Media - Tablet Size
+========================================================= */
+@mixin layout-new-over-641 {}
+@mixin layout-new-over-673 {}
+/* =========================================================
+	 Media - Navigation Expanded
+========================================================= */
+@mixin layout-new-over-783 {}
+@mixin layout-new-over-810 {}
+/* =========================================================
+	 Media - PC Size
+========================================================= */
+@mixin layout-new-over-846 {}
+@mixin layout-new-over-1008 {}
+@mixin layout-new-over-1040 {}
+@mixin layout-new-over-1080 {}
+@mixin layout-new-over-1110 {}
+@mixin layout-new-over-1218 {}
+@mixin layout-new-over-1260 {}
+@mixin layout-new-over-1281 {}
+@mixin layout-new-over-1440 {}
+@mixin layout-new-over-1600 {}
