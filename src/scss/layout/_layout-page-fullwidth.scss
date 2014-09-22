@@ -59,7 +59,7 @@
     background-color: transparent;
     .entry-content__row {
       border-bottom: 2px solid #ededed;
-      &--gray {
+      &.entry-content__row--banner {
         background-color: #f3f3f3;
       }
     }
@@ -71,11 +71,11 @@
         max-width: 880px;
       }
       &--sessions {
-        max-width: 1100px;
+        max-width: 1200px;
       }
-      &--banner-area {
+      &.entry-content__row__inner--banner-area {
         padding-top: 40px;
-        padding-bottom: 20px;
+        padding-bottom: 0;
       }
     }
     h1 {
@@ -346,8 +346,7 @@
 @mixin full-width-pc {
   .full-width {
     .entry-content {
-      .entry-content__row {
-      }
+      .entry-content__row {}
       h1 {
         padding-bottom: 20px;
         &:after {

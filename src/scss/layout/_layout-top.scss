@@ -4,20 +4,19 @@
     display: none;
   }
   .banner-area {
+    @extend %group;
     position: relative;
-    margin: 0 auto;
+    margin: 0 -5px;
     list-style: none;
     text-align: center;
     li {
-      display: inline-block;
-      width: 100%;
+      float: left;
+      width: 50%;
       max-width: 280px;
-      &.link-en {
-        position: absolute;
-        background-color: $colorPink;
-        top: -40px;
-        left: 0;
-      }
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 0 5px;
+      margin-bottom: 20px;
       a {
         &:hover {
           opacity: .9;
@@ -46,6 +45,19 @@
         margin-top: -(150px * .6);
       }
     }
+    .banner-area {
+      margin: 0 auto;
+      li {
+        width: 33.333%;
+        padding: 0 20px;
+        a {}
+      }
+    }
+  }
+}
+
+@mixin layout-front-over-846 {
+  .home {
   }
 }
 

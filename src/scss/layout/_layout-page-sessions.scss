@@ -82,9 +82,14 @@ td {
       border-left-width: 0;
       background: transparent;
     }
+    dd {
+      margin-bottom: .25em;
+      padding-left: 12px;
+    }
   }
   .speaker-name {
     margin-bottom: 0.5em;
+    font-size: 12px;
     &:before {
       @include genericon('\f304');
     }
