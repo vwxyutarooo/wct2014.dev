@@ -1,0 +1,98 @@
+@charset 'utf-8';
+/* layout sessions
+---------------------------------------- */
+.session {
+  margin-bottom: 8em;
+  h2 {
+    border-bottom: 1px solid lighten($colorBlue, 3%);
+    padding-bottom: 0.25em;
+    &:after {
+      display: none;
+      background-image: none;
+    }
+  }
+  &__meta {
+    .table-cell--speaker {
+      text-align: left;
+    }
+    &__stage-key {
+      &:before {
+        margin-right: .25em;
+
+        @include genericon('\f417', 1em);
+      }
+    }
+    &__time-key {
+      &:before {
+        margin-right: .25em;
+
+        @include genericon('\f303', 1em);
+      }
+    }
+    &__speaker-key {
+      &:before {
+        margin-right: .25em;
+
+        @include genericon('\f304', 1em);
+      }
+    }
+    &__speaker-value {
+      .avatar {
+        margin-right: 1em;
+      }
+      .speaker-name {
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: .5em;
+      }
+      .speaker-profile-link {
+        display: block;
+        float: left;
+        padding: .3em 1.2em;
+        text-align: center;
+        border: 1px solid lighten($colorBlue, 3%);
+        border-radius: 3px;
+        letter-spacing: .125em;
+        &:after {
+          margin-left: .4em;
+
+          @include fa('\f101', 1em);
+        }
+      }
+    }
+  }
+}
+
+
+/* =========================================================
+   Media - Mobile sizes
+========================================================= */
+@mixin layout-sessions-under-320 {}
+@mixin layout-sessions-under-360 {}
+@mixin layout-sessions-under-400 {}
+@mixin layout-sessions-under-640 {}
+@mixin layout-sessions-over-401 {}
+@mixin layout-sessions-over-594 {}
+/* =========================================================
+   Media - Tablet Size
+========================================================= */
+@mixin layout-sessions-over-641 {}
+@mixin layout-sessions-over-673 {}
+/* =========================================================
+   Media - Navigation Expanded
+========================================================= */
+@mixin layout-sessions-over-783 {}
+@mixin layout-sessions-over-810 {}
+/* =========================================================
+   Media - PC Size
+========================================================= */
+@mixin layout-sessions-over-846 {}
+@mixin layout-sessions-over-1008 {}
+@mixin layout-sessions-over-1040 {}
+@mixin layout-sessions-over-1080 {}
+@mixin layout-sessions-over-1110 {}
+@mixin layout-sessions-over-1218 {}
+@mixin layout-sessions-over-1260 {}
+@mixin layout-sessions-over-1281 {}
+@mixin layout-sessions-over-1440 {}
+@mixin layout-sessions-over-1600 {}

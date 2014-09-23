@@ -41,11 +41,15 @@ article.post {
         }
       }
     }
-    .single-wcb_sponsor & {
+    .single-wcb_sponsor &,
+    .single-wcb_session &,
+    .single-wcb_speaker & {
       display: none;
     }
   }
-  .single-wcb_sponsor & {
+  .single-wcb_sponsor &,
+  .single-wcb_session &,
+  .single-wcb_speaker & {
     margin-top: 50px;
   }
 }

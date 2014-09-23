@@ -109,6 +109,7 @@
 	@include full-width-pc;	// Page template full-width
 	@include layout-front-over-846;
 	@include footer-sidebar-over-846;	// Footer widget such as sponsor logo
+	@include layout-speakers-over-846;
 	.content-sidebar{
 		margin-top: 72px;
 		margin-left: -300px;

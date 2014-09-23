@@ -1,0 +1,90 @@
+@charset 'utf-8';
+/* layout speakers
+---------------------------------------- */
+.wcorg-speakers {
+  h2 {
+    padding: 0 0 0 120px;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.8em;
+    height: 60px;
+    line-height: 60px;
+    &:after {
+      background-image: none;
+      display: none;
+    }
+  }
+  .spekaer-info {
+    height: 40px;
+    padding: 0 0 0 120px;
+    margin: 0 0 2em;
+  }
+}
+.wcorg-speaker {
+  margin-bottom: 8em;
+  position: relative;
+  .wcorg-speaker-description {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__meta {
+    .session-title {
+      margin-bottom: .5em;
+      font-size: 1.2em;
+    }
+    .inblock-list {
+      list-style: none;
+      margin-left: 0;
+      .stage {
+        &:before {
+          margin-right: .25em;
+
+          @include genericon('\f417', 1em);
+        }
+      }
+      .time {
+        &:before {
+          margin-right: .25em;
+
+          @include genericon('\f303', 1em);
+        }
+      }
+    }
+  }
+}
+
+/* =========================================================
+   Media - Mobile sizes
+========================================================= */
+@mixin layout-speakers-under-320 {}
+@mixin layout-speakers-under-360 {}
+@mixin layout-speakers-under-400 {}
+@mixin layout-speakers-under-640 {}
+@mixin layout-speakers-over-401 {}
+@mixin layout-speakers-over-594 {}
+/* =========================================================
+   Media - Tablet Size
+========================================================= */
+@mixin layout-speakers-over-641 {}
+@mixin layout-speakers-over-673 {}
+/* =========================================================
+   Media - Navigation Expanded
+========================================================= */
+@mixin layout-speakers-over-783 {}
+@mixin layout-speakers-over-810 {}
+/* =========================================================
+   Media - PC Size
+========================================================= */
+@mixin layout-speakers-over-846 {}
+@mixin layout-speakers-over-1008 {}
+@mixin layout-speakers-over-1040 {}
+@mixin layout-speakers-over-1080 {}
+@mixin layout-speakers-over-1110 {}
+@mixin layout-speakers-over-1218 {}
+@mixin layout-speakers-over-1260 {}
+@mixin layout-speakers-over-1281 {}
+@mixin layout-speakers-over-1440 {}
+@mixin layout-speakers-over-1600 {}

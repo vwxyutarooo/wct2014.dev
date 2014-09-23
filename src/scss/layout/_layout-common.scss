@@ -54,6 +54,27 @@
   clear: both;
 }
 
+
+/* General classes
+---------------------------------------- */
+.ja {
+  margin-bottom: 3em;
+}
+.en {
+  margin-bottom: 3em;
+}
+
+.table {
+  display: table;
+  .table-row {
+    display: table-row;
+  }
+  .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
 /* jetpack
 ---------------------------------------- */
 div.sharedaddy {
