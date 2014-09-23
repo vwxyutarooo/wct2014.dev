@@ -61,6 +61,10 @@
 	@include full-width-medium;	// Page template full-width
 	@include footer-sidebar-over-594;
 }
+// for bronze sponsor area
+@media screen and (max-width: 593px){
+	@include footer-sidebar-under-593;
+} 
 
 /* =========================================================
 	 Media - Tablet Size

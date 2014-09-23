@@ -42,6 +42,11 @@
       background-color: #c0c0c0;
     }
   }
+  &--bronze {
+    &:before{
+      background-color: #b9722d;
+    }
+  }
 }
 
 
@@ -94,6 +99,87 @@
       }
     }
   }
+  &--bronze {
+    padding: 0 20px;
+    > li {
+      position: relative;
+      // circle
+      &:before {
+        position: absolute;
+        top: 20px;
+        left: 8px;
+        content: '\25CF';
+        color: lighten($colorText, 45%);
+        font-size: 0.65em;
+        z-index: 10;
+      }
+      &:after {
+        position: absolute;
+        top: 20px;
+        right: 8px;
+        content: '\25CF';
+        color: lighten($colorText, 45%);
+        font-size: 0.65em;
+        z-index: 10;
+      }
+      > a {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border: 2px solid lighten($colorPink, 5%);
+        color: $colorText;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+        overflow: hidden;
+        
+        // background
+        &:before,
+        &:after {
+          position: absolute;
+          left: 0;
+          z-index: -1;
+          display: block;
+          content: '';
+          -webkit-transition: all .3s;
+          transition: all .3s;
+        }
+
+        &:after {
+          top: -100%;
+          width: 100%;
+          height: 100%;
+        } 
+        
+        &:hover {
+          text-decoration: none;
+          color: #ffffff;
+          
+          &:after {
+            top: 0;
+            left: 0;
+            background-color: lighten($colorPink, 5%);
+          }
+        }
+      } 
+    }
+  }
+}
+
+@mixin footer-sidebar-under-593 {
+  .sponsorList {
+    &--bronze {
+      > li {
+        display: block;
+        max-width: 270px;
+        margin: 0 auto 20px auto;
+        
+        > a {
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
 }
 
 @mixin footer-sidebar-over-594 {
@@ -108,6 +194,18 @@
         }
       }
     }
+    &--bronze {
+      > li {
+          display: inline-block;
+          width: 45%;
+          margin: 0 10px 20px 10px;
+        > a {
+          padding-right: 20px;
+          padding-right: 20px;
+          font-size: 0.45em;
+        }
+      }
+    }
   }
 }
 
@@ -118,7 +216,6 @@
     &--platinum {}
   }
 }
-
 
 // PC size
 @mixin footer-sidebar-over-846 {
@@ -140,6 +237,14 @@
     &--gold {
       > li {
         width: 50%;
+      }
+    }
+    &--bronze {
+      > li {
+        width: 30.333%;
+        > a {
+          font-size: 0.45em;
+        }
       }
     }
   }
