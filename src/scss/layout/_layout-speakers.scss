@@ -4,7 +4,7 @@
 .wcorg-speakers {
   h2 {
     padding: 0 0 0 120px;
-    margin: 0;
+    margin: 0 0 .2em;
     font-weight: normal;
     font-size: 1.6em;
     line-height: 1.2;
@@ -14,11 +14,51 @@
     }
   }
   .spekaer-info {
-    height: 40px;
     padding: 0 0 0 120px;
-    margin: 0 0 2em;
+    margin: 0 0 .4em;
     .site {
       line-height: 1.25;
+    }
+  }
+  .inblock-list {
+    &.inblock-list--sns {
+      @extend %group;
+      list-style: none;
+      margin: 0 0 .3em;
+      > li {
+        float: left;
+        margin-right: 0.5em;
+        vertical-align: middle;
+        text-align: center;
+        > a {
+          display: block;
+          font-size: 1.2em;
+          border-radius: 2px;
+        }
+        i {
+          color: #fff;
+          display: block;
+          width: 1.8em;
+          height: 1.8em;
+          line-height: 1.8em;
+        }
+      }
+    }
+    &__twitter {
+      > a {
+        background-color: $colorTw;
+        &:hover {
+          background-color: lighten($colorTw, 3%);
+        }
+      }
+    }
+    &__facebook {
+      > a {
+        background-color: $colorFb;
+        &:hover {
+          background-color: lighten($colorFb, 3%);
+        }
+      }
     }
   }
 }
@@ -84,12 +124,15 @@
   .wcorg-speakers {
     h2 {
       font-size: 1.8em;
-      height: 60px;
-      line-height: 60px;
+      height: 1.4em;
+      line-height: 1.4;
       &:after {
         background-image: none;
         display: none;
       }
+    }
+    .site {
+      margin: 0 0 4em;
     }
   }
 }
