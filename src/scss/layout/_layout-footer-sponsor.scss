@@ -102,26 +102,26 @@
   &--bronze {
     padding: 0 20px;
     > li {
-        position: relative;
-        // circle
-        &:before {
-          position: absolute;
-          top: 20px;
-          left: 8px;
-          content: '\25CF';
-          color: lighten($colorText, 45%);
-          font-size: 0.65em;
-          z-index: 10;
-        }
-        &:after {
-          position: absolute;
-          top: 20px;
-          right: 8px;
-          content: '\25CF';
-          color: lighten($colorText, 45%);
-          font-size: 0.65em;
-          z-index: 10;
-        }
+      position: relative;
+      // circle
+      &:before {
+        position: absolute;
+        top: 20px;
+        left: 8px;
+        content: '\25CF';
+        color: lighten($colorText, 45%);
+        font-size: 0.65em;
+        z-index: 10;
+      }
+      &:after {
+        position: absolute;
+        top: 20px;
+        right: 8px;
+        content: '\25CF';
+        color: lighten($colorText, 45%);
+        font-size: 0.65em;
+        z-index: 10;
+      }
       > a {
         position: relative;
         z-index: 2;
