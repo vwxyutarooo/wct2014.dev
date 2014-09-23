@@ -6,9 +6,8 @@
     padding: 0 0 0 120px;
     margin: 0;
     font-weight: normal;
-    font-size: 1.8em;
-    height: 60px;
-    line-height: 60px;
+    font-size: 1.6em;
+    line-height: 1.2;
     &:after {
       background-image: none;
       display: none;
@@ -18,6 +17,9 @@
     height: 40px;
     padding: 0 0 0 120px;
     margin: 0 0 2em;
+    .site {
+      line-height: 1.25;
+    }
   }
 }
 .wcorg-speaker {
@@ -78,7 +80,19 @@
 /* =========================================================
    Media - PC Size
 ========================================================= */
-@mixin layout-speakers-over-846 {}
+@mixin layout-speakers-over-846 {
+  .wcorg-speakers {
+    h2 {
+      font-size: 1.8em;
+      height: 60px;
+      line-height: 60px;
+      &:after {
+        background-image: none;
+        display: none;
+      }
+    }
+  }
+}
 @mixin layout-speakers-over-1008 {}
 @mixin layout-speakers-over-1040 {}
 @mixin layout-speakers-over-1080 {}

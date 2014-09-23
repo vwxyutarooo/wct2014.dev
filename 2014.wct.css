@@ -1494,9 +1494,8 @@ span.page-links-title {
   padding: 0 0 0 120px;
   margin: 0;
   font-weight: normal;
-  font-size: 1.8em;
-  height: 60px;
-  line-height: 60px; }
+  font-size: 1.6em;
+  line-height: 1.2; }
   .wcorg-speakers h2:after {
     background-image: none;
     display: none; }
@@ -1504,6 +1503,8 @@ span.page-links-title {
   height: 40px;
   padding: 0 0 0 120px;
   margin: 0 0 2em; }
+  .wcorg-speakers .spekaer-info .site {
+    line-height: 1.25; }
 
 .wcorg-speaker {
   margin-bottom: 8em;
@@ -2673,6 +2674,14 @@ span.page-links-title {
 
   .sponsorList--silver > li {
     width: 33.333%; }
+
+  .wcorg-speakers h2 {
+    font-size: 1.8em;
+    height: 60px;
+    line-height: 60px; }
+    .wcorg-speakers h2:after {
+      background-image: none;
+      display: none; }
 
   .content-sidebar {
     margin-top: 72px;
