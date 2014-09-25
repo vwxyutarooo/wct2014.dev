@@ -1120,14 +1120,14 @@ blockquote {
   max-width: 940px;
   margin: 0 auto; }
   .full-width
-  .entry-content__row .entry-content__row__inner--relay-blog p,
+  .entry-content__row .entry-content__row__inner--relay-blog .relay-blog-table p,
   .full-width
-  .entry-content__row .entry-content__row__inner--relay-blog a,
+  .entry-content__row .entry-content__row__inner--relay-blog .relay-blog-table a,
   .full-width
-  .entry-content__row .entry-content__row__inner--relay-blog i {
+  .entry-content__row .entry-content__row__inner--relay-blog .relay-blog-table i {
     color: #fff; }
   .full-width
-  .entry-content__row .entry-content__row__inner--relay-blog p {
+  .entry-content__row .entry-content__row__inner--relay-blog .relay-blog-table p {
     max-width: 100%;
     margin-top: 1.1em;
     font-size: 1.3rem;
