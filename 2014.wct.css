@@ -1071,7 +1071,8 @@ blockquote {
       max-width: 1200px; }
     .full-width .entry-content .entry-content__row__inner.entry-content__row__inner--banner-area {
       padding-top: 40px;
-      padding-bottom: 0; }
+      padding-bottom: 0;
+      max-width: 1100px; }
   .full-width .entry-content h1 {
     position: relative;
     font-size: 3.2rem;
@@ -2483,8 +2484,8 @@ span.page-links-title {
   .home .banner-area {
     margin: 0 auto; }
     .home .banner-area li {
-      width: 33.333%;
-      padding: 0 20px; }
+      width: 25%;
+      padding: 0 1.5%; }
 
   .tix-js button,
   .tix-js .button,
@@ -2760,8 +2761,10 @@ span.page-links-title {
         display: block;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-    .sponsorList--gold > li {
-      width: 50%; }
+    .sponsorList--gold {
+      max-width: 810px; }
+      .sponsorList--gold > li {
+        width: 50%; }
     .sponsorList--bronze > li {
       width: 30.333%; }
       .sponsorList--bronze > li > a {
