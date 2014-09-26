@@ -1493,7 +1493,7 @@ span.page-links-title {
 ---------------------------------------- */
 .wcorg-speakers h2 {
   padding: 0 0 0 120px;
-  margin: 0 0 .2em;
+  margin: 0 0 .4em;
   font-weight: normal;
   font-size: 1.6em;
   line-height: 1.2; }
@@ -1504,10 +1504,11 @@ span.page-links-title {
   padding: 0 0 0 120px;
   margin: 0 0 .4em; }
   .wcorg-speakers .spekaer-info .site {
-    line-height: 1.25; }
+    line-height: 1.25;
+    margin-bottom: .4em; }
 .wcorg-speakers .inblock-list.inblock-list--sns {
   list-style: none;
-  margin: 0 0 .3em; }
+  margin: 0 0 .4em; }
   .wcorg-speakers .inblock-list.inblock-list--sns > li {
     float: left;
     margin-right: 0.5em;
