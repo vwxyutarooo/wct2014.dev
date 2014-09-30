@@ -1544,12 +1544,12 @@ span.page-links-title {
 .moderator-info {
   margin-bottom: .5em; }
 
-.moderator-profile__key {
-  border-left: 3px solid #bebebe;
-  padding-left: .5em; }
-.moderator-profile__value {
-  border-left: 3px solid transparent;
-  padding-left: .5em; }
+.moderator-profile {
+  border-left: 3px solid #bebebe; }
+  .moderator-profile__key {
+    padding-left: .5em; }
+  .moderator-profile__value {
+    padding-left: .5em; }
 
 /* =========================================================
    Media - Mobile sizes
@@ -1606,7 +1606,8 @@ span.page-links-title {
       display: none; }
   .wcorg-speaker .spekaer-info {
     padding: 0 0 0 120px;
-    margin: 0 0 .4em; }
+    margin: 0 0 .4em;
+    min-height: 55px; }
     .wcorg-speaker .spekaer-info .site {
       line-height: 1.25;
       margin-bottom: .4em; }

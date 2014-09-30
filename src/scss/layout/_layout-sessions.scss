@@ -88,12 +88,11 @@
 }
 
 .moderator-profile {
+  border-left: 3px solid #bebebe;
   &__key {
-    border-left: 3px solid #bebebe;
     padding-left: .5em;
   }
   &__value {
-    border-left: 3px solid transparent;
     padding-left: .5em;
   }
 }
