@@ -118,11 +118,11 @@ article.post {
   .entry-title {
     box-sizing: border-box;
     padding-right: 60px;
-    a {
+    a,
+    a:visited, {
       color: $colorTitle;
       &:hover,
       &:focus,
-      &:visited,
       &::selection {
         color: $colorLinkHover;
       }

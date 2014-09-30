@@ -2477,7 +2477,11 @@ span.page-links-title {
     .blog .site-content .entry-title a,
     .archive .site-content .entry-title a,
     .single .site-content .entry-title a,
-    .page-template-default .site-content .entry-title a {
+    .page-template-default .site-content .entry-title a,
+    .blog .site-content .entry-title a:visited,
+    .archive .site-content .entry-title a:visited,
+    .single .site-content .entry-title a:visited,
+    .page-template-default .site-content .entry-title a:visited {
       color: #555555; }
       .blog .site-content .entry-title a:hover,
       .archive .site-content .entry-title a:hover,
@@ -2485,13 +2489,22 @@ span.page-links-title {
       .page-template-default .site-content .entry-title a:hover, .blog .site-content .entry-title a:focus,
       .archive .site-content .entry-title a:focus,
       .single .site-content .entry-title a:focus,
-      .page-template-default .site-content .entry-title a:focus, .blog .site-content .entry-title a:visited,
-      .archive .site-content .entry-title a:visited,
-      .single .site-content .entry-title a:visited,
-      .page-template-default .site-content .entry-title a:visited, .blog .site-content .entry-title a::-moz-selection,
+      .page-template-default .site-content .entry-title a:focus, .blog .site-content .entry-title a::-moz-selection,
       .archive .site-content .entry-title a::-moz-selection,
       .single .site-content .entry-title a::-moz-selection,
-      .page-template-default .site-content .entry-title a::-moz-selection {
+      .page-template-default .site-content .entry-title a::-moz-selection,
+      .blog .site-content .entry-title a:visited:hover,
+      .archive .site-content .entry-title a:visited:hover,
+      .single .site-content .entry-title a:visited:hover,
+      .page-template-default .site-content .entry-title a:visited:hover,
+      .blog .site-content .entry-title a:visited:focus,
+      .archive .site-content .entry-title a:visited:focus,
+      .single .site-content .entry-title a:visited:focus,
+      .page-template-default .site-content .entry-title a:visited:focus,
+      .blog .site-content .entry-title a:visited::-moz-selection,
+      .archive .site-content .entry-title a:visited::-moz-selection,
+      .single .site-content .entry-title a:visited::-moz-selection,
+      .page-template-default .site-content .entry-title a:visited::-moz-selection {
         color: #52a9cf; }
       .blog .site-content .entry-title a:hover,
       .archive .site-content .entry-title a:hover,
@@ -2499,13 +2512,22 @@ span.page-links-title {
       .page-template-default .site-content .entry-title a:hover, .blog .site-content .entry-title a:focus,
       .archive .site-content .entry-title a:focus,
       .single .site-content .entry-title a:focus,
-      .page-template-default .site-content .entry-title a:focus, .blog .site-content .entry-title a:visited,
-      .archive .site-content .entry-title a:visited,
-      .single .site-content .entry-title a:visited,
-      .page-template-default .site-content .entry-title a:visited, .blog .site-content .entry-title a::selection,
+      .page-template-default .site-content .entry-title a:focus, .blog .site-content .entry-title a::selection,
       .archive .site-content .entry-title a::selection,
       .single .site-content .entry-title a::selection,
-      .page-template-default .site-content .entry-title a::selection {
+      .page-template-default .site-content .entry-title a::selection,
+      .blog .site-content .entry-title a:visited:hover,
+      .archive .site-content .entry-title a:visited:hover,
+      .single .site-content .entry-title a:visited:hover,
+      .page-template-default .site-content .entry-title a:visited:hover,
+      .blog .site-content .entry-title a:visited:focus,
+      .archive .site-content .entry-title a:visited:focus,
+      .single .site-content .entry-title a:visited:focus,
+      .page-template-default .site-content .entry-title a:visited:focus,
+      .blog .site-content .entry-title a:visited::selection,
+      .archive .site-content .entry-title a:visited::selection,
+      .single .site-content .entry-title a:visited::selection,
+      .page-template-default .site-content .entry-title a:visited::selection {
         color: #52a9cf; }
 
   .list-view .site-content .hentry {
@@ -3220,28 +3242,32 @@ span.page-links-title {
     margin-right: 0; } }
 @media screen and (min-width: 1281px) {
   body.home {
-    background-size: 1440px; }
-
-  .home .header-main {
-    background-size: 792px;
-    padding-top: 792px;
-    background-size: 100%; }
-
-  .home .primary-navigation {
-    top: 792px; } }
-@media only screen and (min-width: 1440px) {
-  body.home {
     background-image: url("files/2014/06/bkgHeaderL.jpg");
-    background-size: 1920px auto; }
+    background-size: 1440px auto;
+    background-position: center -30px; }
 
   .home .header-main {
-    background-size: 1080px;
-    padding-top: 1080px;
+    background-size: 760px;
+    padding-top: 760px;
     background-image: url("files/2014/08/txtHeaderL.png");
     background-size: 100%; }
 
   .home .primary-navigation {
-    top: 1080px; }
+    top: 760px; } }
+@media only screen and (min-width: 1441px) {
+  body.home {
+    background-image: url("files/2014/06/bkgHeaderL.jpg");
+    background-size: 1600px auto;
+    background-position: center -30px; }
+
+  .home .header-main {
+    background-size: 830px;
+    padding-top: 830px;
+    background-image: url("files/2014/08/txtHeaderL.png");
+    background-size: 100%; }
+
+  .home .primary-navigation {
+    top: 830px; }
 
   .home #masthead:after {
     display: block;
@@ -3255,6 +3281,18 @@ span.page-links-title {
     background-repeat: no-repeat;
     margin-top: -150px; } }
 @media screen and (min-width: 1600px) {
+  body.home {
+    background-size: 1920px auto;
+    background-position: center -20px; }
+
+  .home .header-main {
+    background-size: 1060px;
+    padding-top: 1060px;
+    background-size: 100%; }
+
+  .home .primary-navigation {
+    top: 1060px; }
+
   .site-footer #supplementary:after {
     padding-top: 500px; } }
 /* =========================================================

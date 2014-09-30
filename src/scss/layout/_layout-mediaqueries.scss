@@ -181,14 +181,15 @@
 @media screen and (min-width: 1260px){}
 
 @media screen and (min-width: 1281px){
-	@include setHeaderBkg($height: 792px, $bkgSize: 1440px, $txtSize: 100%, $bodyClass: '.home');
+	@include setHeaderBkg(760px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1440px auto, 100%, $bkgPos: center -30px, $bodyClass: '.home');
 }
 
-@media only screen and (min-width: 1440px){
-	@include setHeaderBkg(1080px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1920px auto, 100%, $bodyClass: '.home');
+@media only screen and (min-width: 1441px){
+	@include setHeaderBkg(830px, '2014/06/bkgHeaderL.jpg', '2014/08/txtHeaderL.png', 1600px auto, 100%, $bkgPos: center -30px, $bodyClass: '.home');
 	@include layout-front-over-1440;
 }
 @media screen and (min-width: 1600px){
+	@include setHeaderBkg($height: 1060px, $bkgSize: 1920px auto, $txtSize: 100%, $bkgPos: center -20px, $bodyClass: '.home');
 	@include setFooterBkg-over-1600;
 }
 
