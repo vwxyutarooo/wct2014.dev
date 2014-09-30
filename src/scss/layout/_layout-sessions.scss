@@ -40,7 +40,9 @@
       .avatar {
         margin-right: 1em;
       }
-      .speaker-name {
+      .speaker-name,
+      .moderator-name
+       {
         font-size: 1.2em;
         display: block;
         margin-bottom: .5em;
@@ -60,9 +62,41 @@
         }
       }
     }
+    .site {
+      line-height: 1.2;
+    }
   }
 }
 
+// moderator
+.moderator-name {
+  background: none !important;
+  padding: 0 !important;
+  margin: .2em 0 !important;
+}
+.moderator-photo {
+  vertical-align: top !important;
+  padding-right: 1em;
+  min-width: 100px;
+  > img {
+    margin-right: 0 !important;
+  }
+}
+
+.moderator-info {
+  margin-bottom: .5em;
+}
+
+.moderator-profile {
+  &__key {
+    border-left: 3px solid #bebebe;
+    padding-left: .5em;
+  }
+  &__value {
+    border-left: 3px solid transparent;
+    padding-left: .5em;
+  }
+}
 
 /* =========================================================
    Media - Mobile sizes
@@ -86,7 +120,11 @@
 /* =========================================================
    Media - PC Size
 ========================================================= */
-@mixin layout-sessions-over-846 {}
+@mixin layout-sessions-over-846 {
+  .table-cell--moderator-photo{
+    vertical-align: top !important;
+  }
+}
 @mixin layout-sessions-over-1008 {}
 @mixin layout-sessions-over-1040 {}
 @mixin layout-sessions-over-1080 {}

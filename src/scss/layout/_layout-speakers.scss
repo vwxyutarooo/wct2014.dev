@@ -1,7 +1,51 @@
 @charset 'utf-8';
 /* layout speakers
 ---------------------------------------- */
-.wcorg-speakers {
+.inblock-list {
+  &.inblock-list--sns {
+    @extend %group;
+    list-style: none;
+    margin: 0 0 .4em;
+    > li {
+      float: left;
+      margin-right: 0.5em;
+      vertical-align: middle;
+      text-align: center;
+      > a {
+        display: block;
+        font-size: 1.2em;
+        border-radius: 2px;
+      }
+      i {
+        color: #fff;
+        display: block;
+        width: 1.8em;
+        height: 1.8em;
+        line-height: 1.8em;
+      }
+    }
+  }
+  &__twitter {
+    > a {
+      background-color: $colorTw;
+      &:hover {
+        background-color: lighten($colorTw, 3%);
+      }
+    }
+  }
+  &__facebook {
+    > a {
+      background-color: $colorFb;
+      &:hover {
+        background-color: lighten($colorFb, 3%);
+      }
+    }
+  }
+}
+
+.wcorg-speaker {
+  margin-bottom: 8em;
+  position: relative;
   h2 {
     padding: 0 0 0 120px;
     margin: 0 0 .4em;
@@ -21,51 +65,6 @@
       margin-bottom: .4em;
     }
   }
-  .inblock-list {
-    &.inblock-list--sns {
-      @extend %group;
-      list-style: none;
-      margin: 0 0 .4em;
-      > li {
-        float: left;
-        margin-right: 0.5em;
-        vertical-align: middle;
-        text-align: center;
-        > a {
-          display: block;
-          font-size: 1.2em;
-          border-radius: 2px;
-        }
-        i {
-          color: #fff;
-          display: block;
-          width: 1.8em;
-          height: 1.8em;
-          line-height: 1.8em;
-        }
-      }
-    }
-    &__twitter {
-      > a {
-        background-color: $colorTw;
-        &:hover {
-          background-color: lighten($colorTw, 3%);
-        }
-      }
-    }
-    &__facebook {
-      > a {
-        background-color: $colorFb;
-        &:hover {
-          background-color: lighten($colorFb, 3%);
-        }
-      }
-    }
-  }
-}
-.wcorg-speaker {
-  margin-bottom: 8em;
-  position: relative;
   .wcorg-speaker-description {
     img {
       position: absolute;

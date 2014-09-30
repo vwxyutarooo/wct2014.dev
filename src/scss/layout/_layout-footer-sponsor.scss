@@ -47,6 +47,11 @@
       background-color: #b9722d;
     }
   }
+  &--wordpress {
+    &:before {
+      background-color: lighten($colorBlue, 3%);
+    }
+  }
 }
 
 
@@ -61,26 +66,28 @@
       display: block;
       transition: all .3s;
       &:hover {
-        box-shadow: 0 0 3px rgba(0,0,0, .125);
+        opacity: .7;
       }
     }
     img {
       width: 100%;
     }
   }
-  &--platinum {
+  &--platinum,
+  &--champion {
     > li {
       img {
         max-width: 450px;
       }
     }
   }
-  &--gold {
+  &--gold,
+  &--accomplice {
     padding: 0 20px;
     > li {
       > a {
-        padding-right: 20px;
-        padding-left: 20px;
+        margin: 0 auto;
+        max-width: 300px;
       }
       img {
         max-width: 300px;
@@ -88,11 +95,10 @@
     }
   }
   &--silver {
-    padding: 0 20px;
     > li {
       > a {
-        padding-right: 20px;
-        padding-left: 20px;
+        margin: 0 auto;
+        max-width: 200px;
       }
       img {
         max-width: 200px;
@@ -188,10 +194,6 @@
       > li {
         display: inline-block;
         width: 50%;
-        > a {
-          padding-right: 20px;
-          padding-left: 20px;
-        }
       }
     }
     &--bronze {
@@ -200,8 +202,6 @@
           width: 45%;
           margin: 0 10px 20px 10px;
         > a {
-          padding-right: 20px;
-          padding-right: 20px;
           font-size: 0.45em;
         }
       }

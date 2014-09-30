@@ -31,10 +31,7 @@
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/2014.wct.css">
 </head>
 
-<?php if ( 
-	is_page_template( 'page-templates/page-sessions.php' ) ||
-	is_page_template( 'page-templates/page-front.php' ) ) :
-?>
+<?php if ( is_page_template( 'page-templates/page-sessions.php' ) ): ?>
 	<body <?php body_class( 'full-width' ); ?>>
 <?php else : ?>
 	<body <?php body_class(); ?>>

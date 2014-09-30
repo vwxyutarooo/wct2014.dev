@@ -78,9 +78,11 @@ td {
   }
   dl {
     dt {
-      color: $colorBlue;
       border-left-width: 0;
       background: transparent;
+      a {
+        color: $colorBlue;
+      }
     }
     dd {
       margin-bottom: .25em;
