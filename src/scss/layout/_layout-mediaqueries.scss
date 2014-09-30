@@ -7,13 +7,15 @@
 	@include setHeaderBkg(640px, '2014/08/bkgHeaderS.jpg', '2014/08/txtHeaderS.png', 640px, 640px, $bodyClass: '.home');
 	@include setHeaderBkg(320px, '2014/08/bkgHeaderShortS.jpg', '2014/08/txtHeaderShortS.png', 640px 320px, 100% auto, center top, left top);
 	@include setFooterBkg-over-361;
-	@include full-width-small;	// Page template full-width
+	@include full-width-small;
+	@include layout-front-under-640;
 }
 @media screen and (max-width: 400px){
 	@include setHeaderBkg($height: 400px, $bkgSize: 400px auto, $bodyClass: '.home');
 	@include setHeaderBkg($height: 200px, $bkgSize: 400px 200px, $txtSize: 400px 200px);
 	@include setFooterBkg-over-361;
 	@include layout-common-under-400;
+	@include layout-front-under-400;
 	.content-sidebar{
 		margin-top: 0;
 		.single &{
@@ -28,7 +30,8 @@
 	@include setHeaderBkg($height: 360px, $bkgSize: 360px, $txtSize: 360px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 180px, $bkgSize: 360px, $txtSize: 360px);
 	@include setFooterBkg-within-360;
-	@include full-width-Android	// Page template full-width
+	@include full-width-Android;
+	@include layout-front-under-360;
 }
 
 /* for iPhone @2x
@@ -37,7 +40,8 @@
 	@include setHeaderBkg($height: 320px, $bkgSize: 320px, $txtSize: 320px, $bodyClass: '.home');
 	@include setHeaderBkg($height: 160px, $bkgSize: 320px 160px, $txtSize: 320px 160px);
 	@include setFooterBkg-within-360;
-	@include full-width-iPhone;	// Page template full-width
+	@include full-width-iPhone;
+	@include layout-front-under-320;
 }
 
 
@@ -46,6 +50,8 @@
 @media screen and (min-width: 401px){
 	@include setHeaderBkg($height: 640px - 48, $bkgSize: 640px auto, $txtSize: 100%, $bkgPos: center top, $txtPos: center, $bodyClass: '.home');
 	@include layout-header-over-401;
+	@include layout-front-over-401;
+	@include layout-sidebar-over-810;
 	%postTitle{
 		@include definePostTitle;
 	}
@@ -58,7 +64,8 @@
 	@include module-grid-over-594;
 	@include module-button-over-594;
 	@include layout-header-over-594;
-	@include full-width-medium;	// Page template full-width
+	@include full-width-medium;
+	@include layout-front-over-594;
 	@include footer-sidebar-over-594;
 }
 // for bronze sponsor area
@@ -84,7 +91,7 @@
 
 @media screen and (min-width: 673px){
 	@include layout-common-over-673;
-	@include full-width-tablet;	// Page template full-width
+	@include full-width-tablet;
 }
 
 /* =========================================================
@@ -102,7 +109,9 @@
 	}
 }
 
-@media screen and (min-width: 810px){}
+@media screen and (min-width: 810px){
+	@include layout-sidebar-over-810;
+}
 
 /* =========================================================
 	 Media - PC Size
@@ -110,7 +119,7 @@
 @media screen and (min-width: 846px){
 	@include layout-header-over-846;
 	@include setFooterBkg-over-735;
-	@include full-width-pc;	// Page template full-width
+	@include full-width-pc;
 	@include layout-front-over-846;
 	@include footer-sidebar-over-846;	// Footer widget such as sponsor logo
 	@include layout-speakers-over-846;

@@ -155,3 +155,54 @@
     margin-left: auto;
   }
 }
+
+
+/* =========================================================
+   Media - Mobile sizes
+========================================================= */
+@mixin layout-sidebar-under-320 {}
+@mixin layout-sidebar-under-360 {}
+@mixin layout-sidebar-under-400 {}
+@mixin layout-sidebar-under-640 {}
+@mixin layout-sidebar-over-401 {
+  .textwidget {
+    &__banner-list {
+      @extend %group;
+      li {
+        float: left;
+      }
+    }
+  }
+}
+@mixin layout-sidebar-over-594 {}
+/* =========================================================
+   Media - Tablet Size
+========================================================= */
+@mixin layout-sidebar-over-641 {}
+@mixin layout-sidebar-over-673 {}
+/* =========================================================
+   Media - Navigation Expanded
+========================================================= */
+@mixin layout-sidebar-over-783 {}
+@mixin layout-sidebar-over-810 {
+  .textwidget {
+    &__banner-list {
+      li {
+        float: none;
+      }
+    }
+  }
+}
+/* =========================================================
+   Media - PC Size
+========================================================= */
+@mixin layout-sidebar-over-846 {}
+@mixin layout-sidebar-over-1008 {}
+@mixin layout-sidebar-over-1040 {}
+@mixin layout-sidebar-over-1080 {}
+@mixin layout-sidebar-over-1110 {}
+@mixin layout-sidebar-over-1218 {}
+@mixin layout-sidebar-over-1260 {}
+@mixin layout-sidebar-over-1281 {}
+@mixin layout-sidebar-over-1440 {}
+@mixin layout-sidebar-over-1600 {}
