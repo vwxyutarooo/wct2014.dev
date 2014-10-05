@@ -73,6 +73,10 @@
       &--sessions {
         max-width: 1200px;
       }
+      &--sessions-timetable {
+        @extend .entry-content__row__inner--sessions;
+        padding: 0 !important;
+      }
       &.entry-content__row__inner--banner-area {
         padding-top: 40px;
         padding-bottom: 0;

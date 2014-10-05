@@ -3,40 +3,59 @@ section#sessions.entry-content__row
     .bkg_WhatIsWordCamp: h1 コンテンツ紹介
     p.p 一部のセッションがまだ調整中となっておりますが、確定次第更新されていきます。また、難易度やおすすめの対象者など順次更新されていきますのでこまめにチェックしてみてください!
 
+  .entry-content__row__inner.entry-content__row__inner--sessions-timetable
     h2 タイムテーブル
+    .clearfix
+      ul.describe-icons
+        li
+          i.describe-icon.describe-icon--designer
+          | デザイナー
+        li
+          i.describe-icon.describe-icon--contents
+          | コンテンツ
+        li
+          i.describe-icon.describe-icon--developper
+          | 開発者
+        li
+          i.describe-icon.describe-icon--all
+          | 全て
 
     table.timetable(border="0")
       thead
         tr
-          th わぷーステージ
+          th.cell.cell--01 わぷーステージ
             br
             | (実践的内容)
-          th これからステージ
+          th.cell.cell--02 これからステージ
             br
             | (メインステージ)
-          th ブルーたたみ
-          th イエローたたみ
-          th 会議室A
-          th 会議室B
+          th.cell.cell--03 ブルーたたみ
+          th.cell.cell--04 イエローたたみ
+          th.cell.cell--05 会議室A
+          th.cell.cell--06 会議室B
+
       tbody
 
         tr
           th.time(colspan="6") 9:45
         tr.opening
-          td.time.open(colspan="6") 開場
+          td.cell.cell--01.time.open(colspan="6") 開場
 
         tr
           th.time(colspan="6") 9:45～9:50
         tr
-          td.none &nbsp;
-          td
+          td.cell.cell--01.none &nbsp;
+          td.cell.cell--02
             dl
               dt.stage.stage--02 WordCamp の楽しみ方
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span セッション
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name WordCamp2014 実行委員長
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
+          td.cell.cell--03.none &nbsp;
+          td.cell.cell--04.none &nbsp;
+          td.cell.cell--05.none &nbsp;
+          td.cell.cell--06.none &nbsp;
 
         tr.restRow
           th.time.rest(colspan="6") 9:50〜10:00
@@ -46,32 +65,49 @@ section#sessions.entry-content__row
         tr
           th.time(colspan="6") 10:00〜10:45
         tr
-          td
+          td.cell.cell--01
             dl
-              dt.stage.stage--01 WordPress で作るビジネス(HappyTables.com)
-              dd.speaker-name Noel Tock
-          td
+              dt.stage.stage--01.target.target--all: a(href="http://2014.tokyo.wordcamp.org/session/happy-tables/", title="W███████S<br>(WordPress で作るビジネス)") W███████S<br>(WordPress で作るビジネス)
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span セッション
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-noel-tock", title="Noel Tock") Noel Tock
+          td.cell.cell--02
             dl
-              dt.stage.stage--02 これからの WordPress 勉強法と勉強会
-              dd.speaker-name 北村 崇
-          td
+              dt.stage.stage--02: a(href="http://2014.tokyo.wordcamp.org/session/seminars-by-learning-level/", title="習得レベル別に考える これからの勉強法と勉強会") 習得レベル別に考える これからの勉強法と勉強会
+              dd.session-tag.session-tag--target-02
+                i.target-tag.target-tag--designer デザイナー
+                i.target-tag.target-tag--contents コンテンツ
+                i.target-tag.target-tag--developper 開発者
+              dd.session-tag.session-tag--type: span パネルディスカッション
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-kitamura-takashi", title="北村 崇") 北村 崇
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-hoshino-kunitoshi", title="星野 邦敏") 星野 邦敏
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-hano-megumi", title="羽野 めぐみ") 羽野 めぐみ
+          td.cell.cell--03
             dl
               dt.stage.stage--03 案内所&amp;交流スペース
-          td
+          td.cell.cell--04
             dl
               dt.stage.stage--04 案内所&amp;交流スペース
-          td
+          td.cell.cell--05
             dl
-              dt.stage.stage--05 仲間を作ろう
+              dt.stage.stage--05: a(href="http://2014.tokyo.wordcamp.org/session/make-a-friends/", title="仲間を作ろう") 仲間を作ろう
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span アンカンファレンス
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name こばやしたけし
               dd.speaker-name 斎藤 健太
               dd.speaker-name 上原 正道
               dd.speaker-name 伊藤ようこ
               dd.speaker-name 荒川 菜津美
               dd.speaker-name Keiko Kanamori
-          td
+          td.cell.cell--06
             dl
               dt.stage.stage--06 勉強の仕方を教えあう部屋
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span ワールドカフェ
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name 石原 隆志
               dd.speaker-name 水野 史土
               dd.speaker-name 佐々木 智佳子
@@ -87,28 +123,41 @@ section#sessions.entry-content__row
         tr
           th.time(colspan="6") 11:00〜11:45
         tr
-          td
+          td.cell.cell--01
             dl
-              dt.stage.stage--01 WordPress を使って多言語サイトを作ってみよう
-              dd.speaker-name Marko Heijnen
-              dd.speaker-name 渡辺 幸一
-          td
+              dt.stage.stage--01: a(href="http://2014.tokyo.wordcamp.org/session/glotpress/", title="WordPress の多言語化プラットフォーム GlotPress の紹介") WordPress の多言語化プラットフォーム GlotPress の紹介
+              dd.session-tag.session-tag--target-02
+                i.target-tag.target-tag--designer デザイナー
+                i.target-tag.target-tag--contents コンテンツ
+                i.target-tag.target-tag--developper 開発者
+              dd.session-tag.session-tag--type: span セッション (分割)
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-marko-heijinen", title="Marko Heijnen") Marko Heijnen
+          td.cell.cell--02
             dl
-              dt.stage.stage--02 必ず押さえておきたい今すぐできるセキュリティ対策
+              dt.stage.stage--02: a(href="http://2014.tokyo.wordcamp.org/session/security/", title="必ず押さえておきたい今すぐできるセキュリティ対策") 必ず押さえておきたい今すぐできるセキュリティ対策
+              dd.session-tag.session-tag--target-02
+                i.target-tag.target-tag--designer デザイナー
+                i.target-tag.target-tag--contents コンテンツ
+                i.target-tag.target-tag--developper 開発者
+              dd.session-tag.session-tag--type: span パネルディスカッション
+              dd.session-tag.session-tag--target-01: span 初心者〜中級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-ounziw", title="水野史土") 水野 史土
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-megane9988", title="大串肇") 大串 肇
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-tajima", title="田島優也") 田島 優也
               dd.speaker-name 松尾 祥子
-              dd.speaker-name 水野 史土
-              dd.speaker-name 大串 肇
-              dd.speaker-name 田島 優也
-          td
+          td.cell.cell--03
             dl
-              dt.stage.stage--03 座談会:WordPress で作るビジネス(HappyTables.com)
-          td
+              dt.stage.stage--03 WordPress で作るビジネス(HappyTables.com)
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--04
             dl
-              dt.stage.stage--04 座談会:これからの WordPress 勉強法と勉強会
-          td
+              dt.stage.stage--04 これからの WordPress 勉強法と勉強会
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--05
             dl
-              dt.stage.stage--05 仲間をつくろう(交流時間)
-          td
+              dt.stage.stage--05: a(href="http://2014.tokyo.wordcamp.org/session/make-a-friends-free-time/", title="仲間をつくろう(交流時間)") 仲間をつくろう(交流時間)
+          td.cell.cell--06
             dl
               dt.stage.stage--06 勉強の仕方を教えあう部屋(交流時間)
 
@@ -120,45 +169,50 @@ section#sessions.entry-content__row
         tr
           th.time(colspan="6") 12:00～13:00
         tr
-          td
-            dl
-              dt ランチLT
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
+          td(colspan="6").cell.cell--01.cell--merged ランチLT
 
         tr
           th.time(colspan="6") 13:00～13:45
         tr
-          td
+          td.cell.cell--01
             dl
-              dt.stage.stage--01 これから WordPress のテーマ制作をはじめる人のために
-              dd.speaker-name Mignon Style
-          td
+              dt.stage.stage--01: a(href="http://2014.tokyo.wordcamp.org/session/make-own-theme/", title="これからWordPressのテーマ制作をはじめる人のために") これから WordPress のテーマ制作をはじめる人のために
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--designer デザイナー
+              dd.session-tag.session-tag--type: span セッション
+              dd.session-tag.session-tag--target-01: span 初心者〜中級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-mignon-style", title="Mignon Style") Mignon Style
+          td.cell.cell--02
             dl
-              dt.stage.stage--02 【基調講演】アプリケーションプラットフォームとしての WordPress
-              dd.speaker-name Joey Kudish
-          td
+              dt.stage.stage--02: a(href="http://2014.tokyo.wordcamp.org/session/keynote/", title="【基調講演】アプリケーションプラットフォームとしての WordPress") 【基調講演】アプリケーションプラットフォームとしての WordPress
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span セッション
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-joey-kudish", title="Joey Kudish") Joey Kudish
+          td.cell.cell--03
             dl
-              dt.stage.stage--04 座談会:ランチLT
+              dt.stage.stage--04 ランチ LT 懇親会
               dd
-          td
+          td.cell.cell--04
             dl
-              dt.stage.stage--03 座談会:必ず押さえておきたい今すぐできるセキュリティ対策
-              dd
-          td
+              dt.stage.stage--03 必ず押さえておきたい今すぐできるセキュリティ対策
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--05
             dl
-              dt.stage.stage--05 おすすめプラグイン&amp;テーマ部屋
+              dt.stage.stage--05: a(href="http://2014.tokyo.wordcamp.org/session/recommended-plugin-theme/", title="おすすめプラグイン&amp;テーマ部屋") おすすめプラグイン&amp;テーマ部屋
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span ワールドカフェ
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name 鵜飼 孝陽
               dd.speaker-name 稲葉 一彦
               dd.speaker-name 吉武 春樹
               dd.speaker-name 松尾祥子
               dd.speaker-name 小川 裕之
-          td
+          td.cell.cell--06
             dl
               dt.stage.stage--06 リアルフォーラム部屋
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span 質疑応答
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name 遠藤 進悟
               dd.speaker-name 相原 知栄子
               dd.speaker-name こばやしたけし
@@ -178,27 +232,36 @@ section#sessions.entry-content__row
         tr
           th.time(colspan="6") 14:00～14:45
         tr
-          td
+          td.cell.cell--01
             dl
-              dt.stage.stage--01 AWS×WordPressでつくるこれからのプラットフォーム
-              dd.speaker-name 堀家 隆宏
-          td
+              dt.stage.stage--01: a(href="http://2014.tokyo.wordcamp.org/session/aws/", title="AWS×WordPressでつくるこれからのプラットフォーム") AWS × WordPressでつくるこれからのプラットフォーム
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--developper 開発者
+              dd.session-tag.session-tag--type: span セッション
+              dd.session-tag.session-tag--target-01: span 中級者〜上級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-horike", title="堀家 隆宏") 堀家 隆宏
+          td.cell.cell--02
             dl
-              dt.stage.stage--02 これからの情報発信
-              dd.speaker-name 江口 創介
-              dd.speaker-name 池田 将
-              dd.speaker-name PITE
-              dd.speaker-name 中村 健太
-          td
+              dt.stage.stage--02: a(href="http://2014.tokyo.wordcamp.org/session/transmission-of-information/", title="その道のプロに聞く！これからの情報発信") その道のプロに聞く！これからの情報発信
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--contents コンテンツ
+              dd.session-tag.session-tag--type: span パネルディスカッション
+              dd.session-tag.session-tag--target-01: span 初心者〜中級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-eguchi-sousuke", title="江口 創介") 江口 創介
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-ikeda-masaru", title="池田 将") 池田 将
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-horiguchi-hidetaka", title="PITE.(堀口英剛)") PITE.(堀口英剛)
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-nakamura-kenta", title="中村 健太") 中村 健太
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-kuchiki-seiichiro", title="朽木 誠一郎") 朽木 誠一郎
+          td.cell.cell--03
             dl
-              dt.stage.stage--03 座談会:これから WordPress のテーマ制作をはじめる人のために
-          td
+              dt.stage.stage--03 これから WordPress のテーマ制作をはじめる人のために
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--04
             dl
-              dt.stage.stage--04 座談会:アプリケーションプラットフォームとしての WordPress
-          td
+              dt.stage.stage--04 アプリケーションプラットフォームとしての WordPress
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--05
             dl
-              dt.stage.stage--05 おすすめプラグイン&amp;テーマ部屋(交流時間)
-          td
+              dt.stage.stage--05: a(href="http://2014.tokyo.wordcamp.org/session/recommended-plugin-theme-free-time", title="おすすめプラグイン&amp;テーマ部屋(交流時間)") おすすめプラグイン&amp;テーマ部屋(交流時間)
+          td.cell.cell--06
             dl
               dt.stage.stage--06 リアルフォーラム部屋(交流時間)
 
@@ -210,45 +273,63 @@ section#sessions.entry-content__row
         tr
           th.time(colspan="6") 15:00～15:45
         tr
-          td
+          td.cell.cell--01
             dl
-              dt.stage.stage--01 WordPress でここまでできる!事例から見るサイト制作テクニック
+              dt.stage.stage--01: a(href="http://2014.tokyo.wordcamp.org/session/technique-from-example/", title="http://2014.tokyo.wordcamp.org/session/technique-from-example/") WordPress でここまでできる!事例から見るサイト制作テクニック
+              dd.session-tag.session-tag--target-02
+                i.target-tag.target-tag--designer デザイナー
+                i.target-tag.target-tag--developper デベロッパー
+              dd.session-tag.session-tag--type: span セッション (分割)
+              dd.session-tag.session-tag--target-01: span 中級者〜中級者
               dd: small WordPressで作る地域ポータルサイト
-              dd.speaker-name 庄子 匡
-              dd.speaker-name 西村祥
-              dd: small WooCommerce で EC サイトからサロンの予約サイトまで
-              dd.speaker-name 田中 昌平
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-tadashi-shoji", title="庄子 匡") 庄子 匡
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-sho-nishimura", title="西村 祥") 西村 祥
+              dd: small WordPressで創造する次世代EC
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-shohei-tanaka", title="田中 昌平") 田中 昌平
               dd: small カスタム投稿/タクソノミー/フィールドで作る独自イベントカレンダー
-              dd.speaker-name 吉田 裕介（コワーキングスペース７F）
-          td
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-yuusuke-yoshida", title="吉田 裕介") 吉田 裕介
+          td.cell.cell--02
             dl
-              dt.stage.stage--02 世界の WordPress 事情
-              dd.speaker-name 西川 伸一
-              dd.speaker-name Valent Mustamin
-              dd.speaker-name Marko Heijnen
-              dd.speaker-name Mika Epstein
-          td
+              dt.stage.stage--02: a(href="http://2014.tokyo.wordcamp.org/session/worldwide-usage-of-wordpress/", title="世界のWordPress事情") 世界の WordPress 事情
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span パネルディスカッション
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-shinichi-nishikawa", title="西川 伸一") 西川 伸一
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-valent-mustamin", title="Valent Mustamin") Valent Mustamin
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-marko-heijnen", title="Marko Heijnen") Marko Heijnen
+              dd.speaker-name: a(href="http://2014.tokyo.wordcamp.org/speakers/#wcorg-speaker-mika-esptein", title="Mika Epstein") Mika Epstein
+          td.cell.cell--03
             dl
-              dt.stage.stage--03 座談会:AWSで作る、これからの WordPress 構築環境
-          td
+              dt.stage.stage--03 AWS x WordPress でつくるこれからのプラットフォーム
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--04
             dl
-              dt.stage.stage--04 座談会:これからの情報発信
-          td
+              dt.stage.stage--04 その道のプロに聞く！これからの情報発信
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--05
             dl
-              dt.stage.stage--05 みんなどうやってる?の部屋
+              dt.stage.stage--05: a(href="http://2014.tokyo.wordcamp.org/session/how-you-make-it-a/", title="http://2014.tokyo.wordcamp.org/session/how-you-make-it-a/") みんなどうやってる?の部屋A
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span ワールドカフェ
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name 小川 裕之               
               dd.speaker-name 山本 龍二郎
               dd.speaker-name 石原 隆志
               dd.speaker-name 佐々木智佳子
               dd.speaker-name 伊藤ようこ
-          td
+              dd.speaker-name 安藤 真衣子
+          td.cell.cell--06
             dl
-              dt.stage.stage--06 みんなどうやってる?の部屋
+              dt.stage.stage--06: a(href="http://2014.tokyo.wordcamp.org/session/how-you-make-it-b/", title="http://2014.tokyo.wordcamp.org/session/how-you-make-it-b/") みんなどうやってる?の部屋B
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--all 全て
+              dd.session-tag.session-tag--type: span ワールドカフェ
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name 大串 肇
               dd.speaker-name 大原 一起
               dd.speaker-name 上原 正道
               dd.speaker-name 嵩本 康志
               dd.speaker-name 鵜飼 孝陽
+              dd.speaker-name Mignon Style
 
         tr.restRow
           th.time.rest(colspan="6") 15:45〜16:00
@@ -258,31 +339,39 @@ section#sessions.entry-content__row
         tr
           th.time(colspan="6") 16:00～16:45
         tr
-          td
+          td.cell.cell--01
             dl
-              dt.stage.stage--01 WordPress の真髄を探る!コアファイルってどうなってるの?(仮)
+              dt.stage.stage--01 WordPressの真髄を探る！WordPressビギナーからのステップアップ術
+              dd.session-tag.session-tag--target-02
+                i.target-tag.target-tag--designer デザイナー
+                i.target-tag.target-tag--developper デベロッパー
+              dd.session-tag.session-tag--type: span パネルディスカッション
+              dd.session-tag.session-tag--target-01: span 初心者〜上級者
               dd.speaker-name 大曲 仁
               dd.speaker-name Kaito Koga
               dd.speaker-name 高橋 大輔
-          td
+          td.cell.cell--02
             dl
-              dt.stage.stage--02 WordPressAPI で作るモバイルアプリ
-              dd.speaker-name 岡本雄樹
-          td
+              dt.stage.stage--02: a(href="http://2014.tokyo.wordcamp.org/session/wordpress-api/", title="WordPressAPIで作るモバイルアプリ") WordPressAPI で作るモバイルアプリ
+              dd.session-tag.session-tag--target-02: i.target-tag.target-tag--developper 開発者
+              dd.session-tag.session-tag--type: span セッション
+              dd.session-tag.session-tag--target-01: span 中級者〜上級者
+              dd.speaker-name: a(a href="http://2014.tokyo.wordcamp.org/speaker/#wcorg-speaker-okamoto-yuki", title="岡本雄樹") 岡本雄樹
+          td.cell.cell--03
             dl
-              dt.stage.stage--03 座談会:WordPress ここまでできる!事例から見るサイト制作テクニック
+              dt.stage.stage--03 WordPress ここまでできる!事例から見るサイト制作テクニック
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--04
+            dl
+              dt.stage.stage--04 世界の WordPress 事情
+              dd.session-tag.session-tag--type: span 座談会
+          td.cell.cell--05
+            dl
+              dt.stage.stage--05: a(href="http://2014.tokyo.wordcamp.org/session/how-you-make-it-a-free-time/", title="http://2014.tokyo.wordcamp.org/session/how-you-make-it-a-free-time/") みんなどうやってる?の部屋A(交流時間)
               dd
-          td
+          td.cell.cell--06
             dl
-              dt.stage.stage--04 座談会:世界の WordPress 事情
-              dd
-          td
-            dl
-              dt.stage.stage--05 みんなどうやってる?の部屋(交流時間)
-              dd
-          td
-            dl
-              dt.stage.stage--06 みんなどうやってる?の部屋(交流時間)
+              dt.stage.stage--06: a(href="http://2014.tokyo.wordcamp.org/session/how-you-make-it-b-free-time/", title="http://2014.tokyo.wordcamp.org/session/how-you-make-it-b-free-time/") みんなどうやってる?の部屋B(交流時間)
               dd
 
         tr.restRow
@@ -293,12 +382,7 @@ section#sessions.entry-content__row
         tr
           th.time(colspan="6") 17:00
         tr
-          td おわりのあいさつ
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
-          td.none &nbsp;
+          td.cell.cell--01.cell--merged(colspan="6") おわりのあいさつ
 
     p(style="text-align: right; max-width: 100%"): small *敬称略
 

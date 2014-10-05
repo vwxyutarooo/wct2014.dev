@@ -139,11 +139,11 @@ gulp.task('image', function() {
 		.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('sprite', function () {
-	var spriteData = gulp.src(paths.imgDest + '/sprite/*.png')
+gulp.task('sprite-icons', function () {
+	var spriteData = gulp.src('src/img/sprite-icons/*.png')
 	.pipe(spritesmith({
-		imgName: paths.imgDest + '/sprite.png',
-		cssName: '_module-sprite.scss'
+		imgName: paths.imgDest + '/2014/10/sprite-icons.png',
+		cssName: '_module-sprite-icons.scss'
 	}));
 	spriteData.img.pipe(gulp.dest("./"));
 	spriteData.css.pipe(gulp.dest(paths.scssDest + '/module'));
@@ -155,7 +155,7 @@ gulp.task('sprite', function () {
 gulp.task('watch', function() {
 	gulp.watch([paths.jadeWatch], ['jade']);
 	// gulp.watch([paths.imgDir], ['image']);
-	// gulp.watch([paths.imgDest + '/sprite/*.png'], ['sprite']);
+	gulp.watch(['src/img/sprite-icons/*.png'], ['sprite-icons']);
 	// gulp.watch([paths.jsDir], ['concat']);
 	gulp.watch([paths.scssDir], ['scss']);
 	gulp.watch(['./*.php', './**/*.php'], ['bs-reload']);

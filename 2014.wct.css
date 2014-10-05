@@ -8,9 +8,9 @@
  * -----------------------------------------------------------------------------
  */
 /* =========================================================
-	 extends
+   extends
 ========================================================= */
-.doubleBtn:after, .home .banner-area:after, .inblock-list.inblock-list--sns:after, .primary-sidebar ul:after {
+.doubleBtn:after, .home .banner-area:after, .describe-icons:after, .inblock-list.inblock-list--sns:after, .primary-sidebar ul:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -494,6 +494,27 @@ table {
 
 /* media queries
 ---------------------------------------- */
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
 /**
  * layouts
  * -----------------------------------------------------------------------------
@@ -1115,8 +1136,10 @@ blockquote {
     padding: 50px 40px; }
     .full-width .entry-content .entry-content__row__inner--tix-attendees {
       max-width: 880px; }
-    .full-width .entry-content .entry-content__row__inner--sessions {
+    .full-width .entry-content .entry-content__row__inner--sessions, .full-width .entry-content .entry-content__row__inner--sessions-timetable {
       max-width: 1200px; }
+    .full-width .entry-content .entry-content__row__inner--sessions-timetable {
+      padding: 0 !important; }
     .full-width .entry-content .entry-content__row__inner.entry-content__row__inner--banner-area {
       padding-top: 40px;
       padding-bottom: 0;
@@ -1180,26 +1203,26 @@ blockquote {
     margin-top: 1.1em;
     font-size: 1.3rem;
     line-height: 1.4; }
-.full-width
-.entry-content__row .none {
-  background: #F1F1F1; }
   .full-width
-  .entry-content__row .none i {
-    color: #3595BE; }
-.full-width
-.entry-content__row .name,
-.full-width
-.entry-content__row .twitter,
-.full-width
-.entry-content__row .title {
-  margin-bottom: 0; }
+  .entry-content__row .entry-content__row__inner--relay-blog .none {
+    background: #F1F1F1; }
+    .full-width
+    .entry-content__row .entry-content__row__inner--relay-blog .none i {
+      color: #3595BE; }
   .full-width
-  .entry-content__row .name a:hover,
+  .entry-content__row .entry-content__row__inner--relay-blog .name,
   .full-width
-  .entry-content__row .twitter a:hover,
+  .entry-content__row .entry-content__row__inner--relay-blog .twitter,
   .full-width
-  .entry-content__row .title a:hover {
-    text-decoration: underline; }
+  .entry-content__row .entry-content__row__inner--relay-blog .title {
+    margin-bottom: 0; }
+    .full-width
+    .entry-content__row .entry-content__row__inner--relay-blog .name a:hover,
+    .full-width
+    .entry-content__row .entry-content__row__inner--relay-blog .twitter a:hover,
+    .full-width
+    .entry-content__row .entry-content__row__inner--relay-blog .title a:hover {
+      text-decoration: underline; }
 
 /* clearfix */
 .clearfix {
@@ -1239,74 +1262,191 @@ blockquote {
 /* =========================================================
    Media - Mobile sizes
 ========================================================= */
-/* ライン 425 */
+.describe-icons {
+  list-style: none;
+  margin-left: 0;
+  float: right; }
+  .describe-icons li {
+    float: left;
+    margin-right: .8em; }
+    .describe-icons li:last-child {
+      margin-right: 0; }
+  .describe-icons .describe-icon {
+    margin-right: .25em; }
+    .describe-icons .describe-icon--designer {
+      background-image: url(files/2014/10/sprite-icons.png);
+      background-position: 0px -36px;
+      display: inline-block;
+      overflow: hidden;
+      padding-top: 18px;
+      width: 18px;
+      height: 0;
+      background-repeat: no-repeat;
+      background-size: 18px 72px; }
+    .describe-icons .describe-icon--contents {
+      background-image: url(files/2014/10/sprite-icons.png);
+      background-position: 0px -18px;
+      display: inline-block;
+      overflow: hidden;
+      padding-top: 18px;
+      width: 18px;
+      height: 0;
+      background-repeat: no-repeat;
+      background-size: 18px 72px; }
+    .describe-icons .describe-icon--developper {
+      background-image: url(files/2014/10/sprite-icons.png);
+      background-position: 0px -54px;
+      display: inline-block;
+      overflow: hidden;
+      padding-top: 18px;
+      width: 18px;
+      height: 0;
+      background-repeat: no-repeat;
+      background-size: 18px 72px; }
+    .describe-icons .describe-icon--all {
+      background-image: url(files/2014/10/sprite-icons.png);
+      background-position: 0px 0px;
+      display: inline-block;
+      overflow: hidden;
+      padding-top: 18px;
+      width: 18px;
+      height: 0;
+      background-repeat: no-repeat;
+      background-size: 18px 72px; }
+
 caption,
+table,
 th,
 td {
   font-weight: normal;
-  text-align: left; }
+  text-align: left;
+  border-width: 0; }
 
 .timetable {
   width: 100%;
   margin: 0 0 20px 0;
   border-spacing: 0;
   border-collapse: collapse;
-  border-width: 0 0 0 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ededed; }
+  border-width: 0;
+  table-layout: fixed; }
   .timetable thead tr {
     border-color: #3a9ec8; }
     .timetable thead tr:first-child th {
       color: #fff;
-      border-width: 0 1px 4px 1px;
+      border-width: 0;
       border-style: solid;
-      border-color: #3595BE #5eafd2 #2b799a;
-      background-color: #3a9ec8; }
+      vertical-align: middle; }
   .timetable tr {
-    border-width: 0 4px 0 4px;
-    border-style: solid;
-    border-color: #efefef; }
-    .timetable tr.restRow {
-      border-color: #f1fcf5; }
+    border-width: 0; }
+    .timetable tr.restRow .time {
+      background-color: transparent;
+      padding: 8px; }
     .timetable tr th, .timetable tr td {
       padding: 16px 8px;
-      border-width: 0 1px 1px 0;
-      border-color: #efefef;
-      background-color: #fefefe; }
+      border-width: 0;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      word-wrap: break-all; }
       .timetable tr th.rest, .timetable tr td.rest {
         text-align: center;
-        border-color: #d7f7e4;
-        background-color: #f1fcf5; }
+        background-color: transparent;
+        color: #aaa; }
       .timetable tr th.time, .timetable tr td.time {
         text-align: center; }
+      .timetable tr th.cell--01, .timetable tr td.cell--01 {
+        width: 22%; }
+      .timetable tr th.cell--02, .timetable tr td.cell--02 {
+        width: 22%; }
+      .timetable tr th.cell--03, .timetable tr td.cell--03 {
+        width: 12%; }
+      .timetable tr th.cell--04, .timetable tr td.cell--04 {
+        width: 12%; }
+      .timetable tr th.cell--05, .timetable tr td.cell--05 {
+        width: 16%; }
+      .timetable tr th.cell--06, .timetable tr td.cell--06 {
+        width: 16%; }
     .timetable tr th {
       font-weight: bold;
-      text-align: center;
-      border-width: 0 1px 1px 0; }
-      .timetable tr th.time:before {
-        position: static;
-        display: inline-block;
-        content: "";
-        vertical-align: text-bottom;
-        font-size: 1.2em;
-        font-family: Genericons;
-        line-height: 1em; }
+      text-align: center; }
+      .timetable tr th.time {
+        background-color: #f6f5f3; }
+        .timetable tr th.time:before {
+          position: static;
+          display: inline-block;
+          content: "";
+          vertical-align: text-bottom;
+          font-size: 1.2em;
+          font-family: Genericons;
+          line-height: 1em; }
       .timetable tr th.rest {
-        border-bottom-width: 0; }
+        border-color: transparent; }
+      .timetable tr th.cell--01 {
+        background-color: #d35b94;
+        border-color: #d35b94; }
+      .timetable tr th.cell--02 {
+        background-color: #8ac56c;
+        border-color: #8ac56c; }
+      .timetable tr th.cell--03 {
+        background-color: #3dbee8;
+        border-color: #3dbee8; }
+      .timetable tr th.cell--04 {
+        background-color: #f1ba19;
+        border-color: #f1ba19; }
+      .timetable tr th.cell--05 {
+        background-color: #e13e3b;
+        border-color: #e13e3b; }
+      .timetable tr th.cell--06 {
+        background-color: #88549f;
+        border-color: #88549f; }
     .timetable tr td {
-      border-bottom-width: 4px; }
+      border-bottom-width: 8px;
+      border-color: #fff; }
       .timetable tr td.rest {
-        padding-top: 0; }
-      .timetable tr td.none {
-        background-color: #e7e7e7; }
+        padding-top: 0;
+        padding-bottom: 8px; }
+      .timetable tr td.cell--merged {
+        text-align: center; }
+      .timetable tr td.cell--01 {
+        background-color: #faf1f6; }
+        .timetable tr td.cell--01 .session-tag--type span, .timetable tr td.cell--01 .session-tag--target-01 span, .timetable tr td.cell--01 .session-tag--target-01 span {
+          background-color: #d35b94; }
+      .timetable tr td.cell--02 {
+        background-color: #eff6ef; }
+        .timetable tr td.cell--02 .session-tag--type span, .timetable tr td.cell--02 .session-tag--target-01 span, .timetable tr td.cell--02 .session-tag--target-01 span {
+          background-color: #8ac56c; }
+      .timetable tr td.cell--03 {
+        background-color: #ecf4f8; }
+        .timetable tr td.cell--03 .session-tag--type span, .timetable tr td.cell--03 .session-tag--target-01 span, .timetable tr td.cell--03 .session-tag--target-01 span {
+          background-color: #3e7eb9; }
+      .timetable tr td.cell--04 {
+        background-color: #f7f8e7; }
+        .timetable tr td.cell--04 .session-tag--type span, .timetable tr td.cell--04 .session-tag--target-01 span, .timetable tr td.cell--04 .session-tag--target-01 span {
+          background-color: #c19018; }
+      .timetable tr td.cell--05 {
+        background-color: #fbefef; }
+        .timetable tr td.cell--05 .session-tag--type span, .timetable tr td.cell--05 .session-tag--target-01 span, .timetable tr td.cell--05 .session-tag--target-01 span {
+          background-color: #e13e3b; }
+      .timetable tr td.cell--06 {
+        background-color: #f7f1f7; }
+        .timetable tr td.cell--06 .session-tag--type span, .timetable tr td.cell--06 .session-tag--target-01 span, .timetable tr td.cell--06 .session-tag--target-01 span {
+          background-color: #88549f; }
   .timetable dl dt {
     border-left-width: 0;
-    background: transparent; }
+    background: transparent;
+    padding: 0;
+    margin: 3px 12px 1em; }
     .timetable dl dt a {
       color: #3595BE; }
   .timetable dl dd {
     margin-bottom: .25em;
     padding-left: 12px; }
+  .timetable .session-tag {
+    font-size: .8em; }
+    .timetable .session-tag--type span, .timetable .session-tag--target-01 span {
+      display: inline-block;
+      padding: .1em 1em;
+      color: #fff;
+      border-radius: 20px; }
   .timetable .speaker-name {
     margin-bottom: 0.5em;
     font-size: 12px; }
@@ -1319,7 +1459,54 @@ td {
       font-family: Genericons;
       line-height: 1em; }
 
+.target-tag {
+  margin-right: .5em; }
+  .target-tag--all {
+    background-image: url(files/2014/10/sprite-icons.png);
+    background-position: 0px 0px;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 12px;
+    width: 12px;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: 12px 48px; }
+  .target-tag--designer {
+    background-image: url(files/2014/10/sprite-icons.png);
+    background-position: 0px -24px;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 12px;
+    width: 12px;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: 12px 48px; }
+  .target-tag--contents {
+    background-image: url(files/2014/10/sprite-icons.png);
+    background-position: 0px -12px;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 12px;
+    width: 12px;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: 12px 48px; }
+  .target-tag--developper {
+    background-image: url(files/2014/10/sprite-icons.png);
+    background-position: 0px -36px;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 12px;
+    width: 12px;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: 12px 48px; }
+
 @media screen and (max-width: 810px) {
+  .describe-icons {
+    font-size: 1.4rem;
+    float: none; }
+
   .timetable {
     border-color: #efefef;
     border-top-width: 4px;
@@ -1341,6 +1528,20 @@ td {
       padding: 10px 15px; }
       .timetable tr td.rest {
         border-left: 0 none; }
+      .timetable tr td.cell--merged {
+        text-align: left; }
+      .timetable tr td.cell--01 > dl:before {
+        content: 'わぷーステージ'; }
+      .timetable tr td.cell--02 > dl:before {
+        content: 'これからステージ'; }
+      .timetable tr td.cell--03 > dl:before {
+        content: 'ブルータタミ'; }
+      .timetable tr td.cell--04 > dl:before {
+        content: 'イエロータタミ'; }
+      .timetable tr td.cell--05 > dl:before {
+        content: '会議室A'; }
+      .timetable tr td.cell--06 > dl:before {
+        content: '会議室B'; }
     .timetable .none {
       display: none; }
     .timetable dl {
@@ -1350,6 +1551,12 @@ td {
       border-color: #3595BE;
       border-left-width: 2px; }
       .timetable dl:before {
+        font-size: 1.3em;
+        display: block;
+        margin: 0 0 .25em;
+        padding: .4em 0 0 1.5em;
+        color: #555555; }
+      .timetable dl:after {
         position: absolute;
         display: inline-block;
         content: "";
@@ -1360,25 +1567,7 @@ td {
         top: .5em;
         left: .25em; }
       .timetable dl dt {
-        margin-bottom: 0;
-        padding: .5em 1.65em 0; }
-        .timetable dl dt.stage:before {
-          font-size: 1.3em;
-          display: block;
-          margin: 0 0 .25em;
-          color: #555555; }
-        .timetable dl dt.stage.stage--01:before {
-          content: 'わぷーステージ'; }
-        .timetable dl dt.stage.stage--02:before {
-          content: 'これからステージ'; }
-        .timetable dl dt.stage.stage--03:before {
-          content: 'ブルーたたみ'; }
-        .timetable dl dt.stage.stage--04:before {
-          content: 'イエローたたみ'; }
-        .timetable dl dt.stage.stage--05:before {
-          content: '会議室A'; }
-        .timetable dl dt.stage.stage--06:before {
-          content: '会議室B'; }
+        margin: .5em 1.65em 0; }
       .timetable dl dd {
         margin-bottom: 0;
         padding: .5em 1.65em; } }

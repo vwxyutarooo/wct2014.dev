@@ -1,15 +1,45 @@
 @charset 'utf-8';
 
+.describe-icons {
+  @extend %group;
+  list-style: none;
+  margin-left: 0;
+  float: right;
+  li {
+    float: left;
+    margin-right: .8em;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .describe-icon {
+    margin-right: .25em;
+    &--designer {
+      @include sprite-ir($icon_time-table_designer, 0.3, inline-block);
+    }
+    &--contents {
+      @include sprite-ir($icon_time-table_contents, 0.3, inline-block);
+    }
+    &--developper {
+      @include sprite-ir($icon_time-table_developper, 0.3, inline-block);
+    }
+    &--all {
+      @include sprite-ir($icon_time-table_all, 0.3, inline-block);
+    }
+  }
+}
+
 // Variables
 $colorBorder: #efefef;
 $colorRest: lighten(#87e6ad, 16%);
 
-/* ライン 425 */
 caption,
+table,
 th,
 td {
   font-weight: normal;
   text-align: left;
+  border-width: 0;
 }
 
 .timetable {
@@ -17,62 +47,172 @@ td {
   margin: 0 0 20px 0;
   border-spacing: 0;
   border-collapse: collapse;
-  border-width: 0 0 0 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ededed;
+  border-width: 0;
+  table-layout: fixed;
   thead tr {
     border-color: lighten($colorBlue, 3%);
     &:first-child th {
       color: #fff;
-      border-width: 0 1px 4px 1px;
+      border-width: 0;
       border-style: solid;
-      border-color: $colorBlue lighten($colorBlue, 12%) darken($colorBlue, 9%);
-      background-color: lighten($colorBlue, 3%);
+      vertical-align: middle;
     }
   }
   tr {
-    border-width: 0 4px 0 4px;
-    border-style: solid;
-    border-color: $colorBorder;
+    border-width: 0;
     &.restRow {
-      border-color: lighten($colorRest, 9%);
+      .time {
+        background-color: transparent;
+        padding: 8px;
+      }
     }
     %tdth {
       padding: 16px 8px;
-      border-width: 0 1px 1px 0;
-      border-color: $colorBorder;
-      background-color: lighten($colorBorder, 6%);
+      border-width: 0;
+      box-sizing: border-box;
+      word-wrap: break-all;
       &.rest {
         text-align: center;
-        border-color: lighten($colorRest, 3%);
-        background-color: lighten($colorRest, 9%);
+        background-color: transparent;
+        color: #aaa;
       }
       &.time {
         text-align: center;
+      }
+      &.cell--01 {
+        width: 22%;
+      }
+      &.cell--02 {
+        width: 22%;
+      }
+      &.cell--03 {
+        width: 12%;
+      }
+      &.cell--04 {
+        width: 12%;
+      }
+      &.cell--05 {
+        width: 16%;
+      }
+      &.cell--06 {
+        width: 16%;
       }
     }
     th {
       @extend %tdth;
       font-weight: bold;
       text-align: center;
-      border-width: 0 1px 1px 0;
       &.time {
+        background-color: lighten(#a69e8c, 36%);
         &:before {
           @include genericon('\f303', 1.2em);
         }
       }
       &.rest {
-        border-bottom-width: 0;
+        border-color: transparent;
+      }
+      &.cell--01 {
+        background-color: #d35b94;
+        border-color: #d35b94;
+      }
+      &.cell--02 {
+        background-color: #8ac56c;
+        border-color: #8ac56c;
+      }
+      &.cell--03 {
+        background-color: #3dbee8;
+        border-color: #3dbee8;
+      }
+      &.cell--04 {
+        background-color: #f1ba19;
+        border-color: #f1ba19;
+      }
+      &.cell--05 {
+        background-color: #e13e3b;
+        border-color: #e13e3b;
+      }
+      &.cell--06{
+        background-color: #88549f;
+        border-color: #88549f;
       }
     }
     td {
       @extend %tdth;
-      border-bottom-width: 4px;
+      border-bottom-width: 8px;
+      border-color: #fff;
       &.rest {
         padding-top: 0;
+        padding-bottom: 8px;
       }
-      &.none {
-        background-color: darken($colorBorder, 3%);
+      &.none {}
+      &.cell--merged {
+        text-align: center;
+      }
+      &.cell--01 {
+        background-color: #faf1f6;
+        .session-tag {
+          &--type,
+          &--target-01 {
+            span {
+              background-color: #d35b94;
+            }
+          }
+        }
+      }
+      &.cell--02 {
+        background-color: #eff6ef;
+        .session-tag {
+          &--type,
+          &--target-01 {
+            span {
+              background-color: #8ac56c;
+            }
+          }
+        }
+      }
+      &.cell--03 {
+        background-color: #ecf4f8;
+        .session-tag {
+          &--type,
+          &--target-01 {
+            span {
+              background-color: #3e7eb9;
+            }
+          }
+        }
+      }
+      &.cell--04 {
+        background-color: #f7f8e7;
+        .session-tag {
+          &--type,
+          &--target-01 {
+            span {
+              background-color: #c19018;
+            }
+          }
+        }
+      }
+      &.cell--05 {
+        background-color: #fbefef;
+        .session-tag {
+          &--type,
+          &--target-01 {
+            span {
+              background-color: #e13e3b;
+            }
+          }
+        }
+      }
+      &.cell--06 {
+        background-color: #f7f1f7;
+        .session-tag {
+          &--type,
+          &--target-01 {
+            span {
+              background-color: #88549f;
+            }
+          }
+        }
       }
     }
   }
@@ -80,6 +220,8 @@ td {
     dt {
       border-left-width: 0;
       background: transparent;
+      padding: 0;
+      margin: 3px 12px 1em;
       a {
         color: $colorBlue;
       }
@@ -87,6 +229,20 @@ td {
     dd {
       margin-bottom: .25em;
       padding-left: 12px;
+    }
+  }
+  .session-tag {
+    font-size: .8em;
+    &--type {
+      span {
+        display: inline-block;
+        padding: .1em 1em;
+        color: #fff;
+        border-radius: 20px;
+      }
+    }
+    &--target-01 {
+      @extend .session-tag--type;
     }
   }
   .speaker-name {
@@ -98,7 +254,27 @@ td {
   }
 }
 
+.target-tag {
+  margin-right: .5em;
+  &--all {
+    @include sprite-ir($icon_time-table_all, 0.2, inline-block);
+  }
+  &--designer {
+    @include sprite-ir($icon_time-table_designer, 0.2, inline-block);
+  }
+  &--contents {
+    @include sprite-ir($icon_time-table_contents, 0.2, inline-block);
+  }
+  &--developper {
+    @include sprite-ir($icon_time-table_developper, 0.2, inline-block);
+  }
+}
+
 @media screen and (max-width: 810px) {
+  .describe-icons {
+    font-size: 1.4rem;
+    float: none;
+  }
   .timetable {
     border-color: $colorBorder;
     border-top-width: 4px;
@@ -128,6 +304,51 @@ td {
         &.rest {
           border-left: 0 none;
         }
+        &.cell--merged {
+          text-align: left;
+        }
+        &.cell--01 {
+          > dl {
+            &:before {
+              content: 'わぷーステージ';
+            }
+          }
+        }
+        &.cell--02 {
+          > dl {
+            &:before {
+              content: 'これからステージ';
+            }
+          }
+        }
+        &.cell--03 {
+          > dl {
+            &:before {
+              content: 'ブルータタミ';
+            }
+          }
+        }
+        &.cell--04 {
+          > dl {
+            &:before {
+              content: 'イエロータタミ';
+            }
+          }
+        }
+        &.cell--05 {
+          > dl {
+            &:before {
+              content: '会議室A';
+            }
+          }
+        }
+        &.cell--06 {
+          > dl {
+            &:before {
+              content: '会議室B';
+            }
+          }
+        }
       }
     }
     .none {
@@ -140,51 +361,19 @@ td {
       border-color: $colorBlue;
       border-left-width: 2px;
       &:before {
+        font-size: 1.3em;
+        display: block;
+        margin: 0 0 .25em;
+        padding: .4em 0 0 1.5em;
+        color: $colorText;
+      }
+      &:after {
         @include genericon('\f417', 1.4em, $position: absolute);
         top: .5em;
         left: .25em;
       }
       dt {
-        margin-bottom: 0;
-        padding: .5em 1.65em 0;
-        &.stage {
-          &:before {
-            font-size: 1.3em;
-            display: block;
-            margin: 0 0 .25em;
-            color: $colorText;
-          }
-          &.stage--01 {
-            &:before {
-              content: 'わぷーステージ';
-            }
-          }
-          &.stage--02 {
-            &:before {
-              content: 'これからステージ';
-            }
-          }
-          &.stage--03 {
-            &:before {
-              content: 'ブルーたたみ';
-            }
-          }
-          &.stage--04 {
-            &:before {
-              content: 'イエローたたみ';
-            }
-          }
-          &.stage--05 {
-            &:before {
-              content: '会議室A';
-            }
-          }
-          &.stage--06 {
-            &:before {
-              content: '会議室B';
-            }
-          }
-        }
+        margin: .5em 1.65em 0;
       }
       dd {
         margin-bottom: 0;

@@ -32,22 +32,22 @@ $colorBkgCell: #F1F1F1;
         line-height: 1.4;
       }
     }
-  }
- 
-  .none {
-    background: $colorBkgCell;
-    
-    i {
-      color: $colorBlue;
-    }
-  }
 
-  .name,
-  .twitter,
-  .title {
-    margin-bottom: 0;
-    a:hover {
-      text-decoration: underline;
+    .none {
+      background: $colorBkgCell;
+      
+      i {
+        color: $colorBlue;
+      }
+    }
+
+    .name,
+    .twitter,
+    .title {
+      margin-bottom: 0;
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
