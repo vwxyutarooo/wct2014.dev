@@ -4,40 +4,19 @@
  * Custom CSS
 */
 
-/**
- * core files
- * -----------------------------------------------------------------------------
- */
+// ========================================
+// core files
+// ========================================
 @import 'core/config';
 @import 'core/mixins';
 @import 'core/default';
 
-/**
- * modules
- * -----------------------------------------------------------------------------
- */
-@import 'module/module-grid';
-@import 'module/module-buttons';
-@import 'module/module-sprite-icons';
+// ========================================
+// modules
+// ========================================
+@import 'module/*.*';
 
-/**
- * layouts
- * -----------------------------------------------------------------------------
- */
-@import 'layout/layout-common';
-@import 'layout/layout-header';
-
-@import 'layout/layout-top';
-@import 'layout/layout-post';
-@import 'layout/layout-page';
-@import 'layout/layout-page-fullwidth';
-@import 'layout/layout-page-relayBlog';
-@import 'layout/layout-page-sessions';
-@import 'layout/layout-archives';
-@import 'layout/layout-sessions';
-@import 'layout/layout-speakers';
-
-@import 'layout/layout-sidebar';
-@import 'layout/layout-footer';
-@import 'layout/layout-footer-sponsor';
-@import 'layout/layout-mediaqueries';
+// ========================================
+// layouts
+// ========================================
+@import 'layout/*.*';
