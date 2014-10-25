@@ -1,25 +1,24 @@
 /*******************************************************************************
  * 1. DEPENDENCIES
 *******************************************************************************/
-var gulp		=	require('gulp')
-,	bower		=	require('gulp-bower-files')
+var gulp			=	require('gulp')
+,	bower				=	require('gulp-bower-files')
 ,	browserSync	=	require('browser-sync')
-,	changed		=	require('gulp-changed')
-,	concat		=	require('gulp-concat')
-,	csscomb		=	require('gulp-csscomb')
-,	flatten		=	require('gulp-flatten')
+,	changed			=	require('gulp-changed')
+,	concat			=	require('gulp-concat')
+,	csscomb			=	require('gulp-csscomb')
+,	flatten			=	require('gulp-flatten')
 ,	gulpFilter	=	require('gulp-filter')
-,	imagemin	=	require('gulp-imagemin')
-,	jade		=	require('gulp-jade')
-,	minifycss	=	require('gulp-csso')
-,	plumber		=	require('gulp-plumber')
-,	prefix		=	require('gulp-autoprefixer')
-,	prettify	=	require('gulp-prettify')
-,	rename		=	require('gulp-rename')
-,	sass		=	require('gulp-ruby-sass')
+,	imagemin		=	require('gulp-imagemin')
+,	jade				=	require('gulp-jade')
+,	plumber			=	require('gulp-plumber')
+,	prefix			=	require('gulp-autoprefixer')
+,	prettify		=	require('gulp-prettify')
+,	rename			=	require('gulp-rename')
+,	sass				=	require('gulp-ruby-sass')
 ,	sourcemaps	=	require('gulp-sourcemaps')
 ,	spritesmith	=	require('gulp.spritesmith')
-,	uglify		=	require('gulp-uglify')
+,	uglify			=	require('gulp-uglify')
 ;
 
 /*******************************************************************************
@@ -116,11 +115,12 @@ gulp.task('js', function() {
 gulp.task('scss', function() {
 	return gulp.src(paths.scssDir)
 		.pipe(plumber({ errorHandler: handleError }))
-		.pipe(sass())
+		.pipe(sass({
+			r: "sass-globbing"
+		}))
 		.pipe(prefix('last 2 version'))
 		// .pipe(csscomb())
 		.pipe(gulp.dest(paths.dest));
-		// .pipe(browserSync.reload({stream: true}));
 });
 
 function handleError(err) {

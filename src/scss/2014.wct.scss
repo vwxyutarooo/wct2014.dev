@@ -4,22 +4,19 @@
  * Custom CSS
 */
 
-/**
- * core files
- * -----------------------------------------------------------------------------
- */
+// ========================================
+// core files
+// ========================================
 @import 'core/config';
 @import 'core/mixins';
 @import 'core/default';
 
-/**
- * modules
- * -----------------------------------------------------------------------------
- */
-@import 'module/module-grid';
-@import 'module/module-buttons';
-@import 'module/module-sprite-icons';
+// ========================================
+// modules
+// ========================================
+@import 'module/*.*';
 
+<<<<<<< HEAD
 /**
  * layouts
  * -----------------------------------------------------------------------------
@@ -42,3 +39,9 @@
 @import 'layout/layout-footer';
 @import 'layout/layout-footer-sponsor';
 @import 'layout/layout-mediaqueries';
+=======
+// ========================================
+// layouts
+// ========================================
+@import 'layout/*.*';
+>>>>>>> c8f8bd0957fa6080ec52d17335f576de5b1a1c0f
