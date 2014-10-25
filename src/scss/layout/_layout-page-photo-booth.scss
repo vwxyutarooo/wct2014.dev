@@ -1,0 +1,199 @@
+@charset 'utf-8';
+/* layout page-photo-booth
+---------------------------------------- */
+#content .entry-content #photo-booth .item {
+/*background-color: #f7f7f7;*/
+float: left;
+/*margin: 0 0.8rem 0.8rem 0;*/
+overflow: hidden;
+
+position: relative;
+/*padding: 1rem 1rem 0.8rem 1rem;*/
+font-size: 14px;
+line-height: 1.2;
+}
+.item img{
+padding-bottom: 5px;
+}
+figure p.name {
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+font-weight: 500;
+line-height: 1.1
+}
+
+@media only screen and (min-width: 906px) {
+	.photo-box > li img {
+	max-width: 170px;
+	margin: 0 auto;
+	display: block;
+	}
+	.item > li img {
+	width: 100%;
+	}
+	.photo-box > li {
+	width: 25%;
+	}
+	.item > li {
+	display: inline-block;
+	}
+
+	.item figcaption {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: rgba(244,170,202,.85);
+	-webkit-transform: rotate(90deg) scale(0);
+	transform: rotate(90deg) scale(0);
+	-webkit-transition: .3s;
+	transition: .3s;
+	opacity: 0;
+	}
+
+	.item figure {
+	max-width: 170px;
+	position: relative;
+	overflow: hidden;
+	}
+	.item figure:hover figcaption {
+	-webkit-transform: rotate(360deg) scale(1);
+	transform: rotate(360deg) scale(1);
+	opacity: 1;
+	}
+	figure p.name {
+	padding: 20px 0 5px;
+	}
+}
+
+@media screen and (min-width: 846px) and (max-width: 935px) {
+	.photo-box > li img {
+	max-width: 140px;
+	}
+	.item figure {
+	max-width: 140px;
+	}
+.photo-box > li {
+	width: 33.333%;
+	}
+	.item > li {
+	display: inline-block;
+	}
+
+	.item figcaption {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: rgba(244,170,202,.85);
+	-webkit-transform: rotate(90deg) scale(0);
+	transform: rotate(90deg) scale(0);
+	-webkit-transition: .3s;
+	transition: .3s;
+	opacity: 0;
+	}
+}
+ 
+@media screen and (min-width: 621px) and (max-width: 845px){
+	.photo-box > li img {
+	max-width: 170px;
+	margin: 0 auto;
+	display: block;
+	}
+	.item > li img {
+	width: 100%;
+	}
+	.photo-box > li {
+	width: 33.333%;
+	}
+	.item > li {
+	display: inline-block;
+	}
+
+	.item figcaption {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	background: rgba(244,170,202,.85);
+	-webkit-transform: rotate(90deg) scale(0);
+	transform: rotate(90deg) scale(0);
+	-webkit-transition: .3s;
+	transition: .3s;
+	opacity: 0;
+	}
+
+	.item figure {
+	max-width: 170px;
+	position: relative;
+	overflow: hidden;
+	}
+	.item figure:hover figcaption {
+	-webkit-transform: rotate(360deg) scale(1);
+	transform: rotate(360deg) scale(1);
+	opacity: 1;
+	}
+	figure p.name {
+	padding: 20px 0 5px;
+	}
+}
+@media only screen and (max-width: 620px) {
+	#content .entry-content #photo-booth .item {
+		width: 90%;
+		height: auto;
+	}
+	.item figure {
+	overflow: visible;
+	}
+	.item figcaption {
+		opacity: 1;
+		position: relative;
+		color: #333;
+		padding: 15px 0 6px 0;
+		border-bottom: dashed 2px #E7B955;
+		margin-bottom: 10px;
+	}
+}
+
+
+/* =========================================================
+	 Media - Mobile sizes
+========================================================= */
+@mixin layout-page-photo-booth-under-320 {}
+@mixin layout-page-photo-booth-under-360 {}
+@mixin layout-page-photo-booth-under-400 {}
+@mixin layout-page-photo-booth-under-640 {}
+@mixin layout-page-photo-booth-over-401 {}
+@mixin layout-page-photo-booth-over-594 {}
+/* =========================================================
+	 Media - Tablet Size
+========================================================= */
+@mixin layout-page-photo-booth-over-641 {}
+@mixin layout-page-photo-booth-over-673 {}
+/* =========================================================
+	 Media - Navigation Expanded
+========================================================= */
+@mixin layout-page-photo-booth-over-783 {}
+@mixin layout-page-photo-booth-over-810 {}
+/* =========================================================
+	 Media - PC Size
+========================================================= */
+@mixin layout-page-photo-booth-over-846 {}
+@mixin layout-page-photo-booth-over-1008 {}
+@mixin layout-page-photo-booth-over-1040 {}
+@mixin layout-page-photo-booth-over-1080 {}
+@mixin layout-page-photo-booth-over-1110 {}
+@mixin layout-page-photo-booth-over-1218 {}
+@mixin layout-page-photo-booth-over-1260 {}
+@mixin layout-page-photo-booth-over-1281 {}
+@mixin layout-page-photo-booth-over-1440 {}
+@mixin layout-page-photo-booth-over-1600 {}

@@ -75,6 +75,18 @@
   }
 }
 
+.list-column {
+  @extend %group;
+  list-style: none;
+  margin: 2em auto;
+  li {
+    margin: .8em auto;
+  }
+  p {
+    margin: .125em auto;
+  }
+}
+
 /* jetpack
 ---------------------------------------- */
 div.sharedaddy {
@@ -145,6 +157,8 @@ div.sharedaddy {
   }
 }
 
+@mixin layout-common-over-401 {}
+
 @mixin layout-common-over-641 {
   body {
     background-image: url($filePath+'2014/08/bkgHeaderShortM.jpg'), url($filePath+'2014/08/bkgHeaderShortRepeatM.jpg');
@@ -158,6 +172,16 @@ div.sharedaddy {
     &:before {
       left: 17px;
       width: 12px;
+    }
+  }
+  .list-column {
+    li {
+      float: left;
+      width: 50%;
+      text-align: center;
+    }
+    p {
+      margin: 0 auto;
     }
   }
 }
@@ -199,5 +223,10 @@ div.sharedaddy {
   .site-content .entry-summary,
   .site-content footer.entry-meta {
     margin-right: 0;
+  }
+  .list-column {
+    li {
+      width: 25%;
+    }
   }
 }

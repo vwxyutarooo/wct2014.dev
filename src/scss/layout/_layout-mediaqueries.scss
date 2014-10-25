@@ -52,6 +52,7 @@
 	@include layout-header-over-401;
 	@include layout-front-over-401;
 	@include layout-sidebar-over-810;
+	@include layout-common-over-401;
 	%postTitle{
 		@include definePostTitle;
 	}
@@ -175,6 +176,7 @@
 }
 
 @media screen and (min-width: 1218px){
+	@include layout-common-over-1218;
 	@include layout-common-over-1218;
 }
 

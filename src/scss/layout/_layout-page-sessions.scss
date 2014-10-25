@@ -270,6 +270,14 @@ td {
   }
 }
 
+.booth-list {
+  li {
+    img {
+      max-width: 280px;
+    }
+  }
+}
+
 @media screen and (max-width: 810px) {
   .describe-icons {
     font-size: 1.4rem;
