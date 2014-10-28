@@ -1,71 +1,61 @@
 /*******************************************************************************
  * 1. DEPENDENCIES
 *******************************************************************************/
-var gulp			=	require('gulp')
-,	bower				=	require('gulp-bower-files')
-,	browserSync	=	require('browser-sync')
-,	changed			=	require('gulp-changed')
-,	concat			=	require('gulp-concat')
-,	csscomb			=	require('gulp-csscomb')
-,	flatten			=	require('gulp-flatten')
-,	gulpFilter	=	require('gulp-filter')
-,	imagemin		=	require('gulp-imagemin')
-,	jade				=	require('gulp-jade')
-,	plumber			=	require('gulp-plumber')
-,	prefix			=	require('gulp-autoprefixer')
-,	prettify		=	require('gulp-prettify')
-,	rename			=	require('gulp-rename')
-,	sass				=	require('gulp-ruby-sass')
-,	sourcemaps	=	require('gulp-sourcemaps')
-,	spritesmith	=	require('gulp.spritesmith')
-,	uglify			=	require('gulp-uglify')
+var gulp = require('gulp'),
+	$ = require('gulp-load-plugins')({
+			pattern: ['gulp-*', 'gulp.*'],
+			replaceString: /\bgulp[\-.]/
+		}),
+	browserSync = require('browser-sync')
 ;
 
 /*******************************************************************************
  * 2. FILE DESTINATIONS (RELATIVE TO ASSSETS FOLDER)
 *******************************************************************************/
 var paths = {
-	'dest':			''
+	'dest':			'./'
 ,	'htmlDest':		'src/html'
-,	'htmlDir':		'src/html/*.html'
+,	'htmlFiles':	'src/html/*.html'
 ,	'imgDest':		'files'
 ,	'imgDir':		'files/**'
 ,	'jadeDir':		'src/jade/*.jade'
-,	'jadeWatch':	['src/jade/*.jade', 'src/jade/**/*.jade']
-,	'jsLib':		'src/lib/*.js'
-,	'jsDest':		'src/js'
-,	'jsDir':		'src/js/*.js'
+,	'jadeFiles':	['src/jade/*.jade', 'src/jade/**/*.jade']
+,	'jsAppFiles':	'src/js/*.js'
+,	'jsDest':		'js'
+,	'jsDir':		'src/js'
+,	'jsLibFiles':	'src/lib/*.js'
+,	'phpFiles':		['*.php', './**/*.php']
 ,	'scssDest':		'src/scss'
 ,	'scssDir':		['src/scss/**/*.scss', 'src/scss/**/*.sass']
 ,	'vhost':		'wct2014.dev'
-,	'portNum':		8080
+,	'portNum':		3000
 }
 
 /*******************************************************************************
  * 3. initialize browser-sync && bower_components
 *******************************************************************************/
 gulp.task('bower-init', function(){
-	var filterJs = gulpFilter('*.js');
-	var filterCss = gulpFilter('*.css');
-	bower().pipe(gulp.dest('src/lib'))
+	var filterJs = $.filter('*.js');
+	var filterCss = $.filter('*.css');
+	bowerFiles().pipe(gulp.dest('src/lib'))
 	gulp.src('src/lib/**')
 		.pipe(filterJs)
-		.pipe(concat('lib.js'))
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('js'))
+		.pipe($.concat('lib.js'))
+		.pipe($.uglify())
+		.pipe($.rename({ suffix: '.min' }))
+		.pipe(gulp.dest(paths.jsDest))
 		.pipe(filterJs.restore())
 		.pipe(filterCss)
-		.pipe(rename({ prefix: '_module-', extname: '.scss' }))
-		.pipe(flatten())
+		.pipe($.rename({ prefix: '_module-', extname: '.scss' }))
+		.pipe($.flatten())
 		.pipe(gulp.dest('src/scss/module'));
 });
 
 gulp.task('foundation-init', function() {
-	var filter = gulpFilter(['foundation.scss', 'normalize.scss']);
+	var filter = $.filter(['foundation.scss', 'normalize.scss']);
 	gulp.src('src/lib/foundation/scss/**')
 		.pipe(filter)
-		.pipe(rename({ prefix: '_' }))
+		.pipe($.rename({ prefix: '_' }))
 		.pipe(filter.restore())
 		.pipe(gulp.dest('src/scss/core'));
 });
@@ -86,14 +76,14 @@ gulp.task('bs-reload', function() {
 *******************************************************************************/
 gulp.task('jade', function() {
 	return gulp.src(paths.jadeDir)
-		.pipe(plumber())
-		.pipe(jade())
-		.pipe(rename({ extname: '.php' }))
+		.pipe($.plumber())
+		.pipe($.jade())
+		.pipe($.rename({ extname: '.php' }))
 		.pipe(gulp.dest(paths.htmlDest))
-		.pipe(prettify({indent_size: 2}))
-		.pipe(rename({ extname: '.html' }))
+		.pipe($.prettify({ indent_size: 2 }))
+		.pipe($.rename({ extname: '.html' }))
 		.pipe(gulp.dest(paths.htmlDest))
-		.pipe(browserSync.reload({stream: true, once: true}));
+		.pipe(browserSync.reload({ stream: true, once: true }));
 });
 
 /*******************************************************************************
@@ -101,12 +91,12 @@ gulp.task('jade', function() {
 *******************************************************************************/
 gulp.task('js', function() {
 	return gulp.src('src/lib/app/*.js')
-		.pipe(sourcemaps.init())
-		.pipe(concat('script.js'))
-		.pipe(uglify())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('js'));
+		.pipe($.sourcemaps.init())
+		.pipe($.concat('script.js'))
+		.pipe($.uglify())
+		.pipe($.rename({ suffix: '.min' }))
+		.pipe($.sourcemaps.write())
+		.pipe(gulp.dest(paths.jsDest));
 });
 
 /*******************************************************************************
@@ -114,12 +104,13 @@ gulp.task('js', function() {
 ********************************************************************************/
 gulp.task('scss', function() {
 	return gulp.src(paths.scssDir)
-		.pipe(plumber({ errorHandler: handleError }))
-		.pipe(sass({
+		.pipe($.plumber({ errorHandler: handleError }))
+		.pipe($.rubySass({
 			r: "sass-globbing"
+			// sourcemap: none // #113 "Try updating to master. A fix for this went in but I won't be releasing anything until 1.0."
 		}))
-		.pipe(prefix('last 2 version'))
-		// .pipe(csscomb())
+		.pipe($.autoprefixer('last 2 version'))
+		// .pipe($.csso())
 		.pipe(gulp.dest(paths.dest));
 });
 
@@ -133,19 +124,19 @@ function handleError(err) {
 *******************************************************************************/
 gulp.task('image', function() {
 	return gulp.src(paths.imgDir)
-		.pipe(changed(paths.imgDest))
-		.pipe(imagemin({optimizationLevel: 3}))
+		.pipe($.changed(paths.imgDest))
+		.pipe($.imagemin({ optimizationLevel: 3 }))
 		.pipe(gulp.dest(paths.imgDest))
-		.pipe(browserSync.reload({stream: true}));
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task('sprite-icons', function () {
 	var spriteData = gulp.src('src/img/sprite-icons/*.png')
-	.pipe(spritesmith({
+	.pipe($.spritesmith({
 		imgName: paths.imgDest + '/2014/10/sprite-icons.png',
 		cssName: '_module-sprite-icons.scss'
 	}));
-	spriteData.img.pipe(gulp.dest("./"));
+	spriteData.img.pipe(gulp.dest('./'));
 	spriteData.css.pipe(gulp.dest(paths.scssDest + '/module'));
 });
 
@@ -153,12 +144,12 @@ gulp.task('sprite-icons', function () {
  * 8. gulp Tasks
 *******************************************************************************/
 gulp.task('watch', function() {
-	gulp.watch([paths.jadeWatch], ['jade']);
+	gulp.watch([paths.jadeFiles], ['jade']);
 	// gulp.watch([paths.imgDir], ['image']);
 	gulp.watch(['src/img/sprite-icons/*.png'], ['sprite-icons']);
 	// gulp.watch([paths.jsDir], ['concat']);
 	gulp.watch([paths.scssDir], ['scss']);
-	gulp.watch(['./*.php', './**/*.php'], ['bs-reload']);
+	gulp.watch([paths.phpFiles], ['bs-reload']);
 });
 
 gulp.task('default', [
@@ -166,7 +157,7 @@ gulp.task('default', [
 	'scss',
 	'jade',
 	// 'image',
-	// 'sprite',
+	'sprite-icons',
 	'watch'
 ]);
 
