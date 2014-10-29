@@ -6,75 +6,75 @@
 ---------------------------------------- */
 .archive-header,
 .page-header {
-	margin: 0 0 2em;
-	padding: 0;
-	max-width: 100%;
-	text-align: right
+  margin: 0 0 2em;
+  padding: 0;
+  max-width: 100%;
+  text-align: right
 }
 .archive-title,
 .page-title {
-	// border-bottom: solid 6px #5198CE;
-	color: #177098;
-	@include hasPseudoClass(before, static);
-	&:before{
-		@include fa('\f187');
-		margin-right: 0.5em;
-	}
+  // border-bottom: solid 6px #5198CE;
+  color: #177098;
+  @include hasPseudoClass(before, static);
+  &:before{
+    @include fa('\f187');
+    margin-right: 0.5em;
+  }
 }
 #categories-2 h1 {
-	margin: 6px 0;
+  margin: 6px 0;
 }
 
 /* Page navigation
 ---------------------------------------- */
 .page-links{
-	a {
-		background: #F7DAE6;
-		border: 1px solid #F7DAE6;
-		color: #666;
-		&:hover {
-			background: lighten($colorPink, 10%);
-			border: 1px solid lighten($colorPink, 10%);
-			color: #fff;
-		}
-	}
-	> span {
-		background-color: lighten($colorPink, 10%);
-		color: #fff;
-	}
+  a {
+    background: #F7DAE6;
+    border: 1px solid #F7DAE6;
+    color: #666;
+    &:hover {
+      background: lighten($colorPink, 10%);
+      border: 1px solid lighten($colorPink, 10%);
+      color: #fff;
+    }
+  }
+  > span {
+    background-color: lighten($colorPink, 10%);
+    color: #fff;
+  }
 }
 .paging-navigation {
-	border-top: none;
-	.page-numbers {
-		background-color: #F7DAE6;
-	}
-	.page-numbers.current {
-		border-top: 5px solid lighten($colorPink, 10%);
-		background: lighten($colorPink, 10%);
-		color: #fff;
-	}
-	a:hover {
-		border-top: 5px solid lighten($colorPink, 10%);
-		background-color: lighten($colorPink, 10%);
-		color: #fff;
-		text-decoration: none;
-	}
+  border-top: none;
+  .page-numbers {
+    background-color: #F7DAE6;
+  }
+  .page-numbers.current {
+    border-top: 5px solid lighten($colorPink, 10%);
+    background: lighten($colorPink, 10%);
+    color: #fff;
+  }
+  a:hover {
+    border-top: 5px solid lighten($colorPink, 10%);
+    background-color: lighten($colorPink, 10%);
+    color: #fff;
+    text-decoration: none;
+  }
 }
 a.prev.page-numbers,
 a:hover.prev.page-numbers,
 a.next.page-numbers,
 span.page-numbers.dots,
 a:hover.next.page-numbers {
-	background-color: transparent;
-	border: none;
-	color: #666 !important;
+  background-color: transparent;
+  border: none;
+  color: #666 !important;
 }
 .pagination.loop-pagination a {
-	color: #666;
-	&:hover {
-		color: #fff;
-	}
+  color: #666;
+  &:hover {
+    color: #fff;
+  }
 }
 span.page-links-title {
-	display: none;
+  display: none;
 }

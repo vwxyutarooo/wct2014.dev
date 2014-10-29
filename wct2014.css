@@ -90,7 +90,7 @@
           animation-fill-mode: backwards, none; }
 
 /* =========================================================
-	 The root elemen
+   The root elemen
 ========================================================= */
 html {
   font-size: 10px; }
@@ -105,13 +105,13 @@ body {
   letter-spacing: 0.1px; }
 
 /* =========================================================
-	 Grouping content
+   Grouping content
 ========================================================= */
 iframe {
   vertical-align: middle; }
 
 /* =========================================================
-	 Text-level semantics
+   Text-level semantics
 ========================================================= */
 a {
   color: #286f8e;
@@ -163,7 +163,7 @@ code {
   font-family: HelveticaNeue, Helvetica, Arial, Verdana, "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif; }
 
 /* =========================================================
-	 List items
+   List items
 ========================================================= */
 dl {
   margin-bottom: 2em; }
@@ -177,7 +177,7 @@ dl {
       margin-bottom: 0; }
 
 /* =========================================================
-	 Embedded content
+   Embedded content
 ========================================================= */
 img {
   vertical-align: bottom;
@@ -187,7 +187,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 /* =========================================================
-	 Tabular data
+   Tabular data
 ========================================================= */
 table {
   font: 100%;
@@ -608,6 +608,8 @@ dl dd {
 /* main elemtns
 ---------------------------------------- */
 #main-content {
+  position: relative;
+  z-index: 1;
   float: none;
   margin-top: 60px; }
   .full-width #main-content {
@@ -1294,16 +1296,16 @@ figure p.name {
     border-bottom: dashed 2px #E7B955;
     margin-bottom: 10px; } }
 /* =========================================================
-	 Media - Mobile sizes
+   Media - Mobile sizes
 ========================================================= */
 /* =========================================================
-	 Media - Tablet Size
+   Media - Tablet Size
 ========================================================= */
 /* =========================================================
-	 Media - Navigation Expanded
+   Media - Navigation Expanded
 ========================================================= */
 /* =========================================================
-	 Media - PC Size
+   Media - PC Size
 ========================================================= */
 .full-width
 .entry-content__row .relay-blog-month {
@@ -2329,7 +2331,7 @@ blockquote {
 /* for Android @2 (max-width: 360px) */
 /* for iPhone @2 (max-width: 320px) */
 /* =========================================================
-	 Media - Mobile sizes
+   Media - Mobile sizes
 ========================================================= */
 @media screen and (max-width: 640px) {
   html {
@@ -3102,7 +3104,7 @@ blockquote {
     .sponsorList--bronze > li > a {
       font-size: 0.5em; } }
 /* =========================================================
-	 Media - Tablet Size
+   Media - Tablet Size
 ========================================================= */
 @media only screen and (min-width: 641px) {
   .header-main {
@@ -3271,7 +3273,7 @@ blockquote {
       right: 5px;
       bottom: -12px; } }
 /* =========================================================
-	 Media - Navigation Expanded
+   Media - Navigation Expanded
 ========================================================= */
 @media screen and (min-width: 783px) {
   body.home {
@@ -3358,7 +3360,7 @@ blockquote {
   .textwidget__banner-list li {
     float: none; } }
 /* =========================================================
-	 Media - PC Size
+   Media - PC Size
 ========================================================= */
 @media screen and (min-width: 846px) {
   .header-main {
@@ -3681,7 +3683,7 @@ blockquote {
   .site-footer #supplementary:after {
     padding-top: 500px; } }
 /* =========================================================
-	 Media - Page attendees
+   Media - Page attendees
 ========================================================= */
 @media screen and (min-width: 735px) {
   .page #tix-attendees li {
@@ -3704,7 +3706,7 @@ blockquote {
     margin-bottom: 20px;
     padding-bottom: 10px; } }
 /* =========================================================
-	 Media - Page relay-blog
+   Media - Page relay-blog
 ========================================================= */
 @media screen and (max-width: 845px) {
   .full-width
@@ -3756,7 +3758,7 @@ blockquote {
     .relay-blog-table .title {
       clear: both; } }
 /* =========================================================
-	 Media - Retina dispaly devices
+   Media - Retina dispaly devices
 ========================================================= */
 @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 960px) and (max-width: 1280px), only screen and (min-device-pixel-ratio: 2) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 192dpi) and (min-width: 960px) and (max-width: 1280px), only screen and (min-resolution: 2dppx) and (min-width: 960px) and (max-width: 1280px) {
   body.home {

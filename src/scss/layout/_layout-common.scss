@@ -36,6 +36,8 @@ dl {
   @extend %baseWidth;
 }
 #main-content {
+  position: relative;
+  z-index: 1;
   float: none;
   margin-top: 60px;
   .full-width & {
