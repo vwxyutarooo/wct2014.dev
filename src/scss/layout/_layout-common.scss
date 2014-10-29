@@ -11,6 +11,17 @@ body {
   margin-right: auto;
   box-shadow: 0 0 20px 1px rgba(0,0,0, 0.125);
 }
+dl {
+  dt {
+    font-weight: normal;
+    padding: 3px 12px;
+    border-left: 3px solid #bebebe;
+    background: #f2f2f2;
+  }
+  dd {
+    padding: 0 0 0 15px;
+  }
+}
 .site {
   max-width: 100%;
   background-color: transparent;

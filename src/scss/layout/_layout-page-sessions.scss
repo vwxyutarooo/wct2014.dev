@@ -33,15 +33,6 @@
 $colorBorder: #efefef;
 $colorRest: lighten(#87e6ad, 16%);
 
-caption,
-table,
-th,
-td {
-  font-weight: normal;
-  text-align: left;
-  border-width: 0;
-}
-
 .timetable {
   width: 100%;
   margin: 0 0 20px 0;
@@ -49,6 +40,13 @@ td {
   border-collapse: collapse;
   border-width: 0;
   table-layout: fixed;
+  caption,
+  th,
+  td {
+    font-weight: normal;
+    text-align: left;
+    border-width: 0;
+  }
   thead tr {
     border-color: lighten($colorBlue, 3%);
     &:first-child th {

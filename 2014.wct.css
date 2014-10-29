@@ -591,6 +591,14 @@ body {
   margin-right: auto;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.125); }
 
+dl dt {
+  font-weight: normal;
+  padding: 3px 12px;
+  border-left: 3px solid #bebebe;
+  background: #f2f2f2; }
+dl dd {
+  padding: 0 0 0 15px; }
+
 .site {
   max-width: 100%;
   background-color: transparent; }
@@ -1432,14 +1440,6 @@ figure p.name {
       background-repeat: no-repeat;
       background-size: 18px 72px; }
 
-caption,
-table,
-th,
-td {
-  font-weight: normal;
-  text-align: left;
-  border-width: 0; }
-
 .timetable {
   width: 100%;
   margin: 0 0 20px 0;
@@ -1447,6 +1447,12 @@ td {
   border-collapse: collapse;
   border-width: 0;
   table-layout: fixed; }
+  .timetable caption,
+  .timetable th,
+  .timetable td {
+    font-weight: normal;
+    text-align: left;
+    border-width: 0; }
   .timetable thead tr {
     border-color: #3a9ec8; }
     .timetable thead tr:first-child th {
@@ -1896,13 +1902,6 @@ article .entry-header {
 .entry-content h6 {
   margin-top: 2.3em;
   margin-bottom: 1.2em; }
-.entry-content dl dt {
-  font-weight: normal;
-  padding: 3px 12px;
-  border-left: 3px solid #bebebe;
-  background: #f2f2f2; }
-.entry-content dl dd {
-  padding: 0 0 0 15px; }
 .entry-content a {
   text-decoration: none; }
 
