@@ -4,12 +4,9 @@ First, You will need your own environment of wordpress as development project.
 ## Setup your local project
 On your WordPress "theme" directory,
 
-	git clone git@github.org:vwxyutarooo/wct2014.dev.git wct2014  
+	git clone git@github.org:vwxyutarooo/wct2014.dev.git wct2014
 
-copy files to your WordPress plugin directory which is in "wct2014/plugins" folder and enable them.  
-Set up gulp if you haven't
-
-	npm install -g gulp
+copy files to your WordPress plugin directory which is in "src/plugins" directory.
 
 Install node_modules
 
@@ -17,25 +14,17 @@ Install node_modules
 
 Run gulp and there are some options that I was prepared
 
-	gulp
+	npm start
 
-Open static server' url in your default browser, I supposed that will be used with "Jade".
-
-	gulp begin
-
-
-##Default WordPress infomations
-Default user
+## Default WordPress infomations
+user
 
 * Username: admin
 * Password: admin
 
 
-Default db values
+Database
 
-* DB_NAME -> wordpress
-* DB_USER -> wordpress
-* DB_PASSWORD -> wordpress
-* DB_HOST -> localhost
+* table_prefix -> wp_
 * WP_HOME -> http://2014.wct.dev
 * WP_SITEURL -> http://2014.wct.dev
