@@ -86,6 +86,18 @@ gulp.task('jade', function() {
 		.pipe(browserSync.reload({ stream: true, once: true }));
 });
 
+gulp.task('jade', function() {
+	return gulp.src(paths.jadeDir)
+		.pipe($.data(function(file) {
+			return require('./setting.json');
+		}))
+		.pipe($.changed(paths.htmlDest, { extension: '.html' }))
+		.pipe($.plumber())
+		.pipe($.jade({ pretty: true }))
+		.pipe(gulp.dest(paths.htmlDest))
+		.pipe(browserSync.reload({ stream: true }));
+});
+
 /*******************************************************************************
  * 5. js Tasks
 *******************************************************************************/
@@ -106,7 +118,8 @@ gulp.task('scss', function() {
 	return gulp.src(paths.scssDir)
 		.pipe($.plumber({ errorHandler: handleError }))
 		.pipe($.rubySass({
-			r: "sass-globbing"
+			r: "sass-globbing",
+			'sourcemap=none': true
 			// sourcemap: none // #113 "Try updating to master. A fix for this went in but I won't be releasing anything until 1.0."
 		}))
 		.pipe($.autoprefixer('last 2 version'))
