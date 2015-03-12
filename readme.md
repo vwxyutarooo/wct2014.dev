@@ -1,4 +1,6 @@
 # Development of wct2014
+![theme of wct2014](/screenshot.png)
+
 First, You will need your own environment of wordpress as development project.
 
 ## Setup your local project
